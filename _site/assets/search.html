@@ -1,0 +1,452 @@
+<!-- Slightly Modified from _layouts/home.html -->
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>The Constant Companion Handbook</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="lipu linluwi pona is a handbook for plurality, a state in which multiple self-aware entities reside in one physical brain.
+"><meta name="author" content="Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."><link rel="stylesheet" href="/site/assets/gitbook/style.css">
+<link rel="stylesheet" href="/site/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/site/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/site/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/site/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/site/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/site/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/site/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/site/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="/site/assets/gitbook/images/favicon-light.ico" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Story+Script&display=swap" rel="stylesheet">
+
+
+
+
+
+<style>
+/* ── Page control toggles ──────────────────────────────────────────────── */
+.page-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 1 !important;
+}
+
+.toggle-group {
+    display: inline-flex;
+    border: 1.5px solid #bbb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 13px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+    opacity: 1 !important;
+    line-height: 1.4;
+    color: inherit;
+}
+
+.toggle-btn:hover {
+    background: rgba(128, 128, 128, 0.15);
+    opacity: 1 !important;
+}
+
+.toggle-btn:disabled {
+    opacity: 0.35 !important;
+    cursor: default;
+}
+
+.toggle-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+/* Font size symbols — explicitly sans-serif */
+.font-toggle .toggle-btn {
+    font-family: sans-serif;
+    padding: 4px 11px;
+}
+
+#btn-font-decrease { font-size: 11px; }
+#btn-font-increase { font-size: 17px; font-weight: 600; }
+
+/* Icon visibility — show the correct variant per theme */
+.icon-dark-mode  { display: none; }
+.icon-light-mode { display: inline; }
+
+/* ── Dark mode overrides (color-theme-2) ─────────────────────────────── */
+.color-theme-2 .toggle-group {
+    border-color: #666;
+}
+
+.color-theme-2 .toggle-btn.active {
+    background: #ddd;
+    color: #111;
+}
+
+.color-theme-2 .toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.color-theme-2 .icon-light-mode { display: none; }
+.color-theme-2 .icon-dark-mode  { display: inline; }
+</style>
+
+        
+            <link rel="next" href="/site/posts/2025-12-31-why/" />
+        
+    </head>
+    <body>
+        <div class="book"><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                let target = $($(element).attr('href'));
+                if (target.length) {
+                    $('div.body-inner').animate({
+                        scrollTop: target.get(0).offsetTop,
+                    });
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+                <img class="alasa" src="/site/assets/gitbook/symbols/alasa-dark.svg" height="20px">
+                <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+                    <img class="alasa" src="/site/assets/gitbook/symbols/alasa-dark.svg" height="20px">
+                    <a href="/site/assets/search.html">Click to search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/site">
+            
+                <a href="/site/" onclick="pageScrollToTop(this)">
+                    The Constant Companion Handbook
+                </a>
+                
+                    
+                
+            </li>
+
+            <li class="divider"></li>
+
+            
+                
+                    
+                    <!-- <p>pages</p> -->
+                    
+                        
+
+                        
+
+                        
+                    
+                
+                    
+                    <!-- <p>posts</p> -->
+                    
+                        
+
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/site/posts/2025-12-31-why/">
+                            
+                                <a href="/site/posts/2025-12-31-why/" onclick="pageScrollToTop(this)">
+                                    Why Jekyll with GitBook
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/site/posts/2026-01-01-warnings/">
+                            
+                                <a href="/site/posts/2026-01-01-warnings/" onclick="pageScrollToTop(this)">
+                                    Tips, Warnings, and Dangers
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+
+                        
+                            <li class="divider"></li>
+                        
+                    
+                
+                    
+                    <!-- <p>others</p> -->
+                    
+                        
+
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/site/others/about/">
+                            
+                                <a href="/site/others/about/" onclick="pageScrollToTop(this)">
+                                    About others
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+
+                        
+                            <li class="divider"></li>
+                        
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <img class="logo" src="/site/assets/gitbook/symbols/lipu-linluwi.svg" height="40px">
+                    
+                    <!-- Page controls -->
+                    <div class="page-controls">
+                        <!-- Theme toggle -->
+                        <div class="toggle-group theme-toggle">
+                            <button class="toggle-btn btn-light" id="btn-light">
+                                <img class="icon-light-mode" src="/site/assets/gitbook/symbols/walo-dark.svg" alt="" width="15" height="15">
+                                <img class="icon-dark-mode"  src="/site/assets/gitbook/symbols/walo-light.svg" alt="" width="15" height="15">
+                                light
+                            </button>
+                            <button class="toggle-btn btn-dark" id="btn-dark">
+                                <img class="icon-light-mode" src="/site/assets/gitbook/symbols/pimeja-dark.svg" alt="" width="15" height="15">
+                                <img class="icon-dark-mode"  src="/site/assets/gitbook/symbols/pimeja-light.svg" alt="" width="15" height="15">
+                                dark
+                            </button>
+                        </div>
+                        <!-- Font size toggle -->
+                        <div class="toggle-group font-toggle">
+                            <button class="toggle-btn" id="btn-font-decrease">a</button>
+                            <button class="toggle-btn" id="btn-font-increase">A</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="body-inner">
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <section class="normal markdown-section">
+                                
+                                    <h1 id="">The Constant Companion Handbook</h1>
+                                
+
+                                <br />
+                            </section>
+
+                            <!-- Slightly Modified from _layouts/home.html -->
+
+<div id="book-search-input-inside" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+                            <div id="book-search-results">
+                                <div class="search-noresults">
+                                    
+                                </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+
+        
+        "next": {
+            "title": "Why Jekyll with GitBook",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_posts/2025-12-31-why.md",
+            "ref": "_posts/2025-12-31-why.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": false,
+
+                "google": false,
+
+                "github": false,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": false,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": false,
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "The Constant Companion Handbook",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "assets/search.html",
+        "mtime": "",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2026-04-09 01:59:43 +0800"
+    },
+    "basePath": "/site",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script>
+        </div><script src="/site/assets/gitbook/gitbook.js"></script>
+<script src="/site/assets/gitbook/theme.js"></script>
+
+<script src="/site/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1775671183"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/site/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/site/assets/gitbook/custom.js"></script>
+<script src="/site/assets/gitbook/custom-local.js"></script>
+
+</body>
+</html>
