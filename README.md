@@ -7,7 +7,7 @@ permalink: /
 <div class="cloudPane">
 	 <p class="index-subheading">lipu linuwi pona</p>
      <p class="index-heading">The<br>Constant<br>Companions<br>Handbook</p>
-     <img class="lh-img" src="{{site.baseurl}}//assets/gitbook/images/CCH-LHArtboard1.png">
+     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LHArtboard1.png">
             <div class="stars">
                 <div class="star" id="star1"></div>
                 <div class="star"></div>
