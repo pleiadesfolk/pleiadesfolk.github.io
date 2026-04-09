@@ -1,16 +1,16 @@
-{"/site/others/about/": {
+{"/others/about/": {
     "title": "Template page",
     "keywords": "test",
-    "url": "/site/others/about/",
+    "url": "/others/about/",
     "body": "This is an about page for “others” in the collections. Heading text text Heading asdfksdjafklasdj heading dfjklasdjfvklasdjvkjvklaj WARNING Be sure that you’re familiar with things like async/await and object destructuring before continuing, as we’ll be making use of features like these. DANGER You cannot delete an ephemeral message. TIP This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have this or a similar version after installation. t'lyn was here blahblabhalbahbhlajgklajg A wide tables needs to be wrapped into a div with class table-wrapper to make sure it displayed as expected on mobile devices. For example, &lt;div class=\"table-wrapper\" markdown=\"block\"&gt; |title1|title2|title3|title4|title5|title6|title7|title8| |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:| |1|2|3|4|5|6|7|8| |1|2|3|4|5|6|7|8| |1|2|3|4|5|6|7|8| |1|2|3|4|5|6|7|8| &lt;/div&gt; Will be rendered as title1 title2 title3 title4 title5 title6 title7 title8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8"
-  },"/site/posts/2026-01-01-warnings/": {
+  },"/posts/2026-01-01-warnings/": {
     "title": "Tips, Warnings, and Dangers",
     "keywords": "Jekyll",
-    "url": "/site/posts/2026-01-01-warnings/",
+    "url": "/posts/2026-01-01-warnings/",
     "body": "This jekyll-theme supports tips, warnings, and dangers blocks and the style is referred from the discord.js website. You could have the following markdown attributes (supported by kramdown): Tips Using a {: .block-tip} attribute: &gt; ##### TIP &gt; &gt; This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have &gt; this or a similar version after installation. {: .block-tip } TIP This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have this or a similar version after installation. Warnings Using a {: .block-warning} attribute: &gt; ##### WARNING &gt; &gt; Be sure that you're familiar with things like async/await and object destructuring &gt; before continuing, as we'll be making use of features like these. {: .block-warning } WARNING Be sure that you’re familiar with things like async/await and object destructuring before continuing, as we’ll be making use of features like these. Dangers Using a {: .block-danger} attribute: &gt; ##### DANGER &gt; &gt; You cannot delete an ephemeral message. {: .block-danger } DANGER You cannot delete an ephemeral message."
-  },"/site/posts/2025-12-31-why/": {
+  },"/posts/2025-12-31-why/": {
     "title": "Why Jekyll with GitBook",
     "keywords": "Jekyll",
-    "url": "/site/posts/2025-12-31-why/",
+    "url": "/posts/2025-12-31-why/",
     "body": "GitBook is an amazing frontend style to present and organize contents (such as book chapters and blogs) on Web. The typical to deploy GitBook at Github Pages is building HTML files locally and then push to Github repository, usually to the gh-pages branch. However, it’s quite annoying to repeat such workload and make it hard for people do version control via git for when there are generated HTML files to be staged in and out. This theme takes style definition out of generated GitBook site and provided the template for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed to Github Pages without generating and uploading HTML bundle every time when there are changes to the original repository."
   }}

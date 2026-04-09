@@ -11,6 +11,7 @@
     -moz-border-radius: 35px;
     border-radius: 35px;
     display: none;
+    z-index: 11;
 }
 .back-to-top i {
     color: #fff;

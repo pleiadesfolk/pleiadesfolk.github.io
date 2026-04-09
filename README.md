@@ -8,30 +8,7 @@ permalink: /
 	 <p class="index-subheading">lipu linuwi pona</p>
      <p class="index-heading">The<br>Constant<br>Companions<br>Handbook</p>
      <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LHArtboard1.png">
-            <div class="stars">
-                <div class="star" id="star1"></div>
-                <div class="star"></div>
-                <div class="star" id="star2"></div>
-                <div class="star"></div>
-                <div class="star" id="star3"></div>
-                <div class="star"></div>
-                <div class="star" id="star4"></div>
-                <div class="star"></div>  
-                <div class="star" id="star5"></div>
-                <div class="star"></div>  
-                <div class="star" id="star6"></div>
-                <div class="star"></div>  
-                <div class="star" id="star7"></div>
-                <div class="star"></div>  
-                <div class="star" id="star8"></div>
-                <div class="star"></div>  
-                <div class="star" id="star9"></div>
-                <div class="star"></div>  
-                <div class="star" id="star10"></div>
-                 <div class="star"></div> 
-                <div class="star" id="star11"></div>
-                 <div class="star"></div> 
-            </div>
+     <img class="lh-stars" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-stars.svg"> 
             <div class="bigCloud" id="cloud1">
                 <div class="largeCircle" id="circ1">
                      
