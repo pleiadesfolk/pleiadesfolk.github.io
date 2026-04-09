@@ -770,7 +770,7 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     color: #f6f6f6;
     position: absolute;
  	left: 2vw;
-    top: 1vh;
+    top: 1vw;
     z-index:10;
 }
 .index-heading {
@@ -780,8 +780,8 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     font-style: normal;
     color: #f6f6f6;
     position: absolute;
-    left: 2vh;
-    top: 7vw;
+    left: 2vw;
+    top: 9vw;
     z-index:10;
 }
 

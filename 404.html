@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: post
 ---
 
 <style type="text/css" media="screen">
@@ -14,11 +14,17 @@ layout: home
     line-height: 1;
     letter-spacing: -1px;
   }
+  .theme-dark { display: none; }
+  .book.color-theme-2 .theme-dark { display: inline; }
+  .book.color-theme-2 .theme-light { display: none; }
 </style>
 
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <img class="theme-light" src="{{site.baseurl}}/assets/gitbook/symbols/CCH-soweli-light.png" alt="" width="150">
+  <img class="theme-dark"  src="{{site.baseurl}}/assets/gitbook/symbols/CCH-soweli-dark.png"  alt="" width="150">
+
+  <p><strong>fox not found :(</strong></p>
+  <p>the requested fox could not be found.</p>
 </div>
