@@ -3442,7 +3442,7 @@ table {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 15px 40px 15px
+    padding: 30px 30px 80px 30px;
 }
 
 .page-inner .btn-group .btn {
