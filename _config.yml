@@ -10,7 +10,7 @@ version:          0.1
 gitbook_version:  3.2.3
 
 url:              'https://pleaidesfolk.github.io'
-baseurl:          '/site'
+baseurl:          '/'
 rss:              RSS
 
 toc:
