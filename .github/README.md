@@ -1,4 +1,4 @@
-# Preface
+# lipu linluwi pona: The Constant Companions Handbook
 
 _lipu linluwi pona_ is a handbook that we’ve written for new plural folk who’ve begun to discover their own plurality, or are struggling with their plurality and need help with understanding themselves.
 
