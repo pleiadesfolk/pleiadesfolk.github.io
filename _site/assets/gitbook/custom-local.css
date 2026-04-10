@@ -415,8 +415,7 @@
 /* Sitelen Lenluwi */
 @font-face {
     font-family: 'Sitelen Lenluwi';
-    font-style: normal;
-    src: url('fonts/SitelenLenluwi/sitelen-Lenluwi.ttf') format('truetype');
+    src: url('fonts/SitelenLenluwi/sitelen Lenluwi.ttf') format('truetype');
 }
 
 /* Story Script */
@@ -456,8 +455,21 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
 }
+.markdown-section blockquote {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+}
 .markdown-section code, 
 .markdown-section pre {
     font-family: 'IBM Plex Mono', sans-serif;
     font-weight: 400;
 }
+
+.sitelen {
+	font-family: "Sitelen Lenluwi";
+	font-style: normal;
+	unicode-bidi: isolate;
+	font-variant-ligatures: common-ligatures;
+}
+	
+

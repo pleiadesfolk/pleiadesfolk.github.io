@@ -1,11 +1,11 @@
-  ---
-  title: Preface
-  author: Ellis of the Pleiadesfolk
-  date: 2026-04-08
-  category: Constant Companion Handbook, preface
-  permalink: /
-  layout: home
-  ---
+---
+title: lipu linluwi pona
+author: Ellis of the Pleiadesfolk
+date: 2026-04-08
+category: Constant Companion Handbook, preface
+permalink: /test
+layout: post
+---
 
 # Preface
 

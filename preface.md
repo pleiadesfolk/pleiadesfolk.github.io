@@ -1,10 +1,10 @@
-  ---
-  title: Preface
-  author: Ellis of the Pleiadesfolk
-  date: 2026-04-08
-  category: Constant Companion Handbook, preface
-  layout: home
-  ---
+---
+title: Preface
+author: Ellis of the Pleiadesfolk
+date: 2026-04-08
+category: Constant Companion Handbook, preface
+layout: home
+---
 
 # Preface
 

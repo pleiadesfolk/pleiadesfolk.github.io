@@ -154,7 +154,7 @@ We build on a series of research and work done by previous plural folk — from 
 
 On top of that, this guide adds a lot of our own personal experience and experiences helping others discover their own plurality and be selves-aware.
 
-This guide will also include essays about plurality and the real world.
+This guide will also include essays about plurality and living with plurality.
 
 This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
