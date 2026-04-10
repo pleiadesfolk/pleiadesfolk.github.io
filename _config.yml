@@ -45,7 +45,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: pleiadesfolk.github.io/assets/media/default-ogp.png
+      image: /assets/media/default-ogp.png
 
 
 exclude:
