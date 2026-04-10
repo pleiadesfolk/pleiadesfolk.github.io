@@ -712,8 +712,32 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     z-index:10;
 }
 
+.ack-heading {
+    font-family: 'Story Script' !important;
+    font-size: 7.5vw;
+    line-height: 6.5vw;
+    font-style: normal;
+	max-width: 90%;
+	color: rgb(0 0 0);
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    z-index:0;
+}
 
-
+.ack-heading-front {
+    font-family: 'Story Script' !important;
+    font-size: 7.5vw;
+    line-height: 6.5vw;
+    font-style: normal;
+    max-width: 90%;
+    color: rgb(246 246 246);
+    mix-blend-mode: difference;
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    z-index:10;
+}
 
 
 

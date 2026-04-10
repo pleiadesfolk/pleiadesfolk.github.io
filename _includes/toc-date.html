@@ -55,7 +55,7 @@
                     {% if label == "essays" %}
                         {% assign col_docs = site[label] | reverse %}
                     {% else %}
-                        {% assign col_docs = site[label] %}
+    					{% assign col_docs = site[label] | sort: "order" %}
                     {% endif %}
 
                     {% if col_docs.size > 0 and label != "others" %}
@@ -78,7 +78,7 @@
                             {% endif %}
                         </li>
                     {% endfor %}
-
+                    
                     {% if col_docs.size > 0 %}
                         <li class="divider"></li>
                     {% endif %}

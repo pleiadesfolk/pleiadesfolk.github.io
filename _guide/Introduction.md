@@ -3,6 +3,8 @@ title: Introduction
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
+permalink: /guides/introduction
+order: 1
 ---
 
 <p>Wondering if you’re plural?</p>

@@ -1,22 +1,161 @@
 ---
-title: Template page
+title: Acknowledgements
 author: Ellis of the Pleiadesfolk
 date: 2026-04-09
 category: test
 layout: post
 ---
 
-(insert LH-motif code)
+<div class="lighthouse-viewport">
+<div class="cloudPane">
+     <p class="ack-heading-front">Thank you<br>for<br>reading!</p>
+     <p class="ack-heading">Thank you<br>for<br>reading!</p>
+     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LHArtboard1.png">
+     <img class="lh-stars" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-stars.svg"> 
+            <div class="bigCloud" id="cloud1">
+                <div class="largeCircle" id="circ1">
+                     
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+            <div class="bigCloud" id="cloud2">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+  
+            <div class="bigCloud" id="cloud3">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+  
+            <div class="bigCloud" id="cloud4">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+  
+            <div class="bigCloud" id="cloud5">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+  
+            <div class="bigCloud" id="cloud6">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+  
+            <div class="bigCloud" id="cloud7">
+                <div class="largeCircle" id="circ1">
+                    <div class="largeCircle" id="circ1shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ2">
+                    <div class="middleCircle" id="circ2shadow"></div>
+                </div>
+                <div class="middleCircle" id="circ3">
+                    <div class="middleCircle" id="circ3shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ4"></div>
+                <div class="smallCircle" id="circ5">
+                    <div class="smallCircle" id="circ5shadow"></div>
+                </div>
+                <div class="smallCircle" id="circ6">
+                    <div class="smallCircle" id="circ6shadow"></div>
+                </div>
+            </div>
+</div>
+</div> 
 
-# Acknowledgements
+We’re very thankful for <span class="sitelen">󱤟</span> Ke Meten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
-We’re very thankful for Ke Meten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
+This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (Lyra, Caitlyn, Kimberly, Ryn, Riley, Merope et al.) with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-This guide was written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Ryn, Riley, Merope et al.) with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
+The Lighthouse motif and the site’s icons is created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
-The Lighthouse motif and the site’s icons is created by the Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
+Copyediting was done by Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
-Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding support.
+Toki Pona glyph support was provided through the _sitelen lenluwi_ font <a href="https://wasokeli.github.io/sp-font-maker/sitelen-Lenluwi.html">by meli Siliwa.</a>
 
 The site theme is based on [Jekyll Gitbook](https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml) by Tao He.
 
