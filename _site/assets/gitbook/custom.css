@@ -175,7 +175,7 @@
 .markdown-section blockquote.block-tip {
     border-color: #009245 !important;
     background-color: #9ddbba;
-    color: #333333;
+    color: #333333 !important;
     padding: 10px;
 }
 
@@ -197,7 +197,7 @@
 .markdown-section blockquote.block-warning {
     border-color: #ffc733 !important;
     background-color: #d9d5c9;
-    color: #333333;
+    color: #333333 !important;
     padding: 10px;
 }
 
@@ -219,7 +219,7 @@
 .markdown-section blockquote.block-danger {
     border-color: #d4145a !important;
     background-color: #d99eb4;
-    color: #333333;
+    color: #333333 !important;
     padding: 10px;
 }
 
@@ -737,6 +737,36 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     left: 2vw;
     top: 2vw;
     z-index:10;
+}
+
+/* ===== Search Results Theming ===== */
+
+/* Match site typography */
+#book-search-results .search-results-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+}
+
+#book-search-results .search-results .has-results .search-results-item {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#book-search-results .search-results .has-results .search-results-item h3 {
+    font-family: 'Old Standard TT', serif;
+}
+
+/* Dark mode: override hardcoded color: #333 (invisible on dark background) */
+.book.color-theme-2 #book-search-results .search-results .has-results .search-results-item {
+    color: #bdcadb;
+}
+
+.book.color-theme-2 #book-search-results .search-results .has-results .search-results-item a {
+    color: #4183e4;
+}
+
+.book.color-theme-2 #book-search-results span.search-highlight-keyword {
+    color: #fffffa;
 }
 
 

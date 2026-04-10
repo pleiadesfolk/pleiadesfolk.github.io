@@ -3698,8 +3698,8 @@ table {
     margin: 0;
     margin-bottom: .85em;
     padding: 0 15px;
-    color: #858585;
-    border-left: 4px solid #e5e5e5
+    color: #2b2b2b;
+    border-left: 4px solid #99e2ff;
 }
 
 .markdown-section blockquote:first-child {

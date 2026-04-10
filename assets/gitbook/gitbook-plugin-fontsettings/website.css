@@ -99,7 +99,8 @@
   background-color: #e7e7e7;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal blockquote {
-  border-color: #e5e5e5;
+  color: #2b2b2b;
+  border-color: #4c7a8c;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal pre,
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal code {
@@ -122,7 +123,7 @@
   background-color: #f8f8f8;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal {
-  color: #bdcadb;
+  color: #f6f6f6;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal a {
   color: #4183e4;
@@ -133,7 +134,7 @@
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h4,
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h5,
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h6 {
-  color: #fffffa;
+  color: #f6f6f6;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h1,
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h2 {
@@ -146,7 +147,8 @@
   background-color: #373b4e;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal blockquote {
-  border-color: #373b4e;
+  color: #b9b9b9;
+  border-color: #c39197;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre,
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code {
