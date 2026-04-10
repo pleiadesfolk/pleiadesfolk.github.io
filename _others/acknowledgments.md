@@ -6,67 +6,18 @@ category: test
 layout: post
 ---
 
-This is an about page for "others" in the collections.
+(insert LH-motif code)
 
-## Heading
+# Acknowledgements
 
-text text
+We’re very thankful for Ke Meten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
-### Heading
+This guide was written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Ryn, Riley, Merope et al.) with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-asdfksdjafklasdj
+The Lighthouse motif and the site’s icons is created by the Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
-#### heading
+Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding support.
 
-dfjklasdjfvklasdjvkjvklaj
+The site theme is based on [Jekyll Gitbook](https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml) by Tao He.
 
-> ##### WARNING
->
-> Be sure that you're familiar with things like async/await and object destructuring
-> before continuing, as we'll be making use of features like these.
-{: .block-warning }
-
-> ##### DANGER
->
-> You cannot delete an ephemeral message.
-{: .block-danger }
-
-> ##### TIP
->
-> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
-> this or a similar version after installation.
-{: .block-tip }
-
-```Markdown 
-t'lyn was here
-blahblabhalbahbhlajgklajg
-```
-
-A wide tables needs to be wrapped into a `div` with class `table-wrapper`
-to make sure it displayed as expected on mobile devices. For example,
-
-```markdown
-<div class="table-wrapper" markdown="block">
-
-|title1|title2|title3|title4|title5|title6|title7|title8|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-
-</div>
-```
-
-Will be rendered as
-
-<div class="table-wrapper" markdown="block">
-
-|title1|title2|title3|title4|title5|title6|title7|title8|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-|1|2|3|4|5|6|7|8|
-
-</div>
+Parts of the site theme was fixed up and reworked with the help of Claude Sonnet 4.6. None of the artwork or site copy was created by AI.

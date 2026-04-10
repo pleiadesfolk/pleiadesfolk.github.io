@@ -3,6 +3,7 @@ title: More than one
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
+permalink: more-than-one
 ---
 
 <p>You’ve probably heard of the term "more than one", most likely <a target="_blank" rel="noopener noreferrer nofollow" href="https://dragonsroost.neocities.org/essay/edu/AmIPlural.pdf">on the Am I Plural guide</a> by The Dragonheart Collective! Plurality is being “more than one.”</p>

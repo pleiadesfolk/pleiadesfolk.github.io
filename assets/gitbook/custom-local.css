@@ -436,7 +436,8 @@
 
 .markdown-section h2 {
     font-family: 'Old Standard TT', serif;
-    font-size: 6vh;
+    font-size: 4vh;
+    line-height: 4vh;
     font-weight: 400;
     font-style: normal;
 }
@@ -466,10 +467,8 @@
 }
 
 .sitelen {
-	font-family: "Sitelen Lenluwi";
+	font-family: "Sitelen Lenluwi", sans-serif;
 	font-style: normal;
-	unicode-bidi: isolate;
-	font-variant-ligatures: common-ligatures;
 }
 	
 
