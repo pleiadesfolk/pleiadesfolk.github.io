@@ -41,7 +41,7 @@ Switching in itself is a practice of intentionality and presentness. As [Lark of
 
 Intentionality is the antidote to, say, zoning out — which is how, mechanistically, dissociation occurs. Remember how, at the start, we discussed mind wandering, and how it might happen when you’re doing something mundane, like being on the bus or being on road trips? That, in essence, is how you lose that intentionality.
 
-(This isn’t to say that zoning out is bad! In fact, mind-wandering and daydreaming can be healthy — it helps build a certain degree of mindfulness and renew attention in repetitive stimuli, and it’ll also help with visualising social scenarios. Daydreaming is an extension of the brain’s experience of social cognition, and have [strong overlapping similarities](https://repository.essex.ac.uk/32052/1/Poerio%26Smallwood2016.pdf) when activated portions of the brain are observed.)
+This isn’t to say that zoning out is bad! In fact, mind-wandering and daydreaming can be healthy — it helps build a certain degree of mindfulness and renew attention in repetitive stimuli, and it’ll also help with visualising social scenarios. Daydreaming is an extension of the brain’s experience of social cognition, and have [strong overlapping similarities](https://repository.essex.ac.uk/32052/1/Poerio%26Smallwood2016.pdf) when activated portions of the brain are observed.
 
 Presentness grounds you toward your surroundings, anchoring to your senses, [says Lark](https://hungryghosts.dreamwidth.org/36666.html):
 
@@ -105,17 +105,19 @@ A short example of how this might seem like, from the <span class="sitelen">󱤟
 
 > I’m typing into this document, feeling the clicks of the keyboard under my fingers. I take a sip of my coffee, and it’s fairly bitter with a sour afternote at the end. It’s too late for us to be drinking coffee.
 > <br><br>
-> My name is Caitlyn Ellis, and now I’m going to step back, perhaps. I glance at our system map in our room, and think about who I can reach out toward for this exercise.
+> My name is <span class="sitelen">󱤎</span> Caitlyn Ellis, and now I’m going to step back, perhaps. I glance at our system map in our room, and think about who I can reach out toward for this exercise.
 > <br><br>
 > These fingers are just expressing my thoughts now, and they are mere vehicles for me to continue this statement.
 > <br><br>
-> I can feel my headmate in headspace, Kimberly. Kimberly has golden flecks in her irises, and short brown hair. She’s slightly younger, and I reach for her thought, her form. I feel her make contact. She’s a little reluctant at first, but I explain that this is for an exercise.
+> I can feel my headmate in headspace, <span class="sitelen">󱤎</span> Kimberly. 
 > <br><br>
-> Why I’m being chosen to do this, I’m a little unsure. But now I realise I have to put this text into a separate line. I feel Caitlyn move back — she’s still aware of what I’m saying, but she’s letting me say it. There’s a tension she’s been holding, and I let that go.
+> <span class="sitelen">󱤎</span> Kimberly has golden flecks in her irises, and short brown hair. She’s slightly younger, and I reach for her thought, her form. I feel her make contact. She’s a little reluctant at first, but I explain that this is for an exercise.
+> <br><br>
+> Why I’m being chosen to do this, I’m a little unsure. But now I realise I have to put this text into a separate line. I feel <span class="sitelen">󱤎</span> Caitlyn move back — she’s still aware of what I’m saying, but she’s letting me say it. There’s a tension she’s been holding, and I let that go.
 > <br><br>
 > I take a sip of my coffee again. It’s a bit too diluted for my taste, and I don’t sense much except for its bitter after note.
-
-I’m Kimberly Ellis, and thus ends this log.
+> <br><br>
+> I’m <span class="sitelen">󱤎</span> Kimberly Ellis, and thus ends this log.
 
 #### _4) Settling in_
 

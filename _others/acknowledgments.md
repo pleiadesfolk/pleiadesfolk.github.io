@@ -146,16 +146,17 @@ layout: post
             </div>
 </div>
 </div> 
+<br>
 
-We’re very thankful for <span class="sitelen">󱤟</span> Ke Meten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
+We (the <span class="sitelen">󱤟</span> Pleiadesfolk) very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
-This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (Lyra, Caitlyn, Kimberly, Ryn, Riley, Merope et al.) with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
+This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
 The Lighthouse motif and the site’s icons is created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
 Copyediting was done by Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
-Toki Pona glyph support was provided through the _sitelen lenluwi_ font <a href="https://wasokeli.github.io/sp-font-maker/sitelen-Lenluwi.html">by meli Siliwa.</a>
+Toki Pona glyph support was provided through the _sitelen seli kiwen mono asuki_ font <a href="https://github.com/kreativekorp/sitelen-seli-kiwen">by jan <span class="sitelen">󱤑</span> Lepeka.</a>
 
 The site theme is based on [Jekyll Gitbook](https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml) by Tao He.
 

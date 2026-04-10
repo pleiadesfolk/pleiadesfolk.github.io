@@ -414,8 +414,8 @@
 
 /* Sitelen Lenluwi */
 @font-face {
-    font-family: 'Sitelen Lenluwi';
-    src: url('fonts/SitelenLenluwi/sitelen Lenluwi.ttf') format('truetype');
+    font-family: 'sitelen seli kiwen mono asuki';
+    src: url('fonts/SitelenLenluwi/sitelenselikiwenmonoasuki.ttf') format('truetype');
 }
 
 /* Story Script */
@@ -473,7 +473,7 @@
 }
 
 .sitelen {
-	font-family: 'Sitelen Lenluwi', sans-serif;
+	font-family: 'sitelen seli kiwen mono asuki', sans-serif;
 	font-style: normal;
 }
 
