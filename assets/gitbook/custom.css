@@ -663,24 +663,52 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     font-family: 'IBM Plex Sans' !important;
     font-size: 3vw;
     font-style: italic;
-    color: #f6f6f6;
+	max-width: 90%;
+    color: rgb(0 0 0);
     position: absolute;
  	left: 2vw;
     top: 1vw;
-    z-index:10;
+    z-index:0;
 }
 .index-heading {
     font-family: 'Story Script' !important;
     font-size: 8vw;
     line-height: 7vw;
     font-style: normal;
-    color: #f6f6f6;
+	max-width: 90%;
+	color: rgb(0 0 0);
+    position: absolute;
+    left: 2vw;
+    top: 9vw;
+    z-index:0;
+}
+
+.index-subheading-front {
+    font-family: 'IBM Plex Sans' !important;
+    font-size: 3vw;
+    font-style: italic;
+    max-width: 90%;
+    color: rgb(246 246 246);
+    mix-blend-mode: difference;
+    position: absolute;
+    left: 2vw;
+    top: 1vw;
+    z-index:10;
+}
+
+.index-heading-front {
+    font-family: 'Story Script' !important;
+    font-size: 8vw;
+    line-height: 7vw;
+    font-style: normal;
+    max-width: 90%;
+    color: rgb(246 246 246);
+    mix-blend-mode: difference;
     position: absolute;
     left: 2vw;
     top: 9vw;
     z-index:10;
 }
-
 
 
 
