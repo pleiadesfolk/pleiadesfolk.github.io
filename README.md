@@ -156,8 +156,8 @@ On top of that, this guide adds a lot of our own personal experience and experie
 
 This guide will also include essays about plurality and living with plurality.
 
-This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
+This work was mainly written by the <span class="sitelen">󱤟</span> Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from <span class="sitelen">󱤟</span> Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding support.
+Copyediting was done by Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
 Sources will be cited in-line and linked.
