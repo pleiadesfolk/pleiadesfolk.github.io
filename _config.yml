@@ -2,14 +2,14 @@
 title:            The Constant Companions Handbook
 longtitle:        lipu linluwi pona - The Constant Companions Handbook
 author:           Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al. 
-email:            pleaidesfolk@proton.me
+email:            pleiadesfolk@proton.me
 description: >
-  lipu linluwi pona is a handbook for plurality, a state in which multiple self-aware entities reside in one physical brain.
+  lipu linluwi pona is a handbook for plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who may suspect that they are a system.
  
-version:          0.1
+version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://pleaidesfolk.github.io'
+url:              'https://pleiadesfolk.github.io'
 baseurl:          ''
 rss:              RSS
 
@@ -46,8 +46,9 @@ defaults:
       path: ""
     values:
       image: /assets/media/default-ogp.png
-
-
+      title: The Constant Companions Handbook
+      description: lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.
+      
 exclude:
   - _drafts
 
