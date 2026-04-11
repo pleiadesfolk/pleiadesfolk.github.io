@@ -162,7 +162,7 @@ On top of that, the handbook will add a lot of our own personal experience and e
 
 This handbook will also include essays about plurality and living with plurality. This work was mainly written by the <span class="sitelen">󱤟</span>  Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.), with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-Copyediting was done by Catherine Cowie, with the <span class="sitelen">󱤟</span>  Cheerleaders providing coding support.
+Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span>  Cheerleaders providing coding support.
 
 Sources will be cited in-line and linked.
 

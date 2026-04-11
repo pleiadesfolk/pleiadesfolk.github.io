@@ -91,7 +91,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 <p>How well can you visualise?</p>
 <p>Can you imagine a square? Can you make the square into a cube? Can you change the colour of the cube? Can you add a design to the cube? Can you change the size of the cube? Can you make different shapes?</p>
 <p>How well you visualise can help you in understanding how your headspace will “look” like. We won’t reproduce the visualisation guide here, but this exercise can help you in <a target="_blank" rel="noopener noreferrer nofollow" href="https://healthymultiplicity.com/loonybrain/Info/Small%20Worlds%20Contained%20Inside.html">establishing your headspace</a>. (If your default shapes remain after, then shrink them till they’re imperceptible.) </p>
-<p>An alternative exercise is to start making a table. <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/763283.html">This essay</a>by LB Lee is also a good introduction to headspace visualisation. </p>
+<p>An alternative exercise is to start making a table. <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/763283.html">This essay</a> by LB Lee is also a good introduction to headspace visualisation. </p>
 <p>If you can’t visualise, that’s fine! Skip over to the next section.</p>
 
 #### _Aphantasic headspace_
