@@ -657,7 +657,7 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     color: rgb(0 0 0);
     position: absolute;
     left: var(--page-inner-left);
-    top: -1vw;
+    top: 0;
     z-index:0;
 }
 .index-heading {
@@ -682,7 +682,7 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     mix-blend-mode: difference;
     position: absolute;
     left: var(--page-inner-left);
-    top: -1vw;
+    top: 0;
     z-index:10;
 }
 
