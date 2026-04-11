@@ -12,4 +12,8 @@ This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley
 
 Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding support.
 
-Sources will be cited in-line and linked.
+## License and copyright
+
+Plurality resources often seem ethereal. Many of them are self-hosted, and link rot has affected quite a bit of them. We don't expect to maintain this repo long term (long term being, more than 3 years). We also want this text to live forever. 
+
+Post it anywhere you want. Just don't sell it or make a commercial profit from it, really; it's kinda mean to us if you do that. 

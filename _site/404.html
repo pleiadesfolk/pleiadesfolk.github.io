@@ -438,54 +438,7 @@ window.MathJax = {
     }
 </script>
 
-
-                    
-
-                    
-                    
-                    
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-
-                    
-                        <a href="/others/acknowledgments/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Acknowledgements">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                    
-
-                    
-                </div>
+</div>
             </div>
 
             <script>
@@ -591,7 +544,7 @@ window.MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-04-11 21:51:47 +0800"
+        "time": "2026-04-11 22:45:44 +0800"
     },
     "basePath": "",
     "book": {
@@ -606,7 +559,7 @@ window.MathJax = {
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1775915507"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1775918744"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
@@ -621,6 +574,19 @@ window.MathJax = {
 
 <script src="/assets/gitbook/custom.js"></script>
 <script src="/assets/gitbook/custom-local.js"></script>
+
+<script>
+require(['gitbook', 'jquery'], function(gitbook, $) {
+    gitbook.events.bind('page.change', function() {
+        $(document).off('click', '#btn-light, #btn-dark, #btn-font-decrease, #btn-font-increase');
+
+        $(document).on('click', '#btn-light',         function(e) { gitbook.fontsettings.setLightTheme(e); });
+        $(document).on('click', '#btn-dark',          function(e) { gitbook.fontsettings.setDarkTheme(e); });
+        $(document).on('click', '#btn-font-decrease', function(e) { gitbook.fontsettings.reduceFontSize(e); });
+        $(document).on('click', '#btn-font-increase', function(e) { gitbook.fontsettings.enlargeFontSize(e); });
+    });
+});
+</script>
 
 </body>
 </html>

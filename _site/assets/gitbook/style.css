@@ -3747,12 +3747,11 @@ table {
     align-content: center;
     flex-direction: column;
     font-size: 40px;
-    color: #ccc;
     text-align: center;
     -webkit-transition: all 350ms ease;
     -moz-transition: all 350ms ease;
     -o-transition: all 350ms ease;
-    transition: all 350ms ease
+    transition: all 350ms ease;
 }
 
 .navigation:hover {

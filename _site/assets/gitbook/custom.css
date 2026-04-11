@@ -49,47 +49,7 @@
     padding-bottom: 100px;
 }
 
-/* Navigation as footer bar on all screen sizes */
-.navigation {
-    position: static;
-    top: auto;
-    bottom: auto;
-    max-width: 50%;
-    width: 50%;
-    display: inline-block;
-    float: left;
-    font-size: 40px;
-    text-align: center;
-    min-width: unset;
-}
-
-.navigation.navigation-next {
-    right: auto;
-    float: right;
-    text-align: right;
-}
-
-.navigation.navigation-prev {
-    left: auto;
-    text-align: left;
-}
-
-.navigation.navigation-unique {
-    max-width: 100%;
-    width: 100%;
-}
-
 @media (max-width: 1240px) {
-    .book-body .body-inner .navigation {
-        max-width: 50%;
-        width: 50%;
-    }
-
-    .book-body .body-inner .navigation.navigation-unique {
-        max-width: 100%;
-        width: 100%;
-    }
-
     .book.with-summary .book-body .book-header {
         overflow-x: hidden;
         overflow-y: hidden;

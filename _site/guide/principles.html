@@ -42,12 +42,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-04-11T21:51:47+08:00" />
+<meta property="article:published_time" content="2026-04-11T22:45:44+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Principles" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk"},"dateModified":"2026-04-11T21:51:47+08:00","datePublished":"2026-04-11T21:51:47+08:00","description":"lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.","headline":"Principles","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/guide/principles"},"url":"http://localhost:4000/guide/principles"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk"},"dateModified":"2026-04-11T22:45:44+08:00","datePublished":"2026-04-11T22:45:44+08:00","description":"lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.","headline":"Principles","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/guide/principles"},"url":"http://localhost:4000/guide/principles"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -602,41 +602,7 @@ window.MathJax = {
     }
 </script>
 
-
-                    
-
-                    
-                    
-                    
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                        
-                    
-                        
-                            
-                            
-
-                    
-                        <a href="/guide/more-than-one" class="navigation navigation-prev" aria-label="Previous page: More than one">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                    
-
-                    
-                        <a href="/guide/listening-in" class="navigation navigation-next" aria-label="Next page: Listening in">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    
-                </div>
+</div>
             </div>
 
             <script>
@@ -746,12 +712,12 @@ window.MathJax = {
     },
     "file": {
         "path": "_guide/principles.md",
-        "mtime": "2026-04-11 21:51:47 +0800",
+        "mtime": "2026-04-11 22:45:44 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-04-11 21:51:47 +0800"
+        "time": "2026-04-11 22:45:44 +0800"
     },
     "basePath": "",
     "book": {
@@ -766,7 +732,7 @@ window.MathJax = {
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1775915507"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1775918744"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
@@ -781,6 +747,19 @@ window.MathJax = {
 
 <script src="/assets/gitbook/custom.js"></script>
 <script src="/assets/gitbook/custom-local.js"></script>
+
+<script>
+require(['gitbook', 'jquery'], function(gitbook, $) {
+    gitbook.events.bind('page.change', function() {
+        $(document).off('click', '#btn-light, #btn-dark, #btn-font-decrease, #btn-font-increase');
+
+        $(document).on('click', '#btn-light',         function(e) { gitbook.fontsettings.setLightTheme(e); });
+        $(document).on('click', '#btn-dark',          function(e) { gitbook.fontsettings.setDarkTheme(e); });
+        $(document).on('click', '#btn-font-decrease', function(e) { gitbook.fontsettings.reduceFontSize(e); });
+        $(document).on('click', '#btn-font-increase', function(e) { gitbook.fontsettings.enlargeFontSize(e); });
+    });
+});
+</script>
 
 </body>
 </html>

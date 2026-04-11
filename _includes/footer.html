@@ -20,6 +20,19 @@
 <script src="{{site.baseurl}}/assets/gitbook/custom.js"></script>
 <script src="{{site.baseurl}}/assets/gitbook/custom-local.js"></script>
 
+<script>
+require(['gitbook', 'jquery'], function(gitbook, $) {
+    gitbook.events.bind('page.change', function() {
+        $(document).off('click', '#btn-light, #btn-dark, #btn-font-decrease, #btn-font-increase');
+
+        $(document).on('click', '#btn-light',         function(e) { gitbook.fontsettings.setLightTheme(e); });
+        $(document).on('click', '#btn-dark',          function(e) { gitbook.fontsettings.setDarkTheme(e); });
+        $(document).on('click', '#btn-font-decrease', function(e) { gitbook.fontsettings.reduceFontSize(e); });
+        $(document).on('click', '#btn-font-increase', function(e) { gitbook.fontsettings.enlargeFontSize(e); });
+    });
+});
+</script>
+
 {% if site.extra_footer_js %}
     {%- for extra_js in site.extra_header_js -%}
         {%- assign starts_with = extra_js | slice: 0,4  -%}

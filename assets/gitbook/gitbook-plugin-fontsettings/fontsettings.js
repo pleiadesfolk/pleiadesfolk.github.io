@@ -101,20 +101,20 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     }
 
     function wireHtmlButtons() {
-        $('#btn-light').on('click', function(e) {
+        $('#btn-light').off('click.fontsettings').on('click.fontsettings', function(e) {
             setLightTheme(e);
         });
 
-        $('#btn-dark').on('click', function(e) {
+        $('#btn-dark').off('click.fontsettings').on('click.fontsettings', function(e) {
             setDarkTheme(e);
         });
 
-        $('#btn-font-decrease').on('click', function(e) {
+        $('#btn-font-decrease').off('click.fontsettings').on('click.fontsettings', function(e) {
             reduceFontSize(e);
             updateToggleUI();
         });
 
-        $('#btn-font-increase').on('click', function(e) {
+        $('#btn-font-increase').off('click.fontsettings').on('click.fontsettings', function(e) {
             enlargeFontSize(e);
             updateToggleUI();
         });
@@ -137,6 +137,11 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     gitbook.events.bind('start', function (e, config) {
         init(config.fontsettings || {});
+        wireHtmlButtons();
+    });
+
+    gitbook.events.bind('page.change', function() {
+        update();
         wireHtmlButtons();
     });
 
