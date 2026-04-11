@@ -154,7 +154,7 @@ This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<s
 
 The Lighthouse motif and the site’s icons is created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
-Copyediting was done by Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
+Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
 Toki Pona glyph support was provided through the _sitelen seli kiwen mono asuki_ font <a href="https://github.com/kreativekorp/sitelen-seli-kiwen">by jan <span class="sitelen">󱤑</span> Lepeka.</a>
 
