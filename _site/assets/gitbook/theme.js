@@ -4095,9 +4095,8 @@
             var t = T(".book-body"),
                 n = t.find(".body-inner"),
                 o = n.find(".page-wrapper");
-            h(), o.focus();
-            var i = r();
-            e !== !1 && i.scrollTop(0), w = T(".book-summary .summary .chapter").filter(function() {
+            h(), o[0] && o[0].focus({preventScroll: true});
+            e !== !1 && t.scrollTop(0), w = T(".book-summary .summary .chapter").filter(function() {
                 var e = T(this).children("a"),
                     t = null;
                 if (!e.length) return !1;

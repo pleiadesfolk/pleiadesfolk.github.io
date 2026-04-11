@@ -488,27 +488,26 @@
 .page-nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 2em;
-    padding-top: 1em;
+    margin-top: 3em;
+    padding-top: 3em;
     border-top: 1px solid var(--border-color, #6b9eea);
 }
 
 .page-nav-btn {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1em;
     text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid var(--border-color, #6b9eea);
-    width: 25%;
-    height: 50px;
+    width: 40%;
+    max-width: 45%;
+    height: 8vh;
     display: flex;
     align-items: center;
     color: #6b9eea;
-    border-radius: 4px;
-    max-width: 45%;
+    border-radius: 10px;
     flex-direction: row;
-    justify-content: center;
 }
 
 .page-nav-btn:hover {
@@ -521,10 +520,12 @@
 .page-nav-btn.prev {
     margin-right: auto;
     text-align: left;
+    justify-content: left;
 }
 
 .page-nav-btn.next {
     margin-left: auto;
     text-align: right;
+    justify-content: right;
 }
 
