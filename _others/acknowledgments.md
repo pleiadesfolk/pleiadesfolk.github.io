@@ -6,11 +6,11 @@ category: test
 layout: others
 ---
 
-<div class="lighthouse-viewport">
-<div class="cloudPane">
+<div class="ack-lighthouse-viewport">
+<div class="ack-cloudPane">
      <p class="ack-heading-front">Thank you<br>for<br>reading!</p>
      <p class="ack-heading">Thank you<br>for<br>reading!</p>
-     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LHArtboard1.png">
+     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-beach.svg">
      <img class="lh-stars" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-stars.svg"> 
             <div class="bigCloud" id="cloud1">
                 <div class="largeCircle" id="circ1">
