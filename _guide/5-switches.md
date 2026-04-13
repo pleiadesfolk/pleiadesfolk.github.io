@@ -1,5 +1,6 @@
 ---
 title: Switches — a dance with yourself
+description: Here, we talk about the principles of switching between selves, and how you can learn to intentionally switch. (Or, try to.)
 author: Ellis of the Pleaidesfolk
 category: Guide
 layout: post

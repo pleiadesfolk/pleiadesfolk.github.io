@@ -19,9 +19,9 @@ _The Constant Companions Handbook_ builds on a series of research and work done 
 
 On top of that, the handbook will add a lot of our own personal experience and experiences helping others discover their own plurality and be selves-aware.
 
-This handbook will also include essays about plurality and living with plurality. 
+This handbook will also include essays about plurality and living as a plural system in the world.
 
-The Constant Companions Handbook was mainly written by the <span class="sitelen">󱤟</span>  Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.), with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
+The Constant Companions Handbook is primarily written by the <span class="sitelen">󱤟</span>  Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.), with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
 Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span>  Cheerleaders providing coding support.
 

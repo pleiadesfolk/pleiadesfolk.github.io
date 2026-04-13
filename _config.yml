@@ -47,6 +47,7 @@ defaults:
     values:
       image: /assets/media/default-ogp.png
       title: "title"
+      tagline: "lipu linluwi pona"
       description: lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.
       
 exclude:

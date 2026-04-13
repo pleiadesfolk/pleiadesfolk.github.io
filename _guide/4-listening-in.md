@@ -1,5 +1,6 @@
 ---
 title: Listening in
+description: Here's how you cn
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
@@ -8,7 +9,9 @@ order: 4
 ---
 
 <p>So now you’ve gotten a sense of what to do (and what not to do) with the other selves in your head.</p>
+
 <p>Maybe they’ve been popping up while you read all of this and saying: “Hm, this handbook makes a terrible point.” Or maybe they’re actively hiding away from you now that you know they’re around. Maybe they’ve been sitting with you all along, waiting on you to see them.</p>
+
 <p>How do you <em>listen in</em>? </p>
 
 ## _sina alasa e sina_: Starting the search for yourselves
@@ -110,7 +113,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 
 #### _Making a safe space_
 
-<p>It’s key to understand that headspace <em>should</em>be safe, stable, and a place for <em>all</em>to gather. </p>
+<p>It’s key to understand that headspace <em>should</em> be safe, stable, and a place for <em>all</em> to gather. </p>
 <p>Your headmates should have a say in creating or modifying headspace —&nbsp;that creates buy-in, and makes them more inclined to use it, perhaps.</p>
 <p>LB Lee recommends working with your own inner mythology to create a safe space:</p>
 <blockquote>Try and work with your own inner mythology to create a space that is safe and enforces useful order. What are you interested in achieving?<br><br>
@@ -130,5 +133,5 @@ The sky is the limit for how you'd like your headspace. Whatever catches your fa
 
 <p>For some, headspace might be hostile. Often, people report that headspace <em>exploded</em>, like a bomb just went off within, destroying what used to be a safe space. </p>
 <p>Once, after a particularly tough argument, the <span class="sitelen">󱤟</span> Pleiadesfolk’s Lighthouse blew up; the hole in the wall had to be fixed back up again. We’ve had friends who reported the same — containment units sealed and filled with anti-memetic gas, and then exploded with the equivalent of a anti-memetic nuke.</p>
-<p>Others find themselves trapped in a basement — particularly, the forcefem basement from Alyson Greaves’ <em>Sisters of Dorley,</em>which, while a novel and awesome concept in theory, is honestly <em>terrible</em> if you have an introject from that story. </p>
+<p>Others find themselves trapped in a basement — particularly, the forcefem basement from Alyson Greaves’ <em>Sisters of Dorley,</em> which, while a novel and awesome concept in theory, is honestly <em>terrible</em> if you have an introject from that story. </p>
 <p>Finding safe ground might be a good first step. LB Lee’s <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1049746.html">Headspace Discovery and Defence</a> might be helpful for plurals who find that headspace is too rough right now. </p>
