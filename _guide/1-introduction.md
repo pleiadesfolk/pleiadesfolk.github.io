@@ -12,7 +12,7 @@ order: 1
 
 <p>Maybe you’re here because you heard a warm voice somewhere in the back of your head. Maybe you’ve been seeing something that you seem to have written but have no memory of writing. Maybe you’re here because a friend encouraged you to talk to the corner of your mind that loves you. Maybe you’ve been engrossed in an imaginary world that you’re outlining on the page, and bam! there’s 8,000 words on the screen and your fingers hurt. Maybe you got sent this after saying “part of me thinks…” to your plural friend too many times.</p>
 
-<p style="text-align: center; font-family:'Story Script'; font-size:3em margin: 1em 0px 1em">Don't be alarmed!</p>
+<p style="text-align: center; font-family:'Story Script'; font-size:3em; margin: 1em 0px 1em">Don't be alarmed!</p>
 
 <p>The Constant Companion Handbook is, well, here.</p><p>The truth is, plurality isn’t going to be something that will radically change who you are.</p>
 
