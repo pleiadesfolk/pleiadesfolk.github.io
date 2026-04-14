@@ -148,7 +148,10 @@ layout: others
 </div> 
 <br>
 
-<p style="text-align:center; margin: 0 25% 0;">This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. </p> 
+<p style="text-align:center; margin: 0 25% 0;"><img src="/assets/media/forlyra.gif" title="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" style="width:24px;">
+<br><br>
+This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. 
+</p> 
 
 <hr>
 

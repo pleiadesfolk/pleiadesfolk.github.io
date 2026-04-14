@@ -22,7 +22,7 @@ order: 1
 
 <p>If you’re plural, understand that plurality, as a framework and a state of being, will not change who you are much — but you’ll learn to see who you are much more clearly.</p>
 
-<p>If you’re not plural — then treat this guide as a way for you to practice more mindfulness. A lot of the exercises — in listening to yourself, in building a safe imaginary space for you to retreat to —&nbsp;are useful for singlets too! And we do hope that you get a greater sense of how folk that are plural live their lives.</p>
+<p>If you’re not plural — then treat this guide as a way for you to practice more mindfulness. A lot of the exercises — in listening to yourself, in building a safe imaginary space for you to retreat to — are useful for singlets too! And we do hope that you get a greater sense of how folk that are plural live their lives.</p>
 
 <p>So, a requisite disclaimer:</p>
 
@@ -31,6 +31,10 @@ order: 1
 <p><strong>We’re also writing about plurality mostly through a transgender (mostly transfeminine-heavy) lens. </strong>To us, adopting this framework of mind — one that helps explain a lot about how memory, self and identity works — won’t immediately resolve issues.</p>
 
 <p>If you have a part that constantly hurts the body, or lashes out, or often takes over and causes damage, and if you have a part that you find that’s constantly in conflict with each other, this framework will not be an immediate salve. In effect, you might find that things get <em>worse</em> before they get better.</p>
+
+<p>This isn't us discouraging you from seeking the rest of your selves. You have to work with each other in order to heal from what you've gone through in the past; this framework will help with that. This is ultimately a tool for communication between selves, and it's important to keep that in mind.</p>
+
+<p>We'd be remiss to add that there's quite a bit of whole of brain issues that won't be solved here. If you think you have ADHD, the whole system likely suffers from ADHD, to various degrees. Same goes if you have autism or are neurodivergent.</p>
 
 <p>It’s also important to note that this process is not for people who are in physically and psychologically unsafe situations. If you’re living with family that’s unwelcome of your existence — especially if you’re a trans person — being selves-aware might be difficult especially if part of you is there to help you survive.</p>
 
