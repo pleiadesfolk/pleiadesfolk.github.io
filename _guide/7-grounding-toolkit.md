@@ -93,7 +93,7 @@ Two methods do stand out in terms of grounding and intentionality (the third one
 
 #### **One hand at heart, one at navel**
 
-<div class="img-figure"><img src="/assets/media/navel-chest.png" alt="A figure of a woman in a reiki position, with one hand on her chest and the other on her navel."><p class="img-caption">Something like this.</p></div>
+<div class="img-figure"><img src="/assets/media/navel-chest.png" title="A figure of a woman in a reiki position, with one hand on her chest and the other on her navel."><p class="img-caption">Something like this.</p></div>
 
 From the Dreamwriters:
 
@@ -105,7 +105,7 @@ The hand at heart and navel technique helps you breathe from your diaphragm, whi
 
 #### **Foot sandwich**
 
-<div class="img-figure"><img src="/assets/media/foot-sandwich.png" alt="A figure of a foot being clasped by two hands."><p class="img-caption">Make sure your legs are in a folded 4 position.</p></div>
+<div class="img-figure"><img src="/assets/media/foot-sandwich.png" title="A figure of a foot being clasped by two hands."><p class="img-caption">Make sure your legs are in a folded 4 position.</p></div>
 
 Here’s what the Dreamwriters have had to say about this technique:
 
