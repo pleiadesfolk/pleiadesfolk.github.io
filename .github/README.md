@@ -1,3 +1,5 @@
+This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, _lipu linluwi pona_ would not exist. May it walk in dreams. 
+
 # lipu linluwi pona: The Constant Companions Handbook
 
 _lipu linluwi pona_ is a handbook that we’ve written for new plural folk who’ve begun to discover their own plurality, or are struggling with their plurality and need help with understanding themselves.

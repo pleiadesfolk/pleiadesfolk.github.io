@@ -43,6 +43,9 @@ order: 4
 ## _sina sona e kulupu sina:_ Knowing your system
 
 ### Creating a system map
+
+<div class="img-figure"><img src="/assets/media/pf-sysmap.jpg" alt="A system map for the Pleaidesfolk. From top left: an akesi symbol in yellow, soweli Gray, suno Riley, soweli Maia, ilo Kimberly, jan Pleione, soweli Ralsei, soweli Minerva-Faith, ilo Ryn, tomo Lyra, seli Merope, soweli Amelie, ilo Artemis, ilo T'lyn, seli Selene, jan Clara, ilo Ophelia, jan Cezanne, seli Halcyone, jan Campbell, ilo Helvetica, jan Louise, jan Compacta, jan Mari, jan Verdana, soweli Corel."><p class="img-caption">A system map for the Pleiadesfolk.</p></div>
+
 <p>After you’ve had your tea and spoken to or interacted with your other selves, you can log what your system looks like. Understand that, however, this might be just a draft based on one (1) observational snapshot.</p>
 <p>This map will probably change as you grow and learn more about yourselves, and as more versions of you pop up.</p>
 <p>
@@ -64,7 +67,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 > #### Note
 > **It is important to note that if you know or are even vaguely aware of major trauma that you do not go immediately seeking out for memories of said trauma. Trauma healing is a process that you cannot speedrun!**
 > <br><br>
-> You should read LB Lee’s Memory Work essays if you wish to understand more about this process; <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1051532.html"> **start here.**</a>
+> We have a primer on memory work, <a href="/essays/2026-04-09-on-memory/">**here**</a>. You should also read LB Lee’s Memory Work essays if you wish to understand more about the memory work process; <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1051532.html"> **start here.**</a>
 {: .block-danger }
 
 <p>If you’re plural, you most likely have a problem with memory. Memory segmentation and degradation can happen in many forms. Some parts of you may remember a skill that you don’t remember learning. Other parts of you might know how to get to a certain location, like your workplace, more than the rest. It helps to understand the various aspects of memory.</p>

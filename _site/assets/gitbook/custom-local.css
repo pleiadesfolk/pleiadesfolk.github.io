@@ -445,11 +445,13 @@
 
 .markdown-section h3 {
     font-family: 'Old Standard TT', serif;
+	font-weight: 400;
+    font-style: normal;
 }
 
 .markdown-section h4 {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -457,6 +459,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
 }
+
 .markdown-section a {
     font-weight: 500;
     text-decoration: underline;

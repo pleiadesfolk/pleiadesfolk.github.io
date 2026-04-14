@@ -63,6 +63,19 @@
     }
 }
 
+.img-caption {
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.img-figure {
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+    padding: 5px;
+}
+
 /* Search input text colour — search-pro plugin sets #book-search-input background
    to #333333, so the inherited dark sidebar text colour is invisible. */
 #book-search-input input,
@@ -814,6 +827,41 @@ pre:has(code.language-mermaid[data-processed="true"]) {
   100% {
     opacity: 1;
   }
+}
+
+/* ===== Box breathing theming ===== */ 
+
+@keyframes box-breath {
+  0%, 75%, 100% {
+    transform: scale(.3);
+  }
+  25%, 50% {
+    transform: scale(1);
+  }
+}
+
+.box-breathing {
+  position: relative;   /* stays in flow; anchors ::after */
+  width: 25vmin;
+  height: 25vmin;
+  margin: 100px auto;       /* centres the block horizontally */
+  border-radius: 50%;
+  border: 5px solid #555555;
+}
+
+.box-breathing::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22vmin;
+  height: 22vmin;
+  margin-top: -11vmin;  /* centres ::after within .box-breathing */
+  margin-left: -11vmin;
+  border-radius: 50%;
+  background: #ff99b3;
+  will-change: transform;
+  animation: box-breath 16s infinite;
 }
 
 /* ===== Search results theming ===== */
