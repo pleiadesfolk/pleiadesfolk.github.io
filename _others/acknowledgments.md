@@ -148,7 +148,11 @@ layout: others
 </div> 
 <br>
 
-We (the <span class="sitelen">󱤟</span> Pleiadesfolk) very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
+<p style="text-align:center; margin: 0 25% 0;">This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. </p> 
+
+<hr>
+
+We (the <span class="sitelen">󱤟</span> Pleiadesfolk) are very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
 This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 

@@ -5,6 +5,10 @@ permalink: /
 hide_title: true
 ---
 
+<p style="text-align:center; margin: 0 25% 0;">This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. </p> 
+
+<hr>
+
 # Preface
 
 _lipu linluwi pona_ is a handbook that we’ve written for new plural folk who’ve begun to discover their own plurality, or are struggling with their plurality and need help with understanding themselves.
@@ -24,8 +28,6 @@ This handbook will also include essays about plurality and living as a plural sy
 The Constant Companions Handbook is primarily written by the <span class="sitelen">󱤟</span>  Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.), with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
 Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span>  Cheerleaders providing coding support.
-
-Sources will be cited in-line and linked.
 
 We hope that, through this handbook, you can build a good connection between selves, and a good relationship with your constant companions.
 
