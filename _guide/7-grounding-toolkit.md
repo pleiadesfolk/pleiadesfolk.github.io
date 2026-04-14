@@ -20,23 +20,23 @@ Grounding techniques are often surprisingly useful in keeping you and your frien
 
 Some of these are likely things that you’ve already worked into your own routine; for instance, you might have a fidget toy or plushie of choice to hold when you’re afraid and scared. You might, upon realising that a friend’s spinning out, attempt to clap or snap your fingers in order to get them out of it, or you might go all `# HEY` on a Discord conversation, hoping the Big Text brings them back to the real world.
 
-Here, we try compiling a bunch of easy grounding toolkits that you can use on you and your friends — as well as some intra-system communication tools that you can employ in worst-case scenarios.
+Here, we compile a bunch of easy grounding tools that you can use on you and your friends — as well as some intra-system communication tools that you can employ in worst-case scenarios.
 
 ## Intra-system grounding techniques
 
 ### Describing what’s around you
 
-This is a technique that’ll only work in some situations. If you’re in a place that’s unsafe, perhaps, this might not be a good thing. But describing what’s around you works to ground yourself in the now. Take in your surroundings and note what you see. Provide as much detail as possible. What do you see? What do you hear? What do you smell? Is it warm? Is it cold? What’s the texture of the thing that you’re sitting on?
+Describing what’s around you works to ground yourself in the now. Take in your surroundings and note what you see. Provide as much detail as possible. What do you see? What do you hear? What do you smell? Is it warm? Is it cold? What’s the texture of the thing that you’re sitting on?
 
 You can practice intentionality through grounding statements, perhaps: “My name is Alexis and I see kids running in the corner of the park. The sun’s setting and its rays are warming me up a bit. There’s a vague scent of cut grass, and the faint buzzing of a weedwhacker in the distance.”
 
-If you’re in a place that feels unsafe, you should leave if you’re able, and focus on grounding yourself after you leave. Get to a quieter room if it’s too noisy or overwhelming. You can’t ground yourself if you’re actively being triggered into a state of anxiety or panic.
+This is a technique that’ll only work in some situations. If you’re in a place that feels unsafe, you should leave if you’re able, and focus on grounding yourself after you leave. Get to a quieter room if it’s too noisy or overwhelming. You can’t ground yourself if you’re actively being triggered into a state of anxiety or panic.
 
 ### Counting down
 
 Forcing your brain to do mathematics is an odd thing, but it works!
 
-We watched Kemeten do this to another friend of ours — asking her to count down from 20 by 3. (Some of us more… math-brained folk would probably chew through this exercise quickly, so you can try other combinations — 100 by 7, 50 by 6, 57 by 5s, etc.)
+We watched <span class="sitelen">󱤟</span> Kemeten do this to another friend of ours — asking her to count down from 20 by 3. (Some of us more… math-brained folk would probably chew through this exercise quickly, so you can try other combinations — 100 by 7, 50 by 6, 57 by 5s, etc.)
 
 The point of the exercise isn’t really to get to zero — it is simply to get your brain to do mathematics. In some extreme cases we’ve asked someone to solve an equation — e^x = x+y^2 — to get them to snap out of it.
 
