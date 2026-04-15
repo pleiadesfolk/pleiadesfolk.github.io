@@ -64,7 +64,12 @@ Focus on your posture. You should sit up straight — that will help you take de
 
 Slowly exhale, and focus on your intentionality. If you’re not sure of who you are, use your body name, perhaps. “I am Ellis, and I am breathing out.” The aim is to be conscious of what you’re doing at the moment.
 
-<div class="box-breathing"></div>
+<div class="box-breathing">
+    <span class="bb-span1">Inhale</span>
+    <span class="bb-span2">Hold</span>
+    <span class="bb-span3">Exhale</span>
+    <span class="bb-span4">Hold</span>
+</div>
 
 Follow the movement of the circle above.
 
@@ -139,6 +144,8 @@ LB also recommends a pocket crisis plan that you can keep in your wallet or phon
 
 ### Reboot cards
 
+<div class="img-figure"><img src="/assets/media/reboot-card.png" alt="An example of a reboot card. It says — Hey, welcome! Sorry if you feel confused. Our chosen name is Maxine Scott. Our legal name is (data obscured) Giordano. We live on 368 Anemone Street, Vista Primavera, San Diego, CA. It is the year 2012. If you face a problem, our emergency contact is Taylor Scott. Her phone number is (555) 1223-8876. If you can reach headspace, look for the fox!"><p class="img-caption">An example of a (fictional) reboot card.</p></div>
+
 In cases in which parts of you might forget essential information, a reboot card is often recommended.
 
 First mentioned in The Dissociative Identity Sourcebook, reboot cards are emergency cards that tell whoever’s fronting basic information about your current self.
@@ -147,6 +154,6 @@ You can include the current year, your current place of living and who to contac
 
 This will help if parts of you experience some time weirdness.
 
-You could encourage new headmates to reach for headspace if you’ve set one up on your reboot card. If you have a headmate that acts a bit like a beacon, for instance, you can ask them to look for that headmate, too.
+You could encourage new headmates to reach for headspace on your reboot card. If you have a headmate that acts a bit like a beacon, for instance, you can ask them to look for that headmate, too.
 
 Find out how you can make [reboot cards here.](https://dreamwritersdreaming.neocities.org/GuideBodyFocusCommunicationMemory#:~:text=tactile%20grounding%20tools-,Reboot%20Cards,-This%20is%20a)

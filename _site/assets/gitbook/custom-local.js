@@ -36,3 +36,30 @@ function initStarfield() {
 }
 
 gitbook.events.on('page.change', initStarfield);
+
+function initHeadingAnchors() {
+    document.querySelectorAll('.markdown-section h2, .markdown-section h3').forEach(function(heading) {
+        if (!heading.id || heading.querySelector('.heading-anchor')) return;
+        var a = document.createElement('a');
+        a.className = 'heading-anchor';
+        a.href = '#' + heading.id;
+        a.setAttribute('aria-label', 'Link to this section');
+        var icon = document.createElement('i');
+        icon.className = 'fa fa-link';
+        a.appendChild(icon);
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = window.location.origin + window.location.pathname + '#' + heading.id;
+            history.pushState(null, '', '#' + heading.id);
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(function() {
+                    a.classList.add('copied');
+                    setTimeout(function() { a.classList.remove('copied'); }, 1500);
+                });
+            }
+        });
+        heading.appendChild(a);
+    });
+}
+
+gitbook.events.on('page.change', initHeadingAnchors);

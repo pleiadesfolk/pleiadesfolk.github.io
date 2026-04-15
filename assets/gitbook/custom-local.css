@@ -538,3 +538,54 @@ a:has(.logo) {
     text-decoration: none;
 }
 
+/* Anchor link buttons on headings */
+.markdown-section h2,
+.markdown-section h3 {
+    position: relative;
+}
+
+.heading-anchor {
+    position: relative;
+    margin-left: 0.4em;
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #333333 !important;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.book.color-theme-2 .heading-anchor {
+    color: #f6f6f6 !important;
+}
+
+.heading-anchor:hover {
+    text-decoration: none;
+}
+
+/* "Copied!" tooltip */
+.heading-anchor::after {
+    content: '';
+    position: absolute;
+    background: #6b9eea;
+    color: #f6f6f6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.5em;
+    line-height: 2.5em;
+    padding: 0px 15px;
+    border-radius: 30px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    top: 50%;
+    left: calc(100% + 0.5em);
+    transform: translateY(-50%);
+}
+
+.heading-anchor.copied::after {
+    content: 'Copied~';
+    opacity: 1;
+}
+
