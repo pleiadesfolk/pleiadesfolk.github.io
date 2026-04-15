@@ -58,13 +58,13 @@ And that’s entirely normal.
 
 A lot of people think headmates work like this:
 
-<img src="/assets/media/fig-1a.png" title="A series of coloured dots in a big circle. One says "imm blue". Another says "I'm Red". A third says "I think you should be doing something else."">
+<img src="/assets/media/fig-1a.png" alt="A series of coloured dots in a big circle. One says "imm blue". Another says "I'm Red". A third says "I think you should be doing something else."">
 
 Where in this figure, the big circle is your brain and your body, and the little ones are headmates.
 
 In truth, you and your headmates probably share a lot of overlap, like this:
 
-<img src="/assets/media/fig-1b.png" title="A series of coloured dots in a big circle, now overlapping with each other. One says "imm blue". Another says "I'm Red". A third says "I still think you should be doing something else."">
+<img src="/assets/media/fig-1b.png" alt="A series of coloured dots in a big circle, now overlapping with each other. One says "imm blue". Another says "I'm Red". A third says "I still think you should be doing something else."">
 
 People can be combinations of other people and still be their own person. People can take features from others but leave part of them. People can overlap!
 

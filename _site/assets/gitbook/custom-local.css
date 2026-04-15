@@ -532,3 +532,9 @@
     justify-content: right;
 }
 
+a:has(.logo) {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+}
+
