@@ -39,3 +39,7 @@ Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with 
 We hope that, through this handbook, you can build a good connection between selves, and a good relationship with your constant companions.
 
 Happy reading!
+
+<nav class="page-nav">
+  <a class="page-nav-btn next" style="text-decoration:none;" href="/guides/introduction">Introduction →</a>
+</nav>
