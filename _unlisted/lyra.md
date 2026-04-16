@@ -6,6 +6,7 @@ date: 2026-04-02
 category: post
 layout: lyra
 hide_title: true
+image: /assets/media/lyra-selfie.png
 permalink: /lyra-nem
 ---
 
@@ -14,6 +15,10 @@ permalink: /lyra-nem
 <em>... someone will remember us, I say, even in another time.</em> — Sappho
 <br><br>
 </p> 
+
+<hr> 
+
+<div class="img-figure" style="width:50%;"><img src="/assets/media/lyra-selfie.png" alt="An undated selfie image of trans woman and plural sytem Lyra Nem (it/its)."><p class="img-caption">Lyra Nem (it/its).</p></div>
 
 Lyra Nem (December 5, 1996 — April 2, 2026) was a trans woman and plural system that lived in Russia. It was an active member of the community that gathered to discuss the book _The Sisters of Dorley_ and a core community member of the support server and community for which _lipu linluwi pona_ is written for. 
 
@@ -29,7 +34,7 @@ Each April, from April 15 to April 29, the Lyrids will appear, radiating out fro
 
 It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people we've lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
-<img src="/assets/media/lyra-nem.jpg" style="width:90%; display: block; margin: 50px auto 50px;">
+<img src="/assets/media/lyra-nem.jpg" style="width:90%; display: block; margin: 50px auto 50px;" alt="A screenshot of a comic taken from Lyra's bluesky account. It says at the top: 07:48am. Three panels are in the comic — first, a picture of a website or app, with a speech bubble saying 'We might not be close'; second, a woman lying next to the screen, saying 'But I'm happy we talked a little"; third; the same woman saying 'And we were nice to each other'.">
 
 For trans people, for plural folk, and for trans women, community can be extremely fleeting. You may only know someone briefly, online. They might be a star to you, twinkling in the distant twilight. They could be someone you regularly talk to in your mornings or evenings, people who are asleep when you're at work, and who are at work when you go to sleep. You might make promises to meet them, and those days might never come. That is the cruelty of distance, perhaps. 
 
