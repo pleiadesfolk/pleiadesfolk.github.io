@@ -27,7 +27,7 @@ It named itself after the constellation, Lyra, which you can see above in our si
 
 Each April, from April 15 to April 29, the Lyrids will appear, radiating out from the constellation. They're seen all over the world, but is most brightly and clearly visible in the northern hemisphere. The Lyrids are some of the strongest annual shower of meters from debris of a long-period comet. 
 
-It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people we've lost. We hope you scroll up, perhaps. Watch the meteors for a bit. Take a moment to reflect on them. Sit here with the stars. And we hope you can keep them in your memory, just as we have kept Lyra Nem's in ours. 
+It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people we've lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
 <img src="/assets/media/lyra-nem.jpg" style="width:70%; display: block; margin: 50px auto 50px;">
 
