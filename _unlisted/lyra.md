@@ -19,7 +19,7 @@ Lyra Nem (December 5, 1996 - April 2, 2026) was a trans woman and plural system 
 
 We (the Pleiadesfolk) did not know it well. Many of the things we learned about it, we learnt it after hearing of its passing.
 
-It was a plural system. It held deep bonds with many around their community. It described itself as a computer girlie, and an "anarchist to the bone". It was a wonderful, kind and caring friend. It enjoyed listening to [Darren Korb](https://supergiantgames.bandcamp.com/), [Sea Power](https://www.youtube.com/channel/UCEIUiqv1M4aJI-3j8TZpc5g), [Ben Prunty](https://benprunty.bandcamp.com/track/impulse) and [Psynwav](https://www.youtube.com/watch?v=MAW84RRNw84&t=1167s), among [others](https://www.youtube.com/watch?v=76SjJqgLzDg). It loved Disco Elysium. It was a Trekkie. It liked robotfic, in particular, (kimmy) by Alyson Greaves, Project Hail Mary by Andy Weir, and other works. 
+It was a plural system. It held deep bonds with many around their community. It described itself as a computer girlie, and an "anarchist to the bone". It was a wonderful, kind and caring friend. It enjoyed listening to [Darren Korb](https://supergiantgames.bandcamp.com/), [Sea Power](https://www.youtube.com/channel/UCEIUiqv1M4aJI-3j8TZpc5g), [Ben Prunty](https://benprunty.bandcamp.com/track/impulse) and [Psynwav](https://www.youtube.com/watch?v=MAW84RRNw84&t=1167s), among [others](https://www.youtube.com/watch?v=76SjJqgLzDg). It loved Disco Elysium. It was a Trekkie. It liked robotfic, in particular, <em>(kimmy)</em> by Alyson Greaves, <em>Project Hail Mary</em> by Andy Weir, and other works. 
 
 It knew of our Lyra (Lyra Ellis of the Pleiadesfolk). We never spoke much, but it knew of us, and we hope it saw us as a friend. 
 
