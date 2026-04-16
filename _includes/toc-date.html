@@ -52,6 +52,7 @@
 
             {% if site.ordered_collections %}
                 {% for label in site.ordered_collections %}
+                    {% if label == "unlisted" %}{% continue %}{% endif %}
                     {% if label == "essays" %}
                         {% assign col_docs = site[label] | reverse %}
                     {% else %}
@@ -85,6 +86,7 @@
                 {% endfor %}
             {% else %}
                 {% for collection in site.collections %}
+                    {% if collection.label == "unlisted" %}{% continue %}{% endif %}
                     {% if collection.label == "essays" %}
                         {% assign col_docs = collection.docs | reverse %}
                     {% else %}

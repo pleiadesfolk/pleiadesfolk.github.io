@@ -296,8 +296,8 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     /* border-color: rgba(0,0,0,.3);
     border-width: 2px;
     border-style: solid; */
-    background: -webkit-radial-gradient(circle at 120% 120%,#fff6d5, #c5b778, #264653, #333333)
-    background: -moz-radial-gradient(circle at 120% 120%,#fff6d5, #c5b778, #264653, #333333));
+    background: -webkit-radial-gradient(circle at 120% 120%,#fff6d5, #c5b778, #264653, #333333);
+    background: -moz-radial-gradient(circle at 120% 120%,#fff6d5, #c5b778, #264653, #333333);
     background: radial-gradient(circle at 120% 120%,#fff6d5, #c5b778, #264653, #333333);
 }
 
@@ -763,6 +763,14 @@ pre:has(code.language-mermaid[data-processed="true"]) {
 	background: radial-gradient(circle at 60% 130%, #fff6d5, #c5bf9f, #264563, #2d3c42, #333333);
 }
 
+.starfield-ly {
+	height: 60vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(circle at 60% 130%, #fff6d5, #c5bf9f, #264563, #2d3c42, #333333);
+}
+
 .starfield-img {
 	position: absolute;
     bottom: -1px;
@@ -771,26 +779,38 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     object-position: bottom center;
 }
 
-.starfield-light {
-  &:after, &:before {
-    content: "";
-    display: block;
-    position: absolute;
-  }
-  &:before {
-    width: 120%;
-    height: 120%;
-    top: 40%;
-    left: -25%;
-    background: radial-gradient(48.58% 48.58% at 49.96% 59.07%, #2d3c42 0%, rgba(28, 38, 41, 0.4) 43.23%, rgba(20, 26, 29, 0) 100%);
-  }
-  &:after {
-    width: 120%;
-    height: 100%;
-    top: 65%;
-    left: 25%;
-    background: radial-gradient(48.58% 48.58% at 49.96% 59.07%, #29424c 0%, rgba(33, 53, 62, 0.45) 38.02%, rgba(21, 34, 39, 0) 100%);
-  }
+.starfield-lyra-const {
+	position: absolute;
+    top:5%; 
+    left:5%;
+    max-width: 90%;
+    opacity: 100%;
+    z-index: 0;
+} 
+
+.starfield-light:after,
+.starfield-light:before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.starfield-light:before {
+  width: 120%;
+  height: 120%;
+  top: 40%;
+  left: -25%;
+  background: radial-gradient(48.58% 48.58% at 49.96% 59.07%, #2d3c42 0%, rgba(28, 38, 41, 0.4) 43.23%, rgba(20, 26, 29, 0) 100%);
+  z-index: 4;
+}
+
+.starfield-light:after {
+  width: 120%;
+  height: 100%;
+  top: 65%;
+  left: 25%;
+  background: radial-gradient(48.58% 48.58% at 49.96% 59.07%, #29424c 0%, rgba(33, 53, 62, 0.45) 38.02%, rgba(21, 34, 39, 0) 100%);
+  z-index: 3;
 }
 
 .star1 {
@@ -828,6 +848,94 @@ pre:has(code.language-mermaid[data-processed="true"]) {
     opacity: 1;
   }
 }
+
+.shooting-stars {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+}
+
+.shooting-star {
+  animation: 12s star-streak ease-out infinite;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 6;
+}
+
+.pause .shooting-star {
+  animation: none;
+}
+
+.shooting-star:before {
+  content: '';
+  transform: translateX(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  width: 150px;
+  height: 4px;
+  background: white;
+  background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0.3) 35%, rgba(24, 12, 56, 0.05) 100%);
+}
+
+.shooting-star--1 {
+  opacity: 0.7;
+  transform: rotate(-162deg) translateY(30px);
+  width: 3px;
+  height: 3px;
+  animation: 14s star-streak linear infinite;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.shooting-star--2 {
+  opacity: 0.4;
+  transform: rotate(-162deg) translateY(80px);
+  width: 2px;
+  height: 2px;
+  animation: 10s star-streak linear infinite;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+
+.shooting-star--3 {
+  opacity: 0.9;
+  transform: rotate(-162deg) translateY(50px);
+  width: 4px;
+  height: 4px;
+  animation: 18s star-streak linear infinite;
+  animation-delay: 9s;
+  animation-fill-mode: backwards;
+}
+
+.pause .shooting-star--1,
+.pause .shooting-star--2,
+.pause .shooting-star--3 {
+  animation: none;
+}
+
+@keyframes star-streak {
+	0% {
+		top: 0%;
+		left: -100%;
+	}
+	40%, 
+	100% {
+		top: 100%;
+		left: 200%;
+	}
+}
+
 
 /* ===== Box breathing theming ===== */ 
 

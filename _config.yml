@@ -63,11 +63,15 @@ collections:
   others:
     output: true
     permalink: /:collection/:path/
+  unlisted:
+    output: true
+    permalink: /:collection/:path/
 
 ordered_collections:
   - guide
   - essays
   - others
+  - unlisted
 
 page_width: 800px
 

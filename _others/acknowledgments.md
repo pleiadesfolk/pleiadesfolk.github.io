@@ -2,7 +2,7 @@
 title: Acknowledgements
 author: Ellis of the Pleiadesfolk
 date: 2026-04-09
-category: test
+category: Acknowledgements
 layout: others
 ---
 
