@@ -11,11 +11,11 @@ permalink: /lyra-nem
 
 <p style="text-align:center; margin: 0 25% 0;"><img src="/assets/media/forlyra.gif" title="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" style="width:24px;">
 <br><br>
-<em>Someone will remember us, even in another time.</em> - Sappho
+<em>... someone will remember us, I say, even in another time.</em> — Sappho
 <br><br>
 </p> 
 
-Lyra Nem (December 5, 1996 - April 2, 2026) was a trans woman and plural system that lived in Russia. It was an active member of the community that gathered to discuss the book _The Sisters of Dorley_ and a core community member of the support server and community for which _lipu linluwi pona_ is written for. 
+Lyra Nem (December 5, 1996 — April 2, 2026) was a trans woman and plural system that lived in Russia. It was an active member of the community that gathered to discuss the book _The Sisters of Dorley_ and a core community member of the support server and community for which _lipu linluwi pona_ is written for. 
 
 We (the Pleiadesfolk) did not know it well. Many of the things we learned about it, we learnt it after hearing of its passing.
 
@@ -29,9 +29,9 @@ Each April, from April 15 to April 29, the Lyrids will appear, radiating out fro
 
 It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people we've lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
-<img src="/assets/media/lyra-nem.jpg" style="width:70%; display: block; margin: 50px auto 50px;">
+<img src="/assets/media/lyra-nem.jpg" style="width:90%; display: block; margin: 50px auto 50px;">
 
-For trans people, for plural folk, and for trans women, community can be extremely fleeting. You may only know someone briefly, online. They might be a star to you, twinkling in the distant twilight. They could be someone you regularly talk to in your mornings or evenings, people who are asleep when you're at work, and who are at work when you go to sleep. You might never get to meet them. You might make promises to meet them, and those days might never come. That is the cruelty of distance, perhaps. 
+For trans people, for plural folk, and for trans women, community can be extremely fleeting. You may only know someone briefly, online. They might be a star to you, twinkling in the distant twilight. They could be someone you regularly talk to in your mornings or evenings, people who are asleep when you're at work, and who are at work when you go to sleep. You might make promises to meet them, and those days might never come. That is the cruelty of distance, perhaps. 
 
 But we encourage you to never stop loving. Community is, as Lyra once said, "something that we communally weave together... Every one of us brings a small strand and we all build something beautiful." 
 
