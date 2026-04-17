@@ -40,11 +40,13 @@ The stars Lyra named itself after might be calling out to you.
 
 For trans people, for plural folk, and for trans women, community can be extremely fleeting. You may only know someone briefly, online. They might be a star to you, twinkling in the distant twilight. They could be someone you regularly talk to in your mornings or evenings, people who are asleep when you're at work, and who are at work when you go to sleep. You might make promises to meet them, and those days might never come. That is the cruelty of distance, perhaps. 
 
-But we encourage you to never stop loving. Community is, as Lyra once said, "something that we communally weave together... Every one of us brings a small strand and we all build something beautiful." 
+But we encourage you to never stop loving. Community is, as Lyra once said, "something that we communally weave together... Every one of us brings a small strand and we all build something beautiful."
 
 You are part of that strand, dear reader, and you, with your presence, will weave your way into another's heart, just as Lyra did for us, and for the people around it.
 
 It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people you might have lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
+
+o, sina awen olin. o, sina awen linluwi. o, mi ale pali e kulupu pona!
 
 Never stop loving. Never stop weaving. And together, we can build something beautiful.
 
@@ -52,6 +54,12 @@ May Lyra walk in dreams.
 
 <hr>
 
-<a href="https://ashr202.com/cool-shit/in-memoriam/lyra" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">Leave a memorial note here, if you'd like.</a>
+<a href="https://ashr202.com/cool-shit/in-memoriam/lyra" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">Leave a memorial note here, if you'd like</a>
+
+<a href="https://www.patreon.com/posts/bereavement-155847757" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Punk Rock Moms' memorial for Lyra</a>
+
+<a href="https://trans-moonbeam.neocities.org/posts/0234-07-24-Adieu-cher.e-ami.e" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Trans Moonbeams' memorial for Lyra</a>
+
+<a href="https://subshellhound.nekoweb.org/in-memoriam/lyra.html" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Sky System's memorial for Lyra</a>
 
 <a href="/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center;text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">Return to the Handbook</a>
