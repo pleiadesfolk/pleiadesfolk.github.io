@@ -28,11 +28,13 @@ It was a plural system. It held deep bonds with many around their community. It 
 
 It knew of our Lyra (Lyra Ellis of the Pleiadesfolk). We never spoke much, but it knew of us, and we hope it saw us as a friend. 
 
-It named itself after the constellation, Lyra, which you can see above in our simulated starscape.
+Like Lyra Ellis, it named itself after the constellation, Lyra. 
 
 Each April, from April 15 to April 29, the Lyrids will appear, radiating out from the constellation. They're seen all over the world, but is most brightly and clearly visible in the northern hemisphere. The Lyrids are some of the strongest annual shower of meters from debris of a long-period comet. 
 
-It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people you might have lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
+You can see both above in our simulated starscape — but on the off chance that you do live in a place where there isn't much light pollution, in the middle of spring, on a dark, moonless night, look up. 
+
+The stars Lyra named itself after might be calling out to you.
 
 <img src="/assets/media/lyra-nem.jpg" style="width:90%; display: block; margin: 50px auto 50px;" alt="A screenshot of a comic taken from Lyra's bluesky account. It says at the top: 07:48am. Three panels are in the comic — first, a picture of a website or app, with a speech bubble saying 'We might not be close'. Second, a woman lying next to the screen, saying 'But I'm happy we talked a little'. Third, the same woman saying 'And we were nice to each other'.">
 
@@ -40,7 +42,9 @@ For trans people, for plural folk, and for trans women, community can be extreme
 
 But we encourage you to never stop loving. Community is, as Lyra once said, "something that we communally weave together... Every one of us brings a small strand and we all build something beautiful." 
 
-You are part of that strand, dear reader, and you, with your presence, will weave your way into another's heart, just as Lyra did for us, and for the people around it. 
+You are part of that strand, dear reader, and you, with your presence, will weave your way into another's heart, just as Lyra did for us, and for the people around it.
+
+It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people you might have lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
 Never stop loving. Never stop weaving. And together, we can build something beautiful.
 
