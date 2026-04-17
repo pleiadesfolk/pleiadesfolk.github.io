@@ -159,7 +159,7 @@ We (the <span class="sitelen">󱤟</span> Pleiadesfolk) are very thankful for <s
 
 This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-The Lighthouse motif and the site’s icons is created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
+The Lighthouse motif and the site’s icons were created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
 Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 

@@ -9,6 +9,10 @@ layout: post
 
 by <span class="sitelen">󱤑</span> Pleione Ellis of the <span class="sitelen">󱤟</span> Pleiadesfolk
 
+> **Content advisory:** 
+> Some elements of plural community discourse is discussed below.
+{: .block-warning }
+
 When we first discovered our plurality, we were… unusually accepting of it all.
 
 Coming after a breakdown — a three day bout of crying after our orchiectomy, in which different parts of us cried their hearts out about a recent job opportunity we lost because we were transgender — we poured our feelings into what people would call a good novel, the (kimmy) transfeminine fanfiction named [_go to sleep, Kimberly_](https://archiveofourown.org/works/69597136). 

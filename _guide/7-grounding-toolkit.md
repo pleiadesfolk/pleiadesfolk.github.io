@@ -8,6 +8,10 @@ permalink: /guide/grounding
 order: 7
 ---
 
+> **Content advisory:** 
+> We discuss panic attacks and anxiety elements (as a way to ground yourself during them) here. Take care!
+{: .block-warning }
+
 There are times you might be feeling like you’re lost in a turbulent sea.
 
 The waves keep crashing around you, and the rain’s battering your little life raft. Everything’s a mess. Look outside and the storm clouds gather above, dark, forbidding. The anxiety within you is bubbling up, now, threatening to take over all of your senses, and it’s hard to focus, perhaps; you call for the crisis manager to come forward and nothing happens.

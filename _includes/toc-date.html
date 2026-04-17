@@ -43,7 +43,7 @@
                 </a>
                 {% if site.toc.enabled %}
                     {% if site.toc.enabled_index %}
-                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                     {% endif %}
                 {% endif %}
             </li>
@@ -74,7 +74,7 @@
                             </a>
                             {% if site.toc.enabled %}
                                 {% if page.url == post.url %}
-                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                                 {% endif %}
                             {% endif %}
                         </li>
@@ -104,7 +104,7 @@
                             </a>
                             {% if site.toc.enabled %}
                                 {% if page.url == post.url %}
-                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                                 {% endif %}
                             {% endif %}
                         </li>

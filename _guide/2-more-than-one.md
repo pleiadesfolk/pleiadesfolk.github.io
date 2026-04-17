@@ -8,6 +8,10 @@ permalink: /guide/more-than-one
 order: 2
 ---
 
+>  **Content advisory:** 
+> We discuss dissociation in this section of the guide. 
+{: .block-warning }
+
 <p>You’ve probably heard of the term "more than one", most likely <a target="_blank" rel="noopener noreferrer nofollow" href="https://dragonsroost.neocities.org/essay/edu/AmIPlural.pdf">on the Am I Plural guide</a> by The Dragonheart Collective! Plurality is being “more than one.”</p>
 
 <p>What exactly is “more than one”? Essentially, it’s a state where there’s more than one consciousness around you. Maybe you have a computer terminal that helps you get through tough days. Maybe you have an introject of a character you fell in love with when you were twelve. Maybe you just hear a voice sometimes and it feels strange.</p>

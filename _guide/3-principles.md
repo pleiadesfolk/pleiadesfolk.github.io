@@ -8,6 +8,10 @@ permalink: /guide/principles
 order: 3
 ---
 
+>  **Content advisory:** 
+> We talk about misgendering and transphobia in this section, and we offer some examples of what disordered systems may look like. Read with care!
+{: .block-warning }
+
 So you might be plural! And you’re wondering: how? How does plurality happen?
 
 You ever meet a challenging situation? Maybe something big happened in school or at work, and you didn’t know how exactly to deal with it? Maybe you’ve been told to fake it till you make it, and you faked it but still don’t remember how you actually faked it? Or maybe, you daydreamed a lot in school, and your mind wandered a lot while on road trips, going on the bus or on the train, or while stuck in traffic, and you make up characters that interact with you. Or you imagined yourself as a character you’ve made up in tabletop RPG sessions, and that character’s come to life somehow.
@@ -58,13 +62,13 @@ And that’s entirely normal.
 
 A lot of people think headmates work like this:
 
-<img src="/assets/media/fig-1a.png" alt="A series of coloured dots in a big circle. One says "imm blue". Another says "I'm Red". A third says "I think you should be doing something else."">
+<img src="/assets/media/fig-1a.png" alt="A series of coloured dots in a big circle. One says 'imm blue'. Another says 'I'm Red'. A third says 'I think you should be doing something else.'">
 
 Where in this figure, the big circle is your brain and your body, and the little ones are headmates.
 
 In truth, you and your headmates probably share a lot of overlap, like this:
 
-<img src="/assets/media/fig-1b.png" alt="A series of coloured dots in a big circle, now overlapping with each other. One says "imm blue". Another says "I'm Red". A third says "I still think you should be doing something else."">
+<img src="/assets/media/fig-1b.png" alt="A series of coloured dots in a big circle, now overlapping with each other. One says 'imm blue'. Another says 'I'm Red'. A third says 'I still think you should be doing something else.'">
 
 People can be combinations of other people and still be their own person. People can take features from others but leave part of them. People can overlap!
 
