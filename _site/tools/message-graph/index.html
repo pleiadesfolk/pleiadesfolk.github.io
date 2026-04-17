@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f0f13;
+      color: #e0dde8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+    h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; color: #c9b8e8; }
+    textarea {
+      width: 100%;
+      max-width: 640px;
+      height: 200px;
+      background: #1a1a24;
+      border: 1px solid #2e2a40;
+      border-radius: 8px;
+      color: #e0dde8;
+      font-family: monospace;
+      font-size: 0.8rem;
+      padding: 0.75rem;
+      resize: vertical;
+      outline: none;
+    }
+    textarea:focus { border-color: #7c5cbf; }
+    .controls { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+    button {
+      padding: 0.5rem 1.25rem;
+      background: #7c5cbf;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button:hover { background: #9070d8; }
+    button.secondary {
+      background: #1a1a24;
+      border: 1px solid #2e2a40;
+      color: #9990b8;
+    }
+    button.secondary:hover { background: #2e2a40; color: #e0dde8; }
+    .switch-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: #9990b8;
+      cursor: pointer;
+      user-select: none;
+    }
+    .switch-label input { display: none; }
+    .switch-track {
+      width: 36px;
+      height: 20px;
+      background: #2e2a40;
+      border-radius: 10px;
+      position: relative;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .switch-track::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #9990b8;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .switch-label input:checked ~ .switch-track { background: #7c5cbf; }
+    .switch-label input:checked ~ .switch-track::after { transform: translateX(16px); background: #fff; }
+    .switch-label:has(input:checked) { color: #e0dde8; }
+    #treemap-wrap {
+      width: 100%;
+      max-width: 900px;
+      background: #1a1a24;
+      border: 1px solid #2e2a40;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    svg { width: 100%; display: block; }
+    .cell { cursor: pointer; }
+    .cell rect {
+      stroke: #0f0f13;
+      stroke-width: 2px;
+      transition: opacity 0.15s;
+    }
+    .cell:hover rect { opacity: 0.8; }
+    .cell text { pointer-events: none; dominant-baseline: middle; }
+    .label-name { font-size: 13px; font-weight: 600; fill: #fff; }
+    .label-count { font-size: 11px; fill: rgba(255,255,255,0.7); }
+    .excluded-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      max-width: 900px;
+      width: 100%;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #2e2a40;
+      border-radius: 20px;
+      padding: 0.2rem 0.5rem 0.2rem 0.75rem;
+      font-size: 0.78rem;
+      color: #c9b8e8;
+    }
+    .pill button {
+      background: none;
+      border: none;
+      color: #9990b8;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      line-height: 1;
+    }
+    .pill button:hover { background: none; color: #e07a7a; }
+    .tooltip {
+      position: fixed;
+      background: #1a1a24;
+      border: 1px solid #7c5cbf;
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.82rem;
+      color: #e0dde8;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.1s;
+      z-index: 10;
+    }
+    .error { color: #e07a7a; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Message Graph</h1>
+  <textarea id="input" spellcheck="false">[ldimv] Riley (14229 messages)
+[bwhsjj] Merope (4296 messages)
+[uwrvuk] Caitlyn (3714 messages)
+[jgngnb] Lyra (3585 messages)
+[fvjcyt] Kimberly (2116 messages)
+[rfyrbu] Ralsei (1017 messages)
+[jhgnef] Pleione (989 messages)
+[zxpoyy] Maia (635 messages)
+[oobozg] Selene (601 messages)
+[taekkg] T'lyn (540 messages)
+[fxanuo] Ryn (444 messages)
+[kztxyk] City (397 messages)
+[vscfbg] Helvetica (306 messages)
+[xhhwjb] Minerva (248 messages)
+[wxxwus] Artemis (201 messages)
+[cabroo] Halcyone (190 messages)
+[cpwyuy] Amelie (177 messages)
+[fuepfv] grey (167 messages)
+[zfzvvk] Ophelia (140 messages)
+[zkkwzf] Clara (132 messages)
+[phtcke] Faith (82 messages)
+[uvknxa] Lycoris (60 messages)
+[fsrefv] Verdana (59 messages)
+[cygzzy] Cezanne (50 messages)
+[tgtnvj] Louise (48 messages)</textarea>
+  <div class="controls">
+    <button onclick="render()">Render</button>
+    <label class="switch-label">
+      <input type="checkbox" id="chk-log" onchange="toggleLog()">
+      <span class="switch-track"></span>
+      Log scale
+    </label>
+    <button class="secondary" id="btn-reset" onclick="resetExcluded()" style="display:none">Restore all</button>
+  </div>
+  <p class="error" id="error"></p>
+  <div class="excluded-pills" id="pills"></div>
+  <div id="treemap-wrap" style="display:none">
+    <p id="member-count" style="font-size:0.85rem;color:#9990b8;margin-bottom:0.75rem"></p>
+    <svg id="treemap"></svg>
+  </div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    let logScale = false;
+    let excluded = new Set();
+    let allEntries = [];
+
+    function parse(text) {
+      const pattern = /\[(\w+)\]\s+(.+?)\s+\((\d+)\s+messages\)/g;
+      const entries = [];
+      let m;
+      while ((m = pattern.exec(text)) !== null) {
+        entries.push({ proxy: m[1], name: m[2], count: parseInt(m[3], 10) });
+      }
+      return entries;
+    }
+
+    function toggleLog() {
+      logScale = document.getElementById('chk-log').checked;
+      drawTreemap();
+    }
+
+    function exclude(proxy) {
+      excluded.add(proxy);
+      updatePills();
+      drawTreemap();
+    }
+
+    function restore(proxy) {
+      excluded.delete(proxy);
+      updatePills();
+      drawTreemap();
+    }
+
+    function resetExcluded() {
+      excluded.clear();
+      updatePills();
+      drawTreemap();
+    }
+
+    function updatePills() {
+      const container = document.getElementById('pills');
+      const resetBtn = document.getElementById('btn-reset');
+      container.innerHTML = '';
+      resetBtn.style.display = excluded.size ? 'inline-block' : 'none';
+      for (const proxy of excluded) {
+        const entry = allEntries.find(e => e.proxy === proxy);
+        if (!entry) continue;
+        const pill = document.createElement('div');
+        pill.className = 'pill';
+        pill.innerHTML = `${entry.name} <button onclick="restore('${proxy}')" title="Restore">✕</button>`;
+        container.appendChild(pill);
+      }
+    }
+
+    function render() {
+      const err = document.getElementById('error');
+      err.textContent = '';
+      allEntries = parse(document.getElementById('input').value);
+      if (!allEntries.length) {
+        err.textContent = 'No valid entries found — check the format.';
+        return;
+      }
+      excluded.clear();
+      updatePills();
+      document.getElementById('treemap-wrap').style.display = 'block';
+      document.getElementById('member-count').textContent = `${allEntries.length} members`;
+      drawTreemap();
+    }
+
+    function drawTreemap() {
+      const entries = allEntries.filter(e => !excluded.has(e.proxy));
+      if (!entries.length) {
+        d3.select('#treemap').selectAll('*').remove();
+        return;
+      }
+
+      const wrap = document.getElementById('treemap-wrap');
+      const W = wrap.clientWidth - 32;
+      const H = Math.round(W * 0.6);
+
+      const svg = d3.select('#treemap')
+        .attr('viewBox', `0 0 ${W} ${H}`)
+        .attr('height', H);
+
+      svg.selectAll('*').remove();
+
+      const total = d3.sum(entries, d => d.count);
+
+      // Preserve original rank order for consistent coloring
+      const rankMap = new Map(allEntries.map((e, i) => [e.proxy, i]));
+      const n = allEntries.length;
+      const color = d3.scaleSequential()
+        .domain([0, n - 1])
+        .interpolator(t => `hsl(${Math.round(t * 360)}, 55%, 62%)`);
+
+      const root = d3.hierarchy({ children: entries })
+        .sum(d => logScale ? Math.log2(d.count + 1) : d.count)
+        .sort((a, b) => b.value - a.value);
+
+      d3.treemap()
+        .size([W, H])
+        .paddingInner(3)
+        .paddingOuter(2)
+        .round(true)
+        (root);
+
+      const tooltip = document.getElementById('tooltip');
+
+      const cell = svg.selectAll('g')
+        .data(root.leaves())
+        .join('g')
+        .attr('class', 'cell')
+        .attr('transform', d => `translate(${d.x0},${d.y0})`)
+        .on('mousemove', (event, d) => {
+          const pct = ((d.data.count / total) * 100).toFixed(1);
+          tooltip.innerHTML = `<strong>${d.data.name}</strong> &mdash; ${d.data.count.toLocaleString()} messages (${pct}%) <span style="color:#9990b8;font-size:0.75em">click to hide</span>`;
+          tooltip.style.opacity = '1';
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 28) + 'px';
+        })
+        .on('mouseleave', () => { tooltip.style.opacity = '0'; })
+        .on('click', (event, d) => {
+          tooltip.style.opacity = '0';
+          exclude(d.data.proxy);
+        });
+
+      cell.append('rect')
+        .attr('width', d => Math.max(0, d.x1 - d.x0))
+        .attr('height', d => Math.max(0, d.y1 - d.y0))
+        .attr('rx', 4)
+        .attr('fill', d => color(rankMap.get(d.data.proxy)));
+
+      cell.each(function(d) {
+        const cw = d.x1 - d.x0;
+        const ch = d.y1 - d.y0;
+        const g = d3.select(this);
+        const pad = 6;
+
+        if (cw < 30 || ch < 20) return;
+
+        g.append('text')
+          .attr('class', 'label-name')
+          .attr('x', pad)
+          .attr('y', ch / 2 - (ch > 40 ? 8 : 0))
+          .text(d.data.name)
+          .each(function() {
+            const el = this;
+            let text = d.data.name;
+            while (el.getComputedTextLength && el.getComputedTextLength() > cw - pad * 2 && text.length > 1) {
+              text = text.slice(0, -1);
+              el.textContent = text + '…';
+            }
+          });
+
+        if (ch > 40) {
+          g.append('text')
+            .attr('class', 'label-count')
+            .attr('x', pad)
+            .attr('y', ch / 2 + 10)
+            .text(d.data.count.toLocaleString());
+        }
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>
