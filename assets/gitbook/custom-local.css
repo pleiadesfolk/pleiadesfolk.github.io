@@ -508,15 +508,15 @@
     height: 8vh;
     display: flex;
     align-items: center;
-    color: #6b9eea;
+    color: #6b9eea !important;
     border-radius: 10px;
     flex-direction: row;
 }
 
 .page-nav-btn:hover {
     text-decoration: none;
-    background-color: #6b9eea;
-    color: #f6f6f6;
+    background-color: #6b9eea !important;
+    color: #f6f6f6 !important;
     opacity: 0.75;
 }
 
