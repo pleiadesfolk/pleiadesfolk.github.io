@@ -20,7 +20,7 @@ permalink: /lyra-nem
 
 <div class="img-figure" style="width:50%;"><img src="/assets/media/lyra-selfie.png" alt="An undated selfie image of trans woman and plural sytem Lyra Nem (it/its)."><p class="img-caption">Lyra Nem (it/its).</p></div>
 
-Lyra Nem (December 5, 1996 — April 2, 2026) was a trans woman and plural system that lived in Russia. It was an active member of the community that gathered to discuss the book _The Sisters of Dorley_ and a core community member of the support server and community for which _lipu linluwi pona_ is written for. 
+Lyra Nem (December 5, 1996 — April 2, 2026) was a trans woman and plural system that lived in Russia. It was an active member of the community that gathered to discuss the book _The Sisters of Dorley_ and a core member of the support server and community for which _lipu linluwi pona_ is written for. 
 
 We (the Pleiadesfolk) did not know it well. Many of the things we learned about it, we learnt it after hearing of its passing.
 
@@ -46,7 +46,7 @@ You are part of that strand, dear reader, and you, with your presence, will weav
 
 It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people you might have lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
-o, sina awen olin. o, sina awen linluwi. o, mi ale pali e kulupu pona!
+_o, sina awen olin. o, sina awen linluwi. o, mi ale pali e kulupu pona.__
 
 Never stop loving. Never stop weaving. And together, we can build something beautiful.
 
