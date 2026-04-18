@@ -1,3 +1,12 @@
+User-agent: *
+Disallow: /lyra-nem
+
+User-agent: DuckDuckBot
+User-agent: DuckAssistBot
+User-agent: CCBot
+Disallow: 
+Disallow: /lyra-nem
+
 User-agent: AddSearchBot
 User-agent: AI2Bot
 User-agent: AI2Bot-DeepResearchEval
@@ -138,3 +147,20 @@ User-agent: YandexAdditionalBot
 User-agent: YouBot
 User-agent: ZanistaBot
 Disallow: /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
