@@ -46,7 +46,7 @@ You are part of that strand, dear reader, and you, with your presence, will weav
 
 It is our fervent wish that if you ever find yourself here, that you take a moment to think about the people you might have lost. Take a moment to reflect on them. Scroll up, perhaps. Watch the meteors for a bit. Sit here with the stars. And we hope you can keep the people you've lost in your memory, just as we have kept Lyra Nem's in ours. 
 
-<p title="O, please keep loving! O, please keep weaving! O, we will build a beautiful world together!"><em>o, sina awen olin! o, sina awen linluwi! o, mi ale pali e lon pona!</em></p> 
+<p title="Keep loving! Keep weaving! Let's build a beautiful world together!"><em>o awen olin! o awen linluwi! mi ale pali e lon pona!</em></p> 
 
 Never stop loving. Never stop weaving. And together, we can build something beautiful.
 
