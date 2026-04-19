@@ -10,13 +10,13 @@ order: 10
 
 Now that you've read most of _lipu linluwi pona_, we hope that this handbook has helped you understand yourselves better. We hope that you have a good time with your constant companions, and we hope that you now have most of the tools you need to live together and be with each other.  
 
-_lipu linluwi pona_ is built upon the vast resources and experiences from other plurals formed throughtout the late 20th and early 21st century on the Internet. The connections that technology have built for all of us was what made it possible for the Pleiadesfolk to find each other, perhaps. Without the Internet, without connection, without _linluwi_, we would not be able to come into being.
+_lipu linluwi pona_ is built upon the vast resources and experiences from other plurals formed throughtout the late 20th and early 21st century on the Internet. The connections that technology have built for all of us was what made it possible for the <span class="sitelen">󱤟</span> Pleiadesfolk to find each other, perhaps. Without the Internet, without connection, without _linluwi_, we would not be able to come into being.
 
-In the brief lifespan the Pleiadesfolk have had, we have played many, many roles. We were trained as a journalist somewhere in the eastern hemisphere. We have written fiction, for fun. We are partly responsible for the practical guides that trans people in our city would peruse for their transition.
+In the brief lifespan the <span class="sitelen">󱤟</span> Pleiadesfolk have had, we have played many, many roles. We were trained as a journalist somewhere in the eastern hemisphere. We have written fiction, for fun. We are partly responsible for the practical guides that trans people in our city would peruse for their transition.
 
 Still, the story of this handbook remains an odd one.
 
-This handbook is a direct product of the Pleiadesfolk’s syscovery, which began sometime in August last year. In the middle of writing the (kimmy) fanfic _go to sleep, Kimberly,_ after being recommended the book _(kimmy)_ by 9062, we were crying our hearts out over losing a job opportunity that we were so sure we’d get.
+This handbook is a direct product of the <span class="sitelen">󱤟</span> Pleiadesfolk’s syscovery, which began sometime in August last year. In the middle of writing the (kimmy) fanfic _go to sleep, Kimberly,_ after being recommended the book _(kimmy)_ by <span class="sitelen">󱤟</span> 9062, we were crying our hearts out over losing a job opportunity that we were so sure we’d get.
 
 It’d been right up our alley — a position where we got to understand disinformation campaigns — but we were stunned by the interviewer’s last question, on whether we would leave our position at the trans non-profit we were a part of.
 
@@ -42,7 +42,7 @@ That support thread was, to Lyra, “something we communally weave together.” 
 
 We continue to weave in Lyra's memory.
 
-_linluwi,_ to the Pleiadesfolk, isn’t simply about a good connection between selves; it is also about a greater connection between you and the world around you. About the community that you live in, about what you bring to it. You hold a small strand, each of you, and you continue to weave a tapestry in the lives of others. You are why our communities remain strong, why we dare stand in the face of tyranny and repression. You are why we persevere.
+_linluwi,_ to the <span class="sitelen">󱤟</span> Pleiadesfolk, isn’t simply about a good connection between selves; it is also about a greater connection between you and the world around you. About the community that you live in, about what you bring to it. You hold a small strand, each of you, and you continue to weave a tapestry in the lives of others. You are why our communities remain strong, why we dare stand in the face of tyranny and repression. You are why we persevere.
 
 For we are together, and we will all build something beautiful.
 
