@@ -9,7 +9,7 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://pleiadesfolk.github.io'
+url:              'https://plurality.systems/'
 baseurl:          ''
 rss:              RSS
 
@@ -46,7 +46,8 @@ defaults:
       path: ""
     values:
       image: /assets/media/default-ogp.png
-      title: The Constant Companions Handbook
+      title: "title"
+      tagline: lipu linluwi pona
       description: lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.
       
 exclude:
@@ -70,6 +71,7 @@ ordered_collections:
   - guide
   - essays
   - others
+  - unlisted
 
 page_width: 800px
 

@@ -1,6 +1,7 @@
 ---
 title: Switches — a dance with yourself
-author: Ellis of the Pleaidesfolk
+description: Here, we talk about the principles of switching between selves, and how you can learn to intentionally switch. (Or, try to.)
+author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/switches
@@ -67,9 +68,9 @@ From the [Feathers Guide to Fronting and Switching](https://web.archive.org/web/
 
 So intentionality comes in when your intent (your “I”, for a lack of a better term) is imposed upon the “persistent I” (i.e. the body, the senses), and when you step back and switch to another, their intent (their “I”) switches over to the “persistent I”.
 
-All of this is really vague.
+All of this is really vague. How then, can you employ this?
 
-### Intentionally switching, step by step:
+### Step by step:
 
 Here’s how we, the <span class="sitelen">󱤟</span> Pleaidesfolk, did it (or tried to, perhaps). Again, do this when you have unstructured time.
 

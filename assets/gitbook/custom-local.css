@@ -443,13 +443,23 @@
     font-style: normal;
 }
 
+.hidden-script-h2 {
+    font-family: 'Story Script';
+    font-size: 2em;
+    line-height: 0.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .markdown-section h3 {
     font-family: 'Old Standard TT', serif;
+	font-weight: 400;
+    font-style: normal;
 }
 
 .markdown-section h4 {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -457,6 +467,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
 }
+
 .markdown-section a {
     font-weight: 500;
     text-decoration: underline;
@@ -483,5 +494,106 @@
     line-height: 1em;
     font-weight: 400;
     font-style: normal;
+}
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    padding-top: 3em;
+    border-top: 1px solid var(--border-color, #6b9eea);
+}
+
+.page-nav-btn {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid var(--border-color, #6b9eea);
+    width: 40%;
+    max-width: 45%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    color: #6b9eea !important;
+    border-radius: 10px;
+    flex-direction: row;
+}
+
+.page-nav-btn:hover {
+    text-decoration: none;
+    background-color: #6b9eea !important;
+    color: #f6f6f6 !important;
+    opacity: 0.75;
+}
+
+.page-nav-btn.prev {
+    margin-right: auto;
+    text-align: left;
+    justify-content: left;
+}
+
+.page-nav-btn.next {
+    margin-left: auto;
+    text-align: right;
+    justify-content: right;
+}
+
+a:has(.logo) {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+}
+
+/* Anchor link buttons on headings */
+.markdown-section h2,
+.markdown-section h3 {
+    position: relative;
+}
+
+.heading-anchor {
+    position: relative;
+    margin-left: 0.4em;
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #333333 !important;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.book.color-theme-2 .heading-anchor {
+    color: #f6f6f6 !important;
+}
+
+.heading-anchor:hover {
+    text-decoration: none;
+}
+
+/* "Copied!" tooltip */
+.heading-anchor::after {
+    content: '';
+    position: absolute;
+    background: #6b9eea;
+    color: #f6f6f6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.5em;
+    line-height: 2.5em;
+    padding: 0px 15px;
+    border-radius: 30px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    top: 50%;
+    left: calc(100% + 0.5em);
+    transform: translateY(-50%);
+}
+
+.heading-anchor.copied::after {
+    content: 'Copied~';
+    opacity: 1;
 }
 

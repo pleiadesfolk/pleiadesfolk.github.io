@@ -1,12 +1,12 @@
+This handbook is dedicated to the memory of Lyra Nem (1996-2026). Without the community it was a pivotal part of, _lipu linluwi pona_ would not exist. May it walk in dreams. 
+
 # lipu linluwi pona: The Constant Companions Handbook
 
 _lipu linluwi pona_ is a handbook that we’ve written for new plural folk who’ve begun to discover their own plurality, or are struggling with their plurality and need help with understanding themselves.
 
 We build on a series of research and work done by previous plural folk — from Zyfron, LB Lee, the Vicki(s), and others, most of which can be found on [healthymultiplicity.com](https://healthymultiplicity.com/).
 
-On top of that, this guide adds a lot of our own personal experience and experiences helping others discover their own plurality and be selves-aware.
-
-This guide will also include essays about plurality and the real world.
+On top of that, this guide adds a lot of our own personal experience and experiences helping others discover their own plurality and be selves-aware. This guide will also include essays about plurality and living as a plural system in the world.
 
 This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
@@ -14,6 +14,6 @@ Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding 
 
 ## License and copyright
 
-Plurality resources often seem ethereal. Many of them are self-hosted, and link rot has affected quite a bit of them. We don't expect to maintain this repo long term (long term being, more than 3 years). We also want this text to live forever. 
+Plurality resources often seem ethereal. Many of them are self-hosted, and link rot has affected quite a bit of them. We don't expect to maintain this repo long term (long term being, more than 3 years). We also want this text to live for a long time. 
 
-Post it anywhere you want. Just don't sell it or make a commercial profit from it, really; it's kinda mean to us if you do that. 
+You're free to translate this resource into a language of your choosing, and replicate it. Do not, however, sell this, or make a commercial profit from it, really; do not use the text or art to train AI. It's kind of mean to us if you do that!

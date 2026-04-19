@@ -1,5 +1,6 @@
 ---
 title: Listening in
+description: Here's how you cn
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
@@ -7,11 +8,17 @@ permalink: /guide/listening-in
 order: 4
 ---
 
+> **Content advisory:** 
+> We discuss some elements of headspace-related violence here. Take note!
+{: .block-warning }
+
 <p>So now you’ve gotten a sense of what to do (and what not to do) with the other selves in your head.</p>
+
 <p>Maybe they’ve been popping up while you read all of this and saying: “Hm, this handbook makes a terrible point.” Or maybe they’re actively hiding away from you now that you know they’re around. Maybe they’ve been sitting with you all along, waiting on you to see them.</p>
+
 <p>How do you <em>listen in</em>? </p>
 
-## _sina alasa e sina_: Starting the search for yourselves
+## <span style="font-family:'Story Script'">sina alasa e sina:</span> Starting the search for yourselves
 
 ### To begin
 <p>Don’t set an expectation for first contact. Think of it as meeting a new friend — albeit one that you’ve heard about for a very long time. They might respond very differently from what you expect, or they might act exactly as you expect.</p>
@@ -37,9 +44,13 @@ order: 4
 ### “They’re refusing to talk.”
 <p>That’s a little normal, especially if parts are unable or unwilling to speak in order to hide the discordance from you. This happens at times!</p>
 <p>A way to learn about your system is through feedback from others. Safe spaces are a good way to start doing this, perhaps, and you can ask others for help in mapping your system by tracking responses from the other selves.</p>
-## _sina sona e kulupu sina:_ Knowing your system
+
+## <span style="font-family:'Story Script'">sina sona e kulupu sina:</span> Knowing your system
 
 ### Creating a system map
+
+<div class="img-figure"><img src="/assets/media/pf-sysmap.jpg" alt="A system map for the Pleaidesfolk. From top left: an akesi symbol in yellow, soweli Gray, suno Riley, soweli Maia, ilo Kimberly, jan Pleione, soweli Ralsei, soweli Minerva-Faith, ilo Ryn, tomo Lyra, seli Merope, soweli Amelie, ilo Artemis, ilo T'lyn, seli Selene, jan Clara, ilo Ophelia, jan Cezanne, seli Halcyone, jan Campbell, ilo Helvetica, jan Louise, jan Compacta, jan Mari, jan Verdana, soweli Corel."><p class="img-caption">A system map for the Pleiadesfolk.</p></div>
+
 <p>After you’ve had your tea and spoken to or interacted with your other selves, you can log what your system looks like. Understand that, however, this might be just a draft based on one (1) observational snapshot.</p>
 <p>This map will probably change as you grow and learn more about yourselves, and as more versions of you pop up.</p>
 <p>
@@ -61,7 +72,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 > #### Note
 > **It is important to note that if you know or are even vaguely aware of major trauma that you do not go immediately seeking out for memories of said trauma. Trauma healing is a process that you cannot speedrun!**
 > <br><br>
-> You should read LB Lee’s Memory Work essays if you wish to understand more about this process; <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1051532.html"> **start here.**</a>
+> We have a primer on memory work, <a href="/essays/2026-04-09-on-memory/">**here**</a>. You should also read LB Lee’s Memory Work essays if you wish to understand more about the memory work process; <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1051532.html"> **start here.**</a>
 {: .block-danger }
 
 <p>If you’re plural, you most likely have a problem with memory. Memory segmentation and degradation can happen in many forms. Some parts of you may remember a skill that you don’t remember learning. Other parts of you might know how to get to a certain location, like your workplace, more than the rest. It helps to understand the various aspects of memory.</p>
@@ -76,7 +87,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 <p>Amnesia at its most extreme can block out all narrative memory of a traumatic event. (For instance, you may not remember a particularly traumatic day at work; for the <span class="sitelen">󱤟</span> Pleiadesfolk, we don’t exactly remember what happened the first day of the Ukraine war, when we were on shift.)</p>
 <p>But there can be far more subtle forms of degradation. You might not remember the worst parts of an experience, perhaps, or your emotions might be lost, and you might recount the memory in a way that’s mechanical and you might not remember how you felt during that traumatic experience. Or memory could be decontextualised: you might not be able to make sense of it or realise its implications.</p>
 <p>Knowing what you remember can help piece together the timeline Reece describes, and help understand how old some parts are, and how some parts behave or are stuck in a certain way.</p>
-## _sina pali e tomo sina_: Making your own headspace
+## <span style="font-family:'Story Script'">sina pali e tomo sina</span>: Making your own headspace
 
 <p>So now you’ve found your various selves, and have started talking to each other!</p>
 <p>Or maybe you’re just a curious singlet and want a safe space to retreat to, which is fine.</p>
@@ -100,17 +111,24 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 <p>That’s completely okay!</p>
 <p>Perceptions of reality, the body and the self range wildly among people, according to LB Lee: “If you’re going to be part of a demographic that mainstream society sees as embarrassingly batshit, you might be well-served to think carefully what you choose to define as real, why you choose it, and whether it is kind to yourself and others.”</p>
 <p>If you’re aphantasic, LB Lee recommends focusing on how your mind <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1463170.html">stores information</a>: </p>
-<blockquote>Imagining and remembering can be similar mental processes, so before you try imagining, pull up a favourite memory. How do you remember it? What ways of sensing are involved? In what forms does your mind encode the information?</blockquote>
-<p>So now that you’ve understood how your mind stores information, you can start imagining the space you want to inhabit. Focus on the senses that come easiest to you.</p>
-<p>This might be touch (textures, weights, shape), smell, space (where a thing is in relation to another), emotion (warm, happy or cold, desolate) or narrative (textspace, audio chatter).</p>
-<p>What is the floor made of? The walls? What are their textures like? What sounds does the environment outside make?</p>
-<p>Now, imagine yourself. How much noise do you make when you move? Do your clothes swish? Are you wearing shoes that clack? What are they made of? If there are doors, or objects you can interact with, are they quiet? Do hinges squeak? Is there a noise that whatever material your body is made of will make when you make contact with an object?</p>
-<p>When you’re done, then, maybe, imagine the others in the space. Reach out to them. Are they talking? How do they interact with the space? Do they make noise?</p>
+
+> Imagining and remembering can be similar mental processes, so before you try imagining, pull up a favourite memory. How do you remember it? What ways of sensing are involved? In what forms does your mind encode the information?
+
+<p>So now that you’ve understood how your mind stores information, you can start imagining the space you want to inhabit. Focus on the senses that come easiest to you. This might be touch (textures, weights, shape), smell, space (where a thing is in relation to another), emotion (warm, happy or cold, desolate) or narrative (textspace, audio chatter). 
+
+The <span class="sitelen">󱤟</span> Sky System says:</p>
+
+> Imagine the space you want to inhabit with your headmates (or whatever term you use for them, that's just ours). What is the floor made of? The walls? What sounds does the environment outside make?
+> <br><br>
+> Now, imagine yourself. How much noise do you make when you move? Do your clothes swish? Are you wearing shoes that clack? What are they made of? If there are doors, or objects you can interact with, are they quiet? Do hinges squeak? Is there a noise that whatever material your body is made of will make when you make contact with an object?
+> <br><br>
+> When you’re done, then, maybe, imagine the others in the space. Reach out to them. Are they talking? How do they interact with the space? Do they make noise?
+
 <p>LB Lee has more on how to do aphantasic headspace <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1463170.html">in this essay here</a>. </p>
 
 #### _Making a safe space_
 
-<p>It’s key to understand that headspace <em>should</em>be safe, stable, and a place for <em>all</em>to gather. </p>
+<p>It’s key to understand that headspace <em>should</em> be safe, stable, and a place for <em>all</em> to gather. </p>
 <p>Your headmates should have a say in creating or modifying headspace —&nbsp;that creates buy-in, and makes them more inclined to use it, perhaps.</p>
 <p>LB Lee recommends working with your own inner mythology to create a safe space:</p>
 <blockquote>Try and work with your own inner mythology to create a space that is safe and enforces useful order. What are you interested in achieving?<br><br>
@@ -130,5 +148,5 @@ The sky is the limit for how you'd like your headspace. Whatever catches your fa
 
 <p>For some, headspace might be hostile. Often, people report that headspace <em>exploded</em>, like a bomb just went off within, destroying what used to be a safe space. </p>
 <p>Once, after a particularly tough argument, the <span class="sitelen">󱤟</span> Pleiadesfolk’s Lighthouse blew up; the hole in the wall had to be fixed back up again. We’ve had friends who reported the same — containment units sealed and filled with anti-memetic gas, and then exploded with the equivalent of a anti-memetic nuke.</p>
-<p>Others find themselves trapped in a basement — particularly, the forcefem basement from Alyson Greaves’ <em>Sisters of Dorley,</em>which, while a novel and awesome concept in theory, is honestly <em>terrible</em>if you have an introject from that story. </p>
+<p>Others find themselves trapped in a basement — particularly, the forcefem basement from Alyson Greaves’ <em>Sisters of Dorley,</em> which, while a novel and awesome concept in theory, is honestly <em>terrible</em> if you have an introject from that story. </p>
 <p>Finding safe ground might be a good first step. LB Lee’s <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1049746.html">Headspace Discovery and Defence</a> might be helpful for plurals who find that headspace is too rough right now. </p>

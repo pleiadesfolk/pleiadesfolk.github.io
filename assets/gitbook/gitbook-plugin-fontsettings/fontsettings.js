@@ -126,18 +126,30 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     // Initialisation
     // ---------------------------------------------------------------------------
 
+    function systemTheme() {
+        var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return dark ? THEME.dark : THEME.light;
+    }
+
     function init(config) {
-        fontState = gitbook.storage.get('fontState', {
-            size:   config.size  || 2,
-            family: 0,
-            theme:  config.theme === 'night' ? THEME.dark : THEME.light
-        });
+        var stored = gitbook.storage.get('fontState', {});
+        fontState = {
+            size:   stored.size   != null ? stored.size   : (config.size || 2),
+            family: stored.family != null ? stored.family : 0,
+            theme:  systemTheme()
+        };
         update();
     }
 
     gitbook.events.bind('start', function (e, config) {
         init(config.fontsettings || {});
         wireHtmlButtons();
+
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+                applyColorTheme(systemTheme());
+            });
+        }
     });
 
     gitbook.events.bind('page.change', function() {

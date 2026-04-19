@@ -96,7 +96,7 @@
   color: #777;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal hr {
-  background-color: #e7e7e7;
+  background-color: #666666;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal blockquote {
   color: #2b2b2b;
@@ -144,7 +144,7 @@
   color: #373b4e;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal hr {
-  background-color: #373b4e;
+  background-color: #666666;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal blockquote {
   color: #b9b9b9;

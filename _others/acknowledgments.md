@@ -2,15 +2,15 @@
 title: Acknowledgements
 author: Ellis of the Pleiadesfolk
 date: 2026-04-09
-category: test
-layout: post
+category: Acknowledgements
+layout: others
 ---
 
-<div class="lighthouse-viewport">
-<div class="cloudPane">
+<div class="ack-lighthouse-viewport">
+<div class="ack-cloudPane">
      <p class="ack-heading-front">Thank you<br>for<br>reading!</p>
      <p class="ack-heading">Thank you<br>for<br>reading!</p>
-     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LHArtboard1.png">
+     <img class="lh-img" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-beach.svg">
      <img class="lh-stars" src="{{site.baseurl}}/assets/gitbook/images/CCH-LH-stars.svg"> 
             <div class="bigCloud" id="cloud1">
                 <div class="largeCircle" id="circ1">
@@ -148,11 +148,18 @@ layout: post
 </div> 
 <br>
 
-We (the <span class="sitelen">󱤟</span> Pleiadesfolk) very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
+<p style="text-align:center; margin: 0 25% 0;"><img src="/assets/media/forlyra.gif" title="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" style="width:24px;">
+<br><br>
+This handbook is dedicated to the memory of <a href="/lyra-nem" style="color:inherit;">Lyra Nem</a> (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. 
+</p> 
+
+<hr>
+
+We (the <span class="sitelen">󱤟</span> Pleiadesfolk) are very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
 This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
-The Lighthouse motif and the site’s icons is created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the silhouette of the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
+The Lighthouse motif and the site’s icons were created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
 Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 

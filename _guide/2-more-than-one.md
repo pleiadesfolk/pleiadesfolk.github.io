@@ -1,11 +1,16 @@
 ---
 title: More than one
+description: What exactly is plurality? How does it work? What are some of the plural experiences you might experience? We say more here.
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/more-than-one
 order: 2
 ---
+
+>  **Content advisory:** 
+> We discuss dissociation in this section of the guide. 
+{: .block-warning }
 
 <p>You’ve probably heard of the term "more than one", most likely <a target="_blank" rel="noopener noreferrer nofollow" href="https://dragonsroost.neocities.org/essay/edu/AmIPlural.pdf">on the Am I Plural guide</a> by The Dragonheart Collective! Plurality is being “more than one.”</p>
 
@@ -31,7 +36,7 @@ order: 2
   <p>You have ‘racing thoughts’ where your thought train is many internal dialogues at once.</p>
   </li>
   <li>
-  <p>You may describe yourself as a “collection of selves” or “collection of voices”</p>
+  <p>You may describe yourself as a “collection of selves” or “collection of voices”.</p>
   </li>
   <li>
   <p>If you write, you might have fictional characters write about or start having opinions and doing things you didn’t intentionally make them do. (For instance, a character might rewrite their own death.)</p>
@@ -96,14 +101,13 @@ order: 2
   <p>Identifying very differently from how you usually are, in age, gender, pronouns, sexuality, species, internal self-image, opinions, likes or dislikes.</p>
   </li>
   <li>
-  <p>Having contradicting thoughts or preferences or opinions</p>
+  <p>Having contradicting thoughts or preferences or opinions.</p>
   </li>
   <li>
-  <p>Having different handwriting, accents, mannerisms and attributes; particularly, with transfeminine voice training, parts of you may experience a “backsliding” with voice training, with some parts having a higher feminine voice and some
-   parts using a more lower register.</p>
+  <p>Having different handwriting, accents, mannerisms and attributes; particularly, with transfeminine voice training, parts of you may experience a “backsliding” with voice training, with some parts having a higher feminine voice and some parts using a deeper register.</p>
   </li>
   <li>
-  <p>Feeling like you had a sudden stray thought or feeling that doesn't belong to you, feeling like some other entity is influencing your thoughts or feelings.</p>
+  <p>Feeling like you had a sudden stray thought or feeling that doesn't belong to you, or feeling like some other entity is influencing your thoughts or feelings.</p>
   </li>
   <li>
   <p>Feeling like you have to put in effort to being a cohesive person.</p>
@@ -130,7 +134,7 @@ order: 2
   <p>Not remembering certain life events, from graduations, parties, to natural disasters, conflicts, other traumatic or stressful events.</p>
   </li>
   <li>
-  <p>Not remembering how you felt during major life events or traumatic life events</p>
+  <p>Not remembering how you felt during major life events or traumatic life events.</p>
   </li>
   <li>
   <p>Not remembering what you did recently, how you got somewhere, conversations you had, possibly whole days of time.</p>
@@ -171,10 +175,10 @@ order: 2
  <p><strong>Disconnects between you, your sense of self, reality and others around you:</strong></p>
  <ul style="--page-paragraph-spacing: 1;">
   <li>
-  <p>Sometimes just feeling “very strange” in a way you can’t place</p>
+  <p>Sometimes just feeling “very strange” in a way you can’t place.</p>
   </li>
   <li>
-  <p>Sometimes feeling like the world around you is surreal or dreamlike or like it’s behind glass, fog or just very far away</p>
+  <p>Sometimes feeling like the world around you is surreal or dreamlike or like it’s behind glass, fog or just very far away.</p>
   </li>
   <li>
   <p>The below can also happen with dysphoria-related derealisation:</p>
@@ -206,19 +210,19 @@ order: 2
   <p>Detachment:</p>
   <ul style="--page-paragraph-spacing: 1;">
    <li>
-   <p>Feeling numbed to or detached from certain senses or body parts</p>
+   <p>Feeling numbed to or detached from certain senses or body parts.</p>
    </li>
    <li>
-   <p>Feeling detached from your own thoughts, sense of self or agency</p>
+   <p>Feeling detached from your own thoughts, sense of self or agency.</p>
    </li>
    <li>
-   <p>Feeling like your emotions are happening to someone else</p>
+   <p>Feeling like your emotions are happening to someone else.</p>
    </li>
    <li>
    <p>Feeling like you are floating outside your body or watching yourself/having an out of body experience.</p>
    </li>
    <li>
-   <p>People say you are “spacey” or “zoned out” and say “you look like you’re AFK” a lot, and you might be described as “being in your own world”.</p>
+   <p>People say you are “spacey” or “zoned out” and say “you look like you’re physically AFK (away from keyboard)” a lot, and you might be described as “being in your own world”.</p>
    </li>
    <li>
    <p>Focusing on what is presently going on instead of your own internal world is difficult sometimes, you feel very ‘zoned out’ often.</p>
@@ -237,7 +241,7 @@ order: 2
   <p>Feeling like, even if you agree to most of the symptoms above, that you must have made them up.</p>
   </li>
   <li>
-  <p>Wondering if you have any other psychosis spectrum disorder, like BPD, ADHD, or C-PTSD because of some criteria matching but not relating to other criteria</p>
+  <p>Wondering if you have any other psychosis spectrum disorder, like BPD, ADHD, or C-PTSD because of some criteria matching but not relating to other criteria/</p>
   </li>
   <li>
   <p>Questioning or thinking you are an age-regressor, but your regressed self some or all of the time seems quite different from you in thinking/pronoun preference/names/etc.</p>
@@ -314,9 +318,12 @@ order: 2
 ## I’m probably faking all of this!
 
 <p>Consider that you just probably opened this handbook. Faking requires that you intentionally know and understand how to <em>fake</em> something. You can’t fake plurality by accident.</p>
-<p>The top feeling that plural systems get is that they’re “faking this for attention.” Your brain essentially doesn’t want you to know that all this is happening; in particular, your brain may be protecting you against traumatic memory that remain unresolved, and your brain might want to preserve some semblance of identity in order for you to function. So at times, this might feel like: “Hey! I don’t remember how to do this, but now I do?”</p>
+
+<p>The top feeling that plural systems get is that they’re “faking this for attention.” Your brain essentially doesn’t want you to know that all this is happening; in particular, your brain may be protecting you against traumatic memories that remain unresolved, and your brain might want to preserve some semblance of identity in order for you to function. So at times, this might feel like: “Hey! I don’t remember how to do this, but now I do?”</p>
 <p>Plurality in general presents itself in a covert fashion.</p>
+
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/watch?v=v93wuN0jtV0">From Patricia Taxxon</a>:</p>
+
 <blockquote>You don’t usually notice it if you have it. It doesn’t necessarily involve blacking out at random times or waking up in weird places. Instead of blacking out, you’re more likely to slowly forget and seamlessly transition into a new personality without a break in “consciousness” as a whole.<br><br>(…) You might hear your voice change its tone in an imperceptible way, and need to be reminded of a couple of things you were talking about, before seamlessly continuing function. <br><br>(…) A big universal symptom of plurality is <strong>denial</strong>.</blockquote>
 <p>To defeat that, you make a conscious effort to unmask and perform. You type differently, speak differently, adopt a mannerism comfortable to you even if it feels different.</p>
 <p>As Patricia Taxxon says: “This is just vital mental health work. I don’t know how any system is supposed to disambiguate and forge lines of communication without a little theatre.”</p>

@@ -43,7 +43,7 @@
                 </a>
                 {% if site.toc.enabled %}
                     {% if site.toc.enabled_index %}
-                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                     {% endif %}
                 {% endif %}
             </li>
@@ -52,6 +52,7 @@
 
             {% if site.ordered_collections %}
                 {% for label in site.ordered_collections %}
+                    {% if label == "unlisted" %}{% continue %}{% endif %}
                     {% if label == "essays" %}
                         {% assign col_docs = site[label] | reverse %}
                     {% else %}
@@ -73,7 +74,7 @@
                             </a>
                             {% if site.toc.enabled %}
                                 {% if page.url == post.url %}
-                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                                 {% endif %}
                             {% endif %}
                         </li>
@@ -85,6 +86,7 @@
                 {% endfor %}
             {% else %}
                 {% for collection in site.collections %}
+                    {% if collection.label == "unlisted" %}{% continue %}{% endif %}
                     {% if collection.label == "essays" %}
                         {% assign col_docs = collection.docs | reverse %}
                     {% else %}
@@ -102,7 +104,7 @@
                             </a>
                             {% if site.toc.enabled %}
                                 {% if page.url == post.url %}
-                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                    {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max sanitize=true %}
                                 {% endif %}
                             {% endif %}
                         </li>
@@ -113,6 +115,12 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
+            
+<li class="header">Other resources</li>
+<li class="chapter" data-level="1.1"><a href="https://p4p.crd.co/">Project 4 Plurals</a></li>
+<li class="chapter" data-level="1.1"><a href="https://healthymultiplicity.com/">Healthy Multiplicity</a></li>
+<li class="divider"></li>
+            
         </ul>
     </nav>
 </div>

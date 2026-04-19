@@ -1,11 +1,16 @@
 ---
 title: Principles
+description: You don’t need to know who you are all the time, and that's okay!
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/principles
 order: 3
 ---
+
+>  **Content advisory:** 
+> We talk about misgendering and transphobia in this section, and we offer some examples of what disordered systems may look like. Read with care!
+{: .block-warning }
 
 So you might be plural! And you’re wondering: how? How does plurality happen?
 
@@ -57,13 +62,13 @@ And that’s entirely normal.
 
 A lot of people think headmates work like this:
 
-<img src="{{site.baseurl}}/assets/media/fig-1a.png">
+<img src="/assets/media/fig-1a.png" alt="A series of coloured dots in a big circle. One says 'imm blue'. Another says 'I'm Red'. A third says 'I think you should be doing something else.'">
 
 Where in this figure, the big circle is your brain and your body, and the little ones are headmates.
 
 In truth, you and your headmates probably share a lot of overlap, like this:
 
-<img src="{{site.baseurl}}/assets/media/fig-1b.png">
+<img src="/assets/media/fig-1b.png" alt="A series of coloured dots in a big circle, now overlapping with each other. One says 'imm blue'. Another says 'I'm Red'. A third says 'I still think you should be doing something else.'">
 
 People can be combinations of other people and still be their own person. People can take features from others but leave part of them. People can overlap!
 
@@ -151,7 +156,7 @@ We go back to that fictional system — Ingrid, Karsten and Esther — for examp
 
 Karsten might initially appear as a part that wants to protect Ingrid from doing things that are out of the societal norm. For instance, Ingrid might want to wear something really feminine for a dinner with her partner, and Karsten might say “you’re probably going to get hate crimed!”. Karsten might feel a little desperate, trying to stop Ingrid from putting on that pair of stockings, and might go on to a point where she fronts instead and wears a pair of jeans; or she might feel antsy the whole time Ingrid’s on her date with her partner, resulting in Ingrid also feeling on edge.
 
-Perhaps when her partner compliments her on her outfit, Ingrid doesn’t feel like these compliments are sincere — nor will she feel pretty when she looks in the mirror, instead feeling Karsten’s own anxiety about being “clocky”.
+Perhaps when her partner compliments her on her outfit, Ingrid doesn’t feel like these compliments are sincere — nor will she feel pretty when she looks in the mirror, instead feeling Karsten’s own anxiety about being “clocky” (easily identifiable as transfeminine, and therefore subject to transmisogyny).
 
 Here, however, Karsten only sees the risk, and is only trying to keep Ingrid from harm. In a more disordered version of this example, Ingrid might experience a lot of abuse from Karsten.
 
@@ -169,7 +174,7 @@ This is even more important with headmates that are dormant, perhaps, or who rar
 
 Headmates with no or very little access to front will often find themselves stuck in the back being half-awake and only driven by emotion, which is like having a 240p low resolution QuickTime video picture of life itself. They will respond, but they may not have the context for action, and they may not be able to understand and consider detail.
 
-For instance, in our fictional example, Esther might feel a lot of anxiety and self-hate over the body’s appearance when Ingrid is fronting. And while she may have no context as to why Ingrid’s dressed in a certain manner (perhaps, Ingrid’s presenting in a detransitioned boymode for a family funeral), her emotions may just simply leak out, and that anxiety and self-hate may simply spread, causing a physical anxiety response.
+For instance, in our fictional example, Esther might feel a lot of anxiety and self-hate over the body’s appearance when Ingrid is fronting. And while she may have no context as to why Ingrid’s dressed in a certain manner (perhaps, Ingrid presenting as her birth gender for a family funeral), her emotions may just simply leak out, and that anxiety and self-hate may simply spread, causing a physical anxiety response.
 
 Giving headmates front time will often help you understand where a headmate is coming from, why they do certain things, and how they may affect you (and vice-versa). You share a brain! Nobody can learn about themselves if they never front.
 
