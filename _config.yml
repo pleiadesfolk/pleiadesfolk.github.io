@@ -62,6 +62,9 @@ collections:
   others:
     output: true
     permalink: /:collection/:path/
+  unlisted:
+    output: true
+    permalink: /:collection/:path/
 
 ordered_collections:
   - guide
