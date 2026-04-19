@@ -93,7 +93,7 @@
       border-radius: 10px;
       padding: 1rem;
     }
-    svg { width: 100%; display: block; }
+    svg { width: 100%; display: block; overflow: hidden; }
     .cell { cursor: pointer; }
     .cell rect {
       stroke: #0f0f13;
@@ -182,6 +182,7 @@
       Log scale
     </label>
     <button class="secondary" id="btn-reset" onclick="resetExcluded()" style="display:none">Restore all</button>
+    <button class="secondary" id="btn-zoom-reset" onclick="resetZoom()" style="display:none">Reset zoom</button>
   </div>
   <p class="error" id="error"></p>
   <div class="excluded-pills" id="pills"></div>
@@ -195,6 +196,7 @@
     let logScale = false;
     let excluded = new Set();
     let allEntries = [];
+    let zoomBehavior = null;
 
     function parse(text) {
       const pattern = /\[(\w+)\]\s+(.+?)\s+\((\d+)\s+messages\)/g;
@@ -229,6 +231,11 @@
       drawTreemap();
     }
 
+    function resetZoom() {
+      const svg = d3.select('#treemap');
+      svg.transition().duration(300).call(zoomBehavior.transform, d3.zoomIdentity);
+    }
+
     function updatePills() {
       const container = document.getElementById('pills');
       const resetBtn = document.getElementById('btn-reset');
@@ -255,12 +262,16 @@
       excluded.clear();
       updatePills();
       document.getElementById('treemap-wrap').style.display = 'block';
-      document.getElementById('member-count').textContent = `${allEntries.length} members`;
+      const totalMessages = d3.sum(allEntries, e => e.count);
+      const zeroes = allEntries.filter(e => e.count === 0);
+      const zeroText = zeroes.length ? ` · 0 messages: ${zeroes.map(e => e.name).join(', ')}` : '';
+      document.getElementById('member-count').textContent =
+        `${allEntries.length} members · ${totalMessages.toLocaleString()} messages${zeroText}`;
       drawTreemap();
     }
 
     function drawTreemap() {
-      const entries = allEntries.filter(e => !excluded.has(e.proxy));
+      const entries = allEntries.filter(e => !excluded.has(e.proxy) && e.count > 0);
       if (!entries.length) {
         d3.select('#treemap').selectAll('*').remove();
         return;
@@ -276,9 +287,8 @@
 
       svg.selectAll('*').remove();
 
-      const total = d3.sum(entries, d => d.count);
+      const total = d3.sum(allEntries.filter(e => !excluded.has(e.proxy)), d => d.count);
 
-      // Preserve original rank order for consistent coloring
       const rankMap = new Map(allEntries.map((e, i) => [e.proxy, i]));
       const n = allEntries.length;
       const color = d3.scaleSequential()
@@ -296,9 +306,23 @@
         .round(true)
         (root);
 
+      const zoomLayer = svg.append('g').attr('class', 'zoom-layer');
+
+      const zoomResetBtn = document.getElementById('btn-zoom-reset');
+      zoomBehavior = d3.zoom()
+        .scaleExtent([1, 12])
+        .translateExtent([[0, 0], [W, H]])
+        .on('zoom', (event) => {
+          zoomLayer.attr('transform', event.transform);
+          zoomResetBtn.style.display = event.transform.k === 1 ? 'none' : 'inline-block';
+        });
+
+      svg.call(zoomBehavior).on('dblclick.zoom', null);
+
       const tooltip = document.getElementById('tooltip');
 
-      const cell = svg.selectAll('g')
+      let dragMoved = false;
+      const cell = zoomLayer.selectAll('g')
         .data(root.leaves())
         .join('g')
         .attr('class', 'cell')
@@ -311,7 +335,10 @@
           tooltip.style.top = (event.clientY - 28) + 'px';
         })
         .on('mouseleave', () => { tooltip.style.opacity = '0'; })
+        .on('mousedown', () => { dragMoved = false; })
+        .on('mousemove.drag', () => { dragMoved = true; })
         .on('click', (event, d) => {
+          if (dragMoved) return;
           tooltip.style.opacity = '0';
           exclude(d.data.proxy);
         });
@@ -345,11 +372,12 @@
           });
 
         if (ch > 40) {
+          const pct = ((d.data.count / total) * 100).toFixed(1);
           g.append('text')
             .attr('class', 'label-count')
             .attr('x', pad)
             .attr('y', ch / 2 + 10)
-            .text(d.data.count.toLocaleString());
+            .text(`${d.data.count.toLocaleString()} · ${pct}%`);
         }
       });
     }
