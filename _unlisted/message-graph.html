@@ -74,6 +74,7 @@ permalink: /tools/pklbmc
     font-size: 3em;
     font-weight: 600;
     color: var(--t-accent);
+    text-align: center;
   }
 
   .tool-root textarea {
@@ -174,8 +175,8 @@ permalink: /tools/pklbmc
   }
   .tool-root .cell:hover rect { opacity: 0.8; }
   .tool-root .cell text { pointer-events: none; dominant-baseline: middle; }
-  .tool-root .label-name { font-size: 0.8em; line-height:0.5em;font-weight: 600; fill: #fff; }
-  .tool-root .label-count { font-size: 0.7em; fill: rgba(255,255,255,0.75); }
+  .tool-root .label-name { font-size: 1.3em; line-height:0.5em;font-weight: 600; fill: #fff; }
+  .tool-root .label-count { font-size: 1em; fill: rgba(255,255,255,0.75); }
 
   .tool-root .excluded-pills {
     display: flex;
@@ -229,6 +230,10 @@ permalink: /tools/pklbmc
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+  }
+    .tool-root ol {
+    margin-right: 18%;
+    margin-left: -6%;
   }
   .tool-root p:last-child { margin-bottom: 0; }
   .tool-root code {
@@ -289,9 +294,11 @@ permalink: /tools/pklbmc
   </ul>
   <blockquote class="disclosure">
   <p style="text-align:left;"><strong>Disclosure</strong></p>
-  <p style="text-align:left;">Do note that the tool below was... partly vibe-coded by Claude Sonnet 4.6. (The Pleiadesfolk don't fucking know javascript and have been meaning to learn.) We do know, however, that we're not stealing your proxy data. (Where would we store it? What would we even do with it?)</p>
+  <p style="text-align:left;">Do note that the tool below was... partly vibe-coded by Claude Sonnet 4.6. (The Pleiadesfolk don't fucking know how to use Chart.js and have been meaning to learn.) We do know, however, that we're not stealing your proxy data. (Where would we store it? What would we even do with it?)</p>
   </blockquote>
-  <textarea id="input" spellcheck="false" placeholder="[pkitid] exampleproxy (3 messages)"></textarea>
+  <textarea id="input" spellcheck="false" placeholder="[pkitid] exampleproxy (420 messages)
+[pkitid] girlproxy (69 messages)
+[pkitid] dogproxy (67 messages)"></textarea>
   <div class="controls">
     <button onclick="render()">Render</button>
     <label class="switch-label">
