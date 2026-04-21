@@ -70,7 +70,7 @@ So intentionality comes in when your intent (your “I”, for a lack of a bette
 
 All of this is really vague. How then, can you employ this?
 
-### Step by step:
+### Switching, step by step
 
 Here’s how we, the <span class="sitelen">󱤟</span> Pleaidesfolk, did it (or tried to, perhaps). Again, do this when you have unstructured time.
 

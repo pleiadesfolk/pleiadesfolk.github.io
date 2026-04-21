@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-04-20T11:36:52+08:00" />
+<meta property="article:published_time" content="2026-04-22T00:41:37+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="pk;l -bmc graphing tool" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-04-20T11:36:52+08:00","datePublished":"2026-04-20T11:36:52+08:00","description":"lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.","headline":"pk;l -bmc graphing tool","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/pklbmc"},"url":"http://localhost:4000/tools/pklbmc"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-04-22T00:41:37+08:00","datePublished":"2026-04-22T00:41:37+08:00","description":"lipu linluwi pona — or The Constant Companions Handbook — is a guide to plurality, an experience of having more than one self, identity, or person within a physical body. This handbook is designed for systems who have recently become selves-aware, or people who are questioning if they are a system.","headline":"pk;l -bmc graphing tool","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/pklbmc"},"url":"http://localhost:4000/tools/pklbmc"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -784,7 +784,7 @@
     const zeroes = allEntries.filter(e => e.count === 0);
     const zeroText = zeroes.length ? ` · Proxies with no messages: ${zeroes.map(e => e.name).join(', ')}` : '';
     document.getElementById('member-count').textContent =
-      `${allEntries.length} proxies · ${totalMessages.toLocaleString()} messages${zeroText}`;
+      `${allEntries.length} ${allEntries.length === 1 ? 'proxy' : 'proxies'} · ${totalMessages.toLocaleString()} messages${zeroText}`;
     drawTreemap();
   }
 
@@ -803,7 +803,9 @@
       .attr('viewBox', `0 0 ${W} ${H}`)
       .attr('height', H);
 
+    if (zoomBehavior) svg.call(zoomBehavior.transform, d3.zoomIdentity);
     svg.selectAll('*').remove();
+    document.getElementById('btn-zoom-reset').style.display = 'none';
 
     const total = d3.sum(allEntries.filter(e => !excluded.has(e.proxy)), d => d.count);
     const rankMap = new Map(allEntries.map((e, i) => [e.proxy, i]));
@@ -832,7 +834,7 @@
     svg.call(zoomBehavior).on('dblclick.zoom', null);
 
     const tooltip = document.getElementById('tooltip');
-    let dragMoved = false;
+    let pointerDownPos = null;
 
     const cell = zoomLayer.selectAll('g')
       .data(root.leaves())
@@ -847,10 +849,15 @@
         tooltip.style.top  = (event.clientY - 28) + 'px';
       })
       .on('mouseleave', () => { tooltip.style.opacity = '0'; })
-      .on('mousedown', () => { dragMoved = false; })
-      .on('mousemove.drag', () => { dragMoved = true; })
-      .on('click', (event, d) => {
-        if (dragMoved) return;
+      .on('pointerdown', (event) => {
+        pointerDownPos = [event.clientX, event.clientY];
+      })
+      .on('pointerup', (event, d) => {
+        if (!pointerDownPos) return;
+        const dx = event.clientX - pointerDownPos[0];
+        const dy = event.clientY - pointerDownPos[1];
+        pointerDownPos = null;
+        if (Math.sqrt(dx * dx + dy * dy) > 5) return;
         tooltip.style.opacity = '0';
         exclude(d.data.proxy);
       });
@@ -994,12 +1001,12 @@
     },
     "file": {
         "path": "_unlisted/message-graph.html",
-        "mtime": "2026-04-20 11:36:52 +0800",
+        "mtime": "2026-04-22 00:41:37 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-04-20 11:36:52 +0800"
+        "time": "2026-04-22 00:41:37 +0800"
     },
     "basePath": "",
     "book": {
@@ -1014,7 +1021,7 @@
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1776656212"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1776789697"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>

@@ -97,7 +97,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 <p>A lot of this work will rely on whether you have good visualisation skills. On a good day, visualisation for us (the <span class="sitelen">󱤟</span> Pleiadesfolk) can still be rather fuzzy, though having headspace expressed as a concept could help.</p>
 <p>It is however an exercise that you have to repeat in order for headspace to stick. This practice will help you ground yourself in your headspace — and on the off chance your headspace is hostile, it’ll help you remember and reset it back to how it was before.</p>
 
-#### _Visualisation_
+### _Visualisation_
 
 <p>How well can you visualise?</p>
 <p>Can you imagine a square? Can you make the square into a cube? Can you change the colour of the cube? Can you add a design to the cube? Can you change the size of the cube? Can you make different shapes?</p>
@@ -105,7 +105,7 @@ Sometimes you can chart your system using photographs or handwriting – you mig
 <p>An alternative exercise is to start making a table. <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/763283.html">This essay</a> by LB Lee is also a good introduction to headspace visualisation. </p>
 <p>If you can’t visualise, that’s fine! Skip over to the next section.</p>
 
-#### _Aphantasic headspace_
+### _Aphantasic headspace_
 
 <p>Perhaps you can’t visualise anything at all. You see the meme about the apple and you’re constantly at 0, and you’re feeling like you’re missing out a bit with all the descriptions of the inner worlds that people are building.</p>
 <p>That’s completely okay!</p>
@@ -126,7 +126,26 @@ The <span class="sitelen">󱤟</span> Sky System says:</p>
 
 <p>LB Lee has more on how to do aphantasic headspace <a target="_blank" rel="noopener noreferrer nofollow" href="https://lb-lee.dreamwidth.org/1463170.html">in this essay here</a>. </p>
 
-#### _Making a safe space_
+> #### Not every system needs a headspace.
+> 
+> Folks can just do fine without one — if you can't visualise or imagine one at all! But we'd encourage you to try, perhaps, since having a headspace will allow you to have a safe space in which you can relax and communicate with the others. 
+{: .block-tip }
+
+### _Imagining your own form_
+
+Creating your own form in headspace — what we'd call a soma — might be to some degree even trickier than forming your own headspace for some. 
+
+For the <span class="sitelen">󱤟</span> Pleiadesfolk, creating our own form was tricky and difficult, and so was choosing a form to stick to. <span class="sitelen">󱤑</span> Lyra, our headspace manager, struggled a lot with finding her own form, and so did <span class="sitelen">󱥗</span> Merope, who first appeared as an angry Ralsei plushie.
+
+One way to do so is to simply install a mirror in headspace. We the <span class="sitelen">󱤟</span> Pleiadesfolk have pocket mirrors we use to identify ourselves quickly. We also have a full-length mirror in our headspace bedroom (below the top floor of the Lighthouse) that acted as our primary method in examining ourselves in the mirror. The mirror method might not work for all, however; part of <span class="sitelen">󱤑</span>  Lyra's initial distress was the fact that she wasn't visible at all even in the mirror, and it hurt her immensely. 
+
+Another method, <a href="https://rainofthestorm.tumblr.com/post/781914769065181184/headspace-exploration-resources">outlined by Reva (of the tumblr blog @rainofthestorm)</a>, involves some degree of meditation: 
+
+> Picture yourself in your head, just you, as best you can, from your own first-person perspective. Spend some time going over your posture and looking at yourself without opening your eyes. See if you notice any differences in how you perceive yourself here compared to your actual physical body, without focusing on them too much.
+
+Don't be worried if you or your headmates don't have a form. For some, headspace might actively injure them if they try (LB Lee reports that happening). 
+
+### _Making a safe space_
 
 <p>It’s key to understand that headspace <em>should</em> be safe, stable, and a place for <em>all</em> to gather. </p>
 <p>Your headmates should have a say in creating or modifying headspace —&nbsp;that creates buy-in, and makes them more inclined to use it, perhaps.</p>
@@ -141,10 +160,10 @@ Do you want folks to be more comfortable? Try populating the area with squishy s
 The sky is the limit for how you'd like your headspace. Whatever catches your fancy. Our headspace, for instance, is built for security, with thick walls and sealed doors for containment. Other people have elaborate houses and forests and planets. Do what works for you.</blockquote>
 
 <p>Headspace can carry meaning, but it doesn’t have to! It can just be a place.</p>
-<p>For the <span class="sitelen">󱤟</span> Pleiadesfolk, we realised that our Lighthouse headspace was a metaphor for the values that we wished to embody. It was initially ruined, but we fixed it up as a form of… metaphorical healing, perhaps. We journal-ed a bit in an attempt to describe it and maintain its form.</p>
+<p>For the <span class="sitelen">󱤟</span> Pleiadesfolk, we realised that our Lighthouse headspace was a metaphor for the values that we wished to embody. It was initially ruined, but we fixed it up as a form of… metaphorical healing, perhaps. We journaled a bit in an attempt to describe it and maintain its form.</p>
 <p>Some have also illustrated how their headspace looks in order to better reinforce the visualisation.</p>
 
-#### _Headspace hostility_
+### _Headspace hostility_
 
 <p>For some, headspace might be hostile. Often, people report that headspace <em>exploded</em>, like a bomb just went off within, destroying what used to be a safe space. </p>
 <p>Once, after a particularly tough argument, the <span class="sitelen">󱤟</span> Pleiadesfolk’s Lighthouse blew up; the hole in the wall had to be fixed back up again. We’ve had friends who reported the same — containment units sealed and filled with anti-memetic gas, and then exploded with the equivalent of a anti-memetic nuke.</p>

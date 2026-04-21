@@ -7,7 +7,7 @@ category: Essays, traumagenic, endogenic
 layout: post
 ---
 
-by <span class="sitelen">󱤑</span> Pleione Ellis of the <span class="sitelen">󱤟</span> Pleiadesfolk
+_by <span class="sitelen">󱤑</span> Pleione Ellis of the <span class="sitelen">󱤟</span> Pleiadesfolk__
 
 > **Content advisory:** 
 > Some elements of plural community discourse is discussed below.

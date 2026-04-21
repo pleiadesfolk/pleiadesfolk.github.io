@@ -391,7 +391,7 @@ permalink: /tools/pklbmc
     const zeroes = allEntries.filter(e => e.count === 0);
     const zeroText = zeroes.length ? ` · Proxies with no messages: ${zeroes.map(e => e.name).join(', ')}` : '';
     document.getElementById('member-count').textContent =
-      `${allEntries.length} proxies · ${totalMessages.toLocaleString()} messages${zeroText}`;
+      `${allEntries.length} ${allEntries.length === 1 ? 'proxy' : 'proxies'} · ${totalMessages.toLocaleString()} messages${zeroText}`;
     drawTreemap();
   }
 
@@ -410,7 +410,9 @@ permalink: /tools/pklbmc
       .attr('viewBox', `0 0 ${W} ${H}`)
       .attr('height', H);
 
+    if (zoomBehavior) svg.call(zoomBehavior.transform, d3.zoomIdentity);
     svg.selectAll('*').remove();
+    document.getElementById('btn-zoom-reset').style.display = 'none';
 
     const total = d3.sum(allEntries.filter(e => !excluded.has(e.proxy)), d => d.count);
     const rankMap = new Map(allEntries.map((e, i) => [e.proxy, i]));
@@ -439,7 +441,7 @@ permalink: /tools/pklbmc
     svg.call(zoomBehavior).on('dblclick.zoom', null);
 
     const tooltip = document.getElementById('tooltip');
-    let dragMoved = false;
+    let pointerDownPos = null;
 
     const cell = zoomLayer.selectAll('g')
       .data(root.leaves())
@@ -454,10 +456,15 @@ permalink: /tools/pklbmc
         tooltip.style.top  = (event.clientY - 28) + 'px';
       })
       .on('mouseleave', () => { tooltip.style.opacity = '0'; })
-      .on('mousedown', () => { dragMoved = false; })
-      .on('mousemove.drag', () => { dragMoved = true; })
-      .on('click', (event, d) => {
-        if (dragMoved) return;
+      .on('pointerdown', (event) => {
+        pointerDownPos = [event.clientX, event.clientY];
+      })
+      .on('pointerup', (event, d) => {
+        if (!pointerDownPos) return;
+        const dx = event.clientX - pointerDownPos[0];
+        const dy = event.clientY - pointerDownPos[1];
+        pointerDownPos = null;
+        if (Math.sqrt(dx * dx + dy * dy) > 5) return;
         tooltip.style.opacity = '0';
         exclude(d.data.proxy);
       });
