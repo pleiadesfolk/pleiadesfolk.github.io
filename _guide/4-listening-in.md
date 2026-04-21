@@ -139,7 +139,7 @@ For the <span class="sitelen">󱤟</span> Pleiadesfolk, creating our own form wa
 
 One way to do so is to simply install a mirror in headspace. We the <span class="sitelen">󱤟</span> Pleiadesfolk have pocket mirrors we use to identify ourselves quickly. We also have a full-length mirror in our headspace bedroom (below the top floor of the Lighthouse) that acted as our primary method in examining ourselves in the mirror. The mirror method might not work for all, however; part of <span class="sitelen">󱤑</span>  Lyra's initial distress was the fact that she wasn't visible at all even in the mirror, and it hurt her immensely. 
 
-Another method, <a href="https://rainofthestorm.tumblr.com/post/781914769065181184/headspace-exploration-resources">outlined by Reva (of the tumblr blog @rainofthestorm)</a>, involves some degree of meditation: 
+Another method, <a href="https://rainofthestorm.tumblr.com/post/781914769065181184/headspace-exploration-resources">outlined by Cait (of the tumblr blog @rainofthestorm)</a>, involves some degree of meditation: 
 
 > Picture yourself in your head, just you, as best you can, from your own first-person perspective. Spend some time going over your posture and looking at yourself without opening your eyes. See if you notice any differences in how you perceive yourself here compared to your actual physical body, without focusing on them too much.
 
