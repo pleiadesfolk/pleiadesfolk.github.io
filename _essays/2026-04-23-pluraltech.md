@@ -31,12 +31,7 @@ Sure, an app marketing itself as having cloud-based storage is convenient, but t
 
 Ideally, an internal communication app or journaling tool should allow you to:
 
-1.  **Keep data encrypted until a passcode is entered.** Notice how we didn’t say “biometric data input” — this is key, as law enforcement in some jurisdictions can force you to hand over your biometric data.
-    
-2.  **Keep data local. Allow for data exports, but only after a passcode is entered.** You should be able to export your data, but data should be stored on _your_ own phone. Having it on the cloud means you lose the ability to control where that data goes, even if it’s end-to-end encrypted.
-    
-    1.  If you use a regular messaging app that uses, say, Google Cloud or iCloud to back up your chats — that’s still fine. Your own personal server and Discord does not however meet this standard and it’s crucial to understand this.
-        
+<ol><li><p><strong>Keep data encrypted until a passcode is entered. </strong>Notice how we didn’t say “biometric data input” —&nbsp;this is key, as law enforcement in some jurisdictions can force you to hand over your biometric data.</p></li><li><p><strong>Keep data local. Allow for data exports, but only after a passcode is entered.</strong> You should be able to export your data, but data should be stored on <em>your</em> own phone. Having it on the cloud means you lose the ability to control where that data goes, even if it’s end-to-end encrypted.</p><ol><li><p>If you use a regular messaging app that uses, say, Google Cloud or iCloud to back up your chats — that’s still fine. Your own personal server and Discord does not however meet this standard and it’s crucial to understand this.</p></li></ol></li></ol>
 
 **If you can’t keep data local, be careful.** Do not discuss illegal activity — even if it’s between your selves — in your own personal Discord server, for instance. Set a 2FA (two-factor authentication) to secure your messaging apps.
 
