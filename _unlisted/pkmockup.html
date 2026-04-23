@@ -1,0 +1,1185 @@
+---
+layout: tools
+title: the pk;m new toolkit
+description: Here, you can preview how a new member will look on Discord and learn to individuate and actualise yourselves.
+permalink: /tools/pkmnew/
+---
+<style>
+  .tool-root {
+    --t-surface:     #e0f5ff;
+    --t-border:      #99E2FF;
+    --t-text:        #0a2a4a;
+    --t-muted:       #3a80b0;
+    --t-accent:      #0088cc;
+    --t-accent-h:    #0099ee;
+    --t-secondary:   #c8ecff;
+    --t-secondary-h: #b0e4ff;
+    --t-pill-text:   #0a3a6a;
+    --t-error:       #c03030;
+    --t-label:       #1a4a7a;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    color: var(--t-text);
+  }
+
+  .book.color-theme-2 .tool-root {
+    --t-surface:     #fff0f5;
+    --t-border:      #FF99B3;
+    --t-text:        #3a1020;
+    --t-muted:       #b06080;
+    --t-accent:      #e05080;
+    --t-accent-h:    #f06090;
+    --t-secondary:   #ffe0ea;
+    --t-secondary-h: #ffccd8;
+    --t-pill-text:   #6a1030;
+    --t-error:       #b03030;
+    --t-label:       #8a2040;
+  }
+
+  .book.color-theme-2 .tool-root > p {
+    color: #f6f6f6;
+  }
+
+  .book.color-theme-2 .field-group label {
+    color: #f0c8d8;
+  }
+
+  .book.color-theme-2 .field-group .hint,
+  .book.color-theme-2 .preview-label,
+  .book.color-theme-2 .section-divider {
+    color: #c090a8;
+    border-color: #5a3040;
+  }
+
+  .book.color-theme-2 .export-section h2 {
+    color: var(--t-accent);
+  }
+
+  .tool-root h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--t-accent);
+    text-align: center;
+    margin: 0;
+  }
+
+  .tool-root p {
+    font-size: 1.1em;
+    margin: 0 0 0.85em;
+    line-height: 1.6;
+    max-width: 640px;
+    text-align: center;
+  }
+  .tool-root p:last-child { 
+  	margin-bottom: 0; 
+  }
+  .tool-root code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1em;
+	color: #333333;
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+  }
+  /* ── Layout ── */
+  .tool-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 960px;
+    align-items: start;
+  }
+  @media (max-width: 700px) {
+    .tool-layout { grid-template-columns: 1fr; }
+  }
+
+  /* ── Form panel ── */
+  .form-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .field-group label {
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--t-label);
+  }
+
+  .field-group .hint {
+    font-size: 0.8em;
+    color: var(--t-muted);
+    margin-top: -0.1rem;
+  }
+
+  .tool-root input[type="text"],
+  .tool-root textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--t-surface);
+    border: 1px solid var(--t-border);
+    border-radius: 6px;
+    color: var(--t-text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.95em;
+    padding: 0.5rem 0.65rem;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .tool-root input[type="text"]:focus,
+  .tool-root textarea:focus { border-color: var(--t-accent); }
+
+  .tool-root textarea {
+    font-family: 'IBM Plex Mono', monospace;
+    resize: vertical;
+    min-height: 70px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .color-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+
+  .tool-root input[type="color"] {
+    width: 44px;
+    height: 36px;
+    border: 1px solid var(--t-border);
+    border-radius: 6px;
+    background: var(--t-surface);
+    cursor: pointer;
+    padding: 2px;
+    flex-shrink: 0;
+  }
+
+  .hex-display {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9em;
+    color: var(--t-muted);
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 6px;
+    padding: 0.4rem 0.65rem;
+    flex: 1;
+    cursor: text;
+    user-select: all;
+  }
+
+  .avatar-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: var(--t-pill-text) !important;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .avatar-label:hover { background: var(--t-secondary-h); }
+  .avatar-label input { display: none; }
+
+  .avatar-thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--t-border);
+    flex-shrink: 0;
+  }
+  .avatar-thumb.hidden { display: none; }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--t-border);
+    margin: 0.25rem 0;
+  }
+
+  /* ── Preview panel ── */
+  .preview-panel {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--t-border);
+    border-radius: 10px;
+    margin: 0em 1em;
+    padding: 1em;
+    background: #333333;
+  }
+
+  .preview-label {
+    font-size: 0.78em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--t-muted);
+  }
+
+  /* ── Discord mockup ── */
+  .discord-bg {
+    background: #222222;
+    border-radius: 10px;
+    border: 1px solid #f6f6f6;
+    padding: 2em 1em 2.5em 1em;
+    font-family: 'gg sans', 'Noto Sans', Whitney, system-ui, sans-serif;
+    color: #dbdee1;
+    font-size: 15px;
+    line-height: 1.375;
+  }
+
+  /* Embed block (reply) */
+  .msg-embed {
+    margin-top: 0.4rem;
+    background: #111111;
+    border-left: 4px solid #4e5058;
+    border-radius: 0 4px 4px 0;
+    padding: 1em 0.75em;
+    max-width: 432px;
+  }
+
+  .embed-author {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .embed-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .embed-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  
+  .embed-avatar-reply-initial {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #FF99B3;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+    color: #dbdee1;
+  }
+
+  .embed-body {
+    font-size: 0.875em;
+    color: #dbdee1;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+
+  .embed-label {
+    font-size: 0.78em;
+    color: #949ba4;
+    margin-bottom: 0.1rem;
+  }
+
+  /* Main message row */
+  .message-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .msg-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+  }
+  .msg-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+  .msg-content { flex: 1; min-width: 0; }
+
+  .msg-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.15rem;
+  }
+
+  .msg-name {
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.2;
+  }
+
+  .app-badge {
+    display: inline-block;
+    background: #5865f2;
+    color: #fff;
+    font-size: 0.6em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 1px 5px;
+    border-radius: 3px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    text-transform: uppercase;
+  }
+
+  .msg-timestamp {
+    font-size: 0.72em;
+    color: #949ba4;
+    font-weight: 400;
+    align-self: center;
+  }
+
+  .msg-text {
+    color: #dbdee1;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+
+  /* ── Info card below Discord preview ── */
+  .info-card {
+    background: var(--t-surface);
+    border: 1px solid var(--t-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .info-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .info-key {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--t-muted);
+    flex-shrink: 0;
+    min-width: 80px;
+  }
+
+  .info-val {
+    color: var(--t-text);
+    word-break: break-word;
+  }
+
+  .color-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.15);
+    vertical-align: middle;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .info-desc {
+    font-size: 0.85em;
+    color: var(--t-text);
+    line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    border-top: 1px solid var(--t-border);
+    padding-top: 0.5rem;
+    margin-top: 0.1rem;
+  }
+
+  .info-desc-text {
+    font-size: 0.85em;
+    color: var(--t-text);
+    line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    padding-top: 0.5rem;
+    margin-top: 0.1rem;
+  }
+  .info-desc:empty { display: none; }
+
+  /* ── Guide tabs ── */
+  .guide-section {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--t-surface);
+    border: 1px solid var(--t-border);
+    border-radius: 10px;
+    overflow: scroll;
+  }
+
+  .tab-bar {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--t-border);
+    background: var(--t-secondary);
+    gap: 0;
+    padding: 0 0.25rem;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.6rem 1rem 0.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    color: var(--t-muted);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+    margin-bottom: -1px;
+  }
+  .tab-btn:hover { color: var(--t-text); background: none; }
+  .tab-btn.active {
+    color: var(--t-accent);
+    border-bottom-color: var(--t-accent);
+    font-weight: 600;
+    background: none;
+  }
+
+  .tab-panels { padding: 1.25rem 1.5rem 0.75rem; }
+
+  .tab-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .tab-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 6px;
+    color: var(--t-pill-text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.82em;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .tab-nav-btn:hover { background: var(--t-secondary-h); color: var(--t-text); }
+  .tab-nav-btn:disabled { opacity: 0.3; pointer-events: none; }
+
+  .tab-nav-counter {
+    font-size: 0.78em;
+    color: var(--t-muted);
+  }
+  .book.color-theme-2 .tab-nav-counter { color: #c090a8; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .tab-panel h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--t-accent);
+    margin: 0 0 0.65rem;
+  }
+
+  .tab-panel p {
+    text-align: left;
+    margin: 0 0 0.75em;
+    max-width: none;
+    font-size: 1.1em;
+  }
+
+  .tab-panel ul {
+    margin: 0 0 0.75em;
+    padding-left: 1.4em;
+    font-size: 1.1em;
+    text-align: left;
+    max-width: none;
+  }
+
+  .tab-panel code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9em;
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+  }
+
+  .picrew-gallery {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - 0.375rem);
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--t-border) transparent;
+    padding-bottom: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .picrew-gallery::-webkit-scrollbar { height: 6px; }
+  .picrew-gallery::-webkit-scrollbar-track { background: transparent; }
+  .picrew-gallery::-webkit-scrollbar-thumb {
+    background: var(--t-border);
+    border-radius: 3px;
+  }
+
+  .picrew-gallery a {
+    scroll-snap-align: start;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--t-border);
+    transition: opacity 0.15s, border-color 0.15s;
+  }
+  .picrew-gallery a:hover {
+    opacity: 0.85;
+    border-color: var(--t-accent);
+  }
+
+  .picrew-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .guide-link {
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid var(--t-accent);
+    border-radius: 10px;
+    color: var(--t-accent);
+    transition: background 0.15s, color 0.15s;
+  }
+  .guide-link:hover {
+    background: var(--t-secondary);
+    color: var(--t-accent-h);
+    border-color: var(--t-accent-h);
+  }
+
+  /* ── Export section ── */
+  .export-section {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.75rem;
+  }
+  @media (max-width: 700px) {
+    .export-section { grid-template-columns: 1fr; }
+  }
+
+  .export-section h2 {
+    grid-column: 1 / -1;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--t-accent);
+    margin: 0;
+  }
+
+  .cmd-block {
+    background: var(--t-surface);
+    border: 1px solid var(--t-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .cmd-comment {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8em;
+    color: var(--t-muted);
+    padding: 0.45rem 0.75rem 0;
+  }
+
+  .cmd-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem 0.45rem 0.75rem;
+  }
+
+  .cmd-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1em;
+    color: var(--t-text);
+    flex: 1;
+    word-break: break-all;
+  }
+
+  .cmd-block.empty .cmd-text { color: var(--t-muted); font-style: italic; }
+  .cmd-block.empty .copy-btn { opacity: 0.4; pointer-events: none; }
+
+  .copy-btn {
+    flex-shrink: 0;
+    padding: 0.3rem 0.7rem;
+    background: var(--t-secondary);
+    border: 1px solid var(--t-border);
+    border-radius: 5px;
+    color: var(--t-pill-text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: var(--t-secondary-h); color: var(--t-text); }
+  .copy-btn.copied {
+    background: var(--t-accent);
+    border-color: var(--t-accent);
+    color: #fff;
+  }
+</style>
+
+<div class="tool-root">
+  <h1>pk;m new toolkit</h1>
+  <p>Hit <code>pk;m new</code>, and unsure of what your new headmate might want to look like online? This toolkit serves as a quick guide to previewing their proxy online.</p>
+
+<div class="guide-section">
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" role="tab" data-tab="welcome">o toki — Welcome!</button>
+      <button class="tab-btn" role="tab" data-tab="qualia">pilin sina — Qualia</button>
+      <button class="tab-btn" role="tab" data-tab="sysnames">nimi kulupu — System names</button>
+      <button class="tab-btn" role="tab" data-tab="yourname">nimi sina — Your name</button>
+      <button class="tab-btn" role="tab" data-tab="avatars">sitelen sina — Avatars</button>
+      <button class="tab-btn" role="tab" data-tab="proxying">toki sina — Proxying as yourself</button>
+    </div>
+    <div class="tab-panels">
+
+      <div class="tab-panel active" id="tab-welcome">
+        <h3>o toki — Welcome!</h3>
+<p>This is a simple toolkit for new members of a system who might be shopping for a name, avatar, and colour. You can preview your PluralKit proxy here.</p><p>Note that this isn’t a place for you to <em>set</em> your PluralKit proxy — it’s a place for you see how it looks like to other people that you interact with. There’s an export function at the end of this tool, that’ll allow you to easily copy commands into PluralKit.</p><p>The aim of this toolkit is simple: it’s a place for you to learn who you are. In a sense, this toolkit is a mirror that shows you how you'd look like on the Internet.</p><p>To begin, go to the next tab.</p>
+
+      </div>
+
+      <div class="tab-panel" id="tab-qualia">
+        <h3>pilin sin — Qualia</h3>
+<p>The first thing you do, before you proceed on to continuing with the rest of the toolkit, is to note your <em>qualia.</em> (Young’ins would call them <em>vibes.</em>)</p><p>Take a moment to pause and consider: What are you like in headspace? How might you talk? And lastly, how does it feel to be you?</p><p>We don’t recommend strongly tying headmates to emotions, but it can help as an initial identifier. Beyond emotion, however, there’s an underlying qualia that each of you might possess. It might be represented by colour. It might be just an intuitive sense.</p><p>Each of the Pleiadesfolk possess a qualia that is distinct and difficult to describe. When, say, Helvetica (our interest manager) fronts, she has this weird feeling of a key in her back.</p><p>Turn your observation inward, and note down how you’re like.</p>
+      </div>
+
+      <div class="tab-panel" id="tab-sysnames">
+        <h3>nimi kulupu — System names</h3>
+<p><em>System names</em> are different from <em>body names </em>and <em>headmate names</em>.</p><p>How system names are treated differ by person — we the Pleiadesfolk initially intended for the Pleiades to be something like a <em>company name </em>or <em>demonym</em>. Some have treated system names as a bit of a theme; some members of the Pleiadesfolk use names from the Pleiades star cluster.</p><p>Your system might not need a collective name, really, but it makes you easy to identify within plural circles! It’s honestly up to you. </p><p>You can also use your body name (the name that you are called collectively outside plural circles) as your system name. Nothing’s really stopping you from that!</p><p>If you’re more adventurous, you can make <a target="_blank" rel="noopener noreferrer nofollow" href="https://pluralkit.me/guide/#system-management:~:text=%23-,System%20avatars,-If%20you%27d%20like">system avatars </a>— those will replace the blank default image Discord provides when a member doesn’t have an avatar.</p><p>To set your system name as your system tag, use the following command: </p><p><code>pk;s tag {system tag}</code></p><p>You can format your system tag as well! Many people opt to use tag configurations like <code>pk;config {name} | {tag}</code>, or include a symbol in the tag itself. To make it unique to a server, use <code>pk;config servername format {name} {tag}</code>.</p>
+      </div>
+
+      <div class="tab-panel" id="tab-yourname">
+        <h3>nimi sina — Your name</h3>
+<p>Say, you’re new and you’re looking to disambiguate yourself from the rest of your system — to be distinct.</p><p>If your system has a theme, this might be easy. Look down a list of names related to that theme, and go from there! Lists of trees, typefaces, flowers, colours, fruits, all that stuff.</p><p>But if your system doesn’t have a theme, or ran out of names from that list (there are only nine named stars in the Pleiades, and we ran out of that soon enough), you might be compelled to look for more. (Or, you might be looking for new names anyway — that’s fine!)</p><p>Behind The Name is a good tool for that — it has lists of names across cultures and their meaning, and you can also select by theme.</p><p>
+
+<p><a target="_blank" href="https://www.behindthename.com/random/" class="guide-link">Behind The Name Randomiser</a></p>
+
+<p>There’s also Wikipedia’s giant list of given names, sorted by lists and split by culture. You can take a look, do a bit of a wikiwalk, see which one fits you.</p>
+
+<p><a htarget="_blank" ref="https://en.wikipedia.org/wiki/Category:Feminine_given_names" class="guide-link">Wikipedia: Feminine given names</a></p>
+
+<p><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Masculine_given_names" class="guide-link">Wikipedia: Masculine given names</a></p>
+
+<p>To set up a new member, use <code>pk;m new {name}</code>. We recommend that the initial <code>{name}</code> value be one word and easy to remember; you can use <code>pk;m {name} displayname &lt;nickname&gt;</code> to change how that name is displayed.</p>
+      </div>
+
+      <div class="tab-panel" id="tab-avatars">
+        <h3>sitelen sina — Avatars</h3>
+<p>Just like Aang, avatars can be hard to find — you might need a good view of yourself in headspace in order to find a good representation of yourself.</p><p>If you’re an introject or if you relate a lot to a character, this might be easy — you can look up images of those characters.</p><p>But just in case you can’t, we’ve curated a series of Picrews you can use below. (Many of them are… unfortunately… very feminine; we apologise if you’re transmasc!)</p><p>On PluralKit, member avatars are set by URL. You can simply dump the image into a message, and that should work, but if you’d like, you can also link to an image. </p><p>The tool here will only allow for previewing locally (we don’t have money for cloud storage waaagh)</p><p>Set your avatar with <code>pk;m {name} avatar &lt;link&gt;</code>. </p>
+        <p style="text-align:center; font-size:1.5em; font-weight:500;">→ Scroll for more →</p>
+        <div class="picrew-gallery">
+          <a target="_blank" href="https://picrew.me/en/image_maker/1944831"     target="_blank" rel="noopener"><img src="/assets/media/picrews/1944831.png"     alt="Picrew 1944831"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/3595"     target="_blank" rel="noopener"><img src="/assets/media/picrews/3595.png"     alt="Picrew 3595"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/16378"    target="_blank" rel="noopener"><img src="/assets/media/picrews/16378.png"    alt="Picrew 16378"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/16952"    target="_blank" rel="noopener"><img src="/assets/media/picrews/16952.png"    alt="Picrew 16952"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1564386"     target="_blank" rel="noopener"><img src="/assets/media/picrews/1564386.png"     alt="Picrew 1564386"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/25030"    target="_blank" rel="noopener"><img src="/assets/media/picrews/25030.png"    alt="Picrew 25030"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/47161"    target="_blank" rel="noopener"><img src="/assets/media/picrews/47161.png"    alt="Picrew 47161"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/69653"    target="_blank" rel="noopener"><img src="/assets/media/picrews/69653.png"    alt="Picrew 69653"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/86217"    target="_blank" rel="noopener"><img src="/assets/media/picrews/86217.png"    alt="Picrew 86217"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1342558"     target="_blank" rel="noopener"><img src="/assets/media/picrews/1342558.png"     alt="Picrew 1342558"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/88835"    target="_blank" rel="noopener"><img src="/assets/media/picrews/88835.png"    alt="Picrew 88835"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/186583"   target="_blank" rel="noopener"><img src="/assets/media/picrews/186583.png"   alt="Picrew 186583"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/318008"   target="_blank" rel="noopener"><img src="/assets/media/picrews/318008.png"   alt="Picrew 318008"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/597326"   target="_blank" rel="noopener"><img src="/assets/media/picrews/597326.png"   alt="Picrew 597326"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/644129"     target="_blank" rel="noopener"><img src="/assets/media/picrews/644129.png"     alt="Picrew 644129"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/707090"   target="_blank" rel="noopener"><img src="/assets/media/picrews/707090.png"   alt="Picrew 707090"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1108773"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1108773.png"  alt="Picrew 1108773"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1249159"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1249159.png"  alt="Picrew 1249159"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1272810"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1272810.png"  alt="Picrew 1272810"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1276414"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1276414.png"  alt="Picrew 1276414"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1403004"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1403004.png"  alt="Picrew 1403004"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1446612"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1446612.png"  alt="Picrew 1446612"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1497656"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1497656.png"  alt="Picrew 1497656"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1589275"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1589275.png"  alt="Picrew 1589275"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1756101"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1756101.png"  alt="Picrew 1756101"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1775567"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1775567.png"  alt="Picrew 1775567"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1787745"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1787745.png"  alt="Picrew 1787745"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1794211"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1794211.png"  alt="Picrew 1794211"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/1969778"  target="_blank" rel="noopener"><img src="/assets/media/picrews/1969778.png"  alt="Picrew 1969778"></a>
+          <a target="_blank" href="https://picrew.me/en/image_maker/2795963"  target="_blank" rel="noopener"><img src="/assets/media/picrews/2795963.png"  alt="Picrew 2795963"></a>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-proxying">
+        <h3>toki sina — Proxying as yourself</h3>
+<p>On PluralKit, you have to use a <a target="_blank" rel="noopener noreferrer nofollow" href="https://pluralkit.me/guide/#system-management:~:text=%23-,System%20avatars,-If%20you%27d%20like">proxy</a> to trigger a webhook that allows you to speak as a part of you.</p><p>You can set anything as proxy tags — some use symbols <code>!, @, #, $, %</code> etc), some add the proxy after their text ( <code>text-P</code>), and some even use emoji as proxies.</p><p>You can also toggle on proxies by using <code>pk;m &lt;member&gt; keepproxy [on|off]</code>. There was a system we knew who had an animated custom emote that they used as their proxy, which showed up in front of their text. Pretty cute!</p>
+      </div>
+
+    </div>
+    <div class="tab-nav">
+      <button class="tab-nav-btn" id="tab-prev">← Prev</button>
+      <span class="tab-nav-counter" id="tab-counter">1 / 6</span>
+      <button class="tab-nav-btn" id="tab-next">Next →</button>
+    </div>
+</div>
+
+<hr style="width:90%; color:--t-border; display: block; margin:2em;">
+
+  <div class="tool-layout">
+        <div class="preview-panel">
+      <div class="preview-label">Preview</div>
+
+      <div class="discord-bg">
+        <!-- Main message -->
+        <div class="message-row">
+          <div class="msg-avatar" id="preview-avatar">
+            <span id="preview-initial">L</span>
+          </div>
+          <div class="msg-content">
+            <div class="msg-header">
+              <span class="msg-name" id="preview-name" style="color:#5865f2;">Shadow the Hedgehog | Example System</span>
+              <span class="app-badge">APP</span>
+              <span class="msg-timestamp">Today at 23:59</span>
+            </div>
+            <div class="msg-text" id="preview-msg">example text</div>
+            <!-- Reply embed -->
+            <div class="msg-embed" id="preview-embed">
+              <div class="embed-author">
+                <div class="embed-avatar-reply-initial" id="preview-reply-avatar">
+                  <span id="preview-reply-initial"></span>
+                </div>
+                <span class="embed-author-name" id="preview-reply-name">Sonic the Hedgehog</span>
+              </div>
+              <div class="embed-label">Reply to:</div>
+              <div class="embed-body" id="preview-reply-excerpt">example text</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info card -->
+      <div class="info-card" id="info-card">
+        <div class="info-row">
+          <span class="info-key">Colour</span>
+          <span class="info-val">
+            <span class="color-swatch" id="info-swatch" style="background:#5865f2;"></span>
+            <span id="info-color">#5865f2</span>
+          </span>
+        </div>
+        <div class="info-row" id="proxy-row" style="display:none;">
+          <span class="info-key">Proxy</span>
+          <span class="info-val" id="info-proxy"></span>
+        </div>
+        <div class="info-row info-desc" id="desc-header-row" style="display:none;">
+          <span class="info-key">Description</span>
+        </div>
+        <div class="info-desc-txt" id="info-desc"></div>
+      </div>
+    </div>
+    <div class="form-panel">
+      <div class="field-group">
+        <label>Display name format</label>
+        <span class="hint">Use <code>{name}</code> and <code>{tag}</code> as placeholders</span>
+        <input type="text" id="fmt" value="{name} | {tag}" placeholder="{name} | {tag}">
+      </div>
+      <div class="field-group">
+        <label>Name <code>{name}</code></label>
+        <input type="text" id="name" value="Shadow the Hedgehog" placeholder="Shadow the Hedgehog">
+      </div>
+      <div class="field-group">
+        <label>Tag <code>{tag}</code></label>
+        <input type="text" id="tag" value="Example System" placeholder="Example System">
+      </div>
+      <div class="field-group">
+        <label>Avatar</label>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <label class="avatar-label">
+            <input type="file" id="avatar-upload" accept="image/*">
+            Upload image
+          </label>
+          <img id="avatar-preview" class="avatar-thumb hidden" src="" alt="avatar preview">
+        </div>
+        <span class="hint">Upload will be for preview only. If you have an URL, you can also key that in here.<span>
+        <input type="text" id="avatar-url" placeholder="https://… (for pk;m avatar command)">
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="field-group">
+        <label>Name colour</label>
+        <div class="color-row">
+          <input type="color" id="color" value="#3889ff">
+          <span class="hex-display" id="hex-out">#3889ff</span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Proxy tag</label>
+        <span class="hint">This will be used in the command export card below</span>
+        <input type="text" id="proxy" placeholder="s:text or sha:text or [text] or -text or text-sha">
+      </div>
+
+      <div class="field-group">
+        <label>Description</label>
+        <textarea id="desc" placeholder="Member description…">Shadow the Hedgehog is a bitch-ass motherf**ker. She pissed on...</textarea>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="field-group">
+        <label>Message text</label>
+        <input type="text" id="msg-text" value="pk;m new Shadow the Hedgehog" placeholder="example text">
+      </div>
+
+      <div class="field-group">
+        <label>Replied-to text</label>
+        <span class="hint">The message being replied to (shown in the embed below)</span>
+        <input type="text" id="reply-text" value="How was your day?" placeholder="example text">
+      </div>
+
+      <div class="field-group">
+        <label>Reply account name</label>
+        <span class="hint">The name shown in the reply embed below the message</span>
+        <input type="text" id="reply-name" value="Sonic the Hedgehog" placeholder="Sonic the Hedgehog">
+      </div>
+    </div>
+  </div>
+
+<hr style="width:90%; color:--t-border; display: block; margin:2em;">
+
+  <!-- ── Export ── -->
+  <div class="export-section">
+    <h2>Export commands</h2>
+
+    <div class="cmd-block" id="ex-tag">
+      <div class="cmd-comment">/* Sets your server system tag */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-tag-text">pk;s tag …</span>
+        <button class="copy-btn" data-target="ex-tag-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-fmt">
+      <div class="cmd-comment">/* Sets name format config */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-fmt-text">pk;config name format …</span>
+        <button class="copy-btn" data-target="ex-fmt-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-new">
+      <div class="cmd-comment">/* Creates a new member */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-new-text">pk;m new …</span>
+        <button class="copy-btn" data-target="ex-new-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-proxy">
+      <div class="cmd-comment">/* Sets the member's proxy */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-proxy-text">pk;m … proxy …</span>
+        <button class="copy-btn" data-target="ex-proxy-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-avatar">
+      <div class="cmd-comment">/* Sets the member's avatar */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-avatar-text">pk;m … avatar …</span>
+        <button class="copy-btn" data-target="ex-avatar-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-colour">
+      <div class="cmd-comment">/* Sets the member's colour */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-colour-text">pk;m … colour …</span>
+        <button class="copy-btn" data-target="ex-colour-text">Copy</button>
+      </div>
+    </div>
+
+    <div class="cmd-block" id="ex-desc">
+      <div class="cmd-comment">/* Sets the member's description */</div>
+      <div class="cmd-row">
+        <span class="cmd-text" id="ex-desc-text">pk;m … description …</span>
+        <button class="copy-btn" data-target="ex-desc-text">Copy</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+
+  let avatarDataUrl = null;
+
+  function getDisplayName() {
+    const fmt  = $('fmt').value  || '{name}{tag}';
+    const name = $('name').value || '';
+    const tag  = $('tag').value  || '';
+    return fmt.replace('{name}', name).replace('{tag}', tag);
+  }
+
+  function getInitial(str) {
+    const stripped = str.replace(/[^\p{L}\p{N}]/gu, '');
+    return stripped.charAt(0).toUpperCase() || '?';
+  }
+
+  function update() {
+    const displayName = getDisplayName();
+    const color       = $('color').value;
+    const msgText     = $('msg-text').value  || '';
+    const replyText   = $('reply-text').value || '';
+    const replyName   = $('reply-name').value || '';
+    const proxy       = $('proxy').value.trim();
+    const desc        = $('desc').value.trim();
+
+    // Hex display
+    $('hex-out').textContent = color;
+
+    // Main name
+    $('preview-name').textContent = displayName;
+    $('preview-name').style.color = color;
+
+    // Embed border colour
+    $('preview-embed').style.borderLeftColor = color;
+
+    // Main avatar
+    const avatarEl = $('preview-avatar');
+    const initialEl = $('preview-initial');
+    if (avatarDataUrl) {
+      avatarEl.style.background = 'none';
+      // clear old img if any
+      let img = avatarEl.querySelector('img');
+      if (!img) {
+        img = document.createElement('img');
+        avatarEl.appendChild(img);
+        initialEl.style.display = 'none';
+      }
+      img.src = avatarDataUrl;
+      img.style.display = '';
+    } else {
+      const img = avatarEl.querySelector('img');
+      if (img) img.style.display = 'none';
+      initialEl.style.display = '';
+      initialEl.textContent = getInitial($('name').value || displayName);
+      avatarEl.style.background = color;
+    }
+
+    // Reply bar
+    $('preview-reply-name').textContent = replyName;
+    $('preview-reply-excerpt').textContent = replyText || '\u00a0';
+    $('preview-reply-initial').textContent = getInitial(replyName);
+
+    // Message text
+    $('preview-msg').textContent = msgText;
+
+    // Info card
+    $('info-swatch').style.background = color;
+    $('info-color').textContent = color;
+
+    if (proxy) {
+      $('proxy-row').style.display = '';
+      $('info-proxy').textContent = proxy;
+    } else {
+      $('proxy-row').style.display = 'none';
+    }
+
+    $('info-desc').textContent = desc;
+    $('desc-header-row').style.display = desc ? '' : 'none';
+
+    // Export commands
+    function setCmd(blockId, textId, cmd, valid) {
+      const block = $(blockId);
+      $(textId).textContent = cmd;
+      block.classList.toggle('empty', !valid);
+    }
+
+    const name      = $('name').value.trim();
+    const tag       = $('tag').value.trim();
+    const fmt       = $('fmt').value.trim();
+    const avatarUrl = $('avatar-url').value.trim();
+
+    setCmd('ex-tag',    'ex-tag-text',    `pk;s tag ${tag}`,                           !!tag);
+    setCmd('ex-fmt',    'ex-fmt-text',    `pk;config name format ${fmt}`,              !!fmt);
+    setCmd('ex-new',    'ex-new-text',    `pk;m new ${name}`,                          !!name);
+    setCmd('ex-proxy',  'ex-proxy-text',  `pk;m ${name} proxy ${proxy}`,               !!(name && proxy));
+    setCmd('ex-avatar', 'ex-avatar-text', `pk;m ${name} avatar ${avatarUrl}`,          !!(name && avatarUrl));
+    setCmd('ex-colour', 'ex-colour-text', `pk;m ${name} colour ${color}`,              !!name);
+    setCmd('ex-desc',   'ex-desc-text',   `pk;m ${name} description ${desc}`,          !!(name && desc));
+  }
+
+  // Live update on all text inputs
+  ['fmt','name','tag','color','msg-text','reply-text','reply-name','proxy','desc','avatar-url'].forEach(id => {
+    $(id).addEventListener('input', update);
+  });
+
+  // Clear default values on first focus
+  ['fmt','name','tag','msg-text','reply-text','reply-name','desc'].forEach(id => {
+    $(id).addEventListener('focus', function() {
+      this.value = '';
+      update();
+    }, { once: true });
+  });
+
+  // Copy buttons
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const text = $(this.dataset.target).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        this.textContent = 'Copied!';
+        this.classList.add('copied');
+        setTimeout(() => {
+          this.textContent = 'Copy';
+          this.classList.remove('copied');
+        }, 1500);
+      });
+    });
+  });
+
+  // Avatar upload
+  $('avatar-upload').addEventListener('change', function () {
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      avatarDataUrl = e.target.result;
+      $('avatar-preview').src = avatarDataUrl;
+      $('avatar-preview').classList.remove('hidden');
+      update();
+    };
+    reader.readAsDataURL(file);
+  });
+
+  update();
+
+  // Tab switching
+  const tabBtns   = Array.from(document.querySelectorAll('.tab-btn'));
+  const tabPanels = Array.from(document.querySelectorAll('.tab-panel'));
+  const prevBtn   = $('tab-prev');
+  const nextBtn   = $('tab-next');
+  const counter   = $('tab-counter');
+
+  function goToTab(idx) {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+    tabBtns[idx].classList.add('active');
+    tabPanels[idx].classList.add('active');
+    // scroll tab into view in the bar
+    tabBtns[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx === tabBtns.length - 1;
+    counter.textContent = `${idx + 1} / ${tabBtns.length}`;
+  }
+
+  tabBtns.forEach((btn, i) => btn.addEventListener('click', () => goToTab(i)));
+  prevBtn.addEventListener('click', () => {
+    const cur = tabBtns.findIndex(b => b.classList.contains('active'));
+    if (cur > 0) goToTab(cur - 1);
+  });
+  nextBtn.addEventListener('click', () => {
+    const cur = tabBtns.findIndex(b => b.classList.contains('active'));
+    if (cur < tabBtns.length - 1) goToTab(cur + 1);
+  });
+
+  goToTab(0); // initialise state
+
+  // On mobile the preview panel is sticky at the top; add a bottom spacer
+  // to the form panel so the last form field can be scrolled fully into view.
+  const previewPanel = document.querySelector('.preview-panel');
+  const formPanel    = document.querySelector('.form-panel');
+
+  function syncMobileSpacer() {
+    if (window.innerWidth <= 700) {
+      formPanel.style.paddingBottom = (previewPanel.offsetHeight + 30) + 'px';
+    } else {
+      formPanel.style.paddingBottom = '';
+    }
+  }
+
+  function syncPreviewTop() {
+    if (window.innerWidth > 700) {
+      previewPanel.style.top = '0px';
+    } else {
+      previewPanel.style.top = (window.innerHeight * 0.56 - previewPanel.offsetHeight) + 'px';
+    }
+  }
+
+  window.addEventListener('resize', () => { syncMobileSpacer(); syncPreviewTop(); });
+  syncMobileSpacer();
+  syncPreviewTop();
+})();
+</script>

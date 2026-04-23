@@ -4,7 +4,7 @@ description: lipu linluwi pona is built upon the vast resources and experiences 
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
-permalink: /guides/o-linluwi
+permalink: /guide/o-linluwi
 order: 10
 ---
 
