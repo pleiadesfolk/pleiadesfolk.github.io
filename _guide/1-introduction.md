@@ -4,7 +4,7 @@ description: Wondering if you're plural? Don't be alarmed!
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
-permalink: /guides/introduction
+permalink: /guide/introduction
 order: 1
 ---
 
