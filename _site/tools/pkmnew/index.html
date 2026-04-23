@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-04-23T23:19:24+08:00" />
+<meta property="article:published_time" content="2026-04-24T00:01:52+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="the pk;m new toolkit" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-04-23T23:19:24+08:00","datePublished":"2026-04-23T23:19:24+08:00","description":"Here, you can preview how a new member will look on Discord and learn to individuate and actualise yourselves.","headline":"the pk;m new toolkit","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/pkmnew/"},"url":"http://localhost:4000/tools/pkmnew/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-04-24T00:01:52+08:00","datePublished":"2026-04-24T00:01:52+08:00","description":"Here, you can preview how a new member will look on Discord and learn to individuate and actualise yourselves.","headline":"the pk;m new toolkit","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/pkmnew/"},"url":"http://localhost:4000/tools/pkmnew/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -940,6 +940,33 @@
     margin: 0 0 0.65rem;
   }
 
+  .tab-panel h3 .heading-anchor {
+    position: relative;
+    margin-left: 0.4em;
+    color: var(--t-accent);
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+  .tab-panel h3 .heading-anchor::after {
+    content: 'Copied~';
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 170%;
+    height: fit-content;
+    background: var(--t-text);
+    color: var(--t-surface);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.2em 0.55em;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  .tab-panel h3 .heading-anchor.copied::after { opacity: 1; }
+
   .tab-panel p {
     text-align: left;
     margin: 0 0 0.75em;
@@ -1112,24 +1139,26 @@
     <div class="tab-panels">
 
       <div class="tab-panel active" id="tab-welcome">
-        <h3>o toki — Welcome!</h3>
+        <h3 id="tab-welcome">o toki — Welcome!<a class="heading-anchor" href="#tab-welcome"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
 <p>This is a simple toolkit for new members of a system who might be shopping for a name, avatar, and colour. You can preview your PluralKit proxy here.</p><p>Note that this isn’t a place for you to <em>set</em> your PluralKit proxy — it’s a place for you see how it looks like to other people that you interact with. There’s an export function at the end of this tool, that’ll allow you to easily copy commands into PluralKit.</p><p>The aim of this toolkit is simple: it’s a place for you to learn who you are. In a sense, this toolkit is a mirror that shows you how you'd look like on the Internet.</p><p>To begin, go to the next tab.</p>
 
       </div>
 
       <div class="tab-panel" id="tab-qualia">
-        <h3>pilin sin — Qualia</h3>
+        <h3 id="tab-qualia-heading">pilin sin — Qualia<a class="heading-anchor" href="#tab-qualia"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
 <p>The first thing you do, before you proceed on to continuing with the rest of the toolkit, is to note your <em>qualia.</em> (Young’ins would call them <em>vibes.</em>)</p><p>Take a moment to pause and consider: What are you like in headspace? How might you talk? And lastly, how does it feel to be you?</p><p>We don’t recommend strongly tying headmates to emotions, but it can help as an initial identifier. Beyond emotion, however, there’s an underlying qualia that each of you might possess. It might be represented by colour. It might be just an intuitive sense.</p><p>Each of the Pleiadesfolk possess a qualia that is distinct and difficult to describe. When, say, Helvetica (our interest manager) fronts, she has this weird feeling of a key in her back.</p><p>Turn your observation inward, and note down how you’re like.</p>
       </div>
 
       <div class="tab-panel" id="tab-sysnames">
-        <h3>nimi kulupu — System names</h3>
+        <h3 id="tab-sysnames-heading">nimi kulupu — System names<a class="heading-anchor" href="#tab-sysnames"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
 <p><em>System names</em> are different from <em>body names </em>and <em>headmate names</em>.</p><p>How system names are treated differ by person — we the Pleiadesfolk initially intended for the Pleiades to be something like a <em>company name </em>or <em>demonym</em>. Some have treated system names as a bit of a theme; some members of the Pleiadesfolk use names from the Pleiades star cluster.</p><p>Your system might not need a collective name, really, but it makes you easy to identify within plural circles! It’s honestly up to you. </p><p>You can also use your body name (the name that you are called collectively outside plural circles) as your system name. Nothing’s really stopping you from that!</p><p>If you’re more adventurous, you can make <a target="_blank" rel="noopener noreferrer nofollow" href="https://pluralkit.me/guide/#system-management:~:text=%23-,System%20avatars,-If%20you%27d%20like">system avatars </a>— those will replace the blank default image Discord provides when a member doesn’t have an avatar.</p><p>To set your system name as your system tag, use the following command: </p><p><code>pk;s tag {system tag}</code></p><p>You can format your system tag as well! Many people opt to use tag configurations like <code>pk;config {name} | {tag}</code>, or include a symbol in the tag itself. To make it unique to a server, use <code>pk;config servername format {name} {tag}</code>.</p>
       </div>
 
       <div class="tab-panel" id="tab-yourname">
-        <h3>nimi sina — Your name</h3>
-<p>Say, you’re new and you’re looking to disambiguate yourself from the rest of your system — to be distinct.</p><p>If your system has a theme, this might be easy. Look down a list of names related to that theme, and go from there! Lists of trees, typefaces, flowers, colours, fruits, all that stuff.</p><p>But if your system doesn’t have a theme, or ran out of names from that list (there are only nine named stars in the Pleiades, and we ran out of that soon enough), you might be compelled to look for more. (Or, you might be looking for new names anyway — that’s fine!)</p><p>Behind The Name is a good tool for that — it has lists of names across cultures and their meaning, and you can also select by theme.</p><p>
+        <h3 id="tab-yourname-heading">nimi sina — Your name<a class="heading-anchor" href="#tab-yourname"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
+<p>Say you’re new and you’re looking to disambiguate yourself from the rest of your system — to be distinct.</p><p>If your system has a theme, this might be easy. Look down a list of names related to that theme, and go from there! Lists of trees, typefaces, flowers, colours, fruits, all that stuff.</p><p>But if your system doesn’t have a theme, or ran out of names from that list (there are only nine named stars in the Pleiades, and we ran out of that soon enough), you might be compelled to look for more. (Or, you might be looking for new names anyway — that’s fine!)</p><p>Behind The Name is a good tool for that — it has lists of names across cultures and their meaning, and you can also search for names by theme.</p><p>
+
+<p><a target="_blank" href="https://www.behindthename.com/meanings/" class="guide-link">Behind The Name — Search by name meaning</a></p>
 
 <p><a target="_blank" href="https://www.behindthename.com/random/" class="guide-link">Behind The Name Randomiser</a></p>
 
@@ -1143,7 +1172,7 @@
       </div>
 
       <div class="tab-panel" id="tab-avatars">
-        <h3>sitelen sina — Avatars</h3>
+        <h3 id="tab-avatars-heading">sitelen sina — Avatars<a class="heading-anchor" href="#tab-avatars"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
 <p>Just like Aang, avatars can be hard to find — you might need a good view of yourself in headspace in order to find a good representation of yourself.</p><p>If you’re an introject or if you relate a lot to a character, this might be easy — you can look up images of those characters.</p><p>But just in case you can’t, we’ve curated a series of Picrews you can use below. (Many of them are… unfortunately… very feminine; we apologise if you’re transmasc!)</p><p>On PluralKit, member avatars are set by URL. You can simply dump the image into a message, and that should work, but if you’d like, you can also link to an image. </p><p>The tool here will only allow for previewing locally (we don’t have money for cloud storage waaagh)</p><p>Set your avatar with <code>pk;m {name} avatar &lt;link&gt;</code>. </p>
         <p style="text-align:center; font-size:1.5em; font-weight:500;">→ Scroll for more →</p>
         <div class="picrew-gallery">
@@ -1181,8 +1210,8 @@
       </div>
 
       <div class="tab-panel" id="tab-proxying">
-        <h3>toki sina — Proxying as yourself</h3>
-<p>On PluralKit, you have to use a <a target="_blank" rel="noopener noreferrer nofollow" href="https://pluralkit.me/guide/#system-management:~:text=%23-,System%20avatars,-If%20you%27d%20like">proxy</a> to trigger a webhook that allows you to speak as a part of you.</p><p>You can set anything as proxy tags — some use symbols <code>!, @, #, $, %</code> etc), some add the proxy after their text ( <code>text-P</code>), and some even use emoji as proxies.</p><p>You can also toggle on proxies by using <code>pk;m &lt;member&gt; keepproxy [on|off]</code>. There was a system we knew who had an animated custom emote that they used as their proxy, which showed up in front of their text. Pretty cute!</p>
+        <h3 id="tab-proxying-heading">toki sina — Proxying as yourself<a class="heading-anchor" href="#tab-proxying"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
+<p>On PluralKit, you have to use a <a target="_blank" rel="noopener noreferrer nofollow" href="https://pluralkit.me/guide/#system-management:~:text=%23-,System%20avatars,-If%20you%27d%20like">proxy</a> to trigger a webhook that allows you to speak as a part of you.</p><p>You can set anything as proxy tags — some use symbols <code>!, @, #, $, %</code> etc), some add the proxy after their text ( <code>text-P</code>), and some even use emoji as proxies.</p><p>You can also keep proxy tags in your proxied message by using <code>pk;m &lt;member&gt; keepproxy [on|off]</code>. There was a system we (the <span class="sitelen">󱤟</span> Pleiadesfolk) knew who had an animated custom emote that they used as their proxy, which showed up in front of their text. Pretty cute!</p>
       </div>
 
     </div>
@@ -1555,7 +1584,23 @@
     if (cur < tabBtns.length - 1) goToTab(cur + 1);
   });
 
-  goToTab(0); // initialise state
+  const hashIdx = tabPanels.findIndex(p => p.id === location.hash.slice(1));
+  goToTab(hashIdx >= 0 ? hashIdx : 0);
+
+  tabBtns.forEach((btn, i) => btn.addEventListener('click', () => {
+    history.replaceState(null, '', '#' + tabPanels[i].id);
+  }));
+
+  document.querySelectorAll('.heading-anchor').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const url = location.origin + location.pathname + this.getAttribute('href');
+      navigator.clipboard.writeText(url).then(() => {
+        this.classList.add('copied');
+        setTimeout(() => this.classList.remove('copied'), 1500);
+      });
+    });
+  });
 
   // On mobile the preview panel is sticky at the top; add a bottom spacer
   // to the form panel so the last form field can be scrolled fully into view.
@@ -1685,12 +1730,12 @@
     },
     "file": {
         "path": "_unlisted/pkmockup.html",
-        "mtime": "2026-04-23 23:19:24 +0800",
+        "mtime": "2026-04-24 00:01:52 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-04-23 23:19:24 +0800"
+        "time": "2026-04-24 00:01:52 +0800"
     },
     "basePath": "",
     "book": {
@@ -1705,7 +1750,7 @@
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1776957564"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1776960112"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
