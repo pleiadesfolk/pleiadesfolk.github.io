@@ -26,7 +26,7 @@
             {%- include search.html -%}
         </div>
 
-        {% if page.previous or page.next %}
+        {% if (page.previous or page.next) and page.collection != "unlisted" %}
         <nav class="page-nav">
             {% if page.previous %}
             <a class="page-nav-btn prev" href="{{ site.baseurl }}{{ page.previous.url }}">
