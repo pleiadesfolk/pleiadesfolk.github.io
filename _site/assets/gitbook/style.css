@@ -3318,9 +3318,7 @@ table {
     border-bottom: none;
     color: #364149;
     background: 0 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     position: relative
 }
 

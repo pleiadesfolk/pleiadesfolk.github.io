@@ -737,13 +737,12 @@ permalink: /tools/pkmnew/
 
       <div class="tab-panel active" id="tab-welcome">
         <h3 id="tab-welcome">o toki — Welcome!<a class="heading-anchor" href="#tab-welcome"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
-<p>This is a simple toolkit for new members of a system who might be shopping for a name, avatar, and colour. You can preview your PluralKit proxy here.</p><p>Note that this isn’t a place for you to <em>set</em> your PluralKit proxy — it’s a place for you see how it looks like to other people that you interact with. There’s an export function at the end of this tool that’ll allow you to easily copy commands into PluralKit.</p><p>The aim of this toolkit is simple: it’s a place for you to learn who you are. In a sense, this toolkit is a mirror that shows you how you'd look like on the Internet.</p><p>To begin, go to the next tab.</p>
-
+<p>This is a simple toolkit for new members of a system who might be shopping for a name, avatar, and colour. You can preview your PluralKit proxy here.</p><p>Note that this isn’t a place for you to <em>set</em> your PluralKit proxy — it’s a place for you to see what it looks like to other people that you interact with. There’ll an export function at the end of this tool that’ll allow you to easily copy commands into PluralKit.</p><p>The aim of this toolkit is simple: it’s a place for you to learn who you are. In a sense, this toolkit is a mirror that shows you how you'd look like on the Internet.</p><p>To begin, go to the next tab.</p>
       </div>
 
       <div class="tab-panel" id="tab-qualia">
         <h3 id="tab-qualia-heading">pilin sin — Qualia<a class="heading-anchor" href="#tab-qualia"><i class="fa fa-link" style="color:var(--t-accent);"></i></a></h3>
-<p>The first thing you do, before you proceed on to continuing with the rest of the toolkit, is to note your <em>qualia.</em> (Young’ins would call them <em>vibes.</em>)</p><p>Take a moment to pause and consider: What are you like in headspace? How might you talk? And lastly, how does it feel to be you?</p><p>We don’t recommend strongly tying headmates to emotions, but it can help as an initial identifier. Beyond emotion, however, there’s an underlying qualia that each of you might possess. It might be represented by colour. It might be just an intuitive sense.</p><p>Each of the <span class="sitelen">󱤟</span> Pleiadesfolk possess a qualia that is distinct and difficult to describe. When, say, Helvetica (our interest manager) fronts, she has this weird feeling of a key in her back.</p><p>Turn your observation inward, and note down how you’re like.</p>
+<p>The first thing you do, before you proceed on to continuing with the rest of the toolkit, is to note your <em>qualia.</em> (Youngsters would call them <em>vibes.</em>)</p><p>Take a moment to pause and consider: What are you like in headspace? How might you talk? And lastly, how does it feel to be you?</p><p>We don’t recommend strongly tying headmates to emotions, but it can help as an initial identifier. Beyond emotion, however, there’s an underlying qualia that each of you might possess. It might be represented by colour. It might be just an intuitive sense.</p><p>Each of the <span class="sitelen">󱤟</span> Pleiadesfolk possess a qualia that is distinct and difficult to describe. When, say, <span class="sitelen">󱤎</span> Helvetica (our interest manager) fronts, she has this weird feeling of a key in her back.</p><p>Turn your observation inward, and note down what you’re like.</p>
       </div>
 
       <div class="tab-panel" id="tab-sysnames">
@@ -882,7 +881,7 @@ permalink: /tools/pkmnew/
       <div class="field-group">
         <label>Display name format</label>
         <span class="hint">Use <code>{name}</code> and <code>{tag}</code> as placeholders</span>
-        <input type="text" id="fmt" value="{name} | {tag}" placeholder="{name} | {tag}">
+        <input type="text" id="fmt" data-no-clear value="{name} | {tag}" placeholder="{name} | {tag}">
       </div>
       <div class="field-group">
         <label>Name <code>{name}</code></label>
@@ -1109,7 +1108,7 @@ permalink: /tools/pkmnew/
     setCmd('ex-fmt',    'ex-fmt-text',    `pk;config name format ${fmt}`,              !!fmt);
     setCmd('ex-new',    'ex-new-text',    `pk;m new ${name}`,                          !!name);
     setCmd('ex-proxy',  'ex-proxy-text',  `pk;m ${name} proxy ${proxy}`,               !!(name && proxy));
-    setCmd('ex-avatar', 'ex-avatar-text', `pk;m ${name} avatar ${avatarUrl}`,          !!(name && avatarUrl));
+    setCmd('ex-avatar', 'ex-avatar-text', avatarUrl ? `pk;m ${name} avatar ${avatarUrl}` : `pk;m ${name} avatar`, !!name);
     setCmd('ex-colour', 'ex-colour-text', `pk;m ${name} colour ${color}`,              !!name);
     setCmd('ex-desc',   'ex-desc-text',   `pk;m ${name} description ${desc}`,          !!(name && desc));
   }
@@ -1120,13 +1119,13 @@ permalink: /tools/pkmnew/
   });
 
   // Clear default values on first focus
-  ['fmt','name','tag','msg-text','reply-text','reply-name','desc'].forEach(id => {
+  ['name','tag','msg-text','reply-text','reply-name','desc'].forEach(id => {
     $(id).addEventListener('focus', function() {
       this.value = '';
       update();
     }, { once: true });
   });
-
+  
   // Copy buttons
   document.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', function () {
