@@ -846,7 +846,7 @@ pre:has(code.language-mermaid[data-processed="true"]) {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 60% 130%, #fff6d5, #c5bf9f, #264563, #2d3c42, #333333);
+  background: radial-gradient(circle at 35% 115%, #dbd9c2, #264563, #2d3c42, #333333);
 }
 
 .ly-starfield-light::after,
