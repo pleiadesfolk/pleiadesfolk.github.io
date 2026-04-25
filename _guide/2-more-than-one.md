@@ -305,15 +305,20 @@ order: 2
 <p>A lot of plurality is covert and difficult to notice.</p>
 <p>Switching can feel like dramatic shifts in mood or personality — and could be explained away as that, mood swings.</p>
 <p>It’s likely that your headmates have a more passive influence on front, perhaps, rather than jarringly being pushed to the front. Sudden switches aren’t common, in fact; most switches are likely passive.</p>
-<p>Think about moments where you had to be confident for a presentation, perhaps. Maybe you felt really anxious in the run-up to the presentation, and you felt like you were about to have a panic attack — but when your name was called, you found a strange,
- confident voice within you that carried the presentation till its end, and the next thing you know you’re stunned to accept applause and have to awkwardly step off the stage. Later, when you step off the stage, you might realise you don’t exactly
- remember the emcee that introduced you, perhaps, or that the people in the room feel familiar, and that you have to try to remember their name.</p>
-<p>That’s an example of <a target="_blank" rel="noopener noreferrer nofollow" href="https://did-research.org/did/identity_alteration/switching">passive influence</a> — intrusions from parts of you that might carry you and help you in situations where you
- need to employ a skill you don’t usually have, or losing memory that you’d expect to be there.</p>
+<p>Think about moments where you had to be confident for a presentation, perhaps. Maybe you felt really anxious in the run-up to the presentation, and you felt like you were about to have a panic attack — but when your name was called, you found a strange, confident voice within you that carried the presentation till its end, and the next thing you know you’re stunned to accept applause and have to awkwardly step off the stage. Later, when you step off the stage, you might realise you don’t exactly remember the emcee that introduced you, perhaps, or that the people in the room feel familiar, and that you have to try to remember their name.</p>
+<p>That’s an example of <a target="_blank" rel="noopener noreferrer nofollow" href="https://did-research.org/did/identity_alteration/switching">passive influence</a> — intrusions from parts of you that might carry you and help you in situations where you need to employ a skill you don’t usually have, or losing memory that you’d expect to be there.</p>
 <p>It’s also likely that you’ll forget what you forgot. While reviewing the checklist, we (the <span class="sitelen">󱤟</span> Pleiadesfolk) realised that we couldn’t identify fully with some of these signs, even when we understood ourselves as a system.</p>
 <p>For instance, we didn’t feel like we’ve “lost time”, but describe time as something that either stretches or compresses depending on whose perspective it is; we can look at a clock and realise that it’s 10 p.m. before realising that we didn’t have any dinner. Still, both of these are “lost time”.</p>
-<p>Episodic memory for us can be spotty — we might struggle with talking about what we did on a day to our partner, only for a fronter to appear and say “oh, I put in 200 more words on our story!” when prompted. More frequently, we might struggle to talk
- about what happened at work, perhaps.</p>
+<p>Episodic memory for us can be spotty — we might struggle with talking about what we did on a day to our partner, only for a fronter to appear and say “oh, I put in 200 more words on our story!” when prompted. More frequently, we might struggle to talk about what happened at work, perhaps.</p>
+
+> #### **Memory weirdness**
+> It's likely that memory gaps, for many of us, aren't going to be Big or Obvious. Memory segmentation can happen in many ways. Emotion can be segmented away, and so would other qualities of a memory — narratives or context. 
+> <br><br>
+> You might just not feel anything at all about that memory gap — and you're usually not going to notice. Tumblr user semiplural <a target="blank" href="https://www.tumblr.com/semiplural/808658413521403904/memory">notes</a>:
+> <br><br>
+> <blockquote style="color:#333333; border-color:#009245;">I think of our memory as being like train tracks. Sometimes the tracks run together, sometimes they don't. You're usually not going to notice a missing track unless you look out the window of your own train, and you're too busy driving it to do that.<br><br>You're more likely to notice when entering or exiting the train (switching).</blockquote>
+> Recovering some of your memories will take some work, which we explore <a target="_blank" rel="noopener noreferrer nofollow" href="https://plurality.systems/essays/2026-04-09-on-memory/">here.</a>
+{: .block-tip }
  
 ## I’m probably faking all of this!
 
@@ -325,7 +330,8 @@ order: 2
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/watch?v=v93wuN0jtV0">From Patricia Taxxon</a>:</p>
 
 <blockquote>You don’t usually notice it if you have it. It doesn’t necessarily involve blacking out at random times or waking up in weird places. Instead of blacking out, you’re more likely to slowly forget and seamlessly transition into a new personality without a break in “consciousness” as a whole.<br><br>(…) You might hear your voice change its tone in an imperceptible way, and need to be reminded of a couple of things you were talking about, before seamlessly continuing function. <br><br>(…) A big universal symptom of plurality is <strong>denial</strong>.</blockquote>
-<p>To defeat that, you make a conscious effort to unmask and perform. You type differently, speak differently, adopt a mannerism comfortable to you even if it feels different.</p>
+<p>Memory weirdness is also a big part of </p>
+<p>To fight the feeling that you're faking all of this, you'll have to make a conscious effort to unmask and perform. You type differently, speak differently, adopt a mannerism comfortable to you even if it feels different.</p>
 <p>As Patricia Taxxon says: “This is just vital mental health work. I don’t know how any system is supposed to disambiguate and forge lines of communication without a little theatre.”</p>
 <h2 id="does-adopting-this-framework-actually-work">Does adopting this framework actually <em>work?</em></h2>
 <p>Theatre. That word evokes emotions of faking it all, pretense. Everything’s just an “act”, maybe. It’s all a fiction! They’re just voices, and they’re just all in your head!</p>
