@@ -1,0 +1,447 @@
+---
+layout: tools
+title: Feelings Wheel
+description: An interactive feelings wheel for exploring and identifying emotions.
+permalink: /tools/feelings-wheel
+---
+<style>
+  .wheel-page {
+    --bg: #fafafa;
+    --text: #222;
+    --panel-bg: #ffffff;
+    --panel-border: #e0e0e0;
+    --muted: #888;
+    --tag-bg: #f0f0f0;
+    --tag-text: #444;
+    --tag-border: #ddd;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 4rem;
+    gap: 1.25rem;
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  .book.color-theme-2 .wheel-page {
+    --bg: #1e1e2e;
+    --text: #e0e0e0;
+    --panel-bg: #2a2a3e;
+    --panel-border: #404060;
+    --muted: #9090b0;
+    --tag-bg: #34344e;
+    --tag-text: #d0d0f0;
+    --tag-border: #505070;
+  }
+
+  .wheel-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .wheel-hint {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+    text-align: center;
+  }
+
+  .wheel-canvas-wrap {
+    width: min(600px, 93vw);
+    height: min(600px, 93vw);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  .wheel-page {
+    overflow: visible;
+  }
+
+  #feelingsWheel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-panel {
+    width: min(600px, 93vw);
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    gap: 0.9rem;
+    display: none;
+  }
+
+  .info-panel.open { display: flex; }
+
+  .info-core-name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .info-section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border: 1px solid var(--tag-border);
+    padding: 0.18rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .deselect-hint {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0;
+  }
+</style>
+
+<div class="wheel-page">
+  <h1 class="wheel-title">Feelings Wheel</h1>
+  <p class="wheel-hint">Click a section to explore. Click again to deselect.</p>
+
+  <div class="wheel-canvas-wrap">
+    <canvas id="feelingsWheel"></canvas>
+  </div>
+
+  <div class="info-panel" id="infoPanel">
+    <h2 class="info-core-name" id="infoTitle"></h2>
+    <div class="info-section">
+      <div class="info-section-label">More specific</div>
+      <div class="tag-list" id="middleTags"></div>
+    </div>
+    <div class="info-section">
+      <div class="info-section-label">Most specific</div>
+      <div class="tag-list" id="outerTags"></div>
+    </div>
+    <p class="deselect-hint">Click the highlighted section again to deselect.</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+// Clockwise from 12 o'clock: Fearful → Angry → Disgusted → Sad → Happy → Surprised → Bad
+const EMOTIONS = [
+  {
+    name: 'Fearful', h: 200, s: 52, l: 58,
+    children: [
+      { name: 'Scared',     kids: ['Helpless', 'Frightened'] },
+      { name: 'Anxious',    kids: ['Overwhelmed', 'Worried'] },
+      { name: 'Insecure',   kids: ['Inadequate', 'Inferior'] },
+      { name: 'Weak',       kids: ['Worthless', 'Insignificant'] },
+      { name: 'Rejected',   kids: ['Excluded', 'Persecuted'] },
+      { name: 'Threatened', kids: ['Nervous', 'Exposed'] },
+    ],
+  },
+  {
+    name: 'Angry', h: 270, s: 38, l: 52,
+    children: [
+      { name: 'Let down',   kids: ['Betrayed', 'Resentful'] },
+      { name: 'Humiliated', kids: ['Disrespected', 'Ridiculed'] },
+      { name: 'Bitter',     kids: ['Indignant', 'Violated'] },
+      { name: 'Mad',        kids: ['Furious', 'Jealous'] },
+      { name: 'Aggressive', kids: ['Provoked', 'Hostile'] },
+      { name: 'Frustrated', kids: ['Infuriated', 'Annoyed'] },
+      { name: 'Distant',    kids: ['Withdrawn', 'Numb'] },
+    ],
+  },
+  {
+    name: 'Disgusted', h: 255, s: 30, l: 46,
+    children: [
+      { name: 'Critical',     kids: ['Sceptical', 'Dismissive'] },
+      { name: 'Disapproving', kids: ['Judgmental', 'Embarrassed'] },
+      { name: 'Disappointed', kids: ['Appalled', 'Revolted'] },
+      { name: 'Awful',        kids: ['Nauseated', 'Detestable'] },
+      { name: 'Repelled',     kids: ['Horrified', 'Hesitant'] },
+    ],
+  },
+  {
+    name: 'Sad', h: 325, s: 42, l: 57,
+    children: [
+      { name: 'Lonely',     kids: ['Isolated', 'Abandoned'] },
+      { name: 'Vulnerable', kids: ['Victimised', 'Fragile'] },
+      { name: 'Despair',    kids: ['Grief', 'Powerless'] },
+      { name: 'Guilty',     kids: ['Ashamed', 'Remorseful'] },
+      { name: 'Depressed',  kids: ['Empty', 'Inferior'] },
+      { name: 'Hurt',       kids: ['Disappointed', 'Embarrassed'] },
+    ],
+  },
+  {
+    name: 'Happy', h: 8, s: 65, l: 60,
+    children: [
+      { name: 'Playful',    kids: ['Aroused', 'Cheeky'] },
+      { name: 'Content',    kids: ['Free', 'Joyful'] },
+      { name: 'Interested', kids: ['Curious', 'Inquisitive'] },
+      { name: 'Proud',      kids: ['Successful', 'Confident'] },
+      { name: 'Accepted',   kids: ['Respected', 'Valued'] },
+      { name: 'Powerful',   kids: ['Courageous', 'Creative'] },
+      { name: 'Peaceful',   kids: ['Loving', 'Thankful'] },
+      { name: 'Trusting',   kids: ['Sensitive', 'Intimate'] },
+      { name: 'Optimistic', kids: ['Hopeful', 'Inspired'] },
+    ],
+  },
+  {
+    name: 'Surprised', h: 38, s: 72, l: 56,
+    children: [
+      { name: 'Startled', kids: ['Shocked', 'Dismayed'] },
+      { name: 'Confused', kids: ['Disillusioned', 'Perplexed'] },
+      { name: 'Amazed',   kids: ['Astonished', 'Awe'] },
+      { name: 'Excited',  kids: ['Eager', 'Energetic'] },
+    ],
+  },
+  {
+    name: 'Bad', h: 165, s: 35, l: 50,
+    children: [
+      { name: 'Stressed',  kids: ['Overwhelmed', 'Out of control'] },
+      { name: 'Tired',     kids: ['Sleepy', 'Unfocused'] },
+      { name: 'Bored',     kids: ['Apathetic', 'Indifferent'] },
+      { name: 'Busy',      kids: ['Pressured', 'Rushed'] },
+    ],
+  },
+];
+
+// HSL helpers — store params as objects so we can dim them with alpha
+function c(h, s, l) { return { h, s, l }; }
+function toHsla({ h, s, l }, a = 1) {
+  return `hsla(${h},${s}%,${l}%,${a})`;
+}
+function lighten({ h, s, l }, by) { return c(h, Math.max(10, s - by * 0.4), l + by); }
+
+// Flatten into parallel arrays
+const innerData = [], innerC = [], innerLabels = [];
+const midData   = [], midC   = [], midLabels   = [], midCore = [];
+const outData   = [], outC   = [], outLabels   = [], outCore = [];
+
+EMOTIONS.forEach((core, ci) => {
+  const coreColor = c(core.h, core.s, core.l);
+  const midColor  = lighten(coreColor, 10);
+  const outColor  = lighten(coreColor, 20);
+
+  const outerCount = core.children.reduce((n, m) => n + m.kids.length, 0);
+  innerData.push(outerCount);
+  innerC.push(coreColor);
+  innerLabels.push(core.name);
+
+  core.children.forEach(mid => {
+    midData.push(mid.kids.length);   // always 2
+    midC.push(midColor);
+    midLabels.push(mid.name);
+    midCore.push(ci);
+
+    mid.kids.forEach(name => {
+      outData.push(1);
+      outC.push(outColor);
+      outLabels.push(name);
+      outCore.push(ci);
+    });
+  });
+});
+
+let selectedCore = null;
+
+// Pre-compute each core emotion's midAngle (radians, canvas convention)
+// so we can set transform-origin toward the clicked sector
+const coreMidAngles = (() => {
+  const total = innerData.reduce((s, v) => s + v, 0);
+  let cum = 0;
+  return innerData.map(v => {
+    const midFrac = (cum + v / 2) / total;
+    cum += v;
+    return (midFrac * 360 - 90) * (Math.PI / 180); // offset by chart rotation (-90°)
+  });
+})();
+
+const wrap = document.querySelector('.wheel-canvas-wrap');
+
+function applyZoom(ci) {
+  if (ci === null) {
+    wrap.style.transform = '';
+    return;
+  }
+  const angle = coreMidAngles[ci];
+  // Pin the scale origin toward the sector's direction from center
+  const ox = (50 + Math.cos(angle) * 50).toFixed(1) + '%';
+  const oy = (50 + Math.sin(angle) * 50).toFixed(1) + '%';
+  wrap.style.transformOrigin = `${ox} ${oy}`;
+  wrap.style.transform = 'scale(1.35)';
+}
+
+function bgs(colorArr, coreArr, dim = 0.25) {
+  if (selectedCore === null) return colorArr.map(col => toHsla(col));
+  return colorArr.map((col, i) =>
+    coreArr[i] === selectedCore ? toHsla(col) : toHsla(col, dim)
+  );
+}
+
+// Arc label plugin
+const arcLabelPlugin = {
+  id: 'arcLabels',
+  afterDraw(chart) {
+    const { ctx } = chart;
+    const fontSizes = [11, 9, 7.5];
+    const fontWeights = ['600', '500', '400'];
+
+    chart.data.datasets.forEach((ds, di) => {
+      const meta = chart.getDatasetMeta(di);
+      const labels = ds.labels;
+      const fs = fontSizes[di];
+
+      ctx.save();
+      ctx.font = `${fontWeights[di]} ${fs}px 'IBM Plex Sans', sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      meta.data.forEach((arc, i) => {
+        const { startAngle, endAngle, innerRadius, outerRadius } = arc;
+        const midAngle = (startAngle + endAngle) / 2;
+        const midR = (innerRadius + outerRadius) / 2;
+        const arcLen = (endAngle - startAngle) * midR;
+
+        // Skip if arc is too narrow to hold any text
+        if (arcLen < fs * 1.1) return;
+
+        const x = arc.x + midR * Math.cos(midAngle);
+        const y = arc.y + midR * Math.sin(midAngle);
+
+        // Rotate text radially; flip left-side labels so they read right-side-up
+        const norm = ((midAngle % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+        let rot = midAngle;
+        if (norm > Math.PI / 2 && norm < (3 * Math.PI) / 2) rot += Math.PI;
+
+        // Set opacity to match the slice dimming
+        const alpha = (selectedCore === null || (di === 0 ? i : di === 1 ? midCore[i] : outCore[i]) === selectedCore)
+          ? 1 : 0.35;
+
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = '#ffffff';
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.fillText(labels[i] || '', 0, 0, outerRadius - innerRadius - 6);
+        ctx.restore();
+      });
+
+      ctx.restore();
+    });
+  },
+};
+
+// Build chart
+const chart = new Chart(document.getElementById('feelingsWheel').getContext('2d'), {
+  type: 'doughnut',
+  data: {
+    datasets: [
+      { data: innerData, backgroundColor: innerC.map(col => toHsla(col)), borderColor: '#fff', borderWidth: 2, labels: innerLabels },
+      { data: midData,   backgroundColor: midC.map(col => toHsla(col)),   borderColor: '#fff', borderWidth: 1, labels: midLabels },
+      { data: outData,   backgroundColor: outC.map(col => toHsla(col)),   borderColor: '#fff', borderWidth: 1, labels: outLabels },
+    ],
+  },
+  options: {
+    cutout: '20%',
+    rotation: -90,   // start at 12 o'clock
+    animation: { duration: 180 },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          title: () => '',
+          label: ctx => ' ' + ctx.dataset.labels[ctx.dataIndex],
+        },
+        displayColors: false,
+        padding: 8,
+      },
+    },
+  },
+  plugins: [arcLabelPlugin],
+});
+
+// Info panel
+function showInfo(ci) {
+  const core = EMOTIONS[ci];
+  const color = toHsla(innerC[ci]);
+
+  document.getElementById('infoTitle').textContent = core.name;
+  document.getElementById('infoTitle').style.color = color;
+
+  const midEl = document.getElementById('middleTags');
+  const outEl = document.getElementById('outerTags');
+  midEl.innerHTML = '';
+  outEl.innerHTML = '';
+
+  core.children.forEach(mid => {
+    const t = document.createElement('span');
+    t.className = 'tag';
+    t.textContent = mid.name;
+    midEl.appendChild(t);
+
+    mid.kids.forEach(name => {
+      const t2 = document.createElement('span');
+      t2.className = 'tag';
+      t2.textContent = name;
+      outEl.appendChild(t2);
+    });
+  });
+
+  document.getElementById('infoPanel').classList.add('open');
+}
+
+function updateColors() {
+  const innerIdx = innerC.map((_, i) => i);
+  chart.data.datasets[0].backgroundColor = bgs(innerC, innerIdx);
+  chart.data.datasets[1].backgroundColor = bgs(midC, midCore);
+  chart.data.datasets[2].backgroundColor = bgs(outC, outCore);
+  chart.update('none');
+}
+
+document.getElementById('feelingsWheel').addEventListener('click', evt => {
+  const els = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, false);
+  if (!els.length) {
+    selectedCore = null;
+    document.getElementById('infoPanel').classList.remove('open');
+    updateColors();
+    applyZoom(null);
+    return;
+  }
+
+  const { datasetIndex: di, index: i } = els[0];
+  const ci = di === 0 ? i : di === 1 ? midCore[i] : outCore[i];
+
+  if (selectedCore === ci) {
+    selectedCore = null;
+    document.getElementById('infoPanel').classList.remove('open');
+    applyZoom(null);
+  } else {
+    selectedCore = ci;
+    showInfo(ci);
+    applyZoom(ci);
+  }
+  updateColors();
+});
+</script>

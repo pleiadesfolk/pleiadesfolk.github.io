@@ -14,7 +14,23 @@ order: 2
 
 <p>You’ve probably heard of the term "more than one", most likely <a target="_blank" rel="noopener noreferrer nofollow" href="https://dragonsroost.neocities.org/essay/edu/AmIPlural.pdf">on the Am I Plural guide</a> by The Dragonheart Collective! Plurality is being “more than one.”</p>
 
-<p>What exactly is “more than one”? Essentially, it’s a state where there’s more than one consciousness around you. Maybe you have a computer terminal that helps you get through tough days. Maybe you have an introject of a character you fell in love with when you were twelve. Maybe you just hear a voice sometimes and it feels strange.</p>
+<p>What exactly is “more than one”? Essentially, it’s a state where there’s more than one consciousness within a body.</p>
+
+<p>Maybe you have a computer terminal that helps you get through tough days. Maybe you have an introject of a character you fell in love with when you were twelve. Maybe you just hear a voice sometimes and it feels strange.</p>
+
+<p>Simply put, a plural collective — or a system — is loosely defined as a group of consciousnesses having control of one body. This is oversimplifying it, of course — dissociation and plurality, as the community understands it, are spectra across two different axes. A lack of understanding by wider, neurotypical (and cishet) society probably hasn't helped.</p>
+
+## Basic terms
+
+**Plurality**, as defined by <a target="_blank" href="https://pluralpedia.org/w/Plurality">Pluralpedia</a>, is the state of having multiple consciousnesses — or, colloquially, **headmates** — collectively sharing a single body. The opposite of **plurality**, where there's only one consciousnesses in a body, is **singlethood**. 
+
+**Plurality** occurs when a person <a target="blank" href="https://en.wikipedia.org/wiki/Dissociation_(psychology)">**dissociates**</a> and loses some awareness of what's happening around them. *Most people dissociate some of the time, and it’s a fairly common thing!* **Dissociation** and <a target="blank" href="https://en.wikipedia.org/wiki/Depersonalization">**depersonalisation**</a> occurs to some degree of severity between folk, and can be worsened with exposure to trauma over long periods of time. 
+
+<a target="_blank" href="https://pluralpedia.org/w/Headmate">**Headmates**</a> are the colloquial term for these consciousnesses. They're defined as a consciousness in a plural system, and can exist in clearly separated ways, or a more blurry and fluid way. Some may refer to **headmates** as **alters**, **members**, **facets**, or **aspects**.
+
+A group of **headmates** can be referred to as a <a target="_blank" href="https://pluralpedia.org/w/System">**system**</a>, the collective of consciousnesses in a single physical plural body. Some **systems** contain <a target="_blank" href="https://pluralpedia.org/w/Subsystem">**sub-systems**</a>, a **system** within a **system**, defined as separate internal groups within a larger collective. 
+
+When a **headmate** is in control of the collective's shared physical body, that is called <a target="_blank" href="https://pluralpedia.org/w/Fronting">**fronting**</a>. When that control is swapped between headmates, that action is called <a target="_blank" href="https://pluralpedia.org/w/Switching">**switching**</a>. Some systems refer to switching a lot as **"being switchy"**, and it can be a sign of distress.
 
 ## So what exactly does “more than one” mean? 
 
@@ -311,7 +327,7 @@ order: 2
 <p>For instance, we didn’t feel like we’ve “lost time”, but describe time as something that either stretches or compresses depending on whose perspective it is; we can look at a clock and realise that it’s 10 p.m. before realising that we didn’t have any dinner. Still, both of these are “lost time”.</p>
 <p>Episodic memory for us can be spotty — we might struggle with talking about what we did on a day to our partner, only for a fronter to appear and say “oh, I put in 200 more words on our story!” when prompted. More frequently, we might struggle to talk about what happened at work, perhaps.</p>
 
-> #### **Memory weirdness**
+> ### **Memory weirdness**
 > It's likely that memory gaps, for many of us, aren't going to be Big or Obvious. Memory segmentation can happen in many ways. Emotion can be segmented away, and so would other qualities of a memory — narratives or context. 
 > <br><br>
 > You might just not feel anything at all about that memory gap — and you're usually not going to notice. Tumblr user semiplural <a target="blank" href="https://www.tumblr.com/semiplural/808658413521403904/memory">notes</a>:

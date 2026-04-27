@@ -18,17 +18,19 @@ You ever meet a challenging situation? Maybe something big happened in school or
 
 Either way, many of these situations arise from dissociation and depersonalisation.
 
-**Dissociation** refers to the disassociation of things that would normally be connected.
+**Dissociation** refers to a wide array of experiences — ranging from mild detachment to severe disconnection — where a person does not feel connected towards their reality. _From [A Guide to Dissociation](https://drive.google.com/file/d/0BwLR4YCzZp8DVjdnUDRZcm4wMUE/view?resourcekey=0-OxbCPnaE_Qxx8OO4w0uMRA)_: 
 
-_From [A Guide to Dissociation](https://drive.google.com/file/d/0BwLR4YCzZp8DVjdnUDRZcm4wMUE/view?resourcekey=0-OxbCPnaE_Qxx8OO4w0uMRA)_: **Most people dissociate some of the time, and it’s a fairly common thing to do.** Dissociation is however a very common response to crisis or trauma. In many cases, when the crisis happens, the dissociation dissipates.
+> **Most people dissociate some of the time, and it’s a fairly common thing to do.** Dissociation is however a very common response to crisis or trauma. In many cases, when the crisis happens, the dissociation dissipates.
 
 But when the crisis persists — say, persistent dysphoria that affects how you function, chronic pain, minority stress (i.e. being neurodivergent and transgender in this world), lack of food, sleep deprivation, high anxiety, etc. — it’s entirely possible for that dissociation to persist, too, and for selves to be formed purely to guide you through a certain difficult period.
 
-**Depersonalisation** can also be persistent in cases of severe gender dysphoria, for instance.
+**Depersonalisation** refers to a subjective feeling of detachment from oneself — a sense of disconnect to your own thoughts, emotions, sensations, actions, often accompanied by the feeling of observing yourself from an external perspective. You might feel like you're watching the world behind glass. Degrees of depersonalisation can happen to anyone — especially if you're subject to prolonged stress and crisis. 
 
-_From [Zinnia Jones](https://zinniajones.medium.com/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized-baaac395bcb0)_: depersonalisation can be generally characterised as “feelings of unreality”, and are not a matter of “delusion”. You might find yourself able to think clearly but feeling like some essential quality is lacking from your thoughts or experience. You might find a sense of pervasive discomfort or unease that didn’t seem to be connected to gender, and you might find yourself extremely distant from your own emotions. The world might be separated from you by a veil, or thick glass.
+Depersonalisation can also be persistent in cases of severe gender dysphoria. _From [Zinnia Jones](https://zinniajones.medium.com/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized-baaac395bcb0)_: 
 
-Depersonalisation is one of the hidden few symptoms of dysphoria that hasn’t been as well known, and is likely why a lot of plural people also happen to be transgender (and why experiences of transition often involve an “old self”, etc.).
+> (Depersonalisation) can be generally characterised as “feelings of unreality”, and are not a matter of “delusion”. You might find yourself able to think clearly but feeling like some essential quality is lacking from your thoughts or experience. You might find a sense of pervasive discomfort or unease that didn’t seem to be connected to gender, and you might find yourself extremely distant from your own emotions. The world might be separated from you by a veil, or thick glass.
+
+Depersonalisation is one of the hidden few symptoms of dysphoria that hasn’t been as well known, and is likely why a lot of plural people also happen to be transgender (and why experiences of transition often involve an “old self”, etc).
 
 Looking at our experiences through the transgender lens — society often requires a lot out of us. We, as trans people, are often forced to live through social roles that are Not Us, and we go through that by dissociating and becoming a person we need to be in the moment.
 
