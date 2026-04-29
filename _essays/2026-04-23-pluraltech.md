@@ -5,6 +5,7 @@ author: Ellis of the Pleiadesfolk
 date: 2026-04-23
 category: Essays, SimplyPlural
 layout: post
+order: 4
 ---
 
 by Ellis of the <span class="sitelen">󱤟</span> Pleiadesfolk

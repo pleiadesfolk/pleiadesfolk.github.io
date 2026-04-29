@@ -5,6 +5,7 @@ author: Ellis of the Pleiadesfolk
 date: 2026-04-13
 category: Essays, traumagenic, endogenic
 layout: post
+order: 3
 ---
 
 by _<span class="sitelen">󱤑</span> Pleione Ellis of the <span class="sitelen">󱤟</span> Pleiadesfolk_

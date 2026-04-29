@@ -53,11 +53,7 @@
             {% if site.ordered_collections %}
                 {% for label in site.ordered_collections %}
                     {% if label == "unlisted" %}{% continue %}{% endif %}
-                    {% if label == "essays" %}
-                        {% assign col_docs = site[label] | reverse %}
-                    {% else %}
-    					{% assign col_docs = site[label] | sort: "order" %}
-                    {% endif %}
+                    {% assign col_docs = site[label] | sort: "order" %}
 
                     {% if col_docs.size > 0 and label != "others" %}
                         <li class="header">{{ label | capitalize }}</li>

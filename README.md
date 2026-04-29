@@ -37,7 +37,7 @@ _Constant Companions_ is a reference [to the Jamie Paige album](https://jamiepai
 _The Constant Companions Handbook_ is primarily written by the <span class="sitelen">󱤟</span>  Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.), with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
 
 > #### **We're still looking for contributions!**
-> _lipu linluwi pona_ is still not complete; if you'd like to contribute, do drop the Pleiadesfolk an email on pleaidesfolk [at] proton.me.
+> _lipu linluwi pona_ is still not complete; if you'd like to contribute, do drop the Pleiadesfolk an email on pleaidesfolk [at] proton.me or drop us a message on Tumblr [@pleiadesfolk](https://www.tumblr.com/pleiadesfolk)! 
 {: .block-tip }
 
 Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span>  Cheerleaders providing coding support.

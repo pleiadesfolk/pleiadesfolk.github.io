@@ -18,35 +18,41 @@ You ever meet a challenging situation? Maybe something big happened in school or
 
 Either way, many of these situations arise from dissociation and depersonalisation.
 
-**Dissociation** refers to a wide array of experiences — ranging from mild detachment to severe disconnection — where a person does not feel connected towards their reality. _From [A Guide to Dissociation](https://drive.google.com/file/d/0BwLR4YCzZp8DVjdnUDRZcm4wMUE/view?resourcekey=0-OxbCPnaE_Qxx8OO4w0uMRA)_: 
+**Dissociation** refers to a wide array of experiences — ranging from mild detachment to severe disconnection — where a person does not feel connected towards their reality. From [A Guide to Dissociation](https://drive.google.com/file/d/0BwLR4YCzZp8DVjdnUDRZcm4wMUE/view?resourcekey=0-OxbCPnaE_Qxx8OO4w0uMRA): 
 
 > **Most people dissociate some of the time, and it’s a fairly common thing to do.** Dissociation is however a very common response to crisis or trauma. In many cases, when the crisis happens, the dissociation dissipates.
 
 But when the crisis persists — say, persistent dysphoria that affects how you function, chronic pain, minority stress (i.e. being neurodivergent and transgender in this world), lack of food, sleep deprivation, high anxiety, etc. — it’s entirely possible for that dissociation to persist, too, and for selves to be formed purely to guide you through a certain difficult period.
 
-**Depersonalisation** refers to a subjective feeling of detachment from oneself — a sense of disconnect to your own thoughts, emotions, sensations, actions, often accompanied by the feeling of observing yourself from an external perspective. You might feel like you're watching the world behind glass. Degrees of depersonalisation can happen to anyone — especially if you're subject to prolonged stress and crisis. 
+Dissociation exists in many forms, but it has two subtypes — **depersonalisation** and **derealisation.**
 
-Depersonalisation can also be persistent in cases of severe gender dysphoria. _From [Zinnia Jones](https://zinniajones.medium.com/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized-baaac395bcb0)_: 
+**Depersonalisation** refers to a subjective feeling of detachment from oneself — a sense of disconnect to your own thoughts, emotions, sensations, actions, often accompanied by the feeling of observing yourself from an external perspective. You might feel like you're watching yourself from the outside or from a distance, as if you're separated behind glass. Degrees of depersonalisation can happen to anyone — especially if you're subject to prolonged stress and crisis.
+
+**Derealisation** refers to an alteration in how you perceive the wider world. When you experience derealisation, you might perceive your wider world as distant, distorted, unreal. Like **depersonalisation**, you might feel like the world around you has been surrounded by glass or a veil; you might also feel like the world lacks an emotional colour — like it's dull, and lacks a certain vividness. You might also experience a lot of déjà vu — like you've lived through the present situation — or jamais vu — like you recognise something but it still feels unfamiliar.
+
+Both depersonalisation and derealisation can be persistent in cases of gender dysphoria. They're some of the hidden few symptoms of dysphoria that hasn't been as well known. From [Zinnia Jones](https://zinniajones.medium.com/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized-baaac395bcb0): 
 
 > (Depersonalisation) can be generally characterised as “feelings of unreality”, and are not a matter of “delusion”. You might find yourself able to think clearly but feeling like some essential quality is lacking from your thoughts or experience. You might find a sense of pervasive discomfort or unease that didn’t seem to be connected to gender, and you might find yourself extremely distant from your own emotions. The world might be separated from you by a veil, or thick glass.
 
-Depersonalisation is one of the hidden few symptoms of dysphoria that hasn’t been as well known, and is likely why a lot of plural people also happen to be transgender (and why experiences of transition often involve an “old self”, etc).
+[genderdysphoria.fyi](https://genderdysphoria.fyi/en/biochemical-dysphoria) outlines dysphoria-related derealisation as follows: 
+
+> If you found yourself strongly relating to _The Matrix_ or _The Truman Show_, you might be experiencing derealization. This can also manifest as a feeling of otherworldliness, like you don’t belong in this society. (...)
+> <br><br>
+> (Depersonalisation and derealisation) sometimes comes with an emotional stunting. You are able to laugh and find humor, but rarely ever genuine joy. Moments of sadness or grief cause you to just go numb, dissociated by the event that caused it. This can also go in the opposite direction, where the person is under so much anxiety that their emotional response is extremely disproportionate to the catalyst, resulting in severe crying or violent outbursts from seemingly small events.
 
 Looking at our experiences through the transgender lens — society often requires a lot out of us. We, as trans people, are often forced to live through social roles that are Not Us, and we go through that by dissociating and becoming a person we need to be in the moment.
 
-**In short, dissociation is an effective tool that the brain uses to allow us to survive.**
+**In short, dissociation has been an effective tool that the brain uses to allow us to survive.**
 
 This isn’t to discount how some folk have had experiences that don’t have a particularly traumatic cause.
 
-Maybe there’s no known cause! Maybe you’ve always had an imaginary friend, and maybe they sometimes “take over” when you’re in crisis or in stress. Maybe you talked to yourself a lot as a kid for no real reason, and you weren’t told off for doing that, perhaps. Maybe you really liked a character somehow and talked to them a lot, and now that character’s in your head. Maybe you DMed one too many sessions at your TTRPG club!
+Maybe there’s no known cause. Maybe you’ve always had an imaginary friend, and maybe they sometimes “take over” when you’re in crisis or in stress. Maybe you talked to yourself a lot as a kid for no real reason, and you weren’t told off for doing that, perhaps. Maybe you really liked a character somehow and talked to them a lot, and now that character’s in your head. Maybe you DMed one too many sessions at your TTRPG club. Maybe you dabbled a bit in kinning characters when you were a kid, roleplaying as your favourite blorbo with friends on Tumblr or other social media, and that character evolved into their own separate voice. Maybe you made an OC and you realise that one day they've changed their hair colour without you looking. 
 
-Examining _how_ your system came about isn’t particularly essential for day-to-day function. Sure, it will help explain perhaps why some selves act a certain way, and it might help you understand your own internal experiences, but it doesn’t mean much!
+That's all fine! Examining _how_ your system came about **isn’t particularly essential** for day-to-day function. Sure, it will help explain perhaps why some selves act a certain way, and it might help you understand your own internal experiences, but it doesn’t mean much at the end of the day. 
 
-Plurality isn’t something that will radically change who you are, ompared with say, the self-actualisation and reinvention of a gender transition.
+Plurality isn’t something that will radically change who you are, compared with say, the self-actualisation and reinvention of a gender transition.
 
-The big changes here are in self-perception.
-
-Who you are isn’t going to change too much, but you will learn to see who you are much more clearly here; and because you can see yourselves, you can work together better and address internal conflict better, for the sake of the team — and the whole.
+The big changes here are in self-perception — who you are isn’t going to change too much, but you will learn to see who you are much more clearly here. And because you can now see yourselves, you can work together better and address internal conflict better, for the sake of the team — and the whole.
 
 You’re all in it together.
 
@@ -92,15 +98,17 @@ Don’t worry, _you’re who you need to be right now._
 
 So, your headmate’s missing for a day or a week?
 
-They’re probably not needed at the moment, and it’s fine; they’re not gone!
+They'll still be there — they might not have shown up because the circumstances don't require them to be around. It’s fine; they’re not gone!
 
 The principle that _you’re who you need to be right now_ also extends to you being front-locked — i.e. stuck in front. It’s likely that on some level you’re in a state where you’re panicky about holding front, and that’s leading to you clutching on to front for dear life.
 
+Your companion (or headmate) might also not be able to deal with what you're facing. Perhaps you're well suited to handling constant pressures — like being at work, dealing with family, or being in school — and thus your headmate has left you to handle all of this as they take a break for a while. 
+
+You might think: “That’s unfair! Why do I have to cope with all this?”. To that, we’d suggest: “You’re who you need to be, and therefore, this is an act of care that you can take for your headmate.”
+
 Relax.
 
-Your companion will be back at some point. Maybe lay out their favourite music. If they play a game and needs you to maintain it, help them! Of if they have a favourite plant, just take care of it for a while.
-
-Take care of your body, too. It helps reduce the anxiety, allowing them room to return. Perhaps your headmate couldn’t deal with the pressure of being at a family dinner and decided to go away for a while. (You might think: “That’s unfair! Why do I have to cope with all this?”, and we’d suggest: “You’re who you need to be, and therefore, this is an act of care that you can take for your headmate!)
+Your companion will be back at some point. Maybe lay out their favourite music. If they play a game and need you to maintain it, help them! Of if they have a favourite plant or a cat, just take care of it for a while. Take care of your body, too. It helps reduce the anxiety, allowing them room to return. 
 
 Either way, _you’re who you need to be right now_, and that’s okay.
 
