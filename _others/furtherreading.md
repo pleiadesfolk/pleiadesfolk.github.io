@@ -10,7 +10,23 @@ layout: post
 
 Healthy Multiplicity has been a core, essential resource for selves-help and selves discovery, and an immensely helpful resource base.
 
-<a href="https://healthymultiplicity.com/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">Visit Healthy Multiplicity</a>
+<a href="https://healthymultiplicity.com/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">Visit Healthy Multiplicity</a>'
+
+***
+
+<span class="hidden-script-h2">Rain's Resource Masterpost</span>
+
+By tumblr user @rainofthestorm, this resource masterpost has many guides and resource notes on plurality and multiplicity, and is useful if you find yourself experiencing some doubt.
+
+<a href="https://www.tumblr.com/rainofthestorm/791727767718887424/resources" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">Rain's Resource Masterpost</a>
+
+***
+
+<span class="hidden-script-h2">A System's Guide (to Plurality)</span>
+
+By tumblr user @sleepingdragoninn and others, this sister guide is an introduction to plurality that "feels like a welcome ... to those for whom it feels like a welcome is long overdue." 
+
+<a href="https://sys.guide/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">A System's Guide (to Plurality)</a>
 
 ***
 

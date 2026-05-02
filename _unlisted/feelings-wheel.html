@@ -1,19 +1,19 @@
 ---
 layout: tools
-title: Feelings Wheel
-description: An interactive feelings wheel for exploring and identifying emotions.
+title: Know how you feel with this interactive feelings wheel
+description: Uncertain as to how you're feeling?  We've put a giant Feelings Wheel here that you can interact and play with. 
 permalink: /tools/feelings-wheel
 ---
 <style>
   .wheel-page {
-    --bg: #fafafa;
-    --text: #222;
-    --panel-bg: #ffffff;
-    --panel-border: #e0e0e0;
-    --muted: #888;
-    --tag-bg: #f0f0f0;
-    --tag-text: #444;
-    --tag-border: #ddd;
+    --bg: #f6f6f6;
+    --text: #222222;
+    --panel-bg: #f4f6fa;
+    --panel-border: #d8dde8;
+    --muted: #7a849a;
+    --tag-bg: #99E2FF;
+    --tag-text: #4c7a8c;
+    --tag-border: #4c7a8c;
 
     font-family: 'IBM Plex Sans', sans-serif;
     display: flex;
@@ -23,178 +23,299 @@ permalink: /tools/feelings-wheel
     gap: 1.25rem;
     color: var(--text);
     min-height: 100vh;
+    overflow: hidden;
   }
 
   .book.color-theme-2 .wheel-page {
-    --bg: #1e1e2e;
-    --text: #e0e0e0;
-    --panel-bg: #2a2a3e;
-    --panel-border: #404060;
-    --muted: #9090b0;
-    --tag-bg: #34344e;
-    --tag-text: #d0d0f0;
-    --tag-border: #505070;
+    --bg: #333333;
+    --text: #f6f6f6;
+    --panel-bg: #1a0006;
+    --panel-border: #3b161f;
+    --muted: #cbc6c9;
+    --tag-bg: #7d4251;
+    --tag-text: #ffbacb;
+    --tag-border: #ffbacb;
+  }
+
+  /* Fallback for embed: match system dark mode unless user explicitly chose light */
+  @media (prefers-color-scheme: dark) {
+    .book:not(.color-theme-1) .wheel-page {
+      --bg: #333333;
+      --text: #f6f6f6;
+      --panel-bg: #1a0006;
+      --panel-border: #3b161f;
+      --muted: #cbc6c9;
+      --tag-bg: #7d4251;
+      --tag-text: #ffbacb;
+      --tag-border: #ffbacb;
+    }
   }
 
   .wheel-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
   }
 
   .wheel-hint {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin: 0;
+    font-size: 1.35rem;
+    color: var(--text);
+    margin: 20px;
     text-align: center;
   }
 
+  /* ── Responsive layout ── */
+  .wheel-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 3em;
+  }
+
+  @media (min-width: 700px) {
+    .wheel-layout {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  /* ── Canvas ── */
   .wheel-canvas-wrap {
     width: min(600px, 93vw);
     height: min(600px, 93vw);
-    cursor: pointer;
+    cursor: grab;
     flex-shrink: 0;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    user-select: none;
   }
 
-  .wheel-page {
-    overflow: visible;
+  @media (min-width: 700px) {
+    .wheel-canvas-wrap {
+      width: min(460px, 52vw);
+      height: min(460px, 52vw);
+    }
   }
 
-  #feelingsWheel {
-    width: 100%;
-    height: 100%;
+  .wheel-canvas-wrap.dragging {
+    cursor: grabbing;
+    transition: none;
   }
 
+  #feelingsWheel { width: 100%; height: 100%; }
+
+  /* ── Info panel outer shell ── */
   .info-panel {
-    width: min(600px, 93vw);
+    width: 100%;
+    max-width: 560px;
+    z-index: 10;
+  }
+
+  @media (min-width: 700px) {
+    .info-panel {
+      width: 272px;
+      flex-shrink: 0;
+      max-height: min(460px, 52vw);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--panel-border) transparent;
+    }
+  }
+  /* ── Card (pkmnew-inspired) ── */
+  .fw-card {
     background: var(--panel-bg);
     border: 1px solid var(--panel-border);
-    border-radius: 10px;
-    padding: 1.25rem 1.5rem;
-    flex-direction: column;
-    gap: 0.9rem;
-    display: none;
-  }
-
-  .info-panel.open { display: flex; }
-
-  .info-core-name {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .info-section {
+    border-top: 3px solid var(--fw-accent, var(--panel-border));
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.375rem;
+    transition: border-top-color 0.2s;
+  }
+
+  .fw-empty {
+    color: var(--muted);
+    font-size: 1.375rem;
+    text-align: center;
+    padding: 2rem 0.5rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+  }
+
+  /* Breadcrumb */
+  .fw-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  .fw-breadcrumb-btn {
+    background: none;
+    border: none;
+    color: var(--fw-accent, var(--muted));
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .fw-breadcrumb-btn:hover { opacity: 0.7; }
+
+  .fw-breadcrumb-sep { color: var(--muted); }
+
+  /* Name row */
+  .fw-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fw-key {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text);
+    flex-shrink: 0;
+    min-width: 58px;
+  }
+
+  .fw-val {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
     gap: 0.4rem;
   }
 
-  .info-section-label {
-    font-size: 0.7rem;
+  .fw-swatch {
+    width: 11px;
+    height: 11px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+
+  /* Definition */
+  .fw-desc {
+    font-size: 1.32rem;
+    line-height: 1.6;
+    color: var(--text);
+    border-top: 1px solid var(--panel-border);
+    padding-top: 0.45rem;
+  }
+
+  /* Stacked info fields (sensation / expression / triggers) */
+  .fw-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-top: 1px solid var(--panel-border);
+    padding-top: 0.5rem;
+  }
+
+  .fw-field-label {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .fw-field-val {
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  /* Child navigation */
+  .fw-children-label {
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--muted);
+    color: var(--text);
+    margin-top: 1.25rem;
   }
 
-  .tag-list {
+  .fw-children {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
+    gap: 0.3rem;
   }
 
-  .tag {
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    border: 1px solid var(--tag-border);
-    padding: 0.18rem 0.6rem;
+  .fw-child-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    background: rgba(var(--fw-accent-rgb, 100,120,160), 0.12);
+    color: var(--fw-accent, var(--tag-text));
+    border: 1px solid rgba(var(--fw-accent-rgb, 100,120,160), 0.35);
     border-radius: 999px;
-    font-size: 0.8rem;
-    line-height: 1.5;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s;
+    line-height: 1.4;
+  }
+  .fw-child-btn:hover {
+    background: rgba(var(--fw-accent-rgb, 100,120,160), 0.22);
+    border-color: rgba(var(--fw-accent-rgb, 100,120,160), 0.6);
   }
 
-  .deselect-hint {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin: 0;
+  /* ── Embed mode (/?embed) ── */
+  .book.is-embed .book-header   { display: none !important;} 
+  .book.is-embed .navigation    { display: none !important;}
+  .book.is-embed .book-body     { margin-top: 0px !important;}
+  .book.is-embed .body-inner    { margin-top: 0px !important;}
+  .book.is-embed .wheel-title   { display: none; }
+  .book.is-embed .wheel-intro   { display: none; }
+  .book.is-embed .wheel-page    { padding: 1rem 1rem 1rem; }
+  .book.is-embed .wheel-layout  { margin-top: 0; }
+  
+  @media (max-width: 700px) {
+  	.book.is-embed  .info-panel {
+  	position: absolute;
+  	bottom: 10px; 
+  	}
+  	.book.is-embed  .fw-empty {
+  	position: absolute;
+  	width: 100%;
+  	bottom: 30vh;
+  	}
   }
+  
 </style>
 
 <div class="wheel-page">
-  <h1 class="wheel-title">Feelings Wheel</h1>
-  <p class="wheel-hint">Click a section to explore. Click again to deselect.</p>
-
-  <div class="wheel-canvas-wrap">
-    <canvas id="feelingsWheel"></canvas>
-  </div>
-
-  <div class="info-panel" id="infoPanel">
-    <h2 class="info-core-name" id="infoTitle"></h2>
-    <div class="info-section">
-      <div class="info-section-label">More specific</div>
-      <div class="tag-list" id="middleTags"></div>
+  <h1 class="wheel-title">Exploring emotions</h1>
+  <p class="wheel-intro" style="text-align:center; margin:0% 25% 0%;">This interactive feelings wheel can be used to identify how you feel, what your emotions are like, etc. Tap on a section to explore secondary and specific feelings, double-tap to zoom out, and so on. </p>
+  <p class="wheel-hint">click a section to explore · double-tap to zoom out · drag to spin</p>
+  <div class="wheel-layout">
+    <div class="wheel-canvas-wrap">
+      <canvas id="feelingsWheel"></canvas>
     </div>
-    <div class="info-section">
-      <div class="info-section-label">Most specific</div>
-      <div class="tag-list" id="outerTags"></div>
+    <div class="info-panel" id="infoPanel">
+      <div class="fw-empty">select a section of the wheel to explore.</div>
     </div>
-    <p class="deselect-hint">Click the highlighted section again to deselect.</p>
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <script>
-// Clockwise from 12 o'clock: Fearful → Angry → Disgusted → Sad → Happy → Surprised → Bad
 const EMOTIONS = [
   {
-    name: 'Fearful', h: 200, s: 52, l: 58,
-    children: [
-      { name: 'Scared',     kids: ['Helpless', 'Frightened'] },
-      { name: 'Anxious',    kids: ['Overwhelmed', 'Worried'] },
-      { name: 'Insecure',   kids: ['Inadequate', 'Inferior'] },
-      { name: 'Weak',       kids: ['Worthless', 'Insignificant'] },
-      { name: 'Rejected',   kids: ['Excluded', 'Persecuted'] },
-      { name: 'Threatened', kids: ['Nervous', 'Exposed'] },
-    ],
-  },
-  {
-    name: 'Angry', h: 270, s: 38, l: 52,
-    children: [
-      { name: 'Let down',   kids: ['Betrayed', 'Resentful'] },
-      { name: 'Humiliated', kids: ['Disrespected', 'Ridiculed'] },
-      { name: 'Bitter',     kids: ['Indignant', 'Violated'] },
-      { name: 'Mad',        kids: ['Furious', 'Jealous'] },
-      { name: 'Aggressive', kids: ['Provoked', 'Hostile'] },
-      { name: 'Frustrated', kids: ['Infuriated', 'Annoyed'] },
-      { name: 'Distant',    kids: ['Withdrawn', 'Numb'] },
-    ],
-  },
-  {
-    name: 'Disgusted', h: 255, s: 30, l: 46,
-    children: [
-      { name: 'Critical',     kids: ['Sceptical', 'Dismissive'] },
-      { name: 'Disapproving', kids: ['Judgmental', 'Embarrassed'] },
-      { name: 'Disappointed', kids: ['Appalled', 'Revolted'] },
-      { name: 'Awful',        kids: ['Nauseated', 'Detestable'] },
-      { name: 'Repelled',     kids: ['Horrified', 'Hesitant'] },
-    ],
-  },
-  {
-    name: 'Sad', h: 325, s: 42, l: 57,
-    children: [
-      { name: 'Lonely',     kids: ['Isolated', 'Abandoned'] },
-      { name: 'Vulnerable', kids: ['Victimised', 'Fragile'] },
-      { name: 'Despair',    kids: ['Grief', 'Powerless'] },
-      { name: 'Guilty',     kids: ['Ashamed', 'Remorseful'] },
-      { name: 'Depressed',  kids: ['Empty', 'Inferior'] },
-      { name: 'Hurt',       kids: ['Disappointed', 'Embarrassed'] },
-    ],
-  },
-  {
-    name: 'Happy', h: 8, s: 65, l: 60,
+    name: 'Happy', color: '#F09A05',
     children: [
       { name: 'Playful',    kids: ['Aroused', 'Cheeky'] },
       { name: 'Content',    kids: ['Free', 'Joyful'] },
@@ -208,7 +329,7 @@ const EMOTIONS = [
     ],
   },
   {
-    name: 'Surprised', h: 38, s: 72, l: 56,
+    name: 'Surprised', color: '#FF8C00',
     children: [
       { name: 'Startled', kids: ['Shocked', 'Dismayed'] },
       { name: 'Confused', kids: ['Disillusioned', 'Perplexed'] },
@@ -217,7 +338,19 @@ const EMOTIONS = [
     ],
   },
   {
-    name: 'Bad', h: 165, s: 35, l: 50,
+    name: 'Angry', color: '#C90303',
+    children: [
+      { name: 'Let down',   kids: ['Betrayed', 'Resentful'] },
+      { name: 'Humiliated', kids: ['Disrespected', 'Ridiculed'] },
+      { name: 'Bitter',     kids: ['Indignant', 'Violated'] },
+      { name: 'Mad',        kids: ['Furious', 'Jealous'] },
+      { name: 'Aggressive', kids: ['Provoked', 'Hostile'] },
+      { name: 'Frustrated', kids: ['Infuriated', 'Annoyed'] },
+      { name: 'Distant',    kids: ['Withdrawn', 'Numb'] },
+    ],
+  },
+  {
+    name: 'Bad', color: '#807560',
     children: [
       { name: 'Stressed',  kids: ['Overwhelmed', 'Out of control'] },
       { name: 'Tired',     kids: ['Sleepy', 'Unfocused'] },
@@ -225,123 +358,1060 @@ const EMOTIONS = [
       { name: 'Busy',      kids: ['Pressured', 'Rushed'] },
     ],
   },
+  {
+    name: 'Disgusted', color: '#886faf',
+    children: [
+      { name: 'Critical',     kids: ['Sceptical', 'Dismissive'] },
+      { name: 'Disapproving', kids: ['Judgmental', 'Embarrassed'] },
+      { name: 'Disappointed', kids: ['Appalled', 'Revolted'] },
+      { name: 'Awful',        kids: ['Nauseated', 'Detestable'] },
+      { name: 'Repelled',     kids: ['Horrified', 'Hesitant'] },
+    ],
+  },
+  {
+    name: 'Sad', color: '#5075B9',
+    children: [
+      { name: 'Lonely',     kids: ['Isolated', 'Abandoned'] },
+      { name: 'Vulnerable', kids: ['Victimised', 'Fragile'] },
+      { name: 'Despair',    kids: ['Grief', 'Powerless'] },
+      { name: 'Guilty',     kids: ['Ashamed', 'Remorseful'] },
+      { name: 'Depressed',  kids: ['Empty', 'Inferior'] },
+      { name: 'Hurt',       kids: ['Disappointed', 'Embarrassed'] },
+    ],
+  },
+  {
+    name: 'Fearful', color: '#008026',
+    children: [
+      { name: 'Scared',     kids: ['Helpless', 'Frightened'] },
+      { name: 'Anxious',    kids: ['Overwhelmed', 'Worried'] },
+      { name: 'Insecure',   kids: ['Inadequate', 'Inferior'] },
+      { name: 'Weak',       kids: ['Worthless', 'Insignificant'] },
+      { name: 'Rejected',   kids: ['Excluded', 'Persecuted'] },
+      { name: 'Threatened', kids: ['Nervous', 'Exposed'] },
+    ],
+  },
 ];
 
-// HSL helpers — store params as objects so we can dim them with alpha
-function c(h, s, l) { return { h, s, l }; }
-function toHsla({ h, s, l }, a = 1) {
-  return `hsla(${h},${s}%,${l}%,${a})`;
-}
-function lighten({ h, s, l }, by) { return c(h, Math.max(10, s - by * 0.4), l + by); }
+// ── Definitions ────────────────────────────────────────────────────────────────
+// Each entry: { definition, sensation, expression, triggers }
+// Source: feelings-wheel-definitions.csv (user-authored data + gap-filled)
+const DEFINITIONS = {
+  'Happy': {
+    definition: 'A positive emotional state marked by joy, contentment, and an overall sense of well-being.',
+    sensation:   'tingly, cheery, like you want to laugh, warm',
+    expression:  'smiley, laughing, raised cheeks',
+    triggers:    'pleasurable things, jokes, humour',
+  },
+  'Surprised': {
+    definition: 'A brief reaction to something unexpected; can feel pleasant, jarring, or somewhere in between.',
+    sensation:   'brief sensation of shock and attentiveness, leading to another emotion',
+    expression:  'mouth slightly agape, sudden gasp',
+    triggers:    'sudden events, unpredictable incidents',
+  },
+  'Angry': {
+    definition: 'Strong displeasure or hostility arising from perceived injustice, threat, or frustration.',
+    sensation:   'hot fire, warm within you — may burn',
+    expression:  'furrowed brows, gritted teeth, crossed expression',
+    triggers:    'a feeling of injustice, infringements, violations',
+  },
+  'Bad': {
+    definition: 'A vague sense of negativity or emotional unwellness without a single identifiable cause.',
+    sensation:   'leaden weight on chest, gaping hole',
+    expression:  'sickly, ill',
+    triggers:    'traumatic events, traumatic memory, immense stress or distress',
+  },
+  'Disgusted': {
+    definition: 'Strong aversion or moral disapproval toward something perceived as unpleasant or deeply wrong.',
+    sensation:   'aversion, nausea (desire to puke)',
+    expression:  'scrunched up expression, wrinkling nose',
+    triggers:    'sensing something bad through sight, smell, or even hearing',
+  },
+  'Sad': {
+    definition: 'Unhappiness or sorrow arising from loss, disappointment, or a sense of disconnection.',
+    sensation:   'tightness of the chest, heaviness of the limbs, watery eyes',
+    expression:  'drooped eyelids, eyes looking down, lips pulled downward, tears',
+    triggers:    'loss or rejection by someone or something',
+  },
+  'Fearful': {
+    definition: 'Apprehension or anxiety about perceived danger, uncertainty, or potential harm ahead.',
+    sensation:   'coldness, shortness of breath, sweating, trembling',
+    expression:  'distinctly raised eyebrows, eyes going wide, tensed lips',
+    triggers:    'a threat of harm, real or imagined, upon your well-being',
+  },
+  // ── Secondary ─────────────────────────────────────────────────────────────
+  'Playful': {
+    definition: 'Lighthearted and drawn toward fun, humour, or imaginative expression.',
+    sensation:   'energetic, desire to be free-spirited, motivation to do an activity',
+    expression:  'smiley, laughing, raised cheeks, hyperactivity',
+    triggers:    'desire to have fun',
+  },
+  'Content': {
+    definition: 'A quiet, settled satisfaction with your current circumstances and inner state.',
+    sensation:   'mild, steady sense of calm',
+    expression:  'neutral, slightly smiley',
+    triggers:    'satisfaction with tasks',
+  },
+  'Interested': {
+    definition: 'An engaged curiosity that draws you toward exploring or learning something new.',
+    sensation:   'sense of curiosity, drawn attention at object or event',
+    expression:  'intent, focused — at times, tilting the head or moving closer',
+    triggers:    'things that pique curiosity',
+  },
+  'Proud': {
+    definition: 'A satisfying sense of accomplishment or dignity in yourself or someone you love.',
+    sensation:   'happiness, joy, a desire to share accomplishment',
+    expression:  'smiley, hyperactive, at times talkative',
+    triggers:    'accomplishment, dignity',
+  },
+  'Accepted': {
+    definition: 'Feeling genuinely welcomed and valued as part of a group or relationship.',
+    sensation:   'mild, steady sense of calm in a large group; feeling warm and fuzzy (loved)',
+    expression:  'smiley, intent to listen — more able to communicate and talk',
+    triggers:    'contentment in a social context',
+  },
+  'Powerful': {
+    definition: 'A sense of inner strength and confidence in your ability to shape your environment.',
+    sensation:   'energetic, motivated',
+    expression:  'joy, mixed with intent — potential hyperactivity',
+    triggers:    'positive events building confidence',
+  },
+  'Peaceful': {
+    definition: 'A calm, undisturbed inner stillness, free from conflict or worry.',
+    sensation:   'mild, steady sense of calm',
+    expression:  'placid, neutral, slightly smiley',
+    triggers:    'long periods of nothing negative happening',
+  },
+  'Trusting': {
+    definition: 'A feeling of safety and openness that allows vulnerability with others.',
+    sensation:   'mild, steady sense of calm — may come with an underlying emotion',
+    expression:  'neutral, with intent to listen or speak — lacking fear or anxiety',
+    triggers:    'knowledge that people around you will do no harm',
+  },
+  'Optimistic': {
+    definition: 'A hopeful belief that positive outcomes are likely, even amid difficulty.',
+    sensation:   'happiness, joy, warmth, hopefulness',
+    expression:  'joy, mixed with potential intent or interest',
+    triggers:    'knowledge that things will be better in the future',
+  },
+  'Startled': {
+    definition: 'A sudden, involuntary fright caused by something unexpected in your environment.',
+    sensation:   'brief sensation of shock',
+    expression:  'mouth slightly agape, sudden gasp',
+    triggers:    'sudden, unexpected event',
+  },
+  'Confused': {
+    definition: 'Uncertainty and lack of clarity about a situation, decision, or piece of information.',
+    sensation:   'trouble understanding something or someone',
+    expression:  'intent — at times tilting the head or moving closer — with an underlying negative emotion',
+    triggers:    'sudden, unexpected event that one does not understand',
+  },
+  'Amazed': {
+    definition: 'A feeling of wonder or astonishment at something remarkable or hard to explain.',
+    sensation:   'a sense of expansion and breathlessness, feeling small in the best way',
+    expression:  'wide eyes, slightly open mouth, head tilting back slightly',
+    triggers:    'witnessing something extraordinary, rare, or beyond ordinary expectation',
+  },
+  'Excited': {
+    definition: 'An energized, eager anticipation directed at something pleasurable or new.',
+    sensation:   'buzzing, fluttery energy in the chest and stomach, restlessness',
+    expression:  'wide eyes, big smile, fidgeting, talking faster, or bouncing',
+    triggers:    'upcoming events, new opportunities, things looked forward to',
+  },
+  'Let down': {
+    definition: 'Disappointment or betrayal felt when someone or something failed to meet your expectations.',
+    sensation:   'heaviness, deflation, a hollow ache in the chest',
+    expression:  'downcast eyes, slumped posture, subdued expression',
+    triggers:    'unmet expectations, broken promises, trust not honoured',
+  },
+  'Humiliated': {
+    definition: 'Deep shame from being degraded or mocked, especially in front of others.',
+    sensation:   'hot flush to the face, desire to shrink or disappear',
+    expression:  'averted gaze, reddened face, hunched posture',
+    triggers:    'public mockery, being demeaned or belittled by others',
+  },
+  'Bitter': {
+    definition: 'A lingering resentment born from past hurts that feels difficult to release.',
+    sensation:   'tight jaw, chest tension, a dull persistent ache',
+    expression:  'pinched lips, hard eyes, a closed-off expression',
+    triggers:    'unresolved grievances, feeling treated unfairly over time',
+  },
+  'Mad': {
+    definition: 'An intense, consuming anger that can feel out of control or disproportionate.',
+    sensation:   'surging heat, clenched muscles, pounding heart',
+    expression:  'flushed face, gritted teeth, intense stare',
+    triggers:    'strong injustice, being crossed or challenged in a significant way',
+  },
+  'Aggressive': {
+    definition: 'An urge to confront, dominate, or use force in response to a perceived threat.',
+    sensation:   'physical tension, readiness to act, heat and energy in the body',
+    expression:  'tense jaw, narrowed eyes, forward-leaning or defensive posture',
+    triggers:    'perceived threat, provocation, feeling cornered or challenged',
+  },
+  'Frustrated': {
+    definition: 'Feeling blocked from a goal despite effort, leading to irritation and inner tension.',
+    sensation:   'tightness in the shoulders or jaw, heat, restless energy',
+    expression:  'clenched jaw, exhaled sigh, furrowed brows',
+    triggers:    'obstacles, repeated failures, feeling misunderstood or unheard',
+  },
+  'Distant': {
+    definition: 'An emotional withdrawal and detachment from others or from your own inner life.',
+    sensation:   'numbness, disconnection, feeling behind a glass wall',
+    expression:  'blank or flat affect, little eye contact, turned-away posture',
+    triggers:    'emotional overwhelm, self-protection, repeated hurt',
+  },
+  'Stressed': {
+    definition: 'Overwhelmed by demands or pressures that exceed your current capacity to cope.',
+    sensation:   'tension in the neck, shoulders, or chest; racing thoughts',
+    expression:  'furrowed brow, tense jaw, rushed or distracted manner',
+    triggers:    'heavy workload, deadlines, feeling out of control of your circumstances',
+  },
+  'Tired': {
+    definition: 'Physical or mental exhaustion that diminishes your energy and motivation.',
+    sensation:   'heaviness in the body, drooping eyelids, reduced motivation',
+    expression:  'drooping eyelids, slower speech, slumped posture',
+    triggers:    'lack of sleep, overexertion, emotional labour, illness',
+  },
+  'Bored': {
+    definition: 'Restless disengagement and a lack of stimulation or meaningful activity.',
+    sensation:   'restlessness, flatness, a lack of energy or interest',
+    expression:  'glazed eyes, slouching, sighing, wandering attention',
+    triggers:    'lack of stimulation, repetitive tasks, absence of challenge',
+  },
+  'Busy': {
+    definition: 'Overwhelmed by a heavy load of tasks, with too little time or energy.',
+    sensation:   'a sense of rushing, tightness, inability to settle',
+    expression:  'distracted, hurried manner; little eye contact; rushed movements',
+    triggers:    'high workload, competing demands, tight deadlines',
+  },
+  'Critical': {
+    definition: 'A disposition to notice and judge faults in others or situations harshly.',
+    sensation:   'sharp alertness, a heightened sense of noticing flaws',
+    expression:  'narrowed eyes, pursed lips, a scrutinising gaze',
+    triggers:    'seeing inconsistency, sloppiness, or perceived wrongdoing',
+  },
+  'Disapproving': {
+    definition: 'Feeling that something is wrong or unacceptable based on your values or standards.',
+    sensation:   'mild distaste, a pulling away or tightening',
+    expression:  'slight frown, averted gaze, stiff or closed posture',
+    triggers:    'witnessing behaviour that conflicts with personal values',
+  },
+  'Disappointed': {
+    definition: 'A letdown when reality falls short of what you hoped, expected, or wanted.',
+    sensation:   'deflation, hollowness, a quiet heaviness',
+    expression:  'downcast eyes, slightly drooped expression, subdued manner',
+    triggers:    'unmet expectations, things not going as hoped or planned',
+  },
+  'Awful': {
+    definition: 'An intense, hard-to-name feeling of distress or badness that feels overwhelming.',
+    sensation:   'heavy, suffocating dread; unease with no clear source',
+    expression:  'pale or pained expression, withdrawn, hard to describe',
+    triggers:    'situations of extreme distress, often hard to name precisely',
+  },
+  'Repelled': {
+    definition: 'A strong impulse to pull away from something deeply unpleasant or threatening.',
+    sensation:   'a physical recoiling, nausea, desire to flee',
+    expression:  'leaning away, scrunched expression, averted gaze',
+    triggers:    'encountering something deeply unpleasant or morally wrong',
+  },
+  'Lonely': {
+    definition: 'A painful sense of disconnection from others, even when people may be around.',
+    sensation:   'hollow ache, heaviness, a yearning feeling in the chest',
+    expression:  'subdued, eyes cast down, withdrawn posture',
+    triggers:    'lack of meaningful connection, isolation, being misunderstood',
+  },
+  'Vulnerable': {
+    definition: 'Feeling emotionally exposed and at risk of being hurt, judged, or rejected.',
+    sensation:   'a raw, exposed feeling; hyperawareness of your surroundings',
+    expression:  'guarded posture, averted gaze, quieter than usual',
+    triggers:    'emotional openness, uncertainty, past experiences of being hurt',
+  },
+  'Despair': {
+    definition: 'A profound loss of hope that feels total, with no visible path forward.',
+    sensation:   'profound heaviness, absence of energy, feeling of finality',
+    expression:  'blank stare, sunken posture, tears or a hollow expression',
+    triggers:    'repeated failures, major loss, feeling trapped with no way forward',
+  },
+  'Guilty': {
+    definition: 'A sense of responsibility and remorse for having done something harmful or wrong.',
+    sensation:   'tight knot in the stomach, restlessness, desire to make amends',
+    expression:  'downcast eyes, fidgeting, inability to meet someone\'s gaze',
+    triggers:    'having harmed someone, breaking a personal or shared moral code',
+  },
+  'Depressed': {
+    definition: 'A persistent, heavy sadness that drains motivation, pleasure, and sense of self.',
+    sensation:   'profound heaviness, numbness, loss of pleasure in anything',
+    expression:  'flat affect, slow movements, minimal eye contact, no smile',
+    triggers:    'sustained loss, isolation, chronic stress, neurological factors',
+  },
+  'Hurt': {
+    definition: 'Emotional pain caused by another\'s words, actions, indifference, or betrayal.',
+    sensation:   'ache in the chest, a stinging sensation, feeling bruised inside',
+    expression:  'pained expression, watery eyes, quiet withdrawal',
+    triggers:    'unkind words or actions, feeling dismissed, betrayal or neglect',
+  },
+  'Scared': {
+    definition: 'An immediate, acute fear in response to a specific perceived threat or danger.',
+    sensation:   'heart pounding, breath shortening, muscles tensing, freezing',
+    expression:  'wide eyes, raised brows, frozen posture, pale face',
+    triggers:    'immediate or perceived threat to safety, sudden danger',
+  },
+  'Anxious': {
+    definition: 'Persistent, uneasy worry about uncertain future events or possible negative outcomes.',
+    sensation:   'racing heart, shallow breathing, stomach churning, fidgeting',
+    expression:  'tense posture, restless movement, difficulty making eye contact',
+    triggers:    'uncertainty, upcoming events, social situations, past trauma',
+  },
+  'Insecure': {
+    definition: 'A lack of confidence rooted in fear of judgment, rejection, or not being enough.',
+    sensation:   'self-consciousness, shrinking, a hollow or unsettled feeling',
+    expression:  'averted gaze, quieter speech, closed or shrinking posture',
+    triggers:    'comparison to others, criticism, unfamiliar situations',
+  },
+  'Weak': {
+    definition: 'Feeling incapable or insufficiently equipped to handle a challenge or difficult situation.',
+    sensation:   'low energy, heaviness, a sense of deflation or collapse',
+    expression:  'slumped posture, quiet or absent manner, downcast eyes',
+    triggers:    'exhaustion, repeated failure, being overwhelmed',
+  },
+  'Rejected': {
+    definition: 'A painful sense of being unwanted, excluded, or not valued by others.',
+    sensation:   'sharp sting followed by heaviness, chest tightness',
+    expression:  'pained expression, withdrawal, avoiding eye contact',
+    triggers:    'exclusion, being ignored, romantic or social rejection',
+  },
+  'Threatened': {
+    definition: 'Feeling that your safety, wellbeing, or sense of self is under direct attack.',
+    sensation:   'alertness, tensing muscles, heightened senses, fear response',
+    expression:  'wide eyes, tense jaw, defensive or guarded posture',
+    triggers:    'perceived danger to safety, status, identity, or relationships',
+  },
+  // ── Outer (specific) feelings ──────────────────────────────────────────────
+  'Aroused': {
+    definition: 'A heightened state of excitement or interest with an energising physical or mental quality.',
+    sensation:   'heightened energy, alertness, physical restlessness or excitement',
+    expression:  'bright eyes, animated expression, leaning forward',
+    triggers:    'engaging content, physical stimulation, something capturing full attention',
+  },
+  'Cheeky': {
+    definition: 'A playful, slightly irreverent spirit that enjoys teasing or lighthearted mischief.',
+    sensation:   'light, playful energy; mild mischievous glee',
+    expression:  'sly smile or grin, raised eyebrow, twinkle in the eye',
+    triggers:    'opportunity to tease, playful situations, familiar company',
+  },
+  'Free': {
+    definition: 'A sense of liberation and spaciousness, unburdened by constraint, worry, or obligation.',
+    sensation:   'spaciousness in the chest, lightness, absence of weight',
+    expression:  'relaxed, open expression; big smile; easy movement',
+    triggers:    'completing obligations, being in open spaces, shedding worries',
+  },
+  'Joyful': {
+    definition: 'A bright, bubbling happiness that radiates outward and makes the world feel vivid.',
+    sensation:   'warmth bubbling up, light and expansive feeling in the chest',
+    expression:  'wide smile, bright eyes, sometimes laughter or bouncing',
+    triggers:    'good news, being with loved ones, beautiful moments',
+  },
+  'Curious': {
+    definition: 'A lively, open desire to know, explore, and understand more about the world.',
+    sensation:   'a pull of attention, leaning-in energy, mental alertness',
+    expression:  'wide eyes, slight tilt of the head, forward lean',
+    triggers:    'something unknown or interesting, a puzzle or mystery',
+  },
+  'Inquisitive': {
+    definition: 'An active, probing interest that delights in asking questions and digging deeper.',
+    sensation:   'sharp mental focus, the urge to ask questions',
+    expression:  'intent gaze, tilted head, leaning forward',
+    triggers:    'complex ideas, unfamiliar information, desire to understand deeply',
+  },
+  'Successful': {
+    definition: 'A satisfying sense of having achieved a meaningful goal through effort and skill.',
+    sensation:   'warmth, pride, energised lightness, relief mingled with joy',
+    expression:  'wide smile, upright posture, bright eyes',
+    triggers:    'completing a goal, being recognised, overcoming a challenge',
+  },
+  'Confident': {
+    definition: 'A steady, grounded trust in your own abilities, judgment, and worth.',
+    sensation:   'steadiness in the body, calm energy, upright presence',
+    expression:  'direct eye contact, relaxed upright posture, easy smile',
+    triggers:    'preparation, past success, positive reinforcement',
+  },
+  'Respected': {
+    definition: 'Feeling that others genuinely recognise and honour your worth, ideas, or contributions.',
+    sensation:   'warmth, calm, a sense of being seen and acknowledged',
+    expression:  'relaxed, open posture; genuine smile; willingness to engage',
+    triggers:    'being listened to, receiving genuine recognition, fair treatment',
+  },
+  'Valued': {
+    definition: 'A warm sense that what you offer matters and is appreciated by others.',
+    sensation:   'warmth and fullness in the chest, a sense of mattering',
+    expression:  'soft smile, open posture, ease in interaction',
+    triggers:    'appreciation shown by others, a meaningful contribution being noticed',
+  },
+  'Courageous': {
+    definition: 'A resolve to act boldly and rightly, even in the face of fear or uncertainty.',
+    sensation:   'adrenaline mixed with resolve; heart rate up but steady',
+    expression:  'upright posture, direct gaze, set jaw',
+    triggers:    'facing a fear, standing up for what is right, crisis situations',
+  },
+  'Creative': {
+    definition: 'A lively, generative energy that delights in imagining and making something new.',
+    sensation:   'fizzing mental energy, absorption, time seeming to pass quickly',
+    expression:  'focused or distracted look, often quiet but animated in bursts',
+    triggers:    'open time and space, stimulating ideas, permission to explore',
+  },
+  'Loving': {
+    definition: 'A warm, open-hearted care for others that asks for nothing in return.',
+    sensation:   'warmth in the chest, a softening of the body, openness',
+    expression:  'soft eyes, gentle smile, relaxed and open posture',
+    triggers:    'time with loved ones, acts of kindness, moments of connection',
+  },
+  'Thankful': {
+    definition: 'A heartfelt appreciation for something good received, whether given by others or by chance.',
+    sensation:   'warmth, a softening, fullness in the chest',
+    expression:  'soft smile, open posture, sustained eye contact',
+    triggers:    'receiving help or kindness, recognising what you have',
+  },
+  'Sensitive': {
+    definition: 'A finely tuned awareness of your own feelings and the emotional states of others.',
+    sensation:   'heightened awareness of surroundings, emotions felt more intensely',
+    expression:  'wide eyes, attentive posture, may respond visibly to small things',
+    triggers:    'intense environments, emotional conversations, perceived criticism',
+  },
+  'Intimate': {
+    definition: 'A closeness and warmth born from genuine openness and mutual vulnerability with another.',
+    sensation:   'warmth, vulnerability, a desire to be close',
+    expression:  'soft eyes, relaxed face, leaning in, gentle touch',
+    triggers:    'moments of honest sharing, being truly known by someone',
+  },
+  'Hopeful': {
+    definition: 'A gentle, forward-looking expectation that things can and will improve.',
+    sensation:   'gentle warmth, forward-leaning energy, lightness',
+    expression:  'soft upward gaze, slight smile, open posture',
+    triggers:    'positive signs, support from others, past evidence of improvement',
+  },
+  'Inspired': {
+    definition: 'A surge of enthusiasm and creative energy sparked by something beautiful or meaningful.',
+    sensation:   'buzzing mental energy, desire to create or act immediately',
+    expression:  'bright eyes, animated expression, urgency or excitement',
+    triggers:    'encountering great art, ideas, nature, or people',
+  },
+  'Shocked': {
+    definition: 'A sudden, jolting reaction to something deeply unexpected, unwanted, or hard to believe.',
+    sensation:   'sudden freeze or jolt, breath catching, heart pounding',
+    expression:  'wide eyes, dropped jaw, frozen posture',
+    triggers:    'completely unexpected news or events, sudden reversals',
+  },
+  'Dismayed': {
+    definition: 'A sinking feeling of alarm and disappointment at something going badly wrong.',
+    sensation:   'sinking feeling, a dropping sensation in the stomach',
+    expression:  'fallen expression, downward gaze, shaking head',
+    triggers:    'things going wrong unexpectedly, hopes dashed',
+  },
+  'Disillusioned': {
+    definition: 'A deflated feeling when something believed in is revealed as false or disappointing.',
+    sensation:   'deflation, hollowness, a quiet collapse of expectation',
+    expression:  'flat expression, distant gaze, subdued manner',
+    triggers:    'discovering something believed in was false or overstated',
+  },
+  'Perplexed': {
+    definition: 'A puzzled, unsettled state of not being able to make sense of something.',
+    sensation:   'mental fog, a tension of not-understanding, slight frustration',
+    expression:  'furrowed brows, tilted head, squinting slightly',
+    triggers:    'confusing information, contradictory messages, unclear situations',
+  },
+  'Astonished': {
+    definition: 'A sudden, overwhelming sense of wonder at something extraordinary or wholly unexpected.',
+    sensation:   'jolting expansion, breathlessness, feeling momentarily unmoored',
+    expression:  'wide open eyes, dropped jaw, hands to face',
+    triggers:    'something far beyond expectation or ordinary experience',
+  },
+  'Awe': {
+    definition: 'A reverential wonder in the face of something vast, powerful, or deeply beautiful.',
+    sensation:   'a sense of smallness and expansion at once, goosebumps',
+    expression:  'wide eyes, open mouth, stillness, tears sometimes',
+    triggers:    'vast natural beauty, profound music, great human achievement',
+  },
+  'Eager': {
+    definition: 'An energetic readiness and enthusiasm to begin or engage with something anticipated.',
+    sensation:   'forward-leaning energy, restlessness, readiness in the body',
+    expression:  'bright eyes, leaning forward, animated expression',
+    triggers:    'upcoming events, new opportunities, meaningful tasks',
+  },
+  'Energetic': {
+    definition: 'A vibrant feeling of physical and mental vitality, ready to act and engage.',
+    sensation:   'vitality and readiness in the body, desire to move',
+    expression:  'bright eyes, upright posture, animated movement',
+    triggers:    'good rest, exercise, excitement, stimulating environments',
+  },
+  'Betrayed': {
+    definition: 'A sharp, painful hurt caused by someone trusted acting against your wellbeing or loyalty.',
+    sensation:   'sharp stab followed by heaviness, disbelief, hollowness',
+    expression:  'pained or stunned expression, withdrawal, avoided eye contact',
+    triggers:    'disloyalty from someone trusted, secrets revealed, promises broken',
+  },
+  'Resentful': {
+    definition: 'A simmering bitterness toward someone felt to have treated you unfairly or badly.',
+    sensation:   'persistent tight heat in the chest, lingering heaviness',
+    expression:  'tight lips, hard eyes, closed-off posture',
+    triggers:    'unaddressed grievances, feeling repeatedly mistreated, suppressed anger',
+  },
+  'Disrespected': {
+    definition: 'Feeling that your worth or dignity was deliberately ignored, dismissed, or undermined.',
+    sensation:   'sting or heat of anger, a shrinking and rising at once',
+    expression:  'tightened expression, lifted chin, direct or averted gaze',
+    triggers:    'being dismissed, talked over, mocked, or treated as lesser',
+  },
+  'Ridiculed': {
+    definition: 'A stinging hurt from being mocked or laughed at in a demeaning way.',
+    sensation:   'hot flush, sinking feeling, desire to disappear',
+    expression:  'flushed face, averted gaze, hunched posture',
+    triggers:    'being publicly mocked or made the object of others\' laughter',
+  },
+  'Indignant': {
+    definition: 'A righteous, heated anger at something perceived as unjust or morally wrong.',
+    sensation:   'hot, righteous energy; a pressing need to say something',
+    expression:  'upright posture, direct gaze, sharp expression',
+    triggers:    'witnessing unfairness or injustice, especially to oneself or others',
+  },
+  'Violated': {
+    definition: 'A profound sense that your boundaries, rights, or dignity were forcibly transgressed.',
+    sensation:   'cold sick feeling, deep discomfort, feeling invaded or contaminated',
+    expression:  'recoiling posture, wide eyes or blank expression, stillness',
+    triggers:    'having personal boundaries crossed without consent',
+  },
+  'Furious': {
+    definition: 'An intense, all-consuming rage that feels overwhelming and difficult to control.',
+    sensation:   'burning heat, racing heart, clenched body, tunnel vision',
+    expression:  'flushed face, clenched jaw, flared nostrils, intense stare',
+    triggers:    'severe injustice, extreme provocation, feeling powerless and wronged',
+  },
+  'Jealous': {
+    definition: 'A sharp, uncomfortable mix of envy and fear of losing something or someone important.',
+    sensation:   'uncomfortable squeeze in the chest, restlessness, a mix of longing and fear',
+    expression:  'guarded expression, watchful eyes, tense posture',
+    triggers:    'perceived threat to a valued relationship, comparison to others',
+  },
+  'Provoked': {
+    definition: 'A reactive anger stirred by someone\'s deliberate or perceived attempt to antagonise you.',
+    sensation:   'rising heat, alertness, readiness to respond or retaliate',
+    expression:  'narrowed eyes, tense jaw, forward-leaning or defensive posture',
+    triggers:    'deliberate irritation, being baited, personal boundaries challenged',
+  },
+  'Hostile': {
+    definition: 'A cold, combative readiness to oppose or attack, born from deep mistrust or anger.',
+    sensation:   'cold hardness, tension throughout the body, guarded alertness',
+    expression:  'flat or cold stare, closed posture, minimal expression',
+    triggers:    'deep mistrust, repeated harm, feeling persistently threatened',
+  },
+  'Infuriated': {
+    definition: 'An extreme frustration that has tipped into burning, hard-to-contain anger.',
+    sensation:   'intense burning heat, loss of fine control, pounding pulse',
+    expression:  'clenched jaw and fists, flushed face, raised voice',
+    triggers:    'extreme frustration breaking through, feeling completely dismissed',
+  },
+  'Annoyed': {
+    definition: 'A mild, nagging irritation at something persistent, inconsiderate, or inconvenient.',
+    sensation:   'mild buzzing irritation, a tightening of patience',
+    expression:  'subtle eye roll, tight lips, slight frown',
+    triggers:    'persistent minor inconveniences, inconsiderate behaviour, interruptions',
+  },
+  'Withdrawn': {
+    definition: 'A retreat inward, pulling back from contact or connection with the world around you.',
+    sensation:   'a pulling inward, numbness, low energy',
+    expression:  'minimal eye contact, quiet manner, turned-away posture',
+    triggers:    'emotional pain, overstimulation, self-protection after hurt',
+  },
+  'Numb': {
+    definition: 'An absence of feeling, as though emotions have been muted or switched off entirely.',
+    sensation:   'an absence — like the volume on feelings has been turned down',
+    expression:  'flat affect, blank gaze, stillness',
+    triggers:    'emotional overload, trauma, prolonged distress, dissociation',
+  },
+  'Overwhelmed': {
+    definition: 'A sense of being buried under more than you can manage, with no clear way out.',
+    sensation:   'heaviness, racing mind, inability to think clearly, chest tightness',
+    expression:  'wide eyes, rapid breathing, frozen or frantic manner',
+    triggers:    'too many demands at once, sudden crisis, sensory overload',
+  },
+  'Out of control': {
+    definition: 'A panicked feeling that events or your own reactions are spiralling beyond your grasp.',
+    sensation:   'panicked urgency, heart racing, feeling of spinning or falling',
+    expression:  'frantic movement, wild eyes, laboured breathing',
+    triggers:    'situations spiralling, loss of agency, intense emotional flooding',
+  },
+  'Sleepy': {
+    definition: 'A heavy, drifting drowsiness that makes concentration and engagement difficult to sustain.',
+    sensation:   'heaviness behind the eyes, drifting focus, slow body',
+    expression:  'drooping eyelids, yawning, head drooping',
+    triggers:    'lack of sleep, exhaustion, monotony, warm environments',
+  },
+  'Unfocused': {
+    definition: 'A scattered, foggy state in which attention keeps slipping away from the task at hand.',
+    sensation:   'mental fogginess, scattered attention, inability to settle',
+    expression:  'glazed eyes, distracted manner, frequent wandering gaze',
+    triggers:    'fatigue, boredom, anxiety, lack of direction or stimulation',
+  },
+  'Apathetic': {
+    definition: 'A flat, unresponsive state in which nothing seems worth caring about or engaging with.',
+    sensation:   'flatness, absence of energy or investment, emotional blankness',
+    expression:  'flat expression, slow movements, minimal responsiveness',
+    triggers:    'burnout, depression, feeling nothing matters, chronic low mood',
+  },
+  'Indifferent': {
+    definition: 'A cool detachment that feels neither positive nor negative, simply unmoved by things around you.',
+    sensation:   'a cool, uninvested flatness — neither pulled toward nor away',
+    expression:  'neutral expression, relaxed posture, low engagement',
+    triggers:    'detachment from outcomes, disconnection from others or events',
+  },
+  'Pressured': {
+    definition: 'A tense, squeezed feeling from external demands pushing hard against your time or capacity.',
+    sensation:   'tightness in the chest, a squeezing urgency, difficulty breathing deeply',
+    expression:  'tense brow, hurried manner, strained expression',
+    triggers:    'deadlines, high expectations, external demands exceeding capacity',
+  },
+  'Rushed': {
+    definition: 'The uncomfortable urgency of too much to do and too little time, always behind.',
+    sensation:   'frantic urgency, inability to slow down, shallow breathing',
+    expression:  'hurried movements, distracted gaze, compressed expression',
+    triggers:    'time pressure, too many tasks, last-minute demands',
+  },
+  'Sceptical': {
+    definition: 'A cautious, questioning stance that withholds belief until evidence is sufficient and clear.',
+    sensation:   'a pulling back, mental alertness, mild resistance',
+    expression:  'raised eyebrow, slightly narrowed gaze, tilted head',
+    triggers:    'claims that seem too good, inconsistencies, unfamiliar sources',
+  },
+  'Dismissive': {
+    definition: 'A tendency to quickly discard or minimise something without giving it fair consideration.',
+    sensation:   'a breezy, unengaged flatness; mild sense of superiority',
+    expression:  'brief eye contact, quick turn away, unimpressed expression',
+    triggers:    'encountering what feels trivial, predictable, or unworthy of attention',
+  },
+  'Judgmental': {
+    definition: 'A harsh, quick tendency to evaluate others negatively based on your own standards.',
+    sensation:   'a sharp noticing and evaluating, often with mild tension',
+    expression:  'narrowed gaze, pursed lips, slightly elevated chin',
+    triggers:    'behaviour conflicting with values, seeing perceived errors or flaws',
+  },
+  'Embarrassed': {
+    definition: 'An uncomfortable self-consciousness arising from a perceived social blunder or exposure.',
+    sensation:   'hot flush, a desire to shrink or disappear, skin prickling',
+    expression:  'reddening face, averted gaze, nervous laugh, hunching',
+    triggers:    'social blunders, unwanted attention, being caught in an awkward moment',
+  },
+  'Appalled': {
+    definition: 'A strong sense of shock and moral outrage at something deeply wrong or offensive.',
+    sensation:   'a cold, nauseating jolt; moral disgust mixed with shock',
+    expression:  'wide eyes, slight recoil, hand to mouth, open expression of shock',
+    triggers:    'severe ethical violations, witnessing cruelty or extreme wrongdoing',
+  },
+  'Revolted': {
+    definition: 'An intense physical or emotional disgust that makes something feel utterly repellent.',
+    sensation:   'physical nausea, a visceral recoiling, desire to flee',
+    expression:  'grimace, turning away, body recoiling',
+    triggers:    'encountering something deeply unpleasant to the senses or morality',
+  },
+  'Nauseated': {
+    definition: 'A queasy, stomach-turning reaction to something physically or morally unpleasant.',
+    sensation:   'queasy stomach, saliva increasing, desire not to swallow',
+    expression:  'grimace, pale complexion, hand over mouth',
+    triggers:    'unpleasant smells, sights, sounds, or moral offences',
+  },
+  'Detestable': {
+    definition: 'A feeling that something is so wrong or repugnant that it inspires strong contempt.',
+    sensation:   'deep contempt, aversion, moral revulsion',
+    expression:  'disgusted expression, turning away, cold stare',
+    triggers:    'something considered morally repugnant or fundamentally wrong',
+  },
+  'Horrified': {
+    definition: 'An intense, visceral shock and revulsion at something shocking or morally unacceptable.',
+    sensation:   'cold shock, bodily freeze, a visceral sense of wrongness',
+    expression:  'wide eyes, open mouth, recoiling, pale face',
+    triggers:    'witnessing extreme harm, violence, or something crossing a moral threshold',
+  },
+  'Hesitant': {
+    definition: 'A cautious reluctance born from doubt, discomfort, or uncertainty about proceeding.',
+    sensation:   'a pausing, uncertain energy; slight tension in the chest',
+    expression:  'slow movements, slight frown, searching gaze',
+    triggers:    'uncertainty, risk, conflicting desires, lack of information',
+  },
+  'Isolated': {
+    definition: 'A stark sense of being cut off, with no one who truly understands or connects with you.',
+    sensation:   'a hollow ache, silence felt acutely, emotional distance',
+    expression:  'downcast eyes, withdrawn posture, minimal expression',
+    triggers:    'physical separation, being excluded, not being understood',
+  },
+  'Abandoned': {
+    definition: 'A raw, painful feeling of having been left alone by someone who mattered.',
+    sensation:   'acute pain in the chest, a hollow desperation, coldness',
+    expression:  'pained expression, tears, withdrawn or searching gaze',
+    triggers:    'being left by someone important, sudden loss of connection',
+  },
+  'Victimised': {
+    definition: 'A distressing sense that you have been unfairly harmed and had no power to prevent it.',
+    sensation:   'helplessness, indignation, a deep sense of wrongness',
+    expression:  'tearful or strained expression, slouched posture, pleading gaze',
+    triggers:    'being targeted or treated unfairly, having no recourse',
+  },
+  'Fragile': {
+    definition: 'A feeling of being thin-skinned and easily hurt, as though your defences are worn away.',
+    sensation:   'a raw, thin-skinned sensitivity; feeling on the edge of breaking',
+    expression:  'careful movements, easily startled, prone to tears',
+    triggers:    'periods of illness, sustained stress, emotional exhaustion',
+  },
+  'Grief': {
+    definition: 'A deep, aching sorrow in response to significant loss, felt in waves over time.',
+    sensation:   'waves of physical pain in the chest, breathlessness, deep fatigue',
+    expression:  'tears, uncontrollable crying, slumped posture, hollow stare',
+    triggers:    'death, major loss, the ending of something significant',
+  },
+  'Powerless': {
+    definition: 'A heavy resignation that you cannot change or influence what is happening to you.',
+    sensation:   'heaviness, a sinking sensation, no energy to act',
+    expression:  'slumped posture, blank or defeated gaze, slow movements',
+    triggers:    'situations beyond control, systems that cannot be changed',
+  },
+  'Ashamed': {
+    definition: 'A painful, self-directed feeling that you are fundamentally flawed or have fallen short.',
+    sensation:   'hot, sinking heaviness; desire to hide or disappear',
+    expression:  'averted gaze, hunched posture, red face, quiet manner',
+    triggers:    'feeling fundamentally flawed, moral failure, being exposed',
+  },
+  'Remorseful': {
+    definition: 'A sincere, heavy regret for specific harm caused, with a wish it could be undone.',
+    sensation:   'a gnawing, twisting feeling in the stomach; heaviness',
+    expression:  'downcast eyes, pained or subdued expression, sighing',
+    triggers:    'having caused harm, recognising a mistake, empathy for someone hurt',
+  },
+  'Empty': {
+    definition: 'A hollow, echoing absence where feeling and meaning once were.',
+    sensation:   'a hollow, echoing absence — like nothing is there',
+    expression:  'flat affect, blank gaze, stillness, absence of responsiveness',
+    triggers:    'long periods of numbness, major loss, exhaustion of emotion',
+  },
+  'Inferior': {
+    definition: 'A chronic, deflating sense of being less capable, worthy, or significant than others.',
+    sensation:   'a deflating, shrinking feeling; heaviness and low energy',
+    expression:  'hunched posture, averted gaze, quieter than usual',
+    triggers:    'comparison to others, criticism, failure, low-status situations',
+  },
+  'Helpless': {
+    definition: 'A paralysing sense that you lack the ability to protect yourself or change your situation.',
+    sensation:   'paralysis, heaviness, a kind of blankness or freeze',
+    expression:  'wide or vacant eyes, stillness, tears sometimes',
+    triggers:    'being trapped, witnessing harm without being able to stop it',
+  },
+  'Frightened': {
+    definition: 'An acute, body-level fear response to something that feels immediately threatening.',
+    sensation:   'rapid heartbeat, shallow breath, freezing or fleeing urge',
+    expression:  'wide eyes, raised brows, tense body, sharp inhale',
+    triggers:    'sudden or imminent threat, dangerous situations',
+  },
+  'Worried': {
+    definition: 'A persistent, intrusive concern about something that might go wrong.',
+    sensation:   'tight, circling unease in the stomach; racing thoughts',
+    expression:  'furrowed brow, distracted gaze, biting lips or nails',
+    triggers:    'uncertainty about the future, care for others, past trauma',
+  },
+  'Inadequate': {
+    definition: 'A painful feeling of falling short of what is needed or expected of you.',
+    sensation:   'deflation, a hollow sense of falling short, mild shame',
+    expression:  'downcast eyes, subdued manner, hesitant speech',
+    triggers:    'high expectations, comparison, perceived failure or criticism',
+  },
+  'Worthless': {
+    definition: 'A crushing belief that you have no value or positive qualities to offer.',
+    sensation:   'profound heaviness, a crushing absence of self-value',
+    expression:  'flat affect, averted gaze, sunken posture',
+    triggers:    'repeated criticism, abandonment, internalised shame or failure',
+  },
+  'Insignificant': {
+    definition: 'A sense of being so small or unimportant that your existence barely registers.',
+    sensation:   'a shrinking feeling, sense of smallness, fading into the background',
+    expression:  'quieter than usual, avoiding taking up space, subdued',
+    triggers:    'being overlooked, belonging to a large group, feeling replaceable',
+  },
+  'Excluded': {
+    definition: 'The painful experience of being deliberately left out or shut out of a group.',
+    sensation:   'cold ache, a sharp sense of absence, feeling on the outside',
+    expression:  'withdrawn posture, wistful or pained gaze',
+    triggers:    'being left out of social events, conversations, or decisions',
+  },
+  'Persecuted': {
+    definition: 'A feeling of being unfairly and repeatedly targeted, judged, or punished by others.',
+    sensation:   'hypervigilance, persistent unease, feeling watched or targeted',
+    expression:  'guarded posture, watchful eyes, defensive manner',
+    triggers:    'repeated unfair treatment, systemic bias, past trauma involving harm',
+  },
+  'Nervous': {
+    definition: 'An edgy, anticipatory tension in the face of something uncertain or potentially harmful.',
+    sensation:   'fluttery stomach, quick heartbeat, fidgety restlessness',
+    expression:  'fidgeting, quickened speech, averted or darting gaze',
+    triggers:    'performance situations, meeting new people, uncertain outcomes',
+  },
+  'Exposed': {
+    definition: 'A vulnerable, uncovered feeling as though your weaknesses are visible to others.',
+    sensation:   'a raw, stripped feeling; heightened self-consciousness',
+    expression:  'protective posture, red face, averted gaze, crossing arms',
+    triggers:    'vulnerability being seen, mistakes made public, loss of privacy',
+  },
+};
 
-// Flatten into parallel arrays
+// ── Colour helper ─────────────────────────────────────────────────────────────
+function hexAlpha(hex, a) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+// ── Flatten data ──────────────────────────────────────────────────────────────
 const innerData = [], innerC = [], innerLabels = [];
 const midData   = [], midC   = [], midLabels   = [], midCore = [];
 const outData   = [], outC   = [], outLabels   = [], outCore = [];
 
 EMOTIONS.forEach((core, ci) => {
-  const coreColor = c(core.h, core.s, core.l);
-  const midColor  = lighten(coreColor, 10);
-  const outColor  = lighten(coreColor, 20);
-
+  const col = core.color;
   const outerCount = core.children.reduce((n, m) => n + m.kids.length, 0);
   innerData.push(outerCount);
-  innerC.push(coreColor);
+  innerC.push(col);
   innerLabels.push(core.name);
 
   core.children.forEach(mid => {
-    midData.push(mid.kids.length);   // always 2
-    midC.push(midColor);
+    midData.push(mid.kids.length);
+    midC.push(col);
     midLabels.push(mid.name);
     midCore.push(ci);
 
     mid.kids.forEach(name => {
       outData.push(1);
-      outC.push(outColor);
+      outC.push(col);
       outLabels.push(name);
       outCore.push(ci);
     });
   });
 });
 
-let selectedCore = null;
+// ── State ─────────────────────────────────────────────────────────────────────
+let selectedCore  = null;
+let chartRotation = -90;
 
-// Pre-compute each core emotion's midAngle (radians, canvas convention)
-// so we can set transform-origin toward the clicked sector
-const coreMidAngles = (() => {
-  const total = innerData.reduce((s, v) => s + v, 0);
-  let cum = 0;
-  return innerData.map(v => {
-    const midFrac = (cum + v / 2) / total;
-    cum += v;
-    return (midFrac * 360 - 90) * (Math.PI / 180); // offset by chart rotation (-90°)
-  });
-})();
+const wrap      = document.querySelector('.wheel-canvas-wrap');
+const infoPanel = document.getElementById('infoPanel');
 
-const wrap = document.querySelector('.wheel-canvas-wrap');
+let panelLevel   = null;
+let panelCoreIdx = null;
+let panelMidIdx  = null;
+let panelOutIdx  = null;
 
-function applyZoom(ci) {
-  if (ci === null) {
-    wrap.style.transform = '';
-    return;
-  }
-  const angle = coreMidAngles[ci];
-  // Pin the scale origin toward the sector's direction from center
-  const ox = (50 + Math.cos(angle) * 50).toFixed(1) + '%';
-  const oy = (50 + Math.sin(angle) * 50).toFixed(1) + '%';
-  wrap.style.transformOrigin = `${ox} ${oy}`;
-  wrap.style.transform = 'scale(1.35)';
+// ── Info panel rendering ──────────────────────────────────────────────────────
+function hexToRgb(hex) {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3
+    ? h.split('').map(c => c + c).join('')
+    : h, 16);
+  return `${(n >> 16) & 255},${(n >> 8) & 255},${n & 255}`;
 }
 
-function bgs(colorArr, coreArr, dim = 0.25) {
-  if (selectedCore === null) return colorArr.map(col => toHsla(col));
-  return colorArr.map((col, i) =>
-    coreArr[i] === selectedCore ? toHsla(col) : toHsla(col, dim)
+function infoField(label, val) {
+  if (!val) return '';
+  return `
+    <div class="fw-field">
+      <span class="fw-field-label">${label}</span>
+      <span class="fw-field-val">${val}</span>
+    </div>`;
+}
+
+function renderInfoPanel() {
+  if (panelLevel === null) {
+    infoPanel.style.removeProperty('--fw-accent');
+    infoPanel.style.removeProperty('--fw-accent-rgb');
+    infoPanel.innerHTML = '<div class="fw-empty">Select a section of the wheel to explore.</div>';
+    return;
+  }
+
+  const core  = EMOTIONS[panelCoreIdx];
+  const color = core.color;
+  infoPanel.style.setProperty('--fw-accent', color);
+  infoPanel.style.setProperty('--fw-accent-rgb', hexToRgb(color));
+
+  let name, d, keyLabel;
+
+  if (panelLevel === 'core') {
+    name     = core.name;
+    d        = DEFINITIONS[name] || {};
+    keyLabel = 'Emotion';
+  } else if (panelLevel === 'mid') {
+    name     = core.children[panelMidIdx].name;
+    d        = DEFINITIONS[name] || {};
+    keyLabel = 'Feeling';
+  } else {
+    name     = core.children[panelMidIdx].kids[panelOutIdx];
+    d        = DEFINITIONS[name] || {};
+    keyLabel = 'Feeling';
+  }
+
+  const def        = d.definition  || '';
+  const sensation  = d.sensation   || '';
+  const expression = d.expression  || '';
+  const triggers   = d.triggers    || '';
+
+  // Breadcrumb
+  let breadcrumb = '';
+  if (panelLevel === 'mid') {
+    breadcrumb = `
+      <div class="fw-breadcrumb">
+        <button class="fw-breadcrumb-btn" data-goto="core">${core.name}</button>
+        <span class="fw-breadcrumb-sep">›</span>
+        <span>${name}</span>
+      </div>`;
+  } else if (panelLevel === 'out') {
+    const midName = core.children[panelMidIdx].name;
+    breadcrumb = `
+      <div class="fw-breadcrumb">
+        <button class="fw-breadcrumb-btn" data-goto="core">${core.name}</button>
+        <span class="fw-breadcrumb-sep">›</span>
+        <button class="fw-breadcrumb-btn" data-goto="mid">${midName}</button>
+        <span class="fw-breadcrumb-sep">›</span>
+        <span>${name}</span>
+      </div>`;
+  }
+
+  // Children pills
+  let childrenHtml = '';
+  if (panelLevel === 'core') {
+    childrenHtml = `
+      <div class="fw-children-label">Secondary emotions</div>
+      <div class="fw-children">
+        ${core.children.map((mid, mi) =>
+          `<button class="fw-child-btn" data-mid="${mi}">${mid.name}</button>`
+        ).join('')}
+      </div>`;
+  } else if (panelLevel === 'mid') {
+    const kids = core.children[panelMidIdx].kids;
+    childrenHtml = `
+      <div class="fw-children-label">Specific feelings</div>
+      <div class="fw-children">
+        ${kids.map((kid, ki) =>
+          `<button class="fw-child-btn" data-out="${ki}">${kid}</button>`
+        ).join('')}
+      </div>`;
+  }
+
+  infoPanel.innerHTML = `
+    <div class="fw-card">
+      ${breadcrumb}
+      <div class="fw-row">
+        <span class="fw-key">${keyLabel}</span>
+        <span class="fw-val">
+          ${panelLevel === 'core'
+            ? `<span class="fw-swatch" style="background:${color}"></span>`
+            : ''}
+          ${name}
+        </span>
+      </div>
+      ${def        ? `<div class="fw-desc">${def}</div>` : ''}
+      ${infoField('Sensation',   sensation)}
+      ${infoField('Facial expressions',  expression)}
+      ${infoField('Caused by',    triggers)}
+      ${childrenHtml}
+    </div>`;
+
+  infoPanel.scrollTop = 0;
+
+  infoPanel.querySelectorAll('[data-mid]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      panelMidIdx = parseInt(btn.dataset.mid);
+      panelOutIdx = null;
+      panelLevel  = 'mid';
+      renderInfoPanel();
+    })
+  );
+  infoPanel.querySelectorAll('[data-out]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      panelOutIdx = parseInt(btn.dataset.out);
+      panelLevel  = 'out';
+      renderInfoPanel();
+    })
+  );
+  infoPanel.querySelectorAll('[data-goto="core"]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      panelMidIdx = null; panelOutIdx = null; panelLevel = 'core';
+      renderInfoPanel();
+    })
+  );
+  infoPanel.querySelectorAll('[data-goto="mid"]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      panelOutIdx = null; panelLevel = 'mid';
+      renderInfoPanel();
+    })
   );
 }
 
-// Arc label plugin
+function openPanelAtCore(ci) {
+  panelLevel = 'core'; panelCoreIdx = ci; panelMidIdx = null; panelOutIdx = null;
+  renderInfoPanel();
+}
+
+function clearPanel() {
+  panelLevel = null;
+  renderInfoPanel();
+}
+
+// ── Chart colours ─────────────────────────────────────────────────────────────
+function bgs(colorArr, coreArr, dim = 0.28) {
+  if (selectedCore === null) return [...colorArr];
+  return colorArr.map((col, i) =>
+    coreArr[i] === selectedCore ? col : hexAlpha(col, dim)
+  );
+}
+
+function updateColors() {
+  const innerIdx = innerC.map((_, i) => i);
+  chart.data.datasets[0].backgroundColor = bgs(outC, outCore);
+  chart.data.datasets[1].backgroundColor = bgs(midC, midCore);
+  chart.data.datasets[2].backgroundColor = bgs(innerC, innerIdx);
+  chart.update('none');
+}
+
+// ── Arc label plugin ──────────────────────────────────────────────────────────
 const arcLabelPlugin = {
   id: 'arcLabels',
   afterDraw(chart) {
     const { ctx } = chart;
-    const fontSizes = [11, 9, 7.5];
-    const fontWeights = ['600', '500', '400'];
+    const fontSizes   = [7.5, 9, 11];
+    const fontWeights = ['400', '500', '600'];
 
     chart.data.datasets.forEach((ds, di) => {
-      const meta = chart.getDatasetMeta(di);
+      const meta   = chart.getDatasetMeta(di);
       const labels = ds.labels;
-      const fs = fontSizes[di];
+      const fs     = fontSizes[di];
 
       ctx.save();
-      ctx.font = `${fontWeights[di]} ${fs}px 'IBM Plex Sans', sans-serif`;
-      ctx.textAlign = 'center';
+      ctx.font         = `${fontWeights[di]} ${fs}px 'IBM Plex Sans', sans-serif`;
+      ctx.textAlign    = 'center';
       ctx.textBaseline = 'middle';
 
       meta.data.forEach((arc, i) => {
         const { startAngle, endAngle, innerRadius, outerRadius } = arc;
         const midAngle = (startAngle + endAngle) / 2;
-        const midR = (innerRadius + outerRadius) / 2;
-        const arcLen = (endAngle - startAngle) * midR;
+        const midR     = (innerRadius + outerRadius) / 2;
+        const arcLen   = (endAngle - startAngle) * midR;
 
-        // Skip if arc is too narrow to hold any text
         if (arcLen < fs * 1.1) return;
 
-        const x = arc.x + midR * Math.cos(midAngle);
-        const y = arc.y + midR * Math.sin(midAngle);
-
-        // Rotate text radially; flip left-side labels so they read right-side-up
+        const x    = arc.x + midR * Math.cos(midAngle);
+        const y    = arc.y + midR * Math.sin(midAngle);
         const norm = ((midAngle % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-        let rot = midAngle;
+        let rot    = midAngle;
         if (norm > Math.PI / 2 && norm < (3 * Math.PI) / 2) rot += Math.PI;
 
-        // Set opacity to match the slice dimming
-        const alpha = (selectedCore === null || (di === 0 ? i : di === 1 ? midCore[i] : outCore[i]) === selectedCore)
+        const alpha = (selectedCore === null ||
+          (di === 2 ? i : di === 1 ? midCore[i] : outCore[i]) === selectedCore)
           ? 1 : 0.35;
 
         ctx.save();
         ctx.globalAlpha = alpha;
-        ctx.fillStyle = '#ffffff';
+        ctx.fillStyle   = '#ffffff';
         ctx.translate(x, y);
         ctx.rotate(rot);
         ctx.fillText(labels[i] || '', 0, 0, outerRadius - innerRadius - 6);
@@ -353,95 +1423,209 @@ const arcLabelPlugin = {
   },
 };
 
-// Build chart
+// ── Build chart ───────────────────────────────────────────────────────────────
 const chart = new Chart(document.getElementById('feelingsWheel').getContext('2d'), {
   type: 'doughnut',
   data: {
     datasets: [
-      { data: innerData, backgroundColor: innerC.map(col => toHsla(col)), borderColor: '#fff', borderWidth: 2, labels: innerLabels },
-      { data: midData,   backgroundColor: midC.map(col => toHsla(col)),   borderColor: '#fff', borderWidth: 1, labels: midLabels },
-      { data: outData,   backgroundColor: outC.map(col => toHsla(col)),   borderColor: '#fff', borderWidth: 1, labels: outLabels },
+      { data: outData,   backgroundColor: [...outC],   borderColor: '#f6f6f6', borderWidth: 1, labels: outLabels },
+      { data: midData,   backgroundColor: [...midC],   borderColor: '#f6f6f6', borderWidth: 1, labels: midLabels },
+      { data: innerData, backgroundColor: [...innerC], borderColor: '#f6f6f6', borderWidth: 1, labels: innerLabels },
     ],
   },
   options: {
-    cutout: '20%',
-    rotation: -90,   // start at 12 o'clock
+    cutout: 0,
+    rotation: -90,
     animation: { duration: 180 },
     plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          title: () => '',
-          label: ctx => ' ' + ctx.dataset.labels[ctx.dataIndex],
-        },
-        displayColors: false,
-        padding: 8,
-      },
+      legend:  { display: false },
+      tooltip: { enabled: false },
     },
   },
   plugins: [arcLabelPlugin],
 });
 
-// Info panel
-function showInfo(ci) {
-  const core = EMOTIONS[ci];
-  const color = toHsla(innerC[ci]);
-
-  document.getElementById('infoTitle').textContent = core.name;
-  document.getElementById('infoTitle').style.color = color;
-
-  const midEl = document.getElementById('middleTags');
-  const outEl = document.getElementById('outerTags');
-  midEl.innerHTML = '';
-  outEl.innerHTML = '';
-
-  core.children.forEach(mid => {
-    const t = document.createElement('span');
-    t.className = 'tag';
-    t.textContent = mid.name;
-    midEl.appendChild(t);
-
-    mid.kids.forEach(name => {
-      const t2 = document.createElement('span');
-      t2.className = 'tag';
-      t2.textContent = name;
-      outEl.appendChild(t2);
-    });
-  });
-
-  document.getElementById('infoPanel').classList.add('open');
+// ── Zoom helpers ──────────────────────────────────────────────────────────────
+function getCoreMidAngle(ci) {
+  const total = innerData.reduce((s, v) => s + v, 0);
+  let cum = 0;
+  for (let j = 0; j < ci; j++) cum += innerData[j];
+  const midFrac = (cum + innerData[ci] / 2) / total;
+  return (midFrac * 360 + chartRotation) * (Math.PI / 180);
 }
 
-function updateColors() {
-  const innerIdx = innerC.map((_, i) => i);
-  chart.data.datasets[0].backgroundColor = bgs(innerC, innerIdx);
-  chart.data.datasets[1].backgroundColor = bgs(midC, midCore);
-  chart.data.datasets[2].backgroundColor = bgs(outC, outCore);
-  chart.update('none');
+function applyZoom(ci, tapX, tapY) {
+  if (ci === null) {
+    currentScale = 1.0;
+    wrap.style.transform       = '';
+    wrap.style.transformOrigin = '50% 50%';
+    return;
+  }
+  let ox, oy;
+  if (tapX !== undefined) {
+    const rect  = canvas.getBoundingClientRect();
+    const vizCX = rect.left + rect.width  / 2;
+    const vizCY = rect.top  + rect.height / 2;
+    const layW  = canvas.offsetWidth;
+    const layH  = canvas.offsetHeight;
+    ox = ((layW / 2 + (tapX - vizCX) / currentScale) / layW * 100).toFixed(2);
+    oy = ((layH / 2 + (tapY - vizCY) / currentScale) / layH * 100).toFixed(2);
+  } else {
+    const angle = getCoreMidAngle(ci);
+    ox = (50 + Math.cos(angle) * 50).toFixed(2);
+    oy = (50 + Math.sin(angle) * 50).toFixed(2);
+  }
+  wrap.style.transformOrigin = `${ox}% ${oy}%`;
+  currentScale = 1.5;
+  wrap.style.transform = 'scale(1.5)';
 }
 
-document.getElementById('feelingsWheel').addEventListener('click', evt => {
-  const els = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, false);
-  if (!els.length) {
+function setScale(s) {
+  currentScale = Math.max(1.0, Math.min(3.5, s));
+  if (currentScale <= 1.0) {
+    currentScale = 1.0;
+    wrap.style.transform = '';
+  } else {
+    wrap.style.transform = `scale(${currentScale.toFixed(3)})`;
+  }
+}
+
+// ── Pointer / interaction state ───────────────────────────────────────────────
+const canvas  = document.getElementById('feelingsWheel');
+const SPIN_PX = 6;
+let currentScale = 1.0;
+
+const pts = new Map();
+let didSpin       = false;
+let spinStartX    = 0, spinStartY = 0;
+let prevSpinAngle = 0;
+let lastTapTime   = 0;
+let pinchStartDist = 0;
+let pinchBaseScale = 1.0;
+let isPinching     = false;
+
+function pointerAngle(x, y) {
+  const rect = canvas.getBoundingClientRect();
+  return Math.atan2(y - (rect.top  + rect.height / 2),
+                    x - (rect.left + rect.width  / 2)) * (180 / Math.PI);
+}
+
+function pinchDist() {
+  const [a, b] = pts.values();
+  return Math.hypot(b.x - a.x, b.y - a.y);
+}
+
+// ── Tap handler ───────────────────────────────────────────────────────────────
+function handleTap(x, y) {
+  const now         = Date.now();
+  const isDoubleTap = (now - lastTapTime) < 300;
+  lastTapTime       = now;
+  if (isDoubleTap && currentScale > 1.0) {
     selectedCore = null;
-    document.getElementById('infoPanel').classList.remove('open');
     updateColors();
+    clearPanel();
     applyZoom(null);
     return;
   }
 
-  const { datasetIndex: di, index: i } = els[0];
-  const ci = di === 0 ? i : di === 1 ? midCore[i] : outCore[i];
+  const rect = canvas.getBoundingClientRect();
+  const dx   = x - (rect.left + rect.width  / 2);
+  const dy   = y - (rect.top  + rect.height / 2);
+
+  if (Math.hypot(dx, dy) > rect.width / 2) {
+    selectedCore = null; updateColors(); clearPanel(); applyZoom(null); return;
+  }
+
+  const innerMeta  = chart.getDatasetMeta(2);
+  const firstStart = innerMeta.data[0].startAngle;
+  let angle = Math.atan2(dy, dx);
+  while (angle < firstStart)               angle += 2 * Math.PI;
+  while (angle > firstStart + 2 * Math.PI) angle -= 2 * Math.PI;
+
+  let ci = null;
+  for (let j = 0; j < innerMeta.data.length; j++) {
+    const { startAngle, endAngle } = innerMeta.data[j];
+    if (angle >= startAngle && angle <= endAngle) { ci = j; break; }
+  }
+
+  if (ci === null) {
+    selectedCore = null; updateColors(); clearPanel(); applyZoom(null); return;
+  }
 
   if (selectedCore === ci) {
-    selectedCore = null;
-    document.getElementById('infoPanel').classList.remove('open');
-    applyZoom(null);
+    selectedCore = null; clearPanel(); applyZoom(null);
   } else {
     selectedCore = ci;
-    showInfo(ci);
-    applyZoom(ci);
+    if (currentScale === 1.0) applyZoom(ci, x, y);
+    openPanelAtCore(ci);
   }
   updateColors();
+}
+
+// ── Pointer events ────────────────────────────────────────────────────────────
+canvas.addEventListener('pointerdown', e => {
+  canvas.setPointerCapture(e.pointerId);
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  e.preventDefault();
+  if (pts.size === 2) {
+    isPinching = true; wrap.classList.remove('dragging');
+    pinchStartDist = pinchDist(); pinchBaseScale = currentScale;
+  } else {
+    isPinching = false; didSpin = false;
+    spinStartX = e.clientX; spinStartY = e.clientY;
+    prevSpinAngle = pointerAngle(e.clientX, e.clientY);
+  }
+}, { passive: false });
+
+canvas.addEventListener('pointermove', e => {
+  if (!pts.has(e.pointerId)) return;
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  e.preventDefault();
+  if (isPinching && pts.size === 2) {
+    wrap.style.transformOrigin = '50% 50%';
+    setScale(pinchBaseScale * (pinchDist() / pinchStartDist));
+    return;
+  }
+  if (pts.size !== 1) return;
+  const dx = e.clientX - spinStartX, dy = e.clientY - spinStartY;
+  if (!didSpin && Math.hypot(dx, dy) < SPIN_PX) return;
+  if (!didSpin) { didSpin = true; wrap.classList.add('dragging'); }
+  const cur  = pointerAngle(e.clientX, e.clientY);
+  let delta  = cur - prevSpinAngle;
+  if (delta >  180) delta -= 360;
+  if (delta < -180) delta += 360;
+  chartRotation += delta; prevSpinAngle = cur;
+  chart.options.rotation = chartRotation;
+  chart.update('none');
+}, { passive: false });
+
+function onRelease(e) {
+  pts.delete(e.pointerId);
+  wrap.classList.remove('dragging');
+  if (isPinching) { if (pts.size < 2) isPinching = false; return; }
+  if (!didSpin) handleTap(e.clientX, e.clientY);
+  didSpin = false;
+}
+
+canvas.addEventListener('pointerup',     onRelease);
+canvas.addEventListener('pointercancel', e => {
+  pts.delete(e.pointerId);
+  wrap.classList.remove('dragging');
+  didSpin = false; isPinching = false;
 });
+
+// ── Embed mode ────────────────────────────────────────────────────────────────
+const _params = new URLSearchParams(window.location.search);
+if (_params.has('embed')) {
+  const _book = document.querySelector('.book');
+  if (_book) {
+    _book.classList.add('is-embed');
+    const _theme = _params.get('theme');
+    if (_theme === 'dark')  { _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1'); }
+    if (_theme === 'light') { _book.classList.add('color-theme-1'); _book.classList.remove('color-theme-2'); }
+  }
+  // Prevent the iframe body from scrolling when the zoomed canvas overflows its layout box
+  document.documentElement.style.overflow       = 'hidden';
+  document.body.style.overflow                  = 'hidden';
+}
 </script>
