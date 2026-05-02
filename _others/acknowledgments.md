@@ -161,7 +161,7 @@ This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<s
 
 The Lighthouse motif and the site’s icons were created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
-Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
+English copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie. toki pona copyediting was done by kulupu <span class="sitelen">󱤟</span> Natali (<span class="sitelen">󱤑</span> jan Anpe en <span class="sitelen">󱤑</span> jan Lila en <span class="sitelen">󱤑</span> jan Ije en <span class="sitelen">󱤎</span> ilo Kali <span class="sitelen">󱤑</span> jan Ali), with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
 Toki Pona glyph support was provided through the _sitelen seli kiwen mono asuki_ font <a href="https://github.com/kreativekorp/sitelen-seli-kiwen">by jan <span class="sitelen">󱤑</span> Lepeka.</a>
 

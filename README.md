@@ -40,7 +40,7 @@ _The Constant Companions Handbook_ is primarily written by the <span class="site
 > _lipu linluwi pona_ is still not complete; if you'd like to contribute, do drop the Pleiadesfolk an email on pleaidesfolk [at] proton.me or drop us a message on Tumblr [@pleiadesfolk](https://www.tumblr.com/pleiadesfolk)! 
 {: .block-tip }
 
-Copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie, with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
+English copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowie. toki pona copyediting was done by kulupu <span class="sitelen">󱤟</span> Natali (<span class="sitelen">󱤑</span> jan Anpe en <span class="sitelen">󱤑</span> jan Lila en <span class="sitelen">󱤑</span> jan Ije en <span class="sitelen">󱤎</span> ilo Kali <span class="sitelen">󱤑</span> jan Ali), with the <span class="sitelen">󱤟</span> Cheerleaders providing coding support.
 
 Happy reading!
 
