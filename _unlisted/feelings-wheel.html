@@ -87,6 +87,7 @@ permalink: /tools/feelings-wheel
     width: min(600px, 93vw);
     height: min(600px, 93vw);
     cursor: grab;
+    touch-action: none;
     flex-shrink: 0;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
@@ -1292,8 +1293,8 @@ function hexAlpha(hex, a) {
 
 // ── Flatten data ──────────────────────────────────────────────────────────────
 const innerData = [], innerC = [], innerLabels = [];
-const midData   = [], midC   = [], midLabels   = [], midCore = [];
-const outData   = [], outC   = [], outLabels   = [], outCore = [];
+const midData   = [], midC   = [], midLabels   = [], midCore = [], midLocal = [];
+const outData   = [], outC   = [], outLabels   = [], outCore = [], outMid  = [], outKid = [];
 
 EMOTIONS.forEach((core, ci) => {
   const col = core.color;
@@ -1302,17 +1303,20 @@ EMOTIONS.forEach((core, ci) => {
   innerC.push(col);
   innerLabels.push(core.name);
 
-  core.children.forEach(mid => {
+  core.children.forEach((mid, mi) => {
     midData.push(mid.kids.length);
     midC.push(col);
     midLabels.push(mid.name);
     midCore.push(ci);
+    midLocal.push(mi);          // index within core.children
 
-    mid.kids.forEach(name => {
+    mid.kids.forEach((name, ki) => {
       outData.push(1);
       outC.push(col);
       outLabels.push(name);
       outCore.push(ci);
+      outMid.push(mi);          // mid index within core.children
+      outKid.push(ki);          // kid index within mid.kids
     });
   });
 });
@@ -1659,35 +1663,67 @@ function handleTap(x, y) {
   const rect = canvas.getBoundingClientRect();
   const dx   = x - (rect.left + rect.width  / 2);
   const dy   = y - (rect.top  + rect.height / 2);
+  const dist = Math.hypot(dx, dy);
 
-  if (Math.hypot(dx, dy) > rect.width / 2) {
+  if (dist > rect.width / 2) {
     selectedCore = null; updateColors(); clearPanel(); applyZoom(null); return;
   }
 
-  const innerMeta  = chart.getDatasetMeta(2);
-  const firstStart = innerMeta.data[0].startAngle;
+  // Determine which ring was tapped by comparing dist against ring radii
+  const outerMeta = chart.getDatasetMeta(0);
+  const midMeta   = chart.getDatasetMeta(1);
+  const innerMeta = chart.getDatasetMeta(2);
+
+  let tappedMeta;
+  if      (dist >= outerMeta.data[0].innerRadius) tappedMeta = outerMeta;
+  else if (dist >= midMeta.data[0].innerRadius)   tappedMeta = midMeta;
+  else                                             tappedMeta = innerMeta;
+
+  // Normalise angle into the arc space
+  const firstStart = tappedMeta.data[0].startAngle;
   let angle = Math.atan2(dy, dx);
   while (angle < firstStart)               angle += 2 * Math.PI;
   while (angle > firstStart + 2 * Math.PI) angle -= 2 * Math.PI;
 
-  let ci = null;
-  for (let j = 0; j < innerMeta.data.length; j++) {
-    const { startAngle, endAngle } = innerMeta.data[j];
-    if (angle >= startAngle && angle <= endAngle) { ci = j; break; }
+  let segIdx = null;
+  for (let j = 0; j < tappedMeta.data.length; j++) {
+    const { startAngle, endAngle } = tappedMeta.data[j];
+    if (angle >= startAngle && angle <= endAngle) { segIdx = j; break; }
   }
 
-  if (ci === null) {
+  if (segIdx === null) {
     selectedCore = null; updateColors(); clearPanel(); applyZoom(null); return;
   }
 
-  if (selectedCore === ci) {
+  // Map segment → core index, then zoom/colour if needed
+  const ci = tappedMeta === innerMeta ? segIdx : tappedMeta === midMeta ? midCore[segIdx] : outCore[segIdx];
+
+  if (tappedMeta === innerMeta && selectedCore === ci) {
+    // Tapping the already-selected core ring deselects
     selectedCore = null; clearPanel(); applyZoom(null);
   } else {
-    selectedCore = ci;
-    if (currentScale === 1.0) applyZoom(ci, x, y);
-    openPanelAtCore(ci);
+    if (selectedCore !== ci) {
+      selectedCore = ci;
+      updateColors();
+      if (currentScale === 1.0) applyZoom(ci, x, y);
+    }
+
+    if (tappedMeta === innerMeta) {
+      openPanelAtCore(ci);
+    } else if (tappedMeta === midMeta) {
+      panelLevel   = 'mid';
+      panelCoreIdx = ci;
+      panelMidIdx  = midLocal[segIdx];
+      panelOutIdx  = null;
+      renderInfoPanel();
+    } else {
+      panelLevel   = 'out';
+      panelCoreIdx = ci;
+      panelMidIdx  = outMid[segIdx];
+      panelOutIdx  = outKid[segIdx];
+      renderInfoPanel();
+    }
   }
-  updateColors();
 }
 
 // ── Pointer events ────────────────────────────────────────────────────────────
