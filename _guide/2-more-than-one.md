@@ -346,7 +346,6 @@ When a **headmate** is in control of the collective's shared physical body, that
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.youtube.com/watch?v=v93wuN0jtV0">From Patricia Taxxon</a>:</p>
 
 <blockquote>You don’t usually notice it if you have it. It doesn’t necessarily involve blacking out at random times or waking up in weird places. Instead of blacking out, you’re more likely to slowly forget and seamlessly transition into a new personality without a break in “consciousness” as a whole.<br><br>(…) You might hear your voice change its tone in an imperceptible way, and need to be reminded of a couple of things you were talking about, before seamlessly continuing function. <br><br>(…) A big universal symptom of plurality is <strong>denial</strong>.</blockquote>
-<p>Memory weirdness is also a big part of </p>
 <p>To fight the feeling that you're faking all of this, you'll have to make a conscious effort to unmask and perform. You type differently, speak differently, adopt a mannerism comfortable to you even if it feels different.</p>
 <p>As Patricia Taxxon says: “This is just vital mental health work. I don’t know how any system is supposed to disambiguate and forge lines of communication without a little theatre.”</p>
 <h2 id="does-adopting-this-framework-actually-work">Does adopting this framework actually <em>work?</em></h2>
