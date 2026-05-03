@@ -10,7 +10,7 @@ layout: post
 
 Healthy Multiplicity has been a core, essential resource for selves-help and selves discovery, and an immensely helpful resource base.
 
-<a href="https://healthymultiplicity.com/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">Visit Healthy Multiplicity</a>'
+<a href="https://healthymultiplicity.com/" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:100%; display: block; margin: auto;">Visit Healthy Multiplicity</a>
 
 ***
 
