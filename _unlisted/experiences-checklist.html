@@ -204,18 +204,8 @@ permalink: /tools/plural-checklist
   color: var(--muted);
 }
 
-.cl-feedback {
-  font-size: 1.28rem;
-  color: var(--check-color);
-  opacity: 0;
-  transition: opacity 0.3s;
-  white-space: nowrap;
-}
-
-.cl-feedback.show { opacity: 1; }
-
 /* ── Summary panel ── */
-.cl-summary {
+.cl-summary-tkit {
   display: none;
   border: 1px solid var(--panel-border);
   border-radius: 8px;
@@ -223,9 +213,7 @@ permalink: /tools/plural-checklist
   margin-bottom: 2rem;
 }
 
-.cl-summary.visible {
-  display: block;
-}
+.cl-summary-tkit.visible { display: block; }
 
 .cl-summary-header {
   padding: 0.65rem 1rem;
@@ -233,20 +221,12 @@ permalink: /tools/plural-checklist
   border-bottom: 1px solid var(--panel-border);
   font-weight: 600;
   font-size: 1.4rem;
-  color: #333333;
 }
 
-.cl-summary-body {
-  padding: 0.75rem 1rem;
-}
+.cl-summary-body { padding: 0.75rem 1rem; }
 
-.cl-summary-section {
-  margin-bottom: 1rem;
-}
-
-.cl-summary-section:last-child {
-  margin-bottom: 0;
-}
+.cl-summary-section { margin-bottom: 1rem; }
+.cl-summary-section:last-child { margin-bottom: 0; }
 
 .cl-summary-section-title {
   font-size: 1.1rem;
@@ -255,11 +235,7 @@ permalink: /tools/plural-checklist
   margin-bottom: 0.3rem;
 }
 
-.cl-summary-list {
-  list-style: disc;
-  padding-left: 1.4rem;
-  margin: 0;
-}
+.cl-summary-list { list-style: disc; padding-left: 1.4rem; margin: 0; }
 
 .cl-summary-list li {
   font-size: 1rem;
@@ -268,18 +244,21 @@ permalink: /tools/plural-checklist
   margin-bottom: 0.2rem;
 }
 
-/* ── Embed mode: hide site chrome + summary ── */
+/* ── Embed mode: hide site chrome + disclaimer ── */
 .embed-mode .book-header,
 .embed-mode .book-summary,
 .embed-mode .navigation,
 .embed-mode .book-footer,
-.embed-mode .cl-summary, 
-.embed-mode .cl-disclaimer {
+.embed-mode .cl-disclaimer, 
+.embed-mode .cl-summary-tkit {
   display: none !important;
 }
 
-.embed-mode .book-body  { margin: 0 !important; }
-.embed-mode .body-inner { margin: 0 !important; }
+.embed-mode .book-body  { left: 0 !important; transform: none !important; }
+.embed-mode .body-inner {
+  margin: 0 !important;
+  width: 100% !important;
+}
 
 </style>
 
@@ -289,17 +268,14 @@ permalink: /tools/plural-checklist
     <p>It's important to note that this checklist is here for you as a tool to understand yourself. It is not a diagnostic quiz. <strong>IT IS NOT A DIAGNOSTIC QUIZ.</strong></p> 
     <p>We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you have DID, OSDD, or DDNOS — all of which have their own diagnostic criteria. But you should note that these are experiences that are common to those who are plural.</p>
     <p><strong>Conversely, not experiencing something on this list doesn't mean that you are <em>not plural</em>, either.</strong> Saying no to some or all of the items on the list doesn't mean that you're <em>not plural.</em> It's unlikely that you're faking the answers to these questionnaires, too.</p>
-    <p>Plurality in itself is covert and difficult to notice. Read on <a target="_blank" href="/guide/more-than-one#i-said-yes-or-maybe-to-some-of-these-but">here</a> to find out more about how plurality in itself can hide from you.</p>
     </div>
-  <div id="cl-summary" class="cl-summary"></div>
+  <div id="cl-summary" class="cl-summary-tkit"></div>
   <div id="cl-sections"></div>
 </div>
 
 <div class="cl-bar" id="cl-bar">
   <span class="cl-total" id="cl-total">0 of 79 checked</span>
-  <button class="cl-btn" id="cl-copy"><i class="fa fa-link" aria-hidden="true"></i> Copy shareable link</button>
   <button class="cl-btn cl-btn-clear" id="cl-clear"><i class="fa fa-trash" aria-hidden="true"></i> Clear all</button>
-  <span class="cl-feedback" id="cl-feedback">Copied!</span>
 </div>
 
 <script>
@@ -440,7 +416,6 @@ var SECTIONS = [
 ];
 
 var STORAGE_KEY = 'plural-checklist-v2';
-var STANDALONE_URL = '/tools/plural-checklist';
 
 // State values: 0 = unchecked, 1 = maybe, 2 = checked
 
@@ -449,59 +424,13 @@ if (new URLSearchParams(window.location.search).has('embed')) {
   document.documentElement.classList.add('embed-mode');
 }
 
-/* ── State encoding (2 bits per item) ────────────────────────── */
+/* ── Helpers ──────────────────────────────────────────────────── */
 function totalItems() {
   return SECTIONS.reduce(function(n, s) { return n + s.items.length; }, 0);
 }
 
-function encodeState(state) {
-  var total = totalItems();
-  var bytes = new Uint8Array(Math.ceil(total * 2 / 8));
-  var idx = 0;
-  SECTIONS.forEach(function(s) {
-    s.items.forEach(function(_, i) {
-      var val = state[s.id + '-' + i] || 0;
-      var bit = idx * 2;
-      if (val & 1) bytes[Math.floor(bit / 8)]     |= (1 << (bit % 8));
-      if (val & 2) bytes[Math.floor((bit+1) / 8)] |= (1 << ((bit+1) % 8));
-      idx++;
-    });
-  });
-  return btoa(String.fromCharCode.apply(null, bytes));
-}
-
-function decodeState(encoded) {
-  var state = {};
-  try {
-    var binary = atob(encoded);
-    var bytes = new Uint8Array(binary.length);
-    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-    var idx = 0;
-    SECTIONS.forEach(function(s) {
-      s.items.forEach(function(_, j) {
-        var bit = idx * 2;
-        var lo = (bytes[Math.floor(bit / 8)]     >> (bit % 8))     & 1;
-        var hi = (bytes[Math.floor((bit+1) / 8)] >> ((bit+1) % 8)) & 1;
-        var val = lo | (hi << 1);
-        if (val) state[s.id + '-' + j] = val;
-        idx++;
-      });
-    });
-  } catch(e) {}
-  return state;
-}
-
 /* ── Persistence ──────────────────────────────────────────────── */
-var fromHash = false;
-
 function loadState() {
-  var hash = window.location.hash.slice(1);
-  if (hash.slice(0, 2) === 'c=') {
-    fromHash = true;
-    var decoded = decodeState(hash.slice(2));
-    saveState(decoded);
-    return decoded;
-  }
   try {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved) return JSON.parse(saved);
@@ -515,48 +444,28 @@ function saveState(state) {
   } catch(e) {}
 }
 
-/* ── Summary ──────────────────────────────────────────────────── */
-function renderSummary(state) {
-  var el = document.getElementById('cl-summary');
-  if (!fromHash) { el.classList.remove('visible'); return; }
-
-  var total = 0;
-  var sections = [];
-
-  var totalMaybe = 0;
+/* ── Post state to parent page ────────────────────────────────── */
+function postState() {
+  var totalChecked = 0, totalMaybe = 0, sections = [];
   SECTIONS.forEach(function(s) {
     var checked = [], maybe = [];
     s.items.forEach(function(text, i) {
       var v = state[s.id + '-' + i] || 0;
-      if (v === 2) { checked.push(text); total++; }
-      if (v === 1) { maybe.push(text);   totalMaybe++; }
+      if (v === 2) { checked.push(text); totalChecked++; }
+      if (v === 1) { maybe.push(text);   totalMaybe++;   }
     });
-    if (checked.length || maybe.length) sections.push({ title: s.title, checked: checked, maybe: maybe });
+    if (checked.length || maybe.length)
+      sections.push({ title: s.title, checked: checked, maybe: maybe });
   });
-
-  if (!total && !totalMaybe) { el.classList.remove('visible'); return; }
-
-  var headerParts = [];
-  if (total)      headerParts.push(total + ' checked');
-  if (totalMaybe) headerParts.push(totalMaybe + ' maybe');
-  var html = '<div class="cl-summary-header">' + 'Summary' + ' · ' + headerParts.join(' · ') + ' of ' + totalItems() + ' experiences</div>';
-  html += '<div class="cl-summary-body">';
-  sections.forEach(function(s) {
-    html += '<div class="cl-summary-section">';
-    html += '<div class="cl-summary-section-title">' + s.title + '</div>';
-    html += '<ul class="cl-summary-list">';
-    s.checked.forEach(function(text) {
-      html += '<li>' + text + '</li>';
-    });
-    s.maybe.forEach(function(text) {
-      html += '<li style="opacity:0.7"><em>Maybe:</em> ' + text + '</li>';
-    });
-    html += '</ul></div>';
-  });
-  html += '</div>';
-
-  el.innerHTML = html;
-  el.classList.add('visible');
+  try {
+    window.parent.postMessage({
+      type: 'cl-state',
+      totalChecked: totalChecked,
+      totalMaybe:   totalMaybe,
+      total:        totalItems(),
+      sections:     sections
+    }, '*');
+  } catch(e) {}
 }
 
 /* ── Render ───────────────────────────────────────────────────── */
@@ -642,41 +551,54 @@ function updateCounts() {
   if (!parts.length) parts.push('0 checked');
   document.getElementById('cl-total').textContent =
     parts.join(' · ') + ' of ' + totalItems();
+  postState();
+  renderSummary();
+}
+
+function renderSummary() {
+  var el = document.getElementById('cl-summary');
+  var totalChecked = 0, totalMaybe = 0, sections = [];
+  SECTIONS.forEach(function(s) {
+    var checked = [], maybe = [];
+    s.items.forEach(function(text, i) {
+      var v = state[s.id + '-' + i] || 0;
+      if (v === 2) { checked.push(text); totalChecked++; }
+      if (v === 1) { maybe.push(text);   totalMaybe++;   }
+    });
+    if (checked.length || maybe.length)
+      sections.push({ title: s.title, checked: checked, maybe: maybe });
+  });
+
+  if (!totalChecked && !totalMaybe) { el.classList.remove('visible'); return; }
+
+  var parts = [];
+  if (totalChecked) parts.push(totalChecked + ' checked');
+  if (totalMaybe)   parts.push(totalMaybe + ' maybe');
+  var html = '<div class="cl-summary-header">Summary · ' + parts.join(' · ') + ' of ' + totalItems() + '</div>';
+  html += '<div class="cl-summary-body">';
+  sections.forEach(function(s) {
+    html += '<div class="cl-summary-section">';
+    html += '<div class="cl-summary-section-title">' + s.title + '</div>';
+    html += '<ul class="cl-summary-list">';
+    s.checked.forEach(function(t) { html += '<li>' + t + '</li>'; });
+    s.maybe.forEach(function(t)   { html += '<li style="opacity:0.7"><em>Maybe:</em> ' + t + '</li>'; });
+    html += '</ul></div>';
+  });
+  html += '</div>';
+  el.innerHTML = html;
+  el.classList.add('visible');
 }
 
 /* ── Actions ──────────────────────────────────────────────────── */
-document.getElementById('cl-copy').addEventListener('click', function() {
-  var encoded = encodeState(state);
-  var url = window.location.origin + STANDALONE_URL + '#c=' + encoded;
-  navigator.clipboard.writeText(url).then(function() {
-    var fb = document.getElementById('cl-feedback');
-    fb.classList.add('show');
-    setTimeout(function() { fb.classList.remove('show'); }, 2200);
-  }).catch(function() {
-    // Fallback for browsers without clipboard API
-    var ta = document.createElement('textarea');
-    ta.value = url;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    var fb = document.getElementById('cl-feedback');
-    fb.classList.add('show');
-    setTimeout(function() { fb.classList.remove('show'); }, 2200);
-  });
-});
-
 document.getElementById('cl-clear').addEventListener('click', function() {
   state = {};
   saveState(state);
   render();
+  postState();
 });
 
-renderSummary(state);
 render();
+postState();
 
 })();
 </script>

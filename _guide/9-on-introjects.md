@@ -20,15 +20,15 @@ Below, we’ll talk about how introjects occur, what types of introjects there a
 
 ## <span style="font-family:'Story Script'">isekai:</span> mechanics of the VM escape
 
-Not much is known about how exactly introjects are formed. In psychology, the act of introjection [is defined as](https://dictionary.apa.org/introjection) the unconscious adoption of thoughts, memories and personality traits of others, and is sometimes seen as a defence mechanism in situatious that cause anxiety.
+Not much is known about how exactly introjects are formed. In psychology, the act of introjection [is defined as](https://dictionary.apa.org/introjection) the unconscious adoption of thoughts, memories and personality traits of others, and is sometimes seen as a defence mechanism in situations that cause anxiety.
 
 Our brain is unusually good at simulating other people, subconsciously. We have mirror neurons that fire when we see others perform an activity on their own, or observe others engaging in it; they’re [key components](https://pubmed.ncbi.nlm.nih.gov/24775147/) of how we form emotional connections. As an overarching process, mirroring is also how we build social rapport with others and empathise.
 
-So it’s not surprising for your brain to introject behaviours of an external source, even if these sources are fictional. That we vividly imagine situations in which characters are in and how they react as we write fiction is a potent example. So too is the act of, perhaps, talking to a character from TV, something that you might have done as a kid; or the act of replaying a memory of a friend, or hearing a friend’s voice as you seek guidance and advice. (In effect, you could even argue that the voice of God is an introject.)
+So it’s not surprising for your brain to introject behaviours of an external source, even if these sources are fictional. That we vividly imagine fictional characters placed in and reacting to made-up situations as we write fiction is a potent example. So too is the act of, perhaps, talking to a character from TV, something that you might have done as a kid; or the act of replaying a memory of a friend, or hearing a friend’s voice as you seek guidance and advice. (In effect, you could even argue that the voice of God is an introject.)
 
 Your brain often simulates and virtualises interactions when you consume fiction — and when introjects form, it’s a bit akin to the brain’s version of a [virtual machine escape](https://en.wikipedia.org/wiki/Virtual_machine_escape).
 
-These are fairly normal things — but what’s troubling, perhaps, is when these introjects attempt to hurt you, or have intrusive thoughts that you can’t seem to dispel. Some systems have reported introjects of a parent, perhaps, and their own abusive behaviour — trauma specialist [Kathy Broady](https://www.discussingdissociation.com/2009/05/introjects-what-are-introjects/) says that abusers sometimes create introjects of themselves on purpose as a way to maintain control and dominance on survivors of abuse.
+These are fairly normal things — but what’s troubling, perhaps, is when these introjects attempt to hurt you, or have intrusive thoughts that you can’t seem to dispel. Some systems have reported introjects of a parent, perhaps, and their own abusive behaviour — trauma specialist [Kathy Broady](https://www.discussingdissociation.com/2009/05/introjects-what-are-introjects/) says that abusers sometimes create introjects of themselves on purpose as a way to maintain control and dominance over survivors of abuse.
 
 Others have reported introjects from sources that have hurt them, perhaps — either by causing unhealthy obsessions with the source, blurring the line between fantasy and reality, and impacting overarching system functions.
 
@@ -180,11 +180,11 @@ So maybe you’re looking around your selves and realising that. “Hm, most of 
 
 You’re not alone, not really!
 
-[A 1988 paper](https://scholarsbank.uoregon.edu/server/api/core/bitstreams/3e47ee80-25ea-4a90-b63f-f6a34a178aed/content) by Richard Kluft studying polyfragmented multiple personality disorder patients found systems with over 4,500 members, systems that form alters “ad hoc” — forming headmates frequently and arbitrarily and merging them into the whole — and systems that have formed complex inner worlds, in which personalities interact among themselves (much like the City of the <span class="sitelen">󱤟</span> Pleiadesfolk, perhaps).
+[A 1988 paper](https://scholarsbank.uoregon.edu/server/api/core/bitstreams/3e47ee80-25ea-4a90-b63f-f6a34a178aed/content) by Richard Kluft studying polyfragmented multiple personality disorder patients found systems with over 4,500 members, systems that form headmates “ad hoc” — forming headmates frequently and arbitrarily and merging them into the whole — and systems that have formed complex inner worlds, in which personalities interact among themselves (much like the City of the <span class="sitelen">󱤟</span> Pleiadesfolk, perhaps). 
 
-Particularly, Kluft had important advice on system size:
+Particularly, Kluft had important advice on system size (<span class="sitelen">󱤟</span> Pleiadesnote: the paper is from 1988, and uses terms now seen as outdated — like Multiple Personalities Disorder.): 
 
-> It is useful to make it clear that the number of alters (<span class="sitelen">󱤟</span> Pleiadesnote: stated in context; we understand the discomfort some have with the term!) is not important; that the critical issues are to understand how such a number came to be and to make sure that no aspects of the mind are neglected or lost in the shuffle in the course of the therapy. I tell the patients that if they are cooperative across the many alters, the complexity is not a problem.  
+> It is useful to make it clear that the number of alters is not important; that the critical issues are to understand how such a number came to be and to make sure that no aspects of the mind are neglected or lost in the shuffle in the course of the therapy. I tell the patients that if they are cooperative across the many alters, the complexity is not a problem.  
 >   
 > (…)The following rather homely analogy may be useful. Rarely-encountered alters, alters described as insignificant, alters described or enumerated but which have not been met, and alters that one can only suspect may be present, may be seen as the members of a football team or baseball team not currently on the field, but who may ultimately decide the outcome of the contest. I find it useful to assume that they are analogous to the team's substitutes, specialists, and coaching staff. Like field-goal kickers, third-string quarterbacks, bullpen catchers, relief pitchers called in only for left-handed power hitters, managers, and batting coaches, they are rarely on the field, infrequently noted, usually involved in playing some role that is in no way apparent to the outside observer, but may abruptly enter the play or influence it decisively from behind the scenes. Some appear to be those who were so depleted that they enjoy an "injured reserve" status, or are deliberately held in reserve (redshirted). Therefore the wise therapist always is aware of the likelihood that when treating an extremely complex case of MPD, interventions are being responded to and assessed by alters whose roles and/ or whose very existence remain hidden. These alters may prove to be the dominant forces in a subsequent portion of the therapy, and will be easier to deal with and less antagonistic if their presence has been anticipated and addressed.
 
@@ -222,4 +222,6 @@ They might not stick around too long, for instance. The one time we realised “
 
 And if, say, an introject wants to settle in… why not let them?
 
-As the <span class="sitelen">󱤟</span> Cheerleaders tell us: “im a radical "acknowledge everyone as a headmate" radicalist. if u might be a fictive, u are a fictive.”
+As the <span class="sitelen">󱤟</span> Cheerleaders tell us: 
+
+> im a radical “acknowledge everyone as a headmate” radicalist. if u might be a fictive, u are a fictive.
