@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-05-04T19:21:18+08:00" />
+<meta property="article:published_time" content="2026-05-04T20:28:10+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Plural and dissociative experience checklist" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-04T19:21:18+08:00","datePublished":"2026-05-04T19:21:18+08:00","description":"An interactive checklist of common plural and dissociative experiences that you can play with.","headline":"Plural and dissociative experience checklist","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/plural-checklist"},"url":"http://localhost:4000/tools/plural-checklist"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-04T20:28:10+08:00","datePublished":"2026-05-04T20:28:10+08:00","description":"An interactive checklist of common plural and dissociative experiences that you can play with.","headline":"Plural and dissociative experience checklist","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/plural-checklist"},"url":"http://localhost:4000/tools/plural-checklist"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -477,6 +477,9 @@
   font-weight: 500;
   text-decoration: underline;
 }
+.cl-disclaimer {
+  font-size: 1.2em;
+}
 
 /* ── Sections ── */
 .cl-section {
@@ -710,7 +713,10 @@
 <div class="cl-page" id="cl-page">
   <div class="cl-disclaimer">
     <p>The checklist below is adapted from The Dragonheart Collective's Am I Plural document <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">which you can find here.</a> Mark what feels familiar — tap or click once for a "maybe", and tap or click once for a "I experience this". You can also generate a shareable link that's useful to share with someone!</p>
-    <p><strong>It would be remiss for us to state that this checklist isn't a diagnostic one.</strong> We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you're definitely having DID, OSDD, or DDNOS — all of which have their own diagnostic criteria — but these are experiences that are common to those who are plural.</p>
+    <p>It's important to note that this checklist is here for you as a tool to understand yourself. It is not a diagnostic quiz. <strong>IT IS NOT A DIAGNOSTIC QUIZ.</strong></p> 
+    <p>We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you have DID, OSDD, or DDNOS — all of which have their own diagnostic criteria. But you should note that these are experiences that are common to those who are plural.</p>
+    <p><strong>Conversely, not experiencing something on this list doesn't mean that you are <em>not plural</em>, either.</strong> Saying no to some or all of the items on the list doesn't mean that you're <em>not plural.</em> It's unlikely that you're faking the answers to these questionnaires, too.</p>
+    <p>Plurality in itself is covert and difficult to notice. Read on <a target="_blank" href="/guide/more-than-one#i-said-yes-or-maybe-to-some-of-these-but">here</a> to find out more about how plurality in itself can hide from you.</p>
     </div>
   <div id="cl-summary" class="cl-summary"></div>
   <div id="cl-sections"></div>
@@ -960,7 +966,7 @@ function renderSummary(state) {
   var headerParts = [];
   if (total)      headerParts.push(total + ' checked');
   if (totalMaybe) headerParts.push(totalMaybe + ' maybe');
-  var html = '<div class="cl-summary-header">' + headerParts.join(' · ') + ' of ' + totalItems() + ' experiences</div>';
+  var html = '<div class="cl-summary-header">' + 'Summary' + ' · ' + headerParts.join(' · ') + ' of ' + totalItems() + ' experiences</div>';
   html += '<div class="cl-summary-body">';
   sections.forEach(function(s) {
     html += '<div class="cl-summary-section">';
@@ -1212,12 +1218,12 @@ render();
     },
     "file": {
         "path": "_unlisted/experiences-checklist.html",
-        "mtime": "2026-05-04 19:21:18 +0800",
+        "mtime": "2026-05-04 20:28:10 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-05-04 19:21:18 +0800"
+        "time": "2026-05-04 20:28:10 +0800"
     },
     "basePath": "",
     "book": {
@@ -1232,7 +1238,7 @@ render();
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1777893678"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1777897690"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
