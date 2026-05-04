@@ -21,7 +21,7 @@ order: 2
 @media (max-width: 779px) {
   .cl-embed,
   .cl-summary-wrap {
-  height: 75vh !important;
+  max-height: 75vh !important;
   }
 }
 
@@ -29,7 +29,7 @@ order: 2
   display: none;
   border: 1px solid #d8dde8;
   border-radius: 8px;
-  height: 40vh;
+  max-height: 40vh;
   overflow: scroll;
 }
 
