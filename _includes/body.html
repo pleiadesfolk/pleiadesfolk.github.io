@@ -26,7 +26,8 @@
             {%- include search.html -%}
         </div>
 
-        {% if (page.previous or page.next) and page.collection != "unlisted" %}
+        {% if page.collection != "unlisted" %}
+        {% if page.previous or page.next %}
         <nav class="page-nav">
             {% if page.previous %}
             <a class="page-nav-btn prev" href="{{ site.baseurl }}{{ page.previous.url }}">
@@ -41,6 +42,7 @@
             </a>
             {% endif %}
         </nav>
+        {% endif %}
         {% endif %}
     </div>
 </div>
