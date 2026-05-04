@@ -416,6 +416,7 @@ var SECTIONS = [
 ];
 
 var STORAGE_KEY = 'plural-checklist-v2';
+var STANDALONE_URL = '/tools/plural-checklist';
 
 // State values: 0 = unchecked, 1 = maybe, 2 = checked
 
@@ -429,8 +430,59 @@ function totalItems() {
   return SECTIONS.reduce(function(n, s) { return n + s.items.length; }, 0);
 }
 
+/* ── State encoding (2 bits per item) ────────────────────────── */
+function totalItems() {
+  return SECTIONS.reduce(function(n, s) { return n + s.items.length; }, 0);
+}
+
+function encodeState(state) {
+  var total = totalItems();
+  var bytes = new Uint8Array(Math.ceil(total * 2 / 8));
+  var idx = 0;
+  SECTIONS.forEach(function(s) {
+    s.items.forEach(function(_, i) {
+      var val = state[s.id + '-' + i] || 0;
+      var bit = idx * 2;
+      if (val & 1) bytes[Math.floor(bit / 8)]     |= (1 << (bit % 8));
+      if (val & 2) bytes[Math.floor((bit+1) / 8)] |= (1 << ((bit+1) % 8));
+      idx++;
+    });
+  });
+  return btoa(String.fromCharCode.apply(null, bytes));
+}
+
+function decodeState(encoded) {
+  var state = {};
+  try {
+    var binary = atob(encoded);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    var idx = 0;
+    SECTIONS.forEach(function(s) {
+      s.items.forEach(function(_, j) {
+        var bit = idx * 2;
+        var lo = (bytes[Math.floor(bit / 8)]     >> (bit % 8))     & 1;
+        var hi = (bytes[Math.floor((bit+1) / 8)] >> ((bit+1) % 8)) & 1;
+        var val = lo | (hi << 1);
+        if (val) state[s.id + '-' + j] = val;
+        idx++;
+      });
+    });
+  } catch(e) {}
+  return state;
+}
+
 /* ── Persistence ──────────────────────────────────────────────── */
+var fromHash = false;
+
 function loadState() {
+  var hash = window.location.hash.slice(1);
+  if (hash.slice(0, 2) === 'c=') {
+    fromHash = true;
+    var decoded = decodeState(hash.slice(2));
+    saveState(decoded);
+    return decoded;
+  }
   try {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved) return JSON.parse(saved);
