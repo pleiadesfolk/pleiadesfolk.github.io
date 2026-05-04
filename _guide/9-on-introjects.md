@@ -120,7 +120,7 @@ This is something we have to stress. Maybe you’re too old to have fictionkin o
 
 You are not immune to introjects!
 
-<div class="img-figure"><img src="/assets/media/introjects.png" alt="A meme of Garfield, with the text: YOU ARE NOT IMMUNE TO INTROJECTS"><p class="img-caption">Yes, you are not.</p></div>
+<div class="img-figure"><img src="/assets/media/INTROJECTS.png" alt="A meme of Garfield, with the text: YOU ARE NOT IMMUNE TO INTROJECTS"><p class="img-caption">Yes, you are not.</p></div>
 
 Okay, maybe now you’re panicking.
 
