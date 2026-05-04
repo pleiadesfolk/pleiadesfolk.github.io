@@ -409,7 +409,7 @@ var SECTIONS = [
   {
     id: 'physical',
     title: 'Physical sensations (with no other known medical cause)',
-    subtitle: 'Psychosomatic experiences that you may have', 
+    subtitle: 'Psychosomatic experiences that you may have. <strong>Check with a medical professional</strong> to rule out things like a gas leak, sleep or food deprivation, heavy metal poisoning or other physical medical issues or drug use if you experience the below symptoms. It is important to rule out other causes for these, as <strong>they can be life-threatening.</strong>', 
     items: [
       "Visual or auditory distortions — blurry vision, muffled sounds, tunnel vision, vision fading or cutting out in some way, rippling/swaying vision, sounds feeling like they are on slow motion.",
       "Getting ‘head pressure’ or headaches.",
@@ -419,6 +419,16 @@ var SECTIONS = [
       "High tolerance for pain, or being able to block out or not notice pain, even at high levels.",
       "Feeling physical pain when nothing is physically wrong.",
       "Loss of physical sensations like sight, hearing, speech, or feelings of hunger."
+    ]
+  },
+  {
+    id: 'further',
+    title: 'Further questions',
+    subtitle: 'These are things that are not necessary yes/no answers — but answering yes is further weight in favour of being plural.',
+    items: [ 
+        "Have your ‘more than one’ experiences been going on a long time? Do they predate hearing about plurality, multiplicity or this community as a whole?",
+        "Are there entities, parts, or selves that object to the idea that <em>you are plural?</em> Are there entities that object to the idea that you are <em>not plural?</em>",
+        "When you consider if you're plural (or not plural), does the internal stress intensify?"
     ]
   }
 ];
@@ -584,7 +594,7 @@ function render() {
 
       var span = document.createElement('span');
       span.className = 'cl-label';
-      span.textContent = text;
+      span.innerHTML = text;
 
       label.appendChild(box);
       label.appendChild(span);
