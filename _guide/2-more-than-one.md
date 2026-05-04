@@ -88,7 +88,7 @@ When a **headmate** is in control of the collective's shared physical body, that
 
 <p>We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you have DID, OSDD, or DDNOS — all of which have their own diagnostic criteria. But you should note that these are experiences that are common to those who are plural.</p>
 
- <p><strong>Conversely, not experiencing something on this list doesn't mean that you are <em>not plural</em>, either.</strong> Saying no to some or all of the items on the list doesn't mean that you're <em>not plural.</em> It's unlikely that you're faking the answers to these questionnaires, too.</p>
+<p><strong>Conversely, not experiencing something on this list doesn't mean that you are <em>not plural</em>, either.</strong> Saying no to some or all of the items on the list doesn't mean that you're <em>not plural.</em></p>
 
 <iframe
   class="cl-embed"
