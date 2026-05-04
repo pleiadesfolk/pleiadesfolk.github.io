@@ -78,7 +78,7 @@
   color: #333;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {
-  color: #4183c4;
+  color: #61abf3;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h1,
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h2,
@@ -126,7 +126,7 @@
   color: #f6f6f6;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal a {
-  color: #4183e4;
+  color: #75adff;
 }
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h1,
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h2,
@@ -244,7 +244,7 @@
 }
 .book.color-theme-1 .book-summary ul.summary li.active > a,
 .book.color-theme-1 .book-summary ul.summary li a:hover {
-  color: #008cff;
+  color: #0076d7;
   background: transparent;
   font-weight: normal;
 }

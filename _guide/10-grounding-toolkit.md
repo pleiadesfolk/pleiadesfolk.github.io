@@ -5,7 +5,7 @@ author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/grounding
-order: 7
+order: 10
 ---
 
 > **Content advisory:** 
@@ -66,7 +66,7 @@ Make sure you’re seated upright. Again, like most of the techniques here, you 
 
 Focus on your posture. You should sit up straight — that will help you take deep breaths.
 
-Slowly exhale, and focus on your intentionality. If you’re not sure of who you are, use your body name, perhaps. “I am Ellis, and I am breathing out.” The aim is to be conscious of what you’re doing at the moment.
+Slowly exhale, and focus on your intentionality. If you’re not sure of who you are, use your body name, perhaps. “I am [NAME], and I am breathing out.” The aim is to be conscious of what you’re doing at the moment.
 
 <div class="box-breathing">
     <span class="bb-span1">Inhale</span>

@@ -5,7 +5,7 @@ author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/o-linluwi
-order: 10
+order: 20
 ---
 
 Now that you've read most of _lipu linluwi pona_, we hope that this handbook has helped you understand yourselves better. We hope that you have a good time with your constant companions, and we hope that you now have most of the tools you need to live together and be with each other.  
