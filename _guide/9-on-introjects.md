@@ -72,7 +72,7 @@ All these possibly indicate that a part of you might be an introject.
 
 Don’t worry too much about that, though! This is entirely normal, perhaps! Some systems may find that their main fronters are really introjects from age-old webcomics (think Homestuck). Some systems may find that they're introject-heavy (more on that below). It's normal to have an introject! 
 
-If your headmate is only barely familiar with bits and pieces of an exomemory, check with them to see if they have memory of what’s happened in the body’s life, or see what their earliest memory might be! (This is a risky thing to do however; [we outline why in our essay on memory here.](https:///essays/2026-04-09-on-memory/))
+If your headmate is only barely familiar with bits and pieces of an exomemory, check with them to see if they have memory of what’s happened in the body’s life, or see what their earliest memory might be! (This is a risky thing to do however; [we outline why in our essay on memory here.](/essays/2026-04-09-on-memory/))
 
 ### Keeping your introject grounded
 
@@ -124,7 +124,7 @@ You are not immune to introjects!
 
 Okay, maybe now you’re panicking.
 
-Stop. Breathe in, breathe out. [Do the box breathing exercise for a bit, and come back](https:///guide/grounding#breathing-techniques).
+Stop. Breathe in, breathe out. [Do the box breathing exercise for a bit, and come back](/guide/grounding#breathing-techniques).
 
 Now that you’re back (or, if you didn’t tab out, now that you’re reading this), and that you understand that the possibility of you having an introject is not zero — here’s the relieving part:
 
