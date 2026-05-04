@@ -167,7 +167,7 @@ permalink: /tools/plural-checklist
   z-index: 200;
   font-family: 'IBM Plex Sans', sans-serif;
   flex-wrap: wrap;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
 }
 
 .cl-total {
@@ -275,15 +275,15 @@ permalink: /tools/plural-checklist
   display: none !important;
 }
 
-.embed-mode .book-body { margin: 0 !important; }
+.embed-mode .book-body  { margin: 0 !important; }
 .embed-mode .body-inner { margin: 0 !important; }
 
 </style>
 
 <div class="cl-page" id="cl-page">
   <div class="cl-disclaimer">
-    <p>The checklist below is an interactive, annotated version of a checklist made by The Dragonheart Collective <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">that you can find here.</a> Mark what feels familiar — tap or click once for a "maybe", and tap or click once for a "I experience this". You can also generate a shareable link that's useful to share with someone!</p>
-    <p>It would be remiss for us to state that this checklist isn't a diagnostic one. We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you're definitely having DID, OSDD, or DDNOS  — but these are experiences that are common to those who are plural.</p>
+    <p>The checklist below is adapted from The Dragonheart Collective's Am I Plural document <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">which you can find here.</a> Mark what feels familiar — tap or click once for a "maybe", and tap or click once for a "I experience this". You can also generate a shareable link that's useful to share with someone!</p>
+    <p><strong>It would be remiss for us to state that this checklist isn't a diagnostic one.</strong> We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you're definitely having DID, OSDD, or DDNOS — all of which have their own diagnostic criteria — but these are experiences that are common to those who are plural.</p>
     </div>
   <div id="cl-summary" class="cl-summary"></div>
   <div id="cl-sections"></div>
@@ -308,8 +308,8 @@ var SECTIONS = [
     items: [
       "A part of you talks to you in extended ways. Sometimes it narrates your actions. “You shouldn’t drink too much soda. You should see the doctor. You forgot your HRT.”",
       "Your internal thought process manifests as a dialogue, in which you don’t control or rarely feel like you control one side. (If you think a question and the answer comes nearly immediately without you considering the question itself, then yes, you should tick this box.)",
-      "You have parts of you that you’ve conversed with internally or externally, with words or otherwise.",
-      "You have ‘racing thoughts’ where your thought train is many internal dialogues at once.",
+      "You have parts of you that you’ve conversed with internally or externally, with words or otherwise. Apart from using words, they may answer in song or melody, or respond with discordant emotion or feeling.",
+      "You have ‘racing thoughts’, where your thought train is many internal dialogues at once.",
       "You’d describe yourself as a “collection of selves” or “collection of voices”.",
       "If you write, you might have fictional characters write about or start having opinions and doing things you didn’t intentionally make them do. (For instance, a character might rewrite their own death.)",
       "Having a spiritual advisor comment on things in your head, or having any other kind of spiritual entity cohabitant in your head.",
@@ -408,8 +408,8 @@ var SECTIONS = [
   },
   {
     id: 'physical',
-    title: 'Physical sensations (with no other known medical cause)',
-    subtitle: 'Psychosomatic experiences that you may have. <strong>Check with a medical professional</strong> to rule out things like a gas leak, sleep or food deprivation, heavy metal poisoning or other physical medical issues or drug use if you experience the below symptoms. It is important to rule out other causes for these, as <strong>they can be life-threatening.</strong>', 
+    title: 'Physical sensations',
+    subtitle: 'Sensations and experiences that you may have. <strong>Check with a medical professional</strong> to rule out things like a gas leak, sleep or food deprivation, heavy metal poisoning or other physical medical issues or drug use if you experience the below symptoms. It is important to rule out other causes for these, as <strong>they can be life-threatening.</strong>', 
     items: [
       "Visual or auditory distortions — blurry vision, muffled sounds, tunnel vision, vision fading or cutting out in some way, rippling/swaying vision, sounds feeling like they are on slow motion.",
       "Getting ‘head pressure’ or headaches.",
@@ -427,7 +427,7 @@ var SECTIONS = [
     subtitle: 'These are things that are not necessary yes/no answers — but answering yes is further weight in favour of being plural.',
     items: [ 
         "Have your ‘more than one’ experiences been going on a long time? Do they predate hearing about plurality, multiplicity or this community as a whole?",
-        "Are there entities, parts, or selves that object to the idea that <em>you are plural?</em> Are there entities that object to the idea that you are <em>not plural?</em>",
+        "Are there entities, parts, or selves that object to the idea that <em>you are plural?</em> Are there entities, parts, or selves that object to the idea that you are <em>not plural?</em>",
         "When you consider if you're plural (or not plural), does the internal stress intensify?"
     ]
   }

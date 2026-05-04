@@ -8,6 +8,24 @@ permalink: /guide/more-than-one
 order: 2
 ---
 
+<style>
+.cl-embed {
+  width: 100%;
+  border: solid 0.5px #838383;
+  border-radius: 8px;
+  margin: 5vh 0 5vh;
+  display: block;
+  height: 62.5vh;
+}
+
+@media (max-width: 779px) {
+  .cl-embed {
+  height: 90vh;
+  }
+}
+
+</style>
+
 >  **Content advisory:** 
 > We discuss dissociation in this section of the guide. 
 {: .block-warning }
@@ -36,16 +54,16 @@ When a **headmate** is in control of the collective's shared physical body, that
 
 <p>There are many experiences about being "more than one" — plurality occurs on a spectrum, and a very diverse one!</p>
 
-<p>The checklist below is an interactive, annotated version of a checklist made by The Dragonheart Collective, <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">that you can find here.</a></p> 
+<p>The checklist below is adapted from The Dragonheart Collective's Am I Plural document <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">which you can find here.</a></p>
 
 <p>Mark what feels familiar — tap or click once for a "maybe", and tap or click once for a "I experience this". You can also generate a shareable link that's useful to share with someone!</p>
     
 <p><strong>It would be remiss for us to state that this checklist isn't a diagnostic one.</strong> We can't diagnose you with a dissociative disorder. Like the Dragonheart Collective, we are not psychologists. Experiencing something on this list doesn't mean that you're definitely having DID, OSDD, or DDNOS — all of which have their own diagnostic criteria — but these are experiences that are common to those who are plural.</p>
 
 <iframe
+  class="cl-embed"
   src="/tools/plural-checklist?embed"
   title="More than one experiences checklist"
-  style="width:100%; height:720px; border:1px solid #d8dde8; border-radius:8px; display:block; margin: 1.5rem 0;"
   loading="lazy"
 ></iframe>
 

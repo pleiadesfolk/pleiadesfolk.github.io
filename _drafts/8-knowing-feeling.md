@@ -12,7 +12,6 @@ order: 8
   width: 100%;
   border: solid 0.5px #838383;
   border-radius: 20px;
-  padding: 1rem;
   margin: 5vh 0 5vh;
   display: block;
   height: 62.5vh;
