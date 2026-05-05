@@ -113,7 +113,7 @@ When a **headmate** is in control of the collective's shared physical body, that
 <p>For instance, we didn’t feel like we’ve “lost time”, but describe time as something that either stretches or compresses depending on whose perspective it is; we can look at a clock and realise that it’s 10 p.m. before realising that we didn’t have any dinner. Still, both of these are “lost time”.</p>
 <p>Episodic memory for us can be spotty — we might struggle with talking about what we did on a day to our partner, only for a fronter to appear and say “oh, I put in 200 more words on our story!” when prompted. More frequently, we might struggle to talk about what happened at work, perhaps.</p>
 
-> ### **Memory weirdness**
+> #### **Memory weirdness**
 > It's likely that memory gaps, for many of us, aren't going to be Big or Obvious. Memory segmentation can happen in many ways. Emotion can be segmented away, and so would other qualities of a memory — narratives or context. 
 > <br><br>
 > You might just not feel anything at all about that memory gap — and you're usually not going to notice. Tumblr user semiplural <a target="blank" href="https://www.tumblr.com/semiplural/808658413521403904/memory">notes</a>:

@@ -3904,7 +3904,7 @@
         function r() {
             s.init(), i.init(), o.init(), a.init(), u.createButton({
                 index: 0,
-                icon: "fa fa-align-justify",
+                icon: "fa fa-bars",
                 onClick: function(e) {
                     e.preventDefault(), s.toggle()
                 }
