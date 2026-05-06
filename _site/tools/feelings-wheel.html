@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-05-07T00:45:55+08:00" />
+<meta property="article:published_time" content="2026-05-07T01:16:45+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Know how you feel with this interactive feelings wheel" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T00:45:55+08:00","datePublished":"2026-05-07T00:45:55+08:00","description":"Uncertain as to how you’re feeling? We’ve put a giant Feelings Wheel here that you can interact and play with.","headline":"Know how you feel with this interactive feelings wheel","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/feelings-wheel"},"url":"http://localhost:4000/tools/feelings-wheel"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T01:16:45+08:00","datePublished":"2026-05-07T01:16:45+08:00","description":"Uncertain as to how you’re feeling? We’ve put a giant Feelings Wheel here that you can interact and play with.","headline":"Know how you feel with this interactive feelings wheel","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/feelings-wheel"},"url":"http://localhost:4000/tools/feelings-wheel"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -701,7 +701,7 @@
   .book.is-embed .book-header   { display: none !important;} 
   .book.is-embed .navigation    { display: none !important;}
   .book.is-embed .book-summary  { display: none !important;}
-  .book.is-embed .book-body     { margin-top: 0px !important;}
+  .book.is-embed .book-body     { margin-top: 0px !important; left: 0 !important; }
   .book.is-embed .body-inner    { margin-top: 0px !important;}
   .book.is-embed .wheel-title   { display: none; }
   .book.is-embed .wheel-intro   { display: none; } 
@@ -2219,6 +2219,15 @@ if (_params.has('embed')) {
     const _theme = _params.get('theme');
     if (_theme === 'dark')  { _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1'); }
     if (_theme === 'light') { _book.classList.add('color-theme-1'); _book.classList.remove('color-theme-2'); }
+
+    // Gitbook theme.js restores 'with-summary' from localStorage after this script runs.
+    // Use a MutationObserver to strip it back out whenever it reappears.
+    new MutationObserver(() => {
+      if (_book.classList.contains('with-summary')) {
+        _book.classList.remove('with-summary');
+        _book.classList.remove('without-animation');
+      }
+    }).observe(_book, { attributes: true, attributeFilter: ['class'] });
   }
   // Prevent the iframe body from scrolling when the zoomed canvas overflows its layout box
   document.documentElement.style.overflow       = 'hidden';
@@ -2336,12 +2345,12 @@ if (_params.has('embed')) {
     },
     "file": {
         "path": "_unlisted/feelings-wheel.html",
-        "mtime": "2026-05-07 00:45:55 +0800",
+        "mtime": "2026-05-07 01:16:45 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-05-07 00:45:55 +0800"
+        "time": "2026-05-07 01:16:45 +0800"
     },
     "basePath": "",
     "book": {
@@ -2356,7 +2365,7 @@ if (_params.has('embed')) {
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778085955"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778087805"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
