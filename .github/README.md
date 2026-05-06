@@ -8,7 +8,7 @@ We build on a series of research and work done by previous plural folk — from 
 
 On top of that, this guide adds a lot of our own personal experience and experiences helping others discover their own plurality and be selves-aware. This guide will also include essays about plurality and living as a plural system in the world.
 
-This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.) and others.
+This work was mainly written by the Pleiadesfolk (Lyra, Caitlyn, Kimberly, Riley, Merope et al.), with contributions from Ke Meten (Jeanne, Anise, Muffin, Kimmy, Reis et al.), the Sky System (Cassandra, Violet, Galatea, Alycone, Stephanie Celeste, Willow, Linden, Christine et al.) and the Cheerleaders. 
 
 Copyediting was done by Catherine Cowie, with the Cheerleaders providing coding support. 
 

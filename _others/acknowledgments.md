@@ -157,7 +157,7 @@ This handbook is dedicated to the memory of <a href="/lyra-nem" style="color:inh
 
 We (the <span class="sitelen">󱤟</span> Pleiadesfolk) are very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
-This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.), the <span class="sitelen">󱤟</span> Sky System, and others.
+This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.), the <span class="sitelen">󱤟</span> Sky System, the Cheerleaders, and others.
 
 The Lighthouse motif and the site’s icons were created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 
