@@ -28,7 +28,7 @@ We hope that through this handbook, you experience a better connection — <span
 
 toki pona will feature a lot in _The Constant Companions Handbook_, in particular the [headnoun](https://sona.pona.la/wiki/Names#Head_nouns) _kulupu_ (<span class="sitelen">󱤟</span>), which means _group_. 
 
-We use toki pona to express some concepts in this guide, due to the language's simplicity and its use of some nearly universal concepts to maximise its own semantic space. For instance the word _system_ could be equivalent to the word _kulupu_ (group), but the word _kulupu_ is semantically bigger and can encompass a lot more things. Used as a headnoun, _kulupu_ Pleiades mean _the group of consciousnesses collectively named Pleiades_. 
+We use toki pona to express some concepts in this guide, due to the language's simplicity and its use of some nearly universal concepts to maximise its own semantic space. For instance — the word _system_ could be equivalent to the word _kulupu_ (group), but the word _kulupu_ is semantically bigger and can encompass a lot more things. Used as a headnoun, _kulupu_ Pleiades mean _the group of consciousnesses collectively named Pleiades_. 
 
 You don't need to worry if you don't know a lick of toki pona — translations will be provided.
 
@@ -45,5 +45,5 @@ English copyediting was done by <span class="sitelen">󱤎</span> Catherine Cowi
 Happy reading!
 
 <nav class="page-nav">
-  <a class="page-nav-btn next" style="text-decoration:none; color:#4183c4;" href="/guides/introduction">Introduction →</a>
+  <a class="page-nav-btn next" style="text-decoration:none; color:#4183c4;" href="/guide/introduction">Introduction →</a>
 </nav>
