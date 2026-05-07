@@ -5,7 +5,7 @@ author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
 permalink: /guide/introjects
-order: 9
+order: 8
 ---
 
 So, you might be partway through your own syscovery. Maybe you’re lounging in headspace and you might be spotting someone new. Someone familiar, maybe. From that book you read a few days ago, or that anime that you watched as a kid, or that TV show you really liked but don’t exactly remember watching. You talk to them, and realise — their memory might be just of the TV show itself. Maybe they’re bemoaning their fate in it.

@@ -19,10 +19,11 @@ order: 2
 }
 
 @media (max-width: 779px) {
-  .cl-embed,
+  .cl-embed {
+  height: 85vh !important;
+  }
   .cl-summary-wrap {
   max-height: 75vh !important;
-  }
 }
 
 .cl-summary-wrap {

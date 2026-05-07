@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-05-07T01:16:45+08:00" />
+<meta property="article:published_time" content="2026-05-07T14:39:40+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Know how you feel with this interactive feelings wheel" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T01:16:45+08:00","datePublished":"2026-05-07T01:16:45+08:00","description":"Uncertain as to how you’re feeling? We’ve put a giant Feelings Wheel here that you can interact and play with.","headline":"Know how you feel with this interactive feelings wheel","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/feelings-wheel"},"url":"http://localhost:4000/tools/feelings-wheel"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T14:39:40+08:00","datePublished":"2026-05-07T14:39:40+08:00","description":"Uncertain as to how you’re feeling? We’ve put a giant Feelings Wheel here that you can interact and play with.","headline":"Know how you feel with this interactive feelings wheel","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/feelings-wheel"},"url":"http://localhost:4000/tools/feelings-wheel"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -395,8 +395,7 @@
                     
             
         
-<li class="header">Tools</li>    
-<li class="chapter" data-level="1.1"><a href="/tools/feelings-wheel">feelings wheel</a></li>
+<li class="header">Tools</li>
 <li class="chapter" data-level="1.1"><a href="/tools/pkmnew">pk;m new toolkit</a></li>
 <li class="chapter" data-level="1.1"><a href="/tools/pklbmc">pk;l -bmc graphing tool</a></li>            
 <li class="divider"></li>
@@ -452,6 +451,7 @@
     --tag-bg: #99E2FF;
     --tag-text: #4c7a8c;
     --tag-border: #4c7a8c;
+    --toggle-btn: #333333;
 
     font-family: 'IBM Plex Sans', sans-serif;
     display: flex;
@@ -473,6 +473,7 @@
     --tag-bg: #7d4251;
     --tag-text: #ffbacb;
     --tag-border: #ffbacb;
+    --toggle-btn: #f6f6f6;
   }
 
   .wheel-title {
@@ -697,6 +698,50 @@
     border-color: rgba(var(--fw-accent-rgb, 100,120,160), 0.6);
   }
 
+  /* ── Embed theme toggle ── */
+  .embed-theme-toggle {
+    display: none;
+  }
+  .book.is-embed .embed-theme-toggle {
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .embed-theme-btn {
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+  /* Light mode: show dark icon; dark mode: show light icon */
+  .embed-theme-btn .theme-icon-dark  { display: none; }
+  .book.color-theme-2 .embed-theme-btn .theme-icon-light { display: none; }
+  .book.color-theme-2 .embed-theme-btn .theme-icon-dark  { display: block; }
+
+  /* ── Theme toggle button ── */
+  .embed-theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .embed-theme-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid var(--panel-border);
+    background: var(--toggle-btn);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
   /* ── Embed mode (/?embed) ── */
   .book.is-embed .book-header   { display: none !important;} 
   .book.is-embed .navigation    { display: none !important;}
@@ -705,7 +750,7 @@
   .book.is-embed .body-inner    { margin-top: 0px !important;}
   .book.is-embed .wheel-title   { display: none; }
   .book.is-embed .wheel-intro   { display: none; } 
-  .book.is-embed .wheel-hint	{ margin: 5px; }
+  .book.is-embed .wheel-hint	{ margin: 5px 15%; }
   .book.is-embed .wheel-page    { padding: 1rem 1rem 1rem; }
   .book.is-embed .wheel-layout  { margin-top: 0; }
   
@@ -724,6 +769,12 @@
 </style>
 
 <div class="wheel-page">
+  <div class="embed-theme-toggle">
+    <button class="embed-theme-btn" id="embedThemeBtn" aria-label="Toggle light/dark mode">
+      <img class="theme-icon-light" src="/assets/gitbook/symbols/pimeja-dark.svg"  width="20" height="20" title="Toggle dark mode" alt="Dark mode toggle">
+      <img class="theme-icon-dark"  src="/assets/gitbook/symbols/walo-light.svg" width="20" height="20" title="Toggle light mode" alt="Light mode toggle">
+    </button>
+  </div>
   <h1 class="wheel-title">Exploring emotions</h1>
   <p class="wheel-intro" style="text-align:center; margin:0% 25% 0%;">This interactive feelings wheel can be used to identify how you feel, what your emotions are like, etc. Tap on a section to explore secondary and specific feelings, double-tap to zoom out, and so on. </p>
   <p class="wheel-hint">click a section to explore · double-tap to zoom out · drag to spin · close the sidebar if you need more space</p>
@@ -2228,6 +2279,16 @@ if (_params.has('embed')) {
         _book.classList.remove('without-animation');
       }
     }).observe(_book, { attributes: true, attributeFilter: ['class'] });
+
+    // Theme toggle
+    document.getElementById('embedThemeBtn').addEventListener('click', () => {
+      const isDark = _book.classList.contains('color-theme-2');
+      if (isDark) {
+        _book.classList.remove('color-theme-2'); _book.classList.add('color-theme-1');
+      } else {
+        _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1');
+      }
+    });
   }
   // Prevent the iframe body from scrolling when the zoomed canvas overflows its layout box
   document.documentElement.style.overflow       = 'hidden';
@@ -2345,12 +2406,12 @@ if (_params.has('embed')) {
     },
     "file": {
         "path": "_unlisted/feelings-wheel.html",
-        "mtime": "2026-05-07 01:16:45 +0800",
+        "mtime": "2026-05-07 14:39:40 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-05-07 01:16:45 +0800"
+        "time": "2026-05-07 14:39:40 +0800"
     },
     "basePath": "",
     "book": {
@@ -2365,7 +2426,7 @@ if (_params.has('embed')) {
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778087805"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778135980"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>

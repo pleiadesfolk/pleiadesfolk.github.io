@@ -513,7 +513,7 @@
     border: 1px solid var(--border-color, #6b9eea);
     width: 40%;
     max-width: 45%;
-    height: 8vh;
+    height: auto;
     display: flex;
     align-items: center;
     color: #6b9eea !important;

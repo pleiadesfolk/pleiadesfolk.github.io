@@ -5,7 +5,7 @@ author: Ellis of the Pleiadesfolk, Sky System
 category: Guide
 layout: post
 permalink: /guide/knowing-emotion
-order: 8
+order: 7
 ---
 <style>
 .fw-embed {
@@ -45,7 +45,7 @@ We (the <span class="sitelen">󱤟</span> Pleiadesfolk) were dissociated to heck
 
 So we’ve always sort of felt this lack. The fact that we were not attuned to our emotions meant that we were often accused of being emotionally unintelligent. In effect we were gifted many self-help books to help us with that, since it was something that we regularly complained about not being good at.
 
-We the <span class="sitelen">󱤟</span> Pleiadesfolk aren’t alone in this. Says the Sky System:
+We the <span class="sitelen">󱤟</span> Pleiadesfolk aren’t alone in this. Says the <span class="sitelen">󱤟</span> Sky System:
 
 > For us, alexithymia ranges from “I can tell I'm feeling a positive/negative emotion, but I can't tell what it is” to “I can tell that I'm feeling _something_ and that's all”, to “I'm not even sure I _have_ feelings”, to “I can't connect these emotions to the event that caused them because it took me so long to notice I was feeling it” to “I unconsciously escalate situations because I need a feeling to be very intense to know it's there”
 
@@ -65,7 +65,7 @@ And that is inherently dangerous perhaps. You might find yourself able to keep w
 
 But your body is also inherently affected by your emotions. You might feel worn out. You might have parts of you in the background holding their emotion, desperate to express them, and that might feel like a leaden weight in your chess, perhaps.
 
-So it’s perhaps important to have someone to talk to from the outside. Asking someone that you trust might be something that feels risky at first, but they can help you notice the physical cues that you might have subconsciously exhibited. As the Sky System tells us:
+So it’s perhaps important to have someone to talk to from the outside. Asking someone that you trust might be something that feels risky at first, but they can help you notice the physical cues that you might have subconsciously exhibited. As the <span class="sitelen">󱤟</span> Sky System tells us:
 
 > The big thing for us has been having a trusted person we can use for... data essentially. "I think you're feeling X because I see you doing Y" and then we can notice those physical cues on our own, instead of just "that sure is a feeling".
 

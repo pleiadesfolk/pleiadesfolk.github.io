@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-05-07T01:16:45+08:00" />
+<meta property="article:published_time" content="2026-05-07T14:39:40+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Plural and dissociative experience checklist" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T01:16:45+08:00","datePublished":"2026-05-07T01:16:45+08:00","description":"An interactive checklist of common plural and dissociative experiences that you can play with.","headline":"Plural and dissociative experience checklist","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/plural-checklist"},"url":"http://localhost:4000/tools/plural-checklist"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-05-07T14:39:40+08:00","datePublished":"2026-05-07T14:39:40+08:00","description":"An interactive checklist of common plural and dissociative experiences that you can play with.","headline":"Plural and dissociative experience checklist","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/plural-checklist"},"url":"http://localhost:4000/tools/plural-checklist"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -395,8 +395,7 @@
                     
             
         
-<li class="header">Tools</li>    
-<li class="chapter" data-level="1.1"><a href="/tools/feelings-wheel">feelings wheel</a></li>
+<li class="header">Tools</li>
 <li class="chapter" data-level="1.1"><a href="/tools/pkmnew">pk;m new toolkit</a></li>
 <li class="chapter" data-level="1.1"><a href="/tools/pklbmc">pk;l -bmc graphing tool</a></li>            
 <li class="divider"></li>
@@ -490,6 +489,16 @@
 }
 .cl-disclaimer {
   font-size: 1.2em;
+}
+
+.cl-bar {
+  --toggle-btn: #333333;
+  --panel-border: #d8dde8;
+}
+
+.book.color-theme-2 .cl-bar {
+  --toggle-btn: #f6f6f6;
+  --panel-border: #3b161f;
 }
 
 /* ── Sections ── */
@@ -683,20 +692,38 @@
 }
 
 /* ── Embed mode: hide site chrome + disclaimer ── */
-.embed-mode .book-header,
-.embed-mode .book-summary,
-.embed-mode .navigation,
-.embed-mode .book-footer,
-.embed-mode .cl-disclaimer, 
-.embed-mode .cl-summary-tkit {
+.book.is-embed .book-header,
+.book.is-embed .book-summary,
+.book.is-embed .navigation,
+.book.is-embed .book-footer,
+.book.is-embed .cl-disclaimer,
+.book.is-embed .cl-summary-tkit {
   display: none !important;
 }
 
-.embed-mode .book-body  { left: 0 !important; transform: none !important; }
-.embed-mode .body-inner {
+.book.is-embed .book-body  { left: 0 !important; transform: none !important; }
+.book.is-embed .body-inner {
   margin: 0 !important;
   width: 100% !important;
 }
+
+/* ── Embed theme toggle ── */
+.embed-theme-toggle { display: none; }
+.book.is-embed .embed-theme-toggle { display: flex; }
+.embed-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1.5px solid var(--panel-border);
+  border-radius: 999px;
+  background: var(--toggle-btn);
+  cursor: pointer;
+}
+
+.embed-theme-btn .theme-icon-dark  { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-light { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-dark  { display: block; }
 
 </style>
 
@@ -714,6 +741,12 @@
 <div class="cl-bar" id="cl-bar">
   <span class="cl-total" id="cl-total">0 of 79 checked</span>
   <button class="cl-btn cl-btn-clear" id="cl-clear"><i class="fa fa-trash" aria-hidden="true"></i> Clear all</button>
+  <div class="embed-theme-toggle">
+    <button class="embed-theme-btn" id="embedThemeBtn" aria-label="Toggle light/dark mode">
+      <img class="theme-icon-light" src="/assets/gitbook/symbols/pimeja-dark.svg"  width="20" height="20" title="Toggle dark mode">
+      <img class="theme-icon-dark"  src="/assets/gitbook/symbols/walo-light.svg"  width="20" height="20" title="Toggle light mode">
+    </button>
+  </div>
 </div>
 
 <script>
@@ -859,8 +892,31 @@ var STANDALONE_URL = '/tools/plural-checklist';
 // State values: 0 = unchecked, 1 = maybe, 2 = checked
 
 /* ── Embed mode ───────────────────────────────────────────────── */
-if (new URLSearchParams(window.location.search).has('embed')) {
-  document.documentElement.classList.add('embed-mode');
+var _params = new URLSearchParams(window.location.search);
+if (_params.has('embed')) {
+  var _book = document.querySelector('.book');
+  if (_book) {
+    _book.classList.add('is-embed');
+    var _theme = _params.get('theme');
+    if (_theme === 'dark')  { _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1'); }
+    if (_theme === 'light') { _book.classList.add('color-theme-1'); _book.classList.remove('color-theme-2'); }
+
+    new MutationObserver(function() {
+      if (_book.classList.contains('with-summary')) {
+        _book.classList.remove('with-summary');
+        _book.classList.remove('without-animation');
+      }
+    }).observe(_book, { attributes: true, attributeFilter: ['class'] });
+
+    document.getElementById('embedThemeBtn').addEventListener('click', function() {
+      var isDark = _book.classList.contains('color-theme-2');
+      if (isDark) {
+        _book.classList.remove('color-theme-2'); _book.classList.add('color-theme-1');
+      } else {
+        _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1');
+      }
+    });
+  }
 }
 
 /* ── Helpers ──────────────────────────────────────────────────── */
@@ -1036,10 +1092,10 @@ function updateCounts() {
     if (el) el.textContent = n + ' ✓' + (m ? ' · ' + m + ' ?' : '');
   });
   var parts = [];
-  if (totalChecked) parts.push(totalChecked + ' checked');
-  if (totalMaybe)   parts.push(totalMaybe + ' maybe');
-  if (!parts.length) parts.push('0 checked');
-  document.getElementById('cl-total').textContent =
+  if (totalChecked) parts.push(totalChecked + ' <i class="fa fa-check" aria-label="checked"></i>');
+  if (totalMaybe)   parts.push(totalMaybe   + ' <i class="fa fa-question" aria-label="question"></i>');
+  if (!parts.length) parts.push('0 <i class="fa fa-check" aria-label="checked"></i>');
+  document.getElementById('cl-total').innerHTML =
     parts.join(' · ') + ' of ' + totalItems();
   postState();
   renderSummary();
@@ -1203,12 +1259,12 @@ postState();
     },
     "file": {
         "path": "_unlisted/experiences-checklist.html",
-        "mtime": "2026-05-07 01:16:45 +0800",
+        "mtime": "2026-05-07 14:39:40 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-05-07 01:16:45 +0800"
+        "time": "2026-05-07 14:39:40 +0800"
     },
     "basePath": "",
     "book": {
@@ -1223,7 +1279,7 @@ postState();
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778087805"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1778135980"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>

@@ -14,6 +14,7 @@ permalink: /tools/feelings-wheel
     --tag-bg: #99E2FF;
     --tag-text: #4c7a8c;
     --tag-border: #4c7a8c;
+    --toggle-btn: #333333;
 
     font-family: 'IBM Plex Sans', sans-serif;
     display: flex;
@@ -35,6 +36,7 @@ permalink: /tools/feelings-wheel
     --tag-bg: #7d4251;
     --tag-text: #ffbacb;
     --tag-border: #ffbacb;
+    --toggle-btn: #f6f6f6;
   }
 
   .wheel-title {
@@ -259,6 +261,50 @@ permalink: /tools/feelings-wheel
     border-color: rgba(var(--fw-accent-rgb, 100,120,160), 0.6);
   }
 
+  /* ── Embed theme toggle ── */
+  .embed-theme-toggle {
+    display: none;
+  }
+  .book.is-embed .embed-theme-toggle {
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .embed-theme-btn {
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+  /* Light mode: show dark icon; dark mode: show light icon */
+  .embed-theme-btn .theme-icon-dark  { display: none; }
+  .book.color-theme-2 .embed-theme-btn .theme-icon-light { display: none; }
+  .book.color-theme-2 .embed-theme-btn .theme-icon-dark  { display: block; }
+
+  /* ── Theme toggle button ── */
+  .embed-theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .embed-theme-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid var(--panel-border);
+    background: var(--toggle-btn);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
   /* ── Embed mode (/?embed) ── */
   .book.is-embed .book-header   { display: none !important;} 
   .book.is-embed .navigation    { display: none !important;}
@@ -267,7 +313,7 @@ permalink: /tools/feelings-wheel
   .book.is-embed .body-inner    { margin-top: 0px !important;}
   .book.is-embed .wheel-title   { display: none; }
   .book.is-embed .wheel-intro   { display: none; } 
-  .book.is-embed .wheel-hint	{ margin: 5px; }
+  .book.is-embed .wheel-hint	{ margin: 5px 15%; }
   .book.is-embed .wheel-page    { padding: 1rem 1rem 1rem; }
   .book.is-embed .wheel-layout  { margin-top: 0; }
   
@@ -286,6 +332,12 @@ permalink: /tools/feelings-wheel
 </style>
 
 <div class="wheel-page">
+  <div class="embed-theme-toggle">
+    <button class="embed-theme-btn" id="embedThemeBtn" aria-label="Toggle light/dark mode">
+      <img class="theme-icon-light" src="{{site.baseurl}}/assets/gitbook/symbols/pimeja-dark.svg"  width="20" height="20" title="Toggle dark mode" alt="Dark mode toggle">
+      <img class="theme-icon-dark"  src="{{site.baseurl}}/assets/gitbook/symbols/walo-light.svg" width="20" height="20" title="Toggle light mode" alt="Light mode toggle">
+    </button>
+  </div>
   <h1 class="wheel-title">Exploring emotions</h1>
   <p class="wheel-intro" style="text-align:center; margin:0% 25% 0%;">This interactive feelings wheel can be used to identify how you feel, what your emotions are like, etc. Tap on a section to explore secondary and specific feelings, double-tap to zoom out, and so on. </p>
   <p class="wheel-hint">click a section to explore · double-tap to zoom out · drag to spin · close the sidebar if you need more space</p>
@@ -1790,6 +1842,16 @@ if (_params.has('embed')) {
         _book.classList.remove('without-animation');
       }
     }).observe(_book, { attributes: true, attributeFilter: ['class'] });
+
+    // Theme toggle
+    document.getElementById('embedThemeBtn').addEventListener('click', () => {
+      const isDark = _book.classList.contains('color-theme-2');
+      if (isDark) {
+        _book.classList.remove('color-theme-2'); _book.classList.add('color-theme-1');
+      } else {
+        _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1');
+      }
+    });
   }
   // Prevent the iframe body from scrolling when the zoomed canvas overflows its layout box
   document.documentElement.style.overflow       = 'hidden';

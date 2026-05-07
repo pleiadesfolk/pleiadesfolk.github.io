@@ -1,6 +1,6 @@
 ---
 title: Listening in
-description: Here's how you cn
+description: So you’ve gotten a sense of what to do (and what not to do) with the other selves in your head. What next? 
 author: Ellis of the Pleiadesfolk
 category: Guide
 layout: post
@@ -12,7 +12,7 @@ order: 4
 > We discuss some elements of headspace-related violence here. Take note!
 {: .block-warning }
 
-<p>So now you’ve gotten a sense of what to do (and what not to do) with the other selves in your head.</p>
+<p>So, after reading our Principles chapter, you’ve gotten a sense of what to do (and what not to do) with the other selves in your head.</p>
 
 <p>Maybe they’ve been popping up while you read all of this and saying: “Hm, this handbook makes a terrible point.” Or maybe they’re actively hiding away from you now that you know they’re around. Maybe they’ve been sitting with you all along, waiting on you to see them.</p>
 
