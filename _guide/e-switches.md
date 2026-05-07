@@ -28,7 +28,7 @@ Switching can also present with headpressure, and may occur with a front trigger
 
 > Switches can be triggered by a number of things, but can also occur naturally during periods of rest (like sleep). However, switches while awake can be rather disorienting. Alongside psychological effects like amnesia (blackout, emotional, greyout), switching can also result in somatic symptoms like dizzyness, nausea, hot flashers and head pressure.
 
-[This alteredpanel comic](https://www.tumblr.com/alteredpanel/797886344247558144/a-quick-comic-explaining-some-terms-and-types-of) has more about what switching is and might feel like — it’s a rather comprehensive guide!
+[This alteredpanel comic](https://www.tumblr.com/alteredpanel/797886344247558144/a-quick-comic-explaining-some-terms-and-types-of) has more about what switching is and might feel like — it’s a rather comprehensive guide! 
 
 ## Intentional switching
 
