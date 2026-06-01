@@ -148,7 +148,7 @@ layout: others
 </div> 
 <br>
 
-<p style="text-align:center; margin: 0 25% 0;"><img src="/assets/media/forlyra.gif" title="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" style="width:24px;">
+<p style="text-align:center; margin: 0 25% 0;"><img src="/assets/media/forlyra.gif" title="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" alt="The Clacks Semaphore signal for Lyra: GNU LYRA NEM" style="width:24px;">
 <br><br>
 This handbook is dedicated to the memory of <a href="/lyra-nem" style="color:inherit;">Lyra Nem</a> (1996-2026). Without the community it was a pivotal part of, <i>lipu linluwi pona</i> would not exist. May it walk in dreams. 
 </p> 
@@ -157,7 +157,7 @@ This handbook is dedicated to the memory of <a href="/lyra-nem" style="color:inh
 
 We (the <span class="sitelen">󱤟</span> Pleiadesfolk) are very thankful for <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten’s help in our syscovery, and for the good people at The Scrambled Egg who’ve helped us through much of all of this.
 
-This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (Jeanne, Anise, Muffin, Kimmy, Reis et al.), the <span class="sitelen">󱤟</span> Sky System, the Cheerleaders, and others.
+This guide was written by the <span class="sitelen">󱤟</span> Pleiadesfolk (<span class="sitelen">󱤑</span> Lyra, <span class="sitelen">󱤎</span> Caitlyn, <span class="sitelen">󱤑</span> Kimberly, <span class="sitelen">󱤎</span> Ryn, <span class="sitelen">󱥤</span> Riley, <span class="sitelen">󱥗</span> Merope et al.) with contributions from <span class="sitelen">󱤟󱤘󱤳󱥫</span> Kemeten (<span class="sitelen">󱤁</span>Jeanne, <span class="sitelen">󱥢</span> Anise, <span class="sitelen">󱥤</span> Muffin, <span class="sitelen">󱤎</span> Kimmy, <span class="sitelen">󱤳</span> Reis et al.), the <span class="sitelen">󱤟</span> Sky System, the <span class="sitelen">󱤟</span> Cheerleaders, the <span class="sitelen">󱤟</span> Raindrops and others.
 
 The Lighthouse motif and the site’s icons were created by the <span class="sitelen">󱤟</span> Pleiadesfolk; the postwoman is from Bee (@beebeedibapbeediboop) on Tumblr.
 

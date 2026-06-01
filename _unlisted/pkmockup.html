@@ -909,8 +909,8 @@ permalink: /tools/pkmnew/
       <div class="field-group">
         <label>Name colour</label>
         <div class="color-row">
-          <input type="color" id="color" value="#3889ff">
-          <span class="hex-display" id="hex-out">#3889ff</span>
+          <input type="color" id="color" value="#ff3882">
+          <span class="hex-display" id="hex-out">#ff3882</span>
         </div>
       </div>
 
@@ -1131,7 +1131,7 @@ permalink: /tools/pkmnew/
     btn.addEventListener('click', function () {
       const text = $(this.dataset.target).textContent;
       navigator.clipboard.writeText(text).then(() => {
-        this.textContent = 'Copied!';
+        this.textContent = 'Copied~';
         this.classList.add('copied');
         setTimeout(() => {
           this.textContent = 'Copy';

@@ -1,0 +1,580 @@
+---
+layout: tools
+title: You feel like shit.
+description: An interactive self-care guide for people who struggle with self care, executive dysfunction, or reading internal signals.
+permalink: /tools/selfcare-guide
+---
+<style>
+.sc-page {
+  --panel-bg: #99E2FF;
+  --panel-border: #d8dde8;
+  --btn-bg: #e8f0fe;
+  --btn-text: #2a5068;
+  --btn-border: #b0c4de;
+  --btn-hover: #d0e4f8;
+  --text: #222222;
+  --muted: #7a849a;
+  --toggle-btn: #333333;
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+  color: var(--text);
+}
+
+.book.color-theme-2 .sc-page {
+  --panel-bg: #7d4251;
+  --panel-border: #3b161f;
+  --btn-bg: #3b161f;
+  --btn-text: #ffbacb;
+  --btn-border: #7d4251;
+  --btn-hover: #521a27;
+  --text: #f6f6f6;
+  --muted: #cbc6c9;
+  --toggle-btn: #f6f6f6;
+}
+
+.sc-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.sc-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sc-card-header {
+  background: var(--panel-bg);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.sc-card-body {
+  padding: 1.25rem 1.2rem;
+}
+
+.sc-text {
+  font-size: 1.3rem;
+  line-height: 1.65;
+}
+
+.sc-text p { margin: 0 0 0.75em; }
+.sc-text p:last-child { margin-bottom: 0; }
+
+.sc-text ul {
+  margin: 0.4em 0 0.75em;
+  padding-left: 1.4em;
+}
+
+.sc-text li { margin-bottom: 0.25em; }
+
+.sc-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.sc-btn {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1.5px solid var(--btn-border);
+  border-radius: 8px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.sc-btn:hover { background: var(--btn-hover); }
+
+.sc-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.sc-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  text-decoration: underline;
+}
+
+.sc-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Embed mode */
+.book.is-embed .book-header,
+.book.is-embed .book-summary,
+.book.is-embed .navigation,
+.book.is-embed .book-footer { display: none !important; }
+.book.is-embed .book-body  { left: 0 !important; transform: none !important; }
+.book.is-embed .body-inner { margin: 0 !important; width: 100% !important; }
+
+.embed-theme-toggle { display: none; }
+.book.is-embed .embed-theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.embed-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1.5px solid var(--panel-border);
+  border-radius: 999px;
+  background: var(--toggle-btn);
+  cursor: pointer;
+}
+.embed-theme-btn .theme-icon-dark { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-light { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-dark  { display: block; }
+</style>
+
+<div class="sc-page" id="sc-page">
+  <div class="embed-theme-toggle">
+    <button class="embed-theme-btn" id="embedThemeBtn" aria-label="Toggle light/dark mode">
+      <img class="theme-icon-light" src="{{site.baseurl}}/assets/gitbook/symbols/pimeja-dark.svg"  width="20" height="20" title="Toggle dark mode">
+      <img class="theme-icon-dark"  src="{{site.baseurl}}/assets/gitbook/symbols/walo-light.svg"  width="20" height="20" title="Toggle light mode">
+    </button>
+  </div>
+  <h1 class="sc-title">You feel like shit.</h1>
+  <div class="sc-card">
+    <div class="sc-card-header" id="sc-header"></div>
+    <div class="sc-card-body">
+      <div class="sc-text" id="sc-text"></div>
+      <div class="sc-choices" id="sc-choices"></div>
+    </div>
+  </div>
+  <div class="sc-nav">
+    <button class="sc-nav-btn" id="sc-back">← Back</button>
+    <button class="sc-nav-btn" id="sc-restart">Start over</button>
+  </div>
+</div>
+
+<script>
+(function () {
+
+var PASSAGES = {
+  "Welcome!": {
+    header: "Welcome",
+    text: '<p>This is meant to be an interactive flow chart for people who struggle with self care, executive dysfunction, and/or who have trouble reading internal signals. It\'s designed to take as much of the weight off of you as possible, so each decision is very easy and doesn\'t require much judgment.</p><p>Set aside some time — maybe an hour total — to allow yourself to work through each step. Don\'t rush or skip ahead, just follow the directions. Self care is important, and you deserve to devote some time to it.</p><p>You may want to go through this routine as soon as you wake up, as a preventative measure.</p>',
+    choices: [{ label: "I'm ready for the first question.", target: "Food" }]
+  },
+
+  "Food": {
+    header: "Step 1 — Food",
+    text: '<p>Have you eaten in the last four hours?</p>',
+    choices: [
+      { label: "Yes. Next question!", target: "Medication" },
+      { label: "I could use a snack.", target: "Snack" },
+      { label: "No, I need a meal.", target: "Meal" }
+    ]
+  },
+  "Snack": {
+    header: "Step 1 — Food",
+    text: '<p>When you need a snack, just pop some easy food in your mouth.</p><p>If there\'s a specific food you want, it\'s okay to eat it! You don\'t have to eat perfectly healthy all the time — no one does! Just also use your brain a little, and notice the quantity you\'re eating, and how healthy it is for you. You\'re probably just fine at trusting your gut and knowing what your body needs.</p>',
+    choices: [{ label: "Okay, I finished my snack.", target: "Medication" }]
+  },
+  "Meal": {
+    header: "Step 1 — Food",
+    text: '<p>You haven\'t eaten in a little while, and your body needs fuel. It\'s time for breakfast, lunch, or dinner.</p><p>If there\'s a specific food you want, it\'s okay to eat it! You don\'t have to eat perfectly healthy all the time — no one does! Just also use your brain a little, and notice the quantity you\'re eating, and how healthy it is for you. You\'re probably just fine at trusting your gut and knowing what your body needs.</p>',
+    choices: [
+      { label: "I finished my meal, and I'm ready for the next step.", target: "Medication" },
+      { label: "I need some help!", target: "Need help" }
+    ]
+  },
+  "Need help": {
+    header: "Step 1 — Food",
+    text: '<p>Making a meal is hard for you right now, and that\'s okay! Everybody struggles with cooking sometimes.</p><p>You have some options:</p><ul><li>You can cook a meal for yourself.</li><li>You might have ready-made meals in the fridge.</li><li>You can get take-out or delivery.</li><li>You can go to a restaurant.</li></ul><p>Take-out, delivery, and restaurants are a little more expensive than cooking on your own, but how you spend your money is your decision. It\'s okay to treat yourself!</p><p>If you\'re going to cook on your own, here are some ideas for easy foods:</p><ul><li>Pasta with butter, sauce, cheese, vegetables, and/or meat</li><li>Ramen noodles</li><li>Sandwiches</li><li>Rice</li><li>Grilled cheese (can have meat on it!)</li><li>A smoothie or milkshake</li><li>Baked or fried potatoes</li><li>Eggs, pancakes, and/or bacon</li><li>Macaroni and cheese</li><li>Canned soup</li><li>Salad</li><li>Boxed mashed potatoes</li></ul>',
+    choices: [{ label: "Okay, I have some food in my stomach. Time for the next question!", target: "Medication" }]
+  },
+
+  "Medication": {
+    header: "Step 2 — Medication",
+    text: '<p>Have you taken any medication you need to take?</p>',
+    choices: [
+      { label: "Yes, I'm all caught up on any medication I need to take.", target: "Water" },
+      { label: "No, I need to take my pill.", target: "Meds" }
+    ]
+  },
+  "Meds": {
+    header: "Step 2 — Medication",
+    text: '<p>Medication needs to be taken on schedule, or your body might react negatively.</p><p>Take some time now to take any pills, do any tests or injections, or apply any ointments prescribed by your doctor.</p><p>If this is a persistent problem for you, you may want to set a smartphone alarm so you remember to take it at the same time every day.</p>',
+    choices: [{ label: "Okay, I took my medication. Next question!", target: "Water" }]
+  },
+
+  "Water": {
+    header: "Step 3 — Water",
+    text: '<p>Drink a glass of whatever liquid you like best. Water is ideal, but don\'t beat yourself up if you\'d rather have tea, soda, juice, or milk. Soda will actually make you feel thirstier, but if it\'s easier for you, then that\'s okay!</p>',
+    choices: [{ label: "Okay, I did it.", target: "Sleep" }]
+  },
+
+  "Sleep": {
+    header: "Step 4 — Sleep",
+    text: '<p>Can you take a guess at how many hours you\'ve slept out of the last 24?</p><p>Everyone is an individual with different sleep schedules, but most people need 8 hours of relatively uninterrupted sleep. If you had less than that, and/or woke up frequently, and/or had nightmares, it might help you to take a nap.</p>',
+    choices: [
+      { label: "I am well-rested. Next question!", target: "Pain" },
+      { label: "I need a nap.", target: "Nap" }
+    ]
+  },
+  "Nap": {
+    header: "Step 4 — Sleep",
+    text: '<p>Take a nap. You can finish this self-care guide when you wake up.</p><p>Ideally, let yourself sleep naturally, and sleep until you wake up. Obviously, this isn\'t always possible. Otherwise, set an alarm for yourself, with plenty of time to wake up and get yourself together between your nap and your responsibilities.</p>',
+    choices: [{ label: "Okay, I'm well-rested now.", target: "Pain" }]
+  },
+
+  "Pain": {
+    header: "Step 5 — Pain",
+    text: '<p>Are you in pain?</p>',
+    choices: [
+      { label: "No, my body feels fine.", target: "Discomfort" },
+      { label: "Yes, something hurts.", target: "Ow" }
+    ]
+  },
+  "Ow": {
+    header: "Step 5 — Pain",
+    text: '<p>If there is something your doctor has prescribed you for pain, you should take it or do it.</p><p>For aches and pains, take an aspirin. You may also want to apply a heating pad or a cold pack on whatever hurts.</p><p>If you have a stomach ache, there are medications for that, like Pepto Bismol, and hot tea may also help.</p><p>Be nice to your body, and try to replace the unpleasant pain with some pleasant alternative sensations, like good smells and pleasurable textures.</p>',
+    choices: [{ label: "I am all taken care of.", target: "Discomfort" }]
+  },
+
+  "Discomfort": {
+    header: "Step 6 — Environment",
+    text: '<p>Next we\'re going to deal with other types of physical discomfort you may be in.</p><p>Is something about your environment distressing or uncomfortable?</p>',
+    choices: [
+      { label: "Yes, my surroundings are less than ideal.", target: "Temp" },
+      { label: "No, it seems fine here to me.", target: "Cleanliness" }
+    ]
+  },
+  "Temp": {
+    header: "Step 6 — Environment",
+    text: '<p>Are your surroundings the right temperature?</p>',
+    choices: [
+      { label: "I'm too cold.", target: "Too cold" },
+      { label: "I'm too hot.", target: "Too hot" },
+      { label: "I'm just right.", target: "Smell" }
+    ]
+  },
+  "Too cold": {
+    header: "Step 6 — Environment",
+    text: '<p>If you\'re too cold, you can try putting on some warm clothes, using a space heater, turning up the heat in your home, putting on a blanket, and/or snuggling with a pet or another person.</p>',
+    choices: [{ label: "I'm not cold anymore.", target: "Smell" }]
+  },
+  "Too hot": {
+    header: "Step 6 — Environment",
+    text: '<p>If you\'re too hot, you can try putting on cooler clothes, turning on a fan, or turning up the AC in your house.</p>',
+    choices: [{ label: "Okay, I fixed it.", target: "Smell" }]
+  },
+  "Smell": {
+    header: "Step 6 — Environment",
+    text: '<p>Are your surroundings dirty or smelly?</p>',
+    choices: [
+      { label: "Yes, it's gross.", target: "Gross" },
+      { label: "No, it's fine.", target: "Unsafe" }
+    ]
+  },
+  "Gross": {
+    header: "Step 6 — Environment",
+    text: '<p>It\'s hard to feel okay in an environment that is unfriendly for whatever reason. If your surroundings aren\'t clean, set a timer for five minutes and take care of the biggest problems, like leftover food, pet messes, or dirty clothes.</p><p>Chores can be scary and exhausting, but that\'s not what we\'re doing here. We\'re just taking a little five-minute clean-up to make ourselves and our homes happier!</p>',
+    choices: [{ label: "Okay, I cleaned up a little!", target: "Unsafe" }]
+  },
+  "Unsafe": {
+    header: "Step 6 — Environment",
+    text: '<p>Do you feel unsafe because of the people, or lack of people, in your surroundings?</p>',
+    choices: [
+      { label: "Yes, there are too many people here, or people I don't feel comfortable with.", target: "Too many people" },
+      { label: "I am alone and I don't like it.", target: "Alone" },
+      { label: "No, I'm good.", target: "Cleanliness" }
+    ]
+  },
+  "Too many people": {
+    header: "Step 6 — Environment",
+    text: '<p>If you can, try to remove yourself from situations that are overwhelming or feel unsafe. If you can\'t relocate entirely, take frequent breaks, or tune out with headphones.</p>',
+    choices: [{ label: "I did my best. On to the next step.", target: "Cleanliness" }]
+  },
+  "Alone": {
+    header: "Step 6 — Environment",
+    text: '<p>Being alone can feel really scary and unsafe. In reality, if you take basic precautions, you\'re almost certainly fine! However, getting a friend, making a phone or video call, playing with a pet, and/or turning on the TV or music can help.</p>',
+    choices: [{ label: "I reached out to someone and I'm feeling better. I'm ready for the next step.", target: "Cleanliness" }]
+  },
+
+  "Cleanliness": {
+    header: "Step 7 — Personal cleanliness",
+    text: '<p>Does your body feel uncomfortable, sweaty, or dirty?</p>',
+    choices: [
+      { label: "Yes, I feel icky, gross, or unclean.", target: "Icky" },
+      { label: "No, I feel fine.", target: "Do you know" }
+    ]
+  },
+  "Icky": {
+    header: "Step 7 — Personal cleanliness",
+    text: '<p>Do you have the energy and ability to take a shower?</p>',
+    choices: [
+      { label: "Yes, I'll take a shower.", target: "Shower" },
+      { label: "No, I need another solution.", target: "No shower" }
+    ]
+  },
+  "Shower": {
+    header: "Step 7 — Personal cleanliness",
+    text: '<p>Take a shower and get dressed in new clothes afterwards. You\'ll feel much better!</p>',
+    choices: [{ label: "I've done that and I'm ready for the next step.", target: "Do you know" }]
+  },
+  "No shower": {
+    header: "Step 7 — Personal cleanliness",
+    text: '<p>If you are unable to take a shower, here are some things to do instead:</p><ul><li>Wash your face</li><li>Put on lotion</li><li>Change your clothes</li><li>Use dry shampoo</li><li>Whatever physical self-care activity you like best!</li></ul>',
+    choices: [{ label: "I'm clean and I'm ready for the next step.", target: "Do you know" }]
+  },
+
+  "Do you know": {
+    header: "Step 8 — Emotional check-in",
+    text: '<p>Now we\'ve taken care of the physical reasons that you\'re not feeling well. Now we\'re going to deal with the emotional ones.</p><p>Obviously, this is a general guide, and can\'t pinpoint your exact problem. But troubleshooting is a good practice, and we\'re going to do our best together.</p><p>In my experience, most of the people who would need a flow chart like this have a mental health problem of some type, so these questions are geared towards common mental health problems. You, of course, might have different needs, but starting here can\'t hurt.</p><p>Do you know why you\'re in a bad mood, or not feeling well emotionally? (Remember, any answer is okay!)</p>',
+    choices: [
+      { label: "Yes, there's something on my mind.", target: "I do know" },
+      { label: "No, I don't know the reason.", target: "I don't know" }
+    ]
+  },
+  "I do know": {
+    header: "Step 8 — Emotional check-in",
+    text: '<p>It sounds like there\'s something on your mind! We\'re going to do our best to take care of it.</p><p>Set a timer for 15 minutes, and work on a solution. If it\'s something you can change, then great! If not, do your best to reach out to someone and talk about it.</p><p>Remember, 15 minutes and only 15! You can go back to whatever it is after we\'re done working through this together. We\'re just taking baby steps in the right direction.</p>',
+    choices: [{ label: "Okay, I did my best.", target: "Anxious" }]
+  },
+  "I don't know": {
+    header: "Step 8 — Emotional check-in",
+    text: '<p>Sometimes, we don\'t know the source of our bad feelings, and that\'s okay. We\'re gonna work through this together!</p>',
+    choices: [{ label: "Okay!", target: "Anxious" }]
+  },
+
+  "Anxious": {
+    header: "Step 9 — Anxiety",
+    text: '<p>Do you feel anxious, nervous, keyed-up, paranoid, scared, or on edge?</p>',
+    choices: [
+      { label: "Yes, I feel anxious about something specific.", target: "Specific" },
+      { label: "Yes, but I don't know why.", target: "Not specific" },
+      { label: "No, I don't feel very anxious.", target: "Triggered" },
+      { label: "I was feeling anxious, but I did my best to take care of myself. I'm ready for the next question.", target: "Triggered" }
+    ]
+  },
+  "Specific": {
+    header: "Step 9 — Anxiety",
+    text: '<p>You\'re feeling anxious about something specific. That\'s okay! Set a timer for 15 minutes and do something to take care of that worry. Maybe chip away at a task that seems insurmountable. You can do it!</p>',
+    choices: [
+      { label: "I'd like to try some grounding exercises too.", target: "Grounding" },
+      { label: "I feel better. Next question!", target: "Triggered" }
+    ]
+  },
+  "Not specific": {
+    header: "Step 9 — Anxiety",
+    text: '<p>You feel generally anxious, but you don\'t know why. That\'s okay!</p>',
+    choices: [{ label: "I'd like to try some grounding exercises.", target: "Grounding" }]
+  },
+  "Grounding": {
+    header: "Grounding exercises",
+    text: '<p>Here are some ideas for grounding activities:</p><ul><li>Take deep, calm breaths.</li><li>Notice and list things in your surroundings.</li><li>Expose yourself to strong, pleasant sensations, like a pleasing smell or a favourite blanket.</li><li>Say out loud your name, your age, the date, and your location. List some things you\'ve done today, or are going to do.</li><li>Splash water on your face or run your hands under the faucet.</li><li>Do a body scan meditation, or pay close attention to each of your body parts one by one.</li><li>Make tea. Feel the warmth of it in your hands, and the taste as you sip it calmly.</li><li>Listen to music.</li><li>Play a categories game, and name some types of dogs, or clothing items, or gemstones, or countries, or anything else you can think of.</li><li>Write in your journal.</li><li>Take a mindful walk, either inside or outside. Pay close attention to your body and your surroundings.</li><li>Squiggle. Wiggle around. Dance. Stretch. Be silly and active for a few minutes.</li><li>Any other favourite grounding technique you\'ve heard of or can think of. There\'s nothing wrong with experimenting!</li></ul>',
+    choices: [{ label: "Okay! I did one or more of these things, and I'm ready to move on.", target: "Anxious" }]
+  },
+
+  "Triggered": {
+    header: "Step 10 — Triggers",
+    text: '<p>Do you feel triggered? Are you having flashbacks? Is something traumatic or upsetting from the past weighing on your mind? Did you have a vivid nightmare?</p>',
+    choices: [
+      { label: "Yes, I feel triggered.", target: "I am triggered" },
+      { label: "No, I'm not feeling triggered.", target: "Dissociated" },
+      { label: "I was feeling triggered, but I did my best to take care of myself. I'm ready for the next question.", target: "Dissociated" }
+    ]
+  },
+  "I am triggered": {
+    header: "Step 10 — Triggers",
+    text: '<p>If you\'re feeling triggered, see if there\'s a practical action you can take to lessen your distress. Can you block that unsafe person from your social media, for example?</p><p>If not, reach out and tell someone safe how you\'re feeling. Just express yourself! Human contact works wonders when you\'re not feeling well emotionally.</p><p>Remember that you\'re here in the present, and nothing from your past can hurt you. If you like, you may want to try some grounding exercises to reinforce that idea.</p>',
+    choices: [
+      { label: "Okay, I'm ready for the next question.", target: "Dissociated" },
+      { label: "I'd like to try some grounding exercises.", target: "Grounding" }
+    ]
+  },
+
+  "Dissociated": {
+    header: "Step 11 — Dissociation",
+    text: '<p>Are you feeling dissociated, depersonalized, or derealized? Do you feel far away, foggy, or unreal? Are you not sure who you are?</p>',
+    choices: [
+      { label: "Yes, I'm dissociated.", target: "Grounding" },
+      { label: "No, I don't feel like that.", target: "Depressed" },
+      { label: "I was feeling dissociated, but I did my best to take care of myself. I'm ready for the next question.", target: "Depressed" }
+    ]
+  },
+
+  "Depressed": {
+    header: "Step 12 — Depression",
+    text: '<p>Are you feeling depressed, sad, or upset?</p>',
+    choices: [
+      { label: "Yes, I'm feeling depressed.", target: "Depression Fixes" },
+      { label: "No, I'm not very depressed.", target: "Lonely" }
+    ]
+  },
+  "Depression Fixes": {
+    header: "Step 12 — Depression",
+    text: '<p>Feeling depressed isn\'t fun, but it doesn\'t last forever! Don\'t be mad or disappointed with yourself for feeling depressed.</p><p>Take 15 minutes and accomplish something small, like loading the dishwasher or making a friendship bracelet. You are not a failure, and your situation is not hopeless! You are a superhero, even if it doesn\'t feel like it.</p>',
+    choices: [{ label: "Okay, I've done my best to take care of myself and I'm ready for the next question.", target: "Lonely" }]
+  },
+
+  "Lonely": {
+    header: "Step 13 — Loneliness",
+    text: '<p>Are you feeling lonely or in need of attention?</p>',
+    choices: [
+      { label: "Yes, I'm feeling lonely.", target: "Loneliness Fixes" },
+      { label: "No, I'm not very lonely. Next question!", target: "Foggy" }
+    ]
+  },
+  "Loneliness Fixes": {
+    header: "Step 13 — Loneliness",
+    text: '<p>Everybody feels lonely sometimes. If you\'re feeling lonely, there are ways to reach out to people!</p><p>You can talk to someone in your house, or call someone on the phone. You can also use texting or messenger apps to speak to someone. You may want to talk about how you\'re feeling, or you may not. Anything you want to talk about is okay!</p><p>If that isn\'t or doesn\'t seem possible, you can post a general message on social media or another internet service, about whatever you want!</p>',
+    choices: [{ label: "Okay, I did my best to take care of myself and I'm ready for the next question.", target: "Foggy" }]
+  },
+
+  "Foggy": {
+    header: "Step 14 — Brain fog",
+    text: '<p>Are you feeling foggy?</p>',
+    choices: [
+      { label: "Yes, I feel foggy.", target: "Exercise" },
+      { label: "No, my head feels pretty clear.", target: "Pets" }
+    ]
+  },
+  "Exercise": {
+    header: "Step 14 — Brain fog",
+    text: '<p>If you are feeling foggy, you might need some exercise.</p><p>Do you have the energy and ability to go for a walk?</p>',
+    choices: [
+      { label: "Yes, a walk sounds great.", target: "Walk" },
+      { label: "No, a walk would be too much for me.", target: "No Walk" }
+    ]
+  },
+  "Walk": {
+    header: "Step 14 — Brain fog",
+    text: '<p>Walks are really good for both our bodies and our minds. Take a walk of whatever length you choose! You\'re not trying to burn calories or get to a particular destination; you\'re just taking a pleasant stroll. Enjoy it!</p>',
+    choices: [{ label: "Okay, I am back from my walk and I'm ready for the next question.", target: "Pets" }]
+  },
+  "No Walk": {
+    header: "Step 14 — Brain fog",
+    text: '<p>If you can\'t take a walk, that\'s okay!</p><p>Here are some alternatives:</p><ul><li>Jumping jacks</li><li>Bouncing on the bed</li><li>Dancing</li><li>Push ups or sit ups, if you like doing them</li><li>Walking up and down the stairs</li><li>Yoga</li><li>Wiggling, squirming, jiggling around; being silly and active and having fun!</li></ul><p>If none of those are or seem possible, just sit outside for some fresh air!</p>',
+    choices: [{ label: "Okay, I did some exercise to the best of my ability. I'm ready for the next question.", target: "Pets" }]
+  },
+
+  "Pets": {
+    header: "Step 15 — Pets",
+    text: '<p>Do you have pets?</p>',
+    choices: [
+      { label: "Yes, I've got animals in my house.", target: "Play with pets" },
+      { label: "No, no pets for me!", target: "Fun" }
+    ]
+  },
+  "Play with pets": {
+    header: "Step 15 — Pets",
+    text: '<p>Playing with pets can be a great way to take the edge off when you\'re not feeling well. It doesn\'t matter what kind of pet you have, just take some time to interact with them. Pet your cat, take your dog outside, feed your fish, hug your lizard...</p>',
+    choices: [{ label: "Good idea! I'm ready for the next question.", target: "Fun" }]
+  },
+
+  "Fun": {
+    header: "Step 16 — Fun",
+    text: '<p>Take half an hour and do whatever you want to do right now. This can be anything: crafts, watching TV, laying on the couch, taking a walk, playing Farmville... your choices are literally endless!</p><p>Obviously, don\'t do anything that\'s bad for you, like feeding addictions or harming yourself or others.</p>',
+    choices: [{ label: "I did 30 minutes of fun and now I'm ready to move on to the next step.", target: "Reassess" }]
+  },
+
+  "Reassess": {
+    header: "All done!",
+    text: '<p>We\'ve reached the end of this self care guide.</p><p>It\'s time to reassess. Maybe now that you\'ve done all this self care, you feel better — great! Maybe you don\'t, and that\'s okay too. But hopefully you\'ve cleared things up and you know what to do next to take care of yourself.</p><p>You deserve self care, so even if it\'s hard, do your best!</p><p>Good luck!</p>',
+    choices: []
+  }
+};
+
+var history = [];
+var current = "Welcome!";
+
+function render() {
+  var passage = PASSAGES[current];
+  if (!passage) return;
+
+  document.getElementById('sc-header').textContent = passage.header;
+  document.getElementById('sc-text').innerHTML = passage.text;
+
+  var choicesEl = document.getElementById('sc-choices');
+  choicesEl.innerHTML = '';
+
+  var items = passage.choices.length > 0 ? passage.choices : [{ label: "Start over from the beginning.", target: null }];
+  items.forEach(function (choice) {
+    var btn = document.createElement('button');
+    btn.className = 'sc-btn';
+    btn.textContent = choice.label;
+    btn.addEventListener('click', function () {
+      if (choice.target === null) {
+        history = [];
+        current = "Welcome!";
+      } else {
+        history.push(current);
+        current = choice.target;
+      }
+      render();
+    });
+    choicesEl.appendChild(btn);
+  });
+
+  document.getElementById('sc-back').disabled = history.length === 0;
+}
+
+document.getElementById('sc-back').addEventListener('click', function () {
+  if (history.length > 0) {
+    current = history.pop();
+    render();
+  }
+});
+
+document.getElementById('sc-restart').addEventListener('click', function () {
+  history = [];
+  current = "Welcome!";
+  render();
+});
+
+render();
+
+/* Embed mode */
+var _params = new URLSearchParams(window.location.search);
+if (_params.has('embed')) {
+  var _book = document.querySelector('.book');
+  if (_book) {
+    _book.classList.add('is-embed');
+    var _theme = _params.get('theme');
+    if (_theme === 'dark')  { _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1'); }
+    if (_theme === 'light') { _book.classList.add('color-theme-1'); _book.classList.remove('color-theme-2'); }
+    new MutationObserver(function () {
+      if (_book.classList.contains('with-summary')) {
+        _book.classList.remove('with-summary');
+        _book.classList.remove('without-animation');
+      }
+    }).observe(_book, { attributes: true, attributeFilter: ['class'] });
+    document.getElementById('embedThemeBtn').addEventListener('click', function () {
+      var isDark = _book.classList.contains('color-theme-2');
+      if (isDark) { _book.classList.remove('color-theme-2'); _book.classList.add('color-theme-1'); }
+      else        { _book.classList.add('color-theme-2');    _book.classList.remove('color-theme-1'); }
+    });
+  }
+}
+
+})();
+</script>
