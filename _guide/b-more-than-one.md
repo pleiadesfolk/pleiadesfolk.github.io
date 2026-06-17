@@ -24,6 +24,7 @@ order: 2
   }
   .cl-summary-wrap {
   max-height: 75vh !important;
+  }
 }
 
 .cl-summary-wrap {

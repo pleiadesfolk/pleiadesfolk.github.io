@@ -58,7 +58,7 @@ May Lyra walk in dreams.
 
 <a href="https://www.patreon.com/posts/bereavement-155847757" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Punk Rock Moms' memorial for Lyra</a>
 
-<a href="https://trans-moonbeam.neocities.org/posts/0234-07-24-Adieu-cher.e-ami.e" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Trans Moonbeams' memorial for Lyra</a>
+<a href="https://trans-moonbeam.neocities.org/posts/234-07-24-Adieu-cher.e-ami.e" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Trans Moonbeams' memorial for Lyra</a>
 
 <a href="https://subshellhound.nekoweb.org/in-memoriam/lyra.html" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; color: #6b9eea; width:70%; display: block; margin: auto;">The Sky System's memorial for Lyra</a>
 

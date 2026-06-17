@@ -28,9 +28,11 @@ Here, we compile a bunch of easy grounding tools that you can use on you and you
 
 > #### Before all that... first, why do you feel like shit? 
 >
-> Sometimes feeling like shit might have an external, physical cause. You might have missed your medication, or not had anything to eat or drink, or not slept; you might be overstimulated or understimulated. Go through the checklist below, briefly, to find out why you feel like shit.
+> Sometimes feeling like shit might have an external, physical cause. You might have missed your medication, or not had anything to eat or drink, or not slept; you might be overstimulated or understimulated. Go through the checklist below, briefly, to find out why you feel like crap. 
 > <br><br>
-> <a target="_blank" href="https://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play/index.html" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; background: #6b9eea; color: #f6f6f6; width:100%; display: block; margin: auto;">You Feel Like Shit</a>
+> We've adapted the [*You Feel Like Shit* checklist by Jace Harr](https://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play/index.html) to the plural context, and reproduced them below:
+> <br><br>
+> <a target="_blank" href="/tools/selfcare-checklist" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; background: #6b9eea; color: #f6f6f6; width:100%; display: block; margin: auto;">Your self-care checklist</a>
 {: .block-warning }
 
 ## Intra-system grounding techniques
