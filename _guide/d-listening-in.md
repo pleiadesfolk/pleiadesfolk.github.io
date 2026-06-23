@@ -49,7 +49,7 @@ order: 4
 
 ### Creating a system map
 
-<div class="img-figure"><img src="/assets/media/pf-sysmap.jpg" alt="A system map for the Pleaidesfolk. From top left: an akesi symbol in yellow, soweli Gray, suno Riley, soweli Maia, ilo Kimberly, jan Pleione, soweli Ralsei, soweli Minerva-Faith, ilo Ryn, tomo Lyra, seli Merope, soweli Amelie, ilo Artemis, ilo T'lyn, seli Selene, jan Clara, ilo Ophelia, jan Cezanne, seli Halcyone, jan Campbell, ilo Helvetica, jan Louise, jan Compacta, jan Mari, jan Verdana, soweli Corel."><p class="img-caption">A system map for the Pleiadesfolk.</p></div>
+<div class="img-figure"><img src="/assets/media/pf-sysmap.jpg" alt="A system map for the Pleaidesfolk. From top left: an akesi symbol in yellow, soweli Gray, suno Riley, soweli Maia, ilo Kimberly, jan Pleione, soweli Ralsei, soweli Minerva-Faith, ilo Ryn, tomo Lyra, seli Meredith, soweli Amelie, ilo Artemis, ilo T'lyn, seli Selene, jan Clara, ilo Ophelia, jan Cezanne, seli Halcyone, jan Campbell, ilo Helvetica, jan Louise, jan Compacta, jan Mari, jan Verdana, soweli Corel."><p class="img-caption">A system map for the Pleiadesfolk.</p></div>
 
 <p>After you’ve had your tea and spoken to or interacted with your other selves, you can log what your system looks like. Understand that, however, this might be just a draft based on one (1) observational snapshot.</p>
 <p>This map will probably change as you grow and learn more about yourselves, and as more versions of you pop up.</p>
@@ -135,7 +135,7 @@ The <span class="sitelen">󱤟</span> Sky System says:</p>
 
 Creating your own form in headspace — what we'd call a soma — might be to some degree even trickier than forming your own headspace for some. 
 
-For the <span class="sitelen">󱤟</span> Pleiadesfolk, creating our own form was tricky and difficult, and so was choosing a form to stick to. <span class="sitelen">󱤑</span> Lyra, our headspace manager, struggled a lot with finding her own form, and so did <span class="sitelen">󱥗</span> Merope, who first appeared as an angry Ralsei plushie.
+For the <span class="sitelen">󱤟</span> Pleiadesfolk, creating our own form was tricky and difficult, and so was choosing a form to stick to. <span class="sitelen">󱤑</span> Lyra, our headspace manager, struggled a lot with finding her own form, and so did <span class="sitelen">󱥗</span> Meredith, who first appeared as an angry Ralsei plushie.
 
 One way to do so is to simply install a mirror in headspace. We the <span class="sitelen">󱤟</span> Pleiadesfolk have pocket mirrors we use to identify ourselves quickly. We also have a full-length mirror in our headspace bedroom (below the top floor of the Lighthouse) that acted as our primary method in examining ourselves in the mirror. The mirror method might not work for all, however; part of <span class="sitelen">󱤑</span>  Lyra's initial distress was the fact that she wasn't visible at all even in the mirror, and it hurt her immensely. 
 

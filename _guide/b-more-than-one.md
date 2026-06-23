@@ -84,7 +84,7 @@ When a **headmate** is in control of the collective's shared physical body, that
 
 <p>There are many experiences about being "more than one" — plurality occurs on a spectrum, and a very diverse one!</p>
 
-<p>The checklist below is adapted from The Dragonheart Collective's Am I Plural document <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">which you can find here.</a> Mark what feels familiar — tap or click once for a "maybe", and tap or click once for a "I experience this". You can also generate a shareable link that's useful to share with someone!</p>
+<p>The checklist below is adapted from The Dragonheart Collective's Am I Plural document <a target="_blank" href="https://healthymultiplicity.com/loonybrain/Info/DragonHeart-AmIPlural.html">which you can find here.</a> Mark what feels familiar — tap or click once for a "maybe", and tap or click twice to indicate "I experience this".</p>
 
 <p>It's important to note that this checklist is here for you as a tool to understand yourself. It is not a diagnostic quiz. <strong>IT IS NOT A DIAGNOSTIC QUIZ.</strong></p> 
 

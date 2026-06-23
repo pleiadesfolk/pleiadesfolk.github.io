@@ -1,0 +1,732 @@
+---
+layout: tools
+title: Self-harm aftercare guide
+description: A harm-reduction guide giving you instructions on how you can care for yourself after instances of self-harm.
+permalink: /tools/sh-aftercare
+---
+<style>
+.sha-page {
+  --panel-bg: #ffd6db;
+  --panel-border: #e8c0c5;
+  --btn-bg: #fff0f2;
+  --btn-text: #5a2a31;
+  --btn-border: #e0b0b8;
+  --btn-hover: #ffe0e5;
+  --text: #222222;
+  --muted: #9a7a7e;
+  --toggle-btn: #333333;
+  --kit-bg: #fff8f9;
+  --kit-border: #f0c8ce;
+  --dot-active: #c05060;
+  --dot-inactive: #e0b0b8;
+  --urgent-bg: #fff3cd;
+  --urgent-border: #e8a020;
+  --urgent-text: #5a3a00;
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+  color: var(--text);
+}
+
+.book.color-theme-2 .sha-page {
+  --panel-bg: #5a1a22;
+  --panel-border: #3b1015;
+  --btn-bg: #3b1015;
+  --btn-text: #ffbac3;
+  --btn-border: #5a1a22;
+  --btn-hover: #4a1018;
+  --text: #f6f0f1;
+  --muted: #c0a0a5;
+  --toggle-btn: #f6f0f1;
+  --kit-bg: #2a0a0e;
+  --kit-border: #5a1a22;
+  --dot-active: #ff8090;
+  --dot-inactive: #5a1a22;
+  --urgent-bg: #3a2a00;
+  --urgent-border: #c08020;
+  --urgent-text: #ffd080;
+}
+
+.sha-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.sha-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sha-card-header {
+  background: var(--panel-bg);
+  padding: 0.6rem 1.2rem;
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.sha-card-body {
+  padding: 1.25rem 1.2rem;
+}
+
+.sha-text {
+  font-size: 1.8rem;
+  line-height: 1.65;
+}
+
+.sha-text p { margin: 0 0 0.75em; }
+.sha-text p:last-child { margin-bottom: 0; }
+
+.sha-text ul {
+  margin: 0.4em 0 0.75em;
+  padding-left: 1.4em;
+}
+
+.sha-text li { margin-bottom: 0.25em; }
+
+.sha-text a {
+  color: #c05060;
+  text-decoration: underline;
+}
+
+.book.color-theme-2 .sha-text a { color: #ff8090; }
+
+.sha-text strong { font-weight: 700; }
+
+.sha-urgent {
+  background: var(--urgent-bg);
+  border: 1.5px solid var(--urgent-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  color: var(--urgent-text);
+  font-weight: 600;
+}
+
+.sha-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.sha-btn {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1.5px solid var(--btn-border);
+  border-radius: 8px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.75rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.sha-btn:hover { background: var(--btn-hover); }
+
+.sha-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.sha-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  text-decoration: underline;
+}
+
+.sha-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* ── Kit carousel ──────────────────────────────────────────── */
+.kit-carousel {
+  margin-top: 1rem;
+}
+
+.kit-track-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--kit-border);
+  background: var(--kit-bg);
+}
+
+.kit-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.kit-slide {
+  flex: 0 0 100%;
+  padding: 1rem 1.1rem 1.1rem;
+  box-sizing: border-box;
+}
+
+.kit-slide-img {
+  display: block;
+  max-height: 300px;
+  width: auto;
+  margin: 0 auto 0.85rem;
+  border-radius: 6px;
+}
+
+.kit-slide-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--dot-active);
+}
+
+.book.color-theme-2 .kit-slide-title { color: var(--dot-active); }
+
+.kit-slide-body {
+  font-size: 1.65rem;
+  line-height: 1.6;
+}
+
+.kit-slide-body p { margin: 0 0 0.5em; }
+.kit-slide-body p:last-child { margin-bottom: 0; }
+
+.kit-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.kit-arrow {
+  background: var(--btn-bg);
+  border: 1.5px solid var(--btn-border);
+  border-radius: 6px;
+  color: var(--btn-text);
+  font-size: 1.6rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  transition: background 0.1s;
+}
+
+.kit-arrow:hover { background: var(--btn-hover); }
+.kit-arrow:disabled { opacity: 0.3; cursor: default; }
+
+.kit-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.kit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot-inactive);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.kit-dot.active {
+  background: var(--dot-active);
+  transform: scale(1.3);
+}
+
+.kit-counter {
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+/* ── Embed mode ──────────────────────────────────────────────── */
+.book.is-embed .book-header,
+.book.is-embed .book-summary,
+.book.is-embed .navigation,
+.book.is-embed .book-footer { display: none !important; }
+.book.is-embed .book-body  { left: 0 !important; transform: none !important; }
+.book.is-embed .body-inner { margin: 0 !important; width: 100% !important; }
+
+.embed-theme-toggle { display: none; }
+.book.is-embed .embed-theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.embed-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1.5px solid var(--panel-border);
+  border-radius: 999px;
+  background: var(--toggle-btn);
+  cursor: pointer;
+}
+.embed-theme-btn .theme-icon-dark { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-light { display: none; }
+.book.color-theme-2 .embed-theme-btn .theme-icon-dark  { display: block; }
+</style>
+
+<div class="sha-page" id="sha-page">
+  <div class="embed-theme-toggle">
+    <button class="embed-theme-btn" id="embedThemeBtn" aria-label="Toggle light/dark mode">
+      <img class="theme-icon-light" src="{{site.baseurl}}/assets/gitbook/symbols/pimeja-dark.svg"  width="20" height="20" title="Toggle dark mode">
+      <img class="theme-icon-dark"  src="{{site.baseurl}}/assets/gitbook/symbols/walo-light.svg"  width="20" height="20" title="Toggle light mode">
+    </button>
+  </div>
+  <h1 class="sha-title">Self-harm aftercare guide</h1>
+  <div class="sha-card">
+    <div class="sha-card-header" id="sha-header"></div>
+    <div class="sha-card-body">
+      <div class="sha-text" id="sha-text"></div>
+      <div class="sha-choices" id="sha-choices"></div>
+    </div>
+  </div>
+  <div class="sha-nav">
+    <button class="sha-nav-btn" id="sha-back">← Back</button>
+    <button class="sha-nav-btn" id="sha-restart">Start over</button>
+  </div>
+</div>
+
+<script>
+(function () {
+
+/* ── Kit carousel data ────────────────────────────────────────── */
+var KIT_ITEMS = [
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/1-FAK.jpg",
+    title: "Antibiotic ointment",
+    body: "<p>A common over-the-counter medication that helps prevent bacterial infections in minor wounds.</p><p>Clean the wound first, then apply a thin layer. Use no more than one to three times daily for up to seven days. Do not use on deep puncture wounds, animal bites, or serious burns without medical supervision.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/2-FAK.png",
+    title: "Antiseptic cleansers",
+    body: "<p>Prevent infections by killing bacteria, viruses, and fungi on skin and minor wounds. Common types:</p><p><strong>Isopropyl alcohol</strong> — quick-acting disinfectant, but stings on open wounds and can slow healing.</p><p><strong>Povidone-iodine (Betadine)</strong> — broad-spectrum, good for bites and puncture wounds. Can stain skin and clothing. May not be suitable if you take iodine-containing medication.</p><p><strong>Benzalkonium chloride (BZK)</strong> — gentle, non-stinging, effective against bacteria and some viruses. Found in most antiseptic wipes.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/3-FAK.jpg",
+    title: "Band-aids / adhesive bandages",
+    body: "<p>Small, flexible strips with adhesive backing to cover and protect minor cuts, scrapes, and wounds. They come in many types and sizes — latex-free, waterproof, joint-flex, and more.</p><p>Remove the tabs from the adhesive and place the dressing section over the wound. Do not place adhesive directly over the wound, as it will tear up scabbing on removal.</p><p>For larger wounds, extra-long strips will cover more area than a standard Band-Aid.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/4-FAK.jpg",
+    title: "Gauze",
+    body: "<p>Gauze bandages come in rolls or sterile packages and can cover larger wounds or burns than a Band-Aid can.</p><p><strong>For cleaning:</strong> saturate with lukewarm water or an antiseptic cleanser.</p><p><strong>For dressing:</strong> use a piece slightly larger than the wound for optimal cushioning.</p><p>Use non-woven gauze for large open wounds — it won't leave loose fibres behind or stick to the wound, reducing the risk of reopening it during dressing changes. Apply pressure, then secure with wrap or tape.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/5-FAK.jpg",
+    title: "Medical tape",
+    body: "<p>Used in emergency medicine to hold bandages, gauze, or other dressings in place over cuts, abrasions, or incisions. Usually made from a variety of materials — good tape tears cleanly by hand and keeps a clean edge.</p><p><strong>Important:</strong> medical tape is not sterile, unlike adhesive bandages. Tape sterile gauze onto dry, clean skin — do not tape directly over the wound.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/6-FAK.jpg",
+    title: "Cohesive wrap",
+    body: "<p>A non-woven elastic bandage with a micro-friction coating that bonds layer to layer on contact. It holds through sweat and movement without adhering to skin, hair, or fur — making it a great alternative for people with adhesive allergies, or when tape isn't available.</p><p>Wrap it around gauze firmly but not so tightly that it restricts circulation. Continue wrapping until you reach the end of the roll.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/7-FAK.jpg",
+    title: "Compression bandages",
+    body: "<p>Elastic bandages used to apply pressure to control bleeding, reduce swelling, and improve circulation. Particularly recommended for joints like ankles and wrists.</p><p>Begin wrapping below the injury site and work upward, overlapping each layer by roughly half. Tie off the ends or use the metal clips to secure them.</p><p>The bandage should feel firm but must not restrict circulation or cause numbness.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/8-FAK.jpg",
+    title: "Medical adhesive remover",
+    body: "<p>Solvents formulated to dissolve adhesive and assist in removing dressings, skin protectors, tapes, and anything else stuck to skin. Usually comes as a spray or a pad.</p><p>For pads or wipes, apply to the edges of the bandage and continue applying as you slowly peel it away.</p><p>After use, wash off the remover and allow skin to dry completely before applying a new dressing, to reduce the risk of skin tears and infection.</p>"
+  },
+  {
+    image: "{{site.baseurl}}/assets/media/first-aid-kit/9-FAK.jpg",
+    title: "Burn gels",
+    body: "<p>Typically made from natural polymer materials, burn gels reduce pain and cool burn wounds. They can be applied quickly over large surface areas.</p><p>For light burns, aloe-based gels are effective. For moderate burns, choose a formulation with added anti-microbial protection.</p><p>Cool the burn under running water first and rinse away any debris, then apply a layer of gel. Apply protective gauze after. Do not apply burn gels to third-degree burns or open wounds.</p>"
+  }
+];
+
+/* ── Passages ─────────────────────────────────────────────────── */
+var PASSAGES = {
+
+  "Welcome": {
+    header: "Welcome",
+    text: '<p>This is an interactive self-harm aftercare guide, adapted and expanded from the <a href="https://shguide.carrd.co/#home" target="_blank">Interactive Self-harm Aftercare Guide</a>.</p><p>We\'re writing this from a harm reduction perspective — in which we provide you with information about how to care for yourself <em>after</em> instances of self-harm. When you hurt yourself, it\'s important to care for any injuries you may have self-inflicted. If you don\'t do that, injuries may worsen or get infected.</p><p><strong>We are not professionals.</strong> We\'ve gathered this information for you to look through, and healthcare professionals — especially those that you trust and who know your body — will be better placed to give you advice suited to your situation.</p><p><strong>Trigger warnings for descriptions of wounds, anatomy, and wound care follow.</strong></p>',
+    choices: [
+      { label: "Preparing a first-aid kit (read this first!)", target: "Kit" },
+      { label: "I hurt myself. What should I do?", target: "IHurtMyself" }
+    ]
+  },
+
+  "Kit": {
+    header: "Preparing a first-aid kit",
+    text: '<p>It\'s important to have a good first-aid kit — and this might be useful to you either way, especially if you live alone. You should be able to find these supplies at any pharmacy, supermarket, or online.</p><p>Below are some essentials for your first-aid kit that you should have — swipe left to view them.</p><div id="kit-carousel-mount"></div>',
+    choices: [
+      { label: "I hurt myself. What should I do?", target: "IHurtMyself" }
+    ]
+  },
+
+  "IHurtMyself": {
+    header: "I hurt myself. What should I do?",
+    text: '<p>It\'s good that you\'re taking care of yourself. What sort of injury do you have?</p>',
+    choices: [
+      { label: "I got a burn", target: "Burn" },
+      { label: "I got a cut", target: "Cut" },
+      { label: "I hit or punched myself", target: "HitMyself" },
+      { label: "I picked at my skin or pulled at my hair", target: "Picking" },
+      { label: "I drank alcohol or took drugs", target: "AlcoholDrugs" },
+      { label: "I ingested something that might be poisonous", target: "Poisoned" }
+    ]
+  },
+
+  /* ── BURNS ──────────────────────────────────────────────────── */
+
+  "Burn": {
+    header: "I got a burn",
+    text: '<p>Burning yourself can happen in many ways — cigarettes, flames, ice or cold, friction, and more.</p><p>First, remove anything that can constrict the area of the injury — burns cause quick swelling. Then assess the burn.</p><p>How deep does the burn seem?</p>',
+    choices: [
+      { label: "First degree — redness and pain at the surface", target: "Burn1" },
+      { label: "Second degree — blistering or wet-looking skin", target: "Burn2" },
+      { label: "Third degree — deep, may appear white, brown, or leathery", target: "Burn3" }
+    ]
+  },
+
+  "Burn1": {
+    header: "First degree burn",
+    text: '<p>A first-degree burn affects the epidermis — the outermost layer of skin. It usually happens from brief contact with hot water, a hot surface, or similar.</p><p>Cool the burn with cool running water for at least 10 minutes. <strong>Do not apply ice.</strong></p><p>Pat dry with a clean towel or gauze. Apply burn gel. Cover with a <strong>non-adhesive bandage</strong> — do not use Band-Aids on burns.</p><p>Change bandages regularly and watch for signs of infection.</p>',
+    choices: [
+      { label: "I've treated my wound. What should I watch for?", target: "Infection" },
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "Burn2": {
+    header: "Second degree burn",
+    text: '<p>A second-degree burn extends into the dermis, the second layer of skin.</p><p>Immerse the burn in cool water. Do not use ice or cold packs — they can damage the skin further.</p><p>Let someone you trust know you\'ve injured yourself.</p><p>Apply a <strong>non-adhesive bandage, loosely</strong>, and tape it with medical tape.</p><p>This degree of burn <strong>will blister.</strong> Avoid picking at blisters — they become infected easily.</p><div class="sha-urgent">Watch for signs of shock — lightheadedness, dizziness, rapid pulse, rapid shallow breathing, or confusion. If you suspect shock, lie flat with feet elevated and cover yourself with a blanket. Call emergency services immediately.</div>',
+    choices: [
+      { label: "I've treated my wound. What should I watch for?", target: "Infection" },
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "Burn3": {
+    header: "Third degree burn",
+    text: '<div class="sha-urgent">A third-degree burn reaches past the epidermis and dermis. You need to seek medical help immediately — go to the ER or an urgent care clinic. Inform someone you trust that you\'ve been injured.</div><p>While you prepare to get help, apply a sterile non-stick bandage loosely over the burn.</p><p>Watch for signs of shock — lightheadedness, dizziness, rapid pulse, rapid shallow breathing, or confusion. If you suspect shock, lie flat with feet elevated and cover yourself with a blanket. Call emergency services immediately.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── CUTS ───────────────────────────────────────────────────── */
+
+  "Cut": {
+    header: "I got a cut",
+    text: '<p>Cuts require different treatment depending on how deep they are. Here\'s how to tell:</p><ul><li><strong>Epidermis (top layer)</strong> — shallow scrapes, paper cuts. The skin surface only.</li><li><strong>Dermis (middle layer)</strong> — appears white or pale pink before filling with blood. Contains blood vessels and nerve endings.</li><li><strong>Hypodermis (fat layer)</strong> — you\'ll see bubbles of yellow fat. Cuts here will not heal on their own and need stitches.</li><li><strong>Muscle</strong> — white, fibrous tissue. Requires immediate emergency care.</li></ul><p>How deep is your cut?</p>',
+    choices: [
+      { label: "Epidermis — surface layer only", target: "CutEpidermis" },
+      { label: "Dermis — pale or white, filling with blood", target: "CutDermis" },
+      { label: "Hypodermis — I can see yellow fat tissue", target: "CutHypodermis" },
+      { label: "Muscle — white fibrous tissue is visible", target: "CutMuscle" }
+    ]
+  },
+
+  "CutEpidermis": {
+    header: "Cut — epidermis",
+    text: '<p>This is the top layer of skin. It\'s easy to care for, heals quickly, and is least likely to become infected.</p><p>Wash the wound with lukewarm water and gentle soap, then pat dry.</p><p>Apply an adhesive bandage (Band-Aid) so dirt and bacteria can\'t enter. It will also cushion the wound so it doesn\'t hurt as much.</p><p>Avoid swimming, outdoor work, or contact with dirty surfaces while it heals.</p>',
+    choices: [
+      { label: "I've treated my wound. What should I watch for?", target: "Infection" },    ]
+  },
+
+  "CutDermis": {
+    header: "Cut — dermis",
+    text: '<p>The dermis contains small arteries and nerve endings. Cuts here often leave a permanent scar.</p><p>Rinse the wound with lukewarm water. Spray with antiseptic, then apply antibiotic ointment to prevent infection.</p><p>If the wound is starting to gape, use a butterfly bandage to try and close it — this will help it heal more cleanly and scar less. Non-woven gauze is recommended here.</p><p>Deeper dermis cuts will bleed for multiple days. Change bandages often, and set a reminder on your phone to do so. Apply pressure using cohesive wrap or compression bandages early on to help clotting.</p><p>You need to clean this wound every day to give it the best chance of healing well.</p>',
+    choices: [
+      { label: "I've treated my wound. What should I watch for?", target: "Infection" },
+    ]
+  },
+
+  "CutHypodermis": {
+    header: "Cut — hypodermis",
+    text: '<div class="sha-urgent">You should seek medical attention urgently. Inform someone you trust that you\'ve been injured, and get to an urgent care clinic or ER.</div><p>Cuts at this depth will damage nerves, arteries, and veins, and will need internal stitches. Butterfly strips and compression bandages will not be enough — the spaces between layers will fill with bacteria.</p><p>If you cannot get immediate help, do your best to close the gap. Use non-woven gauze to cover the wound. Apply pressure early on, as you may bleed for a long time.</p>',
+    choices: [
+      { label: "I've treated my wound. What should I watch for?", target: "Infection" },
+    ]
+  },
+
+  "CutMuscle": {
+    header: "Cut — muscle",
+    text: '<div class="sha-urgent">At this depth you risk permanent damage to muscle fibres. Call emergency services or get to the ER immediately. You will need stitches, and severe infection may mean amputation.</div><p>While you wait for help or transport, apply whatever sterile covering you have and maintain firm pressure on the wound.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── BLUNT FORCE ────────────────────────────────────────────── */
+
+  "HitMyself": {
+    header: "I hit or punched myself",
+    text: '<p>Hitting or punching yourself — or striking yourself with an object — causes a class of injuries called <em>blunt force trauma</em>. This includes hitting yourself with your hands or objects, throwing yourself at hard surfaces, and hitting your head.</p><p>Bruising happens when the blood vessels within your skin break. You may experience swelling in the first day.</p><p>Where did you hit yourself?</p>',
+    choices: [
+      { label: "I hit my head", target: "Concussion" },
+      { label: "Any other part of my body", target: "Bruise" }
+    ]
+  },
+
+  "Bruise": {
+    header: "First aid for bruises",
+    text: '<p>Standard first aid for blunt-force trauma follows the RICE method:</p><ul><li><strong>Rest</strong> the injured area and avoid further strain.</li><li><strong>Ice</strong> for 15–20 minutes at a time, with a cloth between the ice and skin to prevent ice burn. Repeat every few hours in the first 48 hours.</li><li><strong>Compress</strong> the area with a bandage to reduce swelling — don\'t wrap too tightly.</li><li><strong>Elevate</strong> the affected area above heart level where possible, to minimise blood pooling and swelling.</li></ul><p>Keep yourself safe.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "Concussion": {
+    header: "Watching out for concussions",
+    text: '<p>Follow the RICE method for the injury:</p><ul><li><strong>Rest</strong> the injured area and avoid further strain.</li><li><strong>Ice</strong> for 15–20 minutes at a time, with a cloth between the ice and skin. Repeat every few hours in the first 48 hours.</li><li><strong>Compress</strong> the area with a bandage, not too tightly.</li><li><strong>Elevate</strong> the affected area above heart level where possible.</li></ul><p>Inform someone you trust that you\'re injured, so they can look out for you.</p><p>Watch for concussion symptoms:</p><ul><li><strong>Cognitive:</strong> difficulty thinking, poor concentration, confusion, sensitivity to light and noise</li><li><strong>Physical:</strong> headaches, dizziness, nausea, vision problems, balance issues, ringing in the ears</li><li><strong>Emotional:</strong> irritability, anxiety</li><li><strong>Sleep:</strong> disturbances</li></ul><div class="sha-urgent">Seek immediate help if you are repeatedly vomiting, lose consciousness for more than 30 seconds, have worsening headaches, have unequal pupils, experience persistent ringing, weakness in limbs, slurred speech, seizures, or dizziness that doesn\'t resolve.</div>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── PICKING / PULLING ──────────────────────────────────────── */
+
+  "Picking": {
+    header: "I picked at my skin or pulled at my hair",
+    text: '<p>Everyone does this from time to time, but for some it can be compulsive. Skin excoriation disorder (related to OCD) involves obsessively picking at one\'s skin; trichotillomania involves a constant urge to pull out hair from the scalp, eyebrows, eyelashes, or elsewhere.</p><p>What were you doing?</p>',
+    choices: [
+      { label: "I've been picking at my skin", target: "PickingSkin" },
+      { label: "I've been pulling at my hair", target: "PickingHair" }
+    ]
+  },
+
+  "PickingSkin": {
+    header: "Picking at skin",
+    text: '<p>Wash your hands with soothing, lukewarm water and gentle soap to remove bacteria and dirt. Trim and file your nails short.</p><p>If you have open wounds from picking, treat them: use adhesive bandages or hydrocolloid pimple patches to cover them and stop yourself returning to them.</p><p>Try to find a good alternative activity. Peeling fruit by hand, tearing apart paper or foam, or keeping your hands busy with crocheting, knitting, or gardening can all help.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "PickingHair": {
+    header: "Pulling at hair",
+    text: '<p>Try making it physically harder to continue. Wetting your hair makes it slippery and harder to grasp.</p><p>Try alternatives — playing with floss, massaging your scalp, or pulling fibres out of a carpet sample can help redirect the urge.</p><p>Therapy can help with compulsive behaviours and provide alternative coping strategies. If you haven\'t yet spoken with a therapist, that might be a worthwhile step.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── ALCOHOL / DRUGS ────────────────────────────────────────── */
+
+  "AlcoholDrugs": {
+    header: "I drank alcohol or took drugs",
+    text: '<p>Intoxication and drug use can result in negative psychological, physical, emotional, and sensory effects — particularly with impairment.</p><p>If you know you\'ve had alcohol or taken drugs, avoid driving, leaving the house, or acting on impulse. Have someone sober around to help you if you can.</p><p>What\'s happening?</p>',
+    choices: [
+      { label: "I think I had too much alcohol", target: "TooMuchAlcohol" },
+      { label: "I think I'm having a bad trip", target: "BadTrip" },
+      { label: "I may be experiencing an overdose", target: "Overdose" }
+    ]
+  },
+
+  "TooMuchAlcohol": {
+    header: "Too much alcohol",
+    text: '<p>If you\'re feeling nauseous, find a safe place where you can be sick.</p><p>Alcohol is very dehydrating. Drink water to compensate, and eat something starchy if you\'re able to.</p><p><strong>Do not drive.</strong> If you\'re outside, try to get home or to a safe place where you can lie down.</p><p>Have a friend or someone you trust stay with you. If strong feelings of guilt surface — particularly if you relapsed — it\'s okay. What matters now is caring for yourself.</p><p>The intoxication will end. You can try some <a href="https://plurality.systems/guide/grounding" target="_blank">grounding techniques from our toolkit</a>.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "BadTrip": {
+    header: "Having a bad trip",
+    text: '<p>If you\'re getting anxious, paranoid, depressed, or having visual hallucinations that are upsetting, move to a safe and comfortable environment where you can sit or lie down.</p><p>If you have a friend or someone you trust, ask them to accompany you. <strong>Do not drive.</strong> If you\'re outside, try to get to a safe place.</p><p><strong>This feeling will end eventually. Highs wear off.</strong></p><p>Stay hydrated. Do not take more drugs to stop the bad trip.</p><p>Try grounding using your senses: list five things you see, four things you can touch, three things you hear, two things you smell, one thing you can taste.</p><p>Or try box breathing:</p><div class="box-breathing"><span class="bb-span1">Inhale</span><span class="bb-span2">Hold</span><span class="bb-span3">Exhale</span><span class="bb-span4">Hold</span></div><p>If feelings of guilt surface, it\'s okay — what matters now is caring for yourself and making sure you\'re safe.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  "Overdose": {
+    header: "Possible overdose",
+    text: '<div class="sha-urgent">An overdose happens when a substance is taken in a dose too high for the body to process. You need to seek medical help immediately. If you faint, you can choke on your own vomit, hit your head, or suffocate.</div><p>Symptoms include severe chest pain, seizures, unusual body temperature changes, an irregular pulse, difficulty breathing, and vomiting.</p><p>Call emergency services or have someone take you to the ER now.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── POISONING ──────────────────────────────────────────────── */
+
+  "Poisoned": {
+    header: "I ingested something that might be poisonous",
+    text: '<p>Many household chemicals are poisonous in large concentrations or dangerous if ingested.</p><p>Poisoning symptoms can mimic other conditions — like seizures, alcohol intoxication, or stroke. They include:</p><ul><li>Burns or redness around the mouth and lips</li><li>Breath that smells like chemicals</li><li>Vomiting</li><li>Difficulty breathing</li><li>Drowsiness</li><li>Confusion or an altered mental state</li></ul><div class="sha-urgent">Seek medical help immediately. Inform someone that you may have hurt yourself. Call your local poison control centre for additional instructions.</div>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" }
+    ]
+  },
+
+  /* ── INFECTION ──────────────────────────────────────────────── */
+
+  "Infection": {
+    header: "Preventing infection",
+    text: '<p>Keeping a wound clean is your best defence against infection.</p><p>Clean and dress cuts, scrapes, and small wounds as soon as possible. Rinse under running water, wash <em>around</em> (not inside) the wound with soap, then apply a thin layer of antibiotic ointment and cover with a bandage.</p><p>Change the dressing at least once a day, or whenever it gets wet or dirty. Always wash your hands for at least 60 seconds before touching a wound.</p><p><strong>Signs of infection include:</strong></p><ul><li>Worsening pain, spreading redness, swelling, or skin that feels warm to the touch</li><li>Pus, yellowish discharge, or an unpleasant smell</li><li>Fever, chills, or nausea</li></ul><p>Sepsis — a life-threatening condition — can develop if infections are left untreated, potentially causing multiple organ failure or gangrene. See a doctor promptly if your wound is infected, especially if symptoms worsen after a few days.</p>',
+    choices: [
+      { label: "Back", target: "IHurtMyself" },
+      { label: "Start over", target: null }
+    ]
+  }
+
+};
+
+/* ── Navigation ───────────────────────────────────────────────── */
+var history = [];
+var current = "Welcome";
+
+function mountKitCarousel() {
+  var mount = document.getElementById('kit-carousel-mount');
+  if (!mount) return;
+
+  var idx = 0;
+  var total = KIT_ITEMS.length;
+
+  function html() {
+    return '<div class="kit-carousel">' +
+      '<div class="kit-track-wrap"><div class="kit-track" id="kit-track">' +
+        KIT_ITEMS.map(function(item) {
+          return '<div class="kit-slide">' +
+                 (item.image ? '<img class="kit-slide-img" src="' + item.image + '" alt="' + item.title + '">' : '') +
+                 '<div class="kit-slide-title">' + item.title + '</div>' +
+                 '<div class="kit-slide-body">' + item.body + '</div></div>';
+        }).join('') +
+      '</div></div>' +
+      '<div class="kit-controls">' +
+        '<button class="kit-arrow" id="kit-prev">← Prev</button>' +
+        '<div class="kit-dots" id="kit-dots"></div>' +
+        '<span class="kit-counter" id="kit-counter"></span>' +
+        '<button class="kit-arrow" id="kit-next">Next →</button>' +
+      '</div></div>';
+  }
+
+  mount.innerHTML = html();
+
+  function update() {
+    var track = document.getElementById('kit-track');
+    if (track) track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+
+    var counter = document.getElementById('kit-counter');
+    if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+
+    var prev = document.getElementById('kit-prev');
+    var next = document.getElementById('kit-next');
+    if (prev) prev.disabled = idx === 0;
+    if (next) next.disabled = idx === total - 1;
+
+    var dots = document.getElementById('kit-dots');
+    if (dots) {
+      var dotBtns = dots.querySelectorAll('.kit-dot');
+      dotBtns.forEach(function(d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+    }
+  }
+
+  var dotsEl = document.getElementById('kit-dots');
+  if (dotsEl) {
+    KIT_ITEMS.forEach(function(_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'kit-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to item ' + (i + 1));
+      dot.addEventListener('click', function() { idx = i; update(); });
+      dotsEl.appendChild(dot);
+    });
+  }
+
+  var prevBtn = document.getElementById('kit-prev');
+  var nextBtn = document.getElementById('kit-next');
+  if (prevBtn) prevBtn.addEventListener('click', function() { if (idx > 0) { idx--; update(); } });
+  if (nextBtn) nextBtn.addEventListener('click', function() { if (idx < total - 1) { idx++; update(); } });
+
+  update();
+}
+
+function render() {
+  var passage = PASSAGES[current];
+  if (!passage) return;
+
+  document.getElementById('sha-header').textContent = passage.header;
+  document.getElementById('sha-text').innerHTML = passage.text;
+
+  var choicesEl = document.getElementById('sha-choices');
+  choicesEl.innerHTML = '';
+
+  var items = passage.choices.length > 0
+    ? passage.choices
+    : [{ label: "Start over from the beginning.", target: null }];
+
+  items.forEach(function(choice) {
+    var btn = document.createElement('button');
+    btn.className = 'sha-btn';
+    btn.textContent = choice.label;
+    btn.addEventListener('click', function() {
+      if (choice.target === null) {
+        history = [];
+        current = "Welcome";
+      } else {
+        history.push(current);
+        current = choice.target;
+      }
+      render();
+    });
+    choicesEl.appendChild(btn);
+  });
+
+  document.getElementById('sha-back').disabled = history.length === 0;
+
+  if (current === 'Kit') mountKitCarousel();
+}
+
+document.getElementById('sha-back').addEventListener('click', function() {
+  if (history.length > 0) {
+    current = history.pop();
+    render();
+  }
+});
+
+document.getElementById('sha-restart').addEventListener('click', function() {
+  history = [];
+  current = "Welcome";
+  render();
+});
+
+render();
+
+/* ── Embed mode ───────────────────────────────────────────────── */
+var _params = new URLSearchParams(window.location.search);
+if (_params.has('embed')) {
+  var _book = document.querySelector('.book');
+  if (_book) {
+    _book.classList.add('is-embed');
+    var _theme = _params.get('theme');
+    if (_theme === 'dark')  { _book.classList.add('color-theme-2'); _book.classList.remove('color-theme-1'); }
+    if (_theme === 'light') { _book.classList.add('color-theme-1'); _book.classList.remove('color-theme-2'); }
+    new MutationObserver(function() {
+      if (_book.classList.contains('with-summary')) {
+        _book.classList.remove('with-summary');
+        _book.classList.remove('without-animation');
+      }
+    }).observe(_book, { attributes: true, attributeFilter: ['class'] });
+    document.getElementById('embedThemeBtn').addEventListener('click', function() {
+      var isDark = _book.classList.contains('color-theme-2');
+      if (isDark) { _book.classList.remove('color-theme-2'); _book.classList.add('color-theme-1'); }
+      else        { _book.classList.add('color-theme-2');    _book.classList.remove('color-theme-1'); }
+    });
+  }
+}
+
+})();
+</script>

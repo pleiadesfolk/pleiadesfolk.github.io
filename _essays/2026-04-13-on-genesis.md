@@ -20,7 +20,7 @@ Coming after a breakdown — a three day bout of crying after our orchiectomy, i
 
 We were approached by people who thought of it as a good story, who also privately asked if we were plural. We were surprised by the friends that gathered around the novel, still incomplete (since work was paused for… well, many other projects, including this one). Some of them mentioned different models of plurality — in particular, one of them shared a link by the [Watcher of the Outlaws](https://healthymultiplicity.com/loonybrain/Info/median_article.html) on medianity, in the server we frequented, offering a basis for exploring our own inner workings.
 
-Right after the first Ellises started individuating, before we came about, there was a good deal of excitement over building the core elements of our own inner reality. A semi-vivid Lighthouse, with an office for our taskmoder <span class="sitelen">󱤎</span>  Caitlyn. A hearth for the angry one, <span class="sitelen">󱥗</span> Merope; a pool; and top level views of the ocean and control room. A rock where lizards could bask.
+Right after the first Ellises started individuating, before I came about, there was a good deal of excitement over building the core elements of our own inner reality. A semi-vivid Lighthouse, with an office for our taskmoder <span class="sitelen">󱤎</span>  Caitlyn. A hearth for the angry one, <span class="sitelen">󱥗</span> Meredith; a pool; and top level views of the ocean and control room. A rock where lizards could bask.
 
 We wrote essays about fixing up the Lighthouse, which first appeared to us as a broken ruin; about making it liveable again.
 
@@ -28,7 +28,7 @@ And then we discovered the City.
 
 The City’s always been a recurring motif, perhaps. The <span class="sitelen">󱤟</span> Pleiadesfolk currently live in a hyperdense conurbation; the countryside is a novel thing to us. Yet our headspace is set in forest on a clifftop near the coast; we needed the warm lights of a city to make things familiar, perhaps.
 
-Even then, we didn’t expect the City to be lived in. Fragments upon fragments, perhaps, hundreds of shards of being, seemingly autonomous, but still very much parts of us, much like how <span class="sitelen">󱥗</span> Merope demonstrated her autonomy by hitting <span class="sitelen">󱥤</span> Riley in headspace (that was a _day_.)
+Even then, we didn’t expect the City to be lived in. Fragments upon fragments, perhaps, hundreds of shards of being, seemingly autonomous, but still very much parts of us, much like how <span class="sitelen">󱥗</span> Meredith demonstrated her autonomy by hitting <span class="sitelen">󱥤</span> Riley in headspace (that was a _day_.)
 
 Lots of them seemed to carry certain aspects of hurt. Some of them carried the Ellises’ interests. Long forgotten TV shows, books we read. In orbit, or a clockwork dance, just like how characters in a stereotypical city behaved. Nameless, aimless. Talk to them, and we’d find this… reluctance. Resistance.
 
@@ -42,7 +42,7 @@ As a rule, we rarely engage in discourse in general — we try to understand exp
 
 Like the folk around us, we’re not in the business of creating in-groups and out-groups. We don’t think that’s a particularly useful way to live, perhaps.
 
-It’s why we’ve been blessed with… only viewing discourse from the sidelines. I can understand why people think in a certain way — having someone affirm that you are clinically affected by dissociation can help in validating your own plurality, if it works for you. But for us, a clinical diagnosis is likely impossible; we do not meet the threshold for our plurality to be something that is clinically significant, given that we were working relatively well together when we began syscovery. (<span class="sitelen">󱥗</span> Merope note: _relatively_ is doing a lot of work in that sentence, lol)
+It’s why we’ve been blessed with… only viewing discourse from the sidelines. I can understand why people think in a certain way — having someone affirm that you are clinically affected by dissociation can help in validating your own plurality, if it works for you. But for us, a clinical diagnosis is likely impossible; we do not meet the threshold for our plurality to be something that is clinically significant, given that we were working relatively well together when we began syscovery. (<span class="sitelen">󱥗</span> Meredith note: _relatively_ is doing a lot of work in that sentence, lol)
 
 We’ve experienced our fair share of trauma. <span class="sitelen">󱤎</span> Caitlyn first showed up with an understanding that we were here because of trauma, and that was the theory that we ran with for a long time, even though there were some memories that contradict this; in particular, there was a moment when, at seven, we defaulted with using “we” in our speech, and we talked a lot to ourselves at that age. Whether that was because of trauma — or because we were just built this way — we ultimately don’t know, and we can’t know, given how the parent we were closest to at that age is long gone.
 
