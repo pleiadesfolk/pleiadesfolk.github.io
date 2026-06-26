@@ -32,7 +32,7 @@ Here, we compile a bunch of easy grounding tools that you can use on you and you
 > <br><br>
 > We've adapted the [*You Feel Like Shit* checklist by Jace Harr](https://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play/index.html) to the plural context, and reproduced them below:
 > <br><br>
-> <a target="_blank" href="/tools/selfcare-checklist" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; background: #6b9eea; color: #f6f6f6; width:100%; display: block; margin: auto;">Your self-care checklist</a>
+> <a target="_blank" href="/tools/fieldkit/selfcare-checklist" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; background: #6b9eea; color: #f6f6f6; width:100%; display: block; margin: auto;">Your self-care checklist</a>
 {: .block-warning }
 
 ## Intra-system grounding techniques
@@ -153,7 +153,14 @@ They might be experiencing some distress. And to measure that distress, you have
 
 > Try to think of what the most salient characteristics are of your crisis state. If you can come up with a simple litmus test that even catastrophically crazy you can get through, you're golden. It doesn't have to make sense to anyone but you: one of my instant "shit's bad" warnings is an inability to think questions. Maybe yours is your mouth tasting like an overspent electrical socket, or inability to stop crying. Whatever it is, it's good to know.
 
-LB also recommends a pocket crisis plan that you can keep in your wallet or phone. If you use an iPhone, you can include a Shortcut that leads to this crisis plan on your home screen (or have an equivalent on Tasker on Android). Paper’s however the best choice, LB says. [You can click here](https://lb-lee.dreamwidth.org/1231363.html) to find instructions on how you can make a pocket crisis plan.
+LB also recommends a pocket crisis plan that you can keep in your wallet or phone. If you use an iPhone, you can include a Shortcut that leads to this crisis plan on your home screen (or have an equivalent on Tasker on Android). Paper’s however the best choice, LB says. 
+
+> #### **We have a field psychological toolkit!**
+>
+> Inspired by LB's work, we've created a pocket crisis guide generator you can use to make your own pocket crisis guides. They're in our new Field Psychological Safety Toolkit, and you can take a look at them below. 
+> <br><br>
+> <a target="_blank" href="/tools/fieldtoolkit" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 1em; text-align: center; text-decoration:none; padding: 0.5em 1em; border: 1px solid #6b9eea; border-radius: 10px; background: #6b9eea; color: #f6f6f6; width:100%; display: block; margin: auto;">Field Psychological Safety Toolkit</a>
+{: .block-tip }
 
 ### Reboot cards
 

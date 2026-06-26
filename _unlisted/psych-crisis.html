@@ -1,0 +1,342 @@
+---
+layout: tools
+title: Field psychological safety kit — The Pocket Crisis Plan Generator
+description: This form helps you build a pocket psychological crisis plan on paper, and is an adaptation of an eight-page crisis guide plan by LB Lee. 
+permalink: /tools/fieldkit/psych-crisis
+---
+
+<style>
+.tk-form {
+  --section-border: #5075b9;
+  --input-border: #000000;
+  --text: #222222;
+  --muted: #111111;
+  --export-bg: #231f20;
+  --export-text: #ffffff;
+  --export-hover: #444444;
+  --card-bg: rgba(0,0,0,0.03);
+
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--text);
+}
+
+.tk-form h1 { 
+    font-family: 'Story Script';
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.book.color-theme-2 .tk-form {
+  --section-border: #5075b9;
+  --input-border: #888888;
+  --text: #f0f0f0;
+  --muted: #eeeeee;
+  --export-bg: #f0f0f0;
+  --export-text: #231f20;
+  --export-hover: #dddddd;
+  --card-bg: rgba(255,255,255,0.05);
+}
+
+.book.color-theme-2 .tk-form a {
+  color: #75adff;
+  text-decoration: underline;
+}
+
+.tk-form h1 { margin-bottom: 0.25em; }
+.tk-form .subtitle { opacity: 0.9; margin-bottom: 1em; font-size: 1.2em; }
+.tk-form blockquote {border-left: 2px solid var(--input-border); padding-left: 1.5em; font-size:1.2em; opacity:0.9;}
+.tk-section { margin: 2.5em 0; }
+.tk-section h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  margin-bottom: 0.75em;
+  border-bottom: 1px solid var(--section-border);
+  padding-bottom: 0.25em;
+}
+.tk-section-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2.5rem;
+  align-items: start;
+}
+@media (max-width: 680px) {
+  .tk-section-body { grid-template-columns: 1fr; }
+}
+.tk-desc {
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--muted);
+  background: var(--card-bg);
+  border: 1px solid var(--section-border);
+  border-radius: 8px;
+  padding: 0.85em 1em;
+}
+.tk-desc p { margin: 0 0 0.75em; }
+.tk-desc p:last-child { margin-bottom: 0; }
+.tk-desc ul { margin: 0 0 0.75em; padding-left: 1.4em; }
+.tk-desc li { margin-bottom: 0.2em; }
+.tk-desc a { color: inherit; text-decoration: underline; }
+.book.color-theme-2 .tk-desc a { color: #75adff; }
+label.tk-label { display: block; font-size: 0.82em; font-style: italic; opacity: 0.75; margin: 0.75em 0 0.25em; }
+input.tk-input, textarea.tk-textarea {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  width: 100%;
+  padding: 0.45em 0.6em;
+  border: 1px solid var(--input-border);
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  box-sizing: border-box;
+}
+textarea.tk-textarea { min-height: 7em; resize: vertical; }
+.scale-grid { display: grid; grid-template-columns: 1.5em 1fr; gap: 4px 0.75em; align-items: center; margin: 0.5em 0; }
+.scale-num { font-size: 0.8em; text-align: right; opacity: 0.7; }
+.scale-0-3 input { border-left: 3px solid #a2cca3; }
+.scale-4-6 input { border-left: 3px solid #fff0b3; }
+.scale-7-10 input { border-left: 3px solid #cc9aa0; }
+.questions-grid { display: grid; gap: 0.5em; }
+.q-row { display: grid; grid-template-columns: 2em 1fr; gap: 0.5em; align-items: center; }
+.q-label { font-size: 0.82em; opacity: 0.65; }
+.contacts-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5em; margin-bottom: 0.75em; }
+.export-area { margin: 3em 0 2em; }
+.export-btn {
+  font-family: 'Story Script', cursive;
+  font-size: 1.6em;
+  padding: 0.4em 1.25em;
+  background: var(--export-bg);
+  color: var(--export-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.1s;
+}
+.export-btn:hover { background: var(--export-hover); }
+.export-btn:disabled { opacity: 0.5; cursor: wait; }
+.export-btn-secondary {
+  font-family: 'Story Script', cursive;
+  font-size: 1.6em;
+  padding: 0.4em 1.25em;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 0.75em;
+  opacity: 0.6;
+  transition: opacity 0.1s;
+}
+.export-btn-secondary:hover { opacity: 1; }
+.privacy-note { font-size: 0.78em; font-style: italic; opacity: 0.6; margin-top: 0.75em; }
+</style>
+
+<div class="tk-form">
+  <h1>Pocket crisis plan</h1>
+  <p class="subtitle">This form helps you build a pocket crisis plan on paper, and is an adaptation of an eight-page crisis guide plan by LB Lee.</p>
+  <p class="subtitle">While it’s possible to save the crisis plan into your Notes app of choice, paper is something that you can carry with you at all times. As LB Lee says in their <a href="https://lb-lee.dreamwidth.org/1231363.html">original guide to Crisis Planning:</a></p>
+  <blockquote>Remembering your coping skills in a controlled medical environment doesn't insure remembering outside it. You can hang lists of coping skills on your walls (or make a book of them), but you can't always be home. You can keep your loved ones informed, but you can't always be in their company. Best is something small that you habitually carry at all times--something that's just enough to get you to your books, loves, or doctors.</blockquote>
+  <p class="subtitle">At the end of this form, you’ll be able to export a typed-up version of your pocket crisis plan, save it, and print it out! This will however be an A4-sized pdf file (sorry Americans!).</p>
+  <p class="subtitle">We don’t store the PDFs on a server, so you’ll have to save it to your computer or phone when it’s generated.</p>
+  <p class="subtitle">If you aren't able to export the PDFs, or simply want the zine template, you can find it <a href="/assets/pdf/template-psych.pdf">here.</a></p>
+
+  <form id="psych-form" autocomplete="off">
+
+    <div class="tk-section">
+      <h3>This toolkit belongs to</h3>
+      <input class="tk-input" type="text" id="owner-name" maxlength="50" placeholder="your name or system name">
+    </div>
+
+    <!-- Page 2: Scale -->
+    <div class="tk-section">
+      <h3>a) How bad is it?</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>There's no definitive scale of "how bad things are" — clinicians have tried, and pain scales are often too simple. This one is yours to define.</p>
+          <p>What are the most prominent signs of your crisis state? When it gets bad, how bad does it get? As <a href="https://lb-lee.dreamwidth.org/1213382.html">LB Lee says</a>: "If you can come up with a simple litmus test that even catastrophically crazy you can get through, you're golden."</p>
+          <p>It doesn't have to make clinical sense — just personal sense. For reference, <a href="https://lb-lee.dreamwidth.org/file/208960.png">here's LB's scale</a>.</p>
+        </div>
+        <div class="tk-inputs">
+          <div class="scale-grid">
+            <span class="scale-num">0</span><input class="tk-input scale-0-3" type="text" id="scale-0" maxlength="56" placeholder="I'm okay!">
+            <span class="scale-num">1</span><input class="tk-input scale-0-3" type="text" id="scale-1" maxlength="56" placeholder="Something's maybe bothering me.">
+            <span class="scale-num">2</span><input class="tk-input scale-0-3" type="text" id="scale-2" maxlength="56" placeholder="Something's troubling me, but I can manage it.">
+            <span class="scale-num">3</span><input class="tk-input scale-0-3" type="text" id="scale-3" maxlength="56" placeholder="I can function normally, but it's getting difficult.">
+            <span class="scale-num">4</span><input class="tk-input scale-4-6" type="text" id="scale-4" maxlength="56" placeholder="I can't function normally. I need rest, but I'm not too worried.">
+            <span class="scale-num">5</span><input class="tk-input scale-4-6" type="text" id="scale-5" maxlength="56" placeholder="Okay, I think things are getting bad.">
+            <span class="scale-num">6</span><input class="tk-input scale-4-6" type="text" id="scale-6" maxlength="56" placeholder="I'm trying to hold on, but barely.">
+            <span class="scale-num">7</span><input class="tk-input scale-7-10" type="text" id="scale-7" maxlength="56" placeholder="I think I'm losing my grip, but I can still listen to others' reasoning.">
+            <span class="scale-num">8</span><input class="tk-input scale-7-10" type="text" id="scale-8" maxlength="56" placeholder="I can't be reasoned with anymore. Grounding techniques barely work.">
+            <span class="scale-num">9</span><input class="tk-input scale-7-10" type="text" id="scale-9" maxlength="56" placeholder="Grounding techniques don't work any more, but I still am afraid of pain.">
+            <span class="scale-num">10</span><input class="tk-input scale-7-10" type="text" id="scale-10" maxlength="56" placeholder="I can't fear pain, or be reasoned with. This is an ultimate fail state.">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 3: Grounding questions -->
+    <div class="tk-section">
+      <h3>b) Ask yourself…</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>Now that you have the scale, it's time to build a test for how bad things are. Given the signs that you might be having a crisis — what are some questions you would want to ask yourself?</p>
+          <p>These should be simple enough that even a very bad version of you can get through them.</p>
+        </div>
+        <div class="tk-inputs">
+          <div class="questions-grid">
+            <div class="q-row"><span class="q-label">i)</span><input class="tk-input" type="text" id="q1" maxlength="31" placeholder="question i"></div>
+            <div class="q-row"><span class="q-label">ii)</span><input class="tk-input" type="text" id="q2" maxlength="31" placeholder="question ii"></div>
+            <div class="q-row"><span class="q-label">iii)</span><input class="tk-input" type="text" id="q3" maxlength="31" placeholder="question iii"></div>
+            <div class="q-row"><span class="q-label">iv)</span><input class="tk-input" type="text" id="q4" maxlength="31" placeholder="question iv"></div>
+            <div class="q-row"><span class="q-label">v)</span><input class="tk-input" type="text" id="q5" maxlength="31" placeholder="question v"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 4: What to do -->
+    <div class="tk-section">
+      <h3>c) What should I do when things get really bad?</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>When you're in crisis, it's going to be hard to know that. Take this chance to tell that version of you what to do — things you can do to cope.</p>
+          <p>Some examples from LB: HALT (hungry, angry, lonely, tired), take a brisk walk, have a cry, hang out with loved ones, read or watch your favourite recharging media.</p>
+          <p>You should also list things to avoid — things that might not be obviously bad to the part of you in crisis, like doom-scrolling, calling your ex, or talking to people who've wronged you.</p>
+        </div>
+        <div class="tk-inputs">
+          <textarea class="tk-textarea" id="page4" maxlength="500" placeholder="Things to do:&#10;&#10;Things to avoid:"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 5: Safe places outside -->
+    <div class="tk-section">
+      <h3>d) What happens if I'm outside and things get bad?</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>What happens if you've been caught outside? You probably need direction on where to go next, so you don't wander around in a daze.</p>
+          <p>These places should be where you feel safe — a library, a bookstore, a park, a movie theatre, wherever works for you. Ideally, one of them should be where you live.</p>
+        </div>
+        <div class="tk-inputs">
+          <label class="tk-label">Place 1</label>
+          <input class="tk-input" type="text" id="place1" maxlength="34" placeholder="e.g. the library on Main St">
+          <label class="tk-label">Place 2</label>
+          <input class="tk-input" type="text" id="place2" maxlength="34">
+          <label class="tk-label">Place 3</label>
+          <input class="tk-input" type="text" id="place3" maxlength="34" placeholder="e.g. home">
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 6: Contacts -->
+    <div class="tk-section">
+      <h3>e) Who should I call?</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>Have at least three people you can reach out to. Preferably someone you trust, and someone living in your vicinity if you have local community.</p>
+          <p>Talk to them before putting them in your plan — let them know what to expect and what you might need. Give them details of the others in the plan, too.</p>
+        </div>
+        <div class="tk-inputs">
+          <label class="tk-label">Contact 1</label>
+          <div class="contacts-group">
+            <input class="tk-input" type="text" id="contact1-name" maxlength="20" placeholder="name">
+            <input class="tk-input" type="text" id="contact1-how" maxlength="20" placeholder="phone / how to reach">
+          </div>
+          <label class="tk-label">Contact 2</label>
+          <div class="contacts-group">
+            <input class="tk-input" type="text" id="contact2-name" maxlength="20" placeholder="name">
+            <input class="tk-input" type="text" id="contact2-how" maxlength="20" placeholder="phone / how to reach">
+          </div>
+          <label class="tk-label">Contact 3</label>
+          <div class="contacts-group">
+            <input class="tk-input" type="text" id="contact3-name" maxlength="20" placeholder="name">
+            <input class="tk-input" type="text" id="contact3-how" maxlength="20" placeholder="phone / how to reach">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 7: Script -->
+    <div class="tk-section">
+      <h3>f) What can I say?</h3>
+      <div class="tk-section-body">
+        <div class="tk-desc">
+          <p>Have a script for what you need to say. If you've learned to tell nobody that you're not okay, this is extremely helpful — you need to be able to tell the people around you what's going on, and how they can help.</p>
+          <p>Write your script using this formula: choose a name from your contacts list, tell them what is happening and that it's an emergency, then tell them what you need them to do.</p>
+        </div>
+        <div class="tk-inputs">
+          <textarea class="tk-textarea" id="page7" maxlength="500" placeholder="[Name], I'm not doing well right now and I need help. Can you…"></textarea>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="export-area">
+    <button class="export-btn" id="export-btn" onclick="handleExport()">Export zine</button>
+    <a class="export-btn-secondary" href="/tools/zine-instructions">How to fold</a>
+    <p class="privacy-note">Your answers are never sent to a server. The PDF is generated in your browser and opens in a new tab — save it from there.</p>
+  </div>
+</div>
+
+<script src="/assets/js/pdf-lib.min.js"></script>
+<script src="/assets/js/toolkit-draw.js"></script>
+<script>
+function val(id) {
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : '';
+}
+
+async function handleExport() {
+  const btn = document.getElementById('export-btn');
+  btn.disabled = true;
+  btn.textContent = 'Generating…';
+
+  try {
+    const questions = [val('q1'), val('q2'), val('q3'), val('q4'), val('q5')]
+      .filter(Boolean)
+      .map((q, i) => ['i)', 'ii)', 'iii)', 'iv)', 'v)'][i] + ' ' + q)
+      .join('\n');
+
+    const contacts = [
+      [val('contact1-name'), val('contact1-how')],
+      [val('contact2-name'), val('contact2-how')],
+      [val('contact3-name'), val('contact3-how')],
+    ].filter(([n]) => n).map(([n, h]) => h ? n + ' — ' + h : n).join('\n');
+
+    const places = [val('place1'), val('place2'), val('place3')]
+      .filter(Boolean).join('\n');
+
+    await generateZine('psych', {
+      ownerName: val('owner-name'),
+      scaleLabels: [0,1,2,3,4,5,6,7,8,9,10].map(n => val('scale-' + n)),
+      pages: {
+        3: questions,
+        4: val('page4'),
+        5: places,
+        6: contacts,
+        7: val('page7'),
+      },
+    });
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Export zine';
+  }
+}
+
+function hasUnsavedWork() {
+  return Array.from(document.querySelectorAll('#psych-form input, #psych-form textarea'))
+    .some(el => el.value.trim() !== '');
+}
+window.addEventListener('beforeunload', e => {
+  if (hasUnsavedWork()) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+</script>
