@@ -107,6 +107,14 @@ function breakLongWords(text, maxChars) {
 // ─── Word-wrap helper ─────────────────────────────────────────────────────────
 // Returns an array of strings that each fit within maxWidthPt at the given size.
 // Respects \n line breaks in the source text.
+// IBM Plex Mono is monospace (advance ratio ~0.6), so we measure by character
+// count rather than calling font.widthOfTextAtSize (which triggers a fontkit
+// glyph-metrics bug on these TTF files).
+const MONO_ADVANCE_RATIO = 0.6;
+function textWidthPt(text, size) {
+  return text.length * size * MONO_ADVANCE_RATIO;
+}
+
 function wrapText(font, text, size, maxWidthPt) {
   const out = [];
   for (const para of String(text).split('\n')) {
@@ -114,7 +122,7 @@ function wrapText(font, text, size, maxWidthPt) {
     let line = '';
     for (const word of words) {
       const candidate = line ? line + ' ' + word : word;
-      if (line && font.widthOfTextAtSize(candidate, size) > maxWidthPt) {
+      if (line && textWidthPt(candidate, size) > maxWidthPt) {
         out.push(line);
         line = word;
       } else {
@@ -163,11 +171,13 @@ async function tryEmbedFont(pdfDoc, path) {
   try {
     const r = await fetch(path);
     if (!r.ok) return null;
-    return await pdfDoc.embedFont(await r.arrayBuffer());
+    return await pdfDoc.embedFont(await r.arrayBuffer(), { subset: false });
   } catch (_) { return null; }
 }
 
 async function loadFonts(pdfDoc) {
+  if (typeof fontkit !== 'undefined') pdfDoc.registerFontkit(fontkit);
+
   const mono  = '/assets/gitbook/fonts/IBM_Plex_Mono/IBMPlexMono-';
   const story = '/assets/gitbook/fonts/Story_Script/StoryScript-Regular.ttf';
   const [

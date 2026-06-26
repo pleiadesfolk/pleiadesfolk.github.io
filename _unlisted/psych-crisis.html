@@ -134,6 +134,20 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 }
 .export-btn-secondary:hover { opacity: 1; }
 .privacy-note { font-size: 0.78em; font-style: italic; opacity: 0.6; margin-top: 0.75em; }
+.char-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+  border-radius: 4px;
+  color: #c0392b;
+  font-size: 0.8em;
+  padding: 0.5em 0.75em;
+  margin-top: 0.6em;
+}
+.char-warning::before { content: '⚠'; flex-shrink: 0; }
 </style>
 
 <div class="tk-form">
@@ -189,11 +203,11 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
         </div>
         <div class="tk-inputs">
           <div class="questions-grid">
-            <div class="q-row"><span class="q-label">i)</span><input class="tk-input" type="text" id="q1" maxlength="31" placeholder="question i"></div>
-            <div class="q-row"><span class="q-label">ii)</span><input class="tk-input" type="text" id="q2" maxlength="31" placeholder="question ii"></div>
-            <div class="q-row"><span class="q-label">iii)</span><input class="tk-input" type="text" id="q3" maxlength="31" placeholder="question iii"></div>
-            <div class="q-row"><span class="q-label">iv)</span><input class="tk-input" type="text" id="q4" maxlength="31" placeholder="question iv"></div>
-            <div class="q-row"><span class="q-label">v)</span><input class="tk-input" type="text" id="q5" maxlength="31" placeholder="question v"></div>
+            <div class="q-row"><span class="q-label">i)</span><input class="tk-input" type="text" id="q1" maxlength="100" placeholder="Do you know who you are?"></div>
+            <div class="q-row"><span class="q-label">ii)</span><input class="tk-input" type="text" id="q2" maxlength="100" placeholder="Can you see headspace?"></div>
+            <div class="q-row"><span class="q-label">iii)</span><input class="tk-input" type="text" id="q3" maxlength="100" placeholder="Are your headmates saying it's bad?"></div>
+            <div class="q-row"><span class="q-label">iv)</span><input class="tk-input" type="text" id="q4" maxlength="100" placeholder="Can you make a complete sentence?"></div>
+            <div class="q-row"><span class="q-label">v)</span><input class="tk-input" type="text" id="q5" maxlength="100" placeholder="Do you know what's happening around you?'"></div>
           </div>
         </div>
       </div>
@@ -224,11 +238,11 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
         </div>
         <div class="tk-inputs">
           <label class="tk-label">Place 1</label>
-          <input class="tk-input" type="text" id="place1" maxlength="34" placeholder="e.g. the library on Main St">
+          <input class="tk-input" type="text" id="place1" maxlength="100" placeholder="e.g. the library on Main St">
           <label class="tk-label">Place 2</label>
-          <input class="tk-input" type="text" id="place2" maxlength="34">
+          <input class="tk-input" type="text" id="place2" maxlength="100">
           <label class="tk-label">Place 3</label>
-          <input class="tk-input" type="text" id="place3" maxlength="34" placeholder="e.g. home">
+          <input class="tk-input" type="text" id="place3" maxlength="100" placeholder="e.g. home">
         </div>
       </div>
     </div>
@@ -244,18 +258,18 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
         <div class="tk-inputs">
           <label class="tk-label">Contact 1</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact1-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact1-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact1-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact1-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 2</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact2-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact2-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact2-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact2-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 3</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact3-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact3-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact3-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact3-how" maxlength="40" placeholder="phone / how to reach">
           </div>
         </div>
       </div>
@@ -279,11 +293,12 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 
   <div class="export-area">
     <button class="export-btn" id="export-btn" onclick="handleExport()">Export zine</button>
-    <a class="export-btn-secondary" href="/tools/zine-instructions">How to fold</a>
+    <a class="export-btn-secondary" href="/tools/fieldkit/zine-instructions">How to fold</a>
     <p class="privacy-note">Your answers are never sent to a server. The PDF is generated in your browser and opens in a new tab — save it from there.</p>
   </div>
 </div>
 
+<script src="/assets/js/fontkit.umd.min.js"></script>
 <script src="/assets/js/pdf-lib.min.js"></script>
 <script src="/assets/js/toolkit-draw.js"></script>
 <script>
@@ -338,5 +353,26 @@ window.addEventListener('beforeunload', e => {
     e.preventDefault();
     e.returnValue = '';
   }
+});
+
+document.querySelectorAll('[maxlength]').forEach(el => {
+  const container = el.closest('.tk-inputs') || el.parentElement;
+  let warn = container.querySelector(':scope > .char-warning');
+  if (!warn) {
+    warn = document.createElement('div');
+    warn.className = 'char-warning';
+    warn.style.display = 'none';
+    container.appendChild(warn);
+  }
+  el.addEventListener('input', () => {
+    const atLimit = Array.from(container.querySelectorAll('[maxlength]'))
+      .find(f => f.value.length >= f.maxLength);
+    if (atLimit) {
+      warn.textContent = `Exceeded ${atLimit.maxLength} characters. Sorry, but any longer, and your text will be cropped on the output pdf!`;
+      warn.style.display = 'flex';
+    } else {
+      warn.style.display = 'none';
+    }
+  });
 });
 </script>

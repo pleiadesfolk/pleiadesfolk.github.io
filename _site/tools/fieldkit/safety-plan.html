@@ -47,12 +47,12 @@
 <meta property="og:site_name" content="The Constant Companions Handbook" />
 <meta property="og:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-06-26T13:11:09+08:00" />
+<meta property="article:published_time" content="2026-06-26T14:45:18+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/media/default-ogp.png" />
 <meta property="twitter:title" content="Field psychological safety kit — Pocket safety plan generator" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-06-26T13:11:09+08:00","datePublished":"2026-06-26T13:11:09+08:00","description":"This form helps you build a pocket safety plan on paper, to help you stay safe when you’re feeling suicidal. It is an adaptation of various different safety plans online.","headline":"Field psychological safety kit — Pocket safety plan generator","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/fieldkit/safety-plan"},"url":"http://localhost:4000/tools/fieldkit/safety-plan"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ellis of the Pleiadesfolk, Cheerleader System, Catherine Cowie et al."},"dateModified":"2026-06-26T14:45:18+08:00","datePublished":"2026-06-26T14:45:18+08:00","description":"This form helps you build a pocket safety plan on paper, to help you stay safe when you’re feeling suicidal. It is an adaptation of various different safety plans online.","headline":"Field psychological safety kit — Pocket safety plan generator","image":"http://localhost:4000/assets/media/default-ogp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tools/fieldkit/safety-plan"},"url":"http://localhost:4000/tools/fieldkit/safety-plan"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -396,7 +396,7 @@
             
         
 <li class="header">Tools</li>
-<li class="chapter" data-level="1.1"><a href="/tools/fieldkit/">field psychological safety toolkit</a></li>
+<li class="chapter" data-level="1.1"><a href="/tools/fieldkit">field psychological safety toolkit</a></li>
 <li class="chapter" data-level="1.1"><a href="/tools/fieldkit/selfcare-checklist">your self-care checklist</a></li>
 <li class="chapter" data-level="1.1"><a href="/tools/fieldkit/sh-aftercare">self-harm aftercare</a></li>
 <li class="chapter" data-level="1.1"><a href="/tools/pkmnew">pk;m new toolkit</a></li>
@@ -576,6 +576,20 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 }
 .export-btn-secondary:hover { opacity: 1; }
 .privacy-note { font-size: 0.78em; font-style: italic; opacity: 0.6; margin-top: 0.75em; }
+.char-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+  border-radius: 4px;
+  color: #c0392b;
+  font-size: 0.8em;
+  padding: 0.5em 0.75em;
+  margin-top: 0.6em;
+}
+.char-warning::before { content: '⚠'; flex-shrink: 0; }
 </style>
 
 
@@ -681,18 +695,18 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
         <div class="tk-inputs">
           <label class="tk-label">Contact 1</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact1-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact1-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact1-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact1-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 2</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact2-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact2-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact2-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact2-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 3</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact3-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact3-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact3-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact3-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Your script — what will you say?</label>
           <textarea class="tk-textarea" id="page6-script" maxlength="500" placeholder="[Name], I'm not safe right now and I need help. Can you…"></textarea>
@@ -720,11 +734,12 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 
   <div class="export-area">
     <button class="export-btn" id="export-btn" onclick="handleExport()">Export zine</button>
-    <a class="export-btn-secondary" href="/tools/zine-instructions">How to fold</a>
+    <a class="export-btn-secondary" href="/tools/fieldkit/zine-instructions">How to fold</a>
     <p class="privacy-note">Your answers are never sent to a server. The PDF is generated in your browser and opens in a new tab — save it from there.</p>
   </div>
 </div>
 
+<script src="/assets/js/fontkit.umd.min.js"></script>
 <script src="/assets/js/pdf-lib.min.js"></script>
 <script src="/assets/js/toolkit-draw.js"></script>
 <script>
@@ -773,6 +788,27 @@ window.addEventListener('beforeunload', e => {
     e.preventDefault();
     e.returnValue = '';
   }
+});
+
+document.querySelectorAll('[maxlength]').forEach(el => {
+  const container = el.closest('.tk-inputs') || el.parentElement;
+  let warn = container.querySelector(':scope > .char-warning');
+  if (!warn) {
+    warn = document.createElement('div');
+    warn.className = 'char-warning';
+    warn.style.display = 'none';
+    container.appendChild(warn);
+  }
+  el.addEventListener('input', () => {
+    const atLimit = Array.from(container.querySelectorAll('[maxlength]'))
+      .find(f => f.value.length >= f.maxLength);
+    if (atLimit) {
+      warn.textContent = `Exceeded ${atLimit.maxLength} characters. Sorry, but any longer, and your text will be cropped on the output pdf!`;
+      warn.style.display = 'flex';
+    } else {
+      warn.style.display = 'none';
+    }
+  });
 });
 </script>
 
@@ -886,12 +922,12 @@ window.addEventListener('beforeunload', e => {
     },
     "file": {
         "path": "_unlisted/safety-plan.html",
-        "mtime": "2026-06-26 13:11:09 +0800",
+        "mtime": "2026-06-26 14:45:18 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2026-06-26 13:11:09 +0800"
+        "time": "2026-06-26 14:45:18 +0800"
     },
     "basePath": "",
     "book": {
@@ -906,7 +942,7 @@ window.addEventListener('beforeunload', e => {
 <script src="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
-<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1782450669"></script>
+<script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js?v=1782456318"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
 <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>

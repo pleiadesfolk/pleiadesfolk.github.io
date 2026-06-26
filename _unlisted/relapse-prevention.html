@@ -133,6 +133,20 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 }
 .export-btn-secondary:hover { opacity: 1; }
 .privacy-note { font-size: 0.78em; font-style: italic; opacity: 0.6; margin-top: 0.75em; }
+.char-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  border-left: 3px solid #e74c3c;
+  border-radius: 4px;
+  color: #c0392b;
+  font-size: 0.8em;
+  padding: 0.5em 0.75em;
+  margin-top: 0.6em;
+}
+.char-warning::before { content: '⚠'; flex-shrink: 0; }
 </style>
 
 <div class="tk-form">
@@ -205,18 +219,18 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
         <div class="tk-inputs">
           <label class="tk-label">Contact 1</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact1-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact1-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact1-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact1-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 2</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact2-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact2-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact2-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact2-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">Contact 3</label>
           <div class="contacts-group">
-            <input class="tk-input" type="text" id="contact3-name" maxlength="20" placeholder="name">
-            <input class="tk-input" type="text" id="contact3-how" maxlength="20" placeholder="phone / how to reach">
+            <input class="tk-input" type="text" id="contact3-name" maxlength="40" placeholder="name">
+            <input class="tk-input" type="text" id="contact3-how" maxlength="40" placeholder="phone / how to reach">
           </div>
           <label class="tk-label">What can they help you do?</label>
           <textarea class="tk-textarea" id="contact-notes" maxlength="500" placeholder="What I need from them…"></textarea>
@@ -256,11 +270,12 @@ textarea.tk-textarea { min-height: 7em; resize: vertical; }
 
   <div class="export-area">
     <button class="export-btn" id="export-btn" onclick="handleExport()">Export zine</button>
-    <a class="export-btn-secondary" href="/tools/zine-instructions">How to fold</a>
+    <a class="export-btn-secondary" href="/tools/fieldkit/zine-instructions">How to fold</a>
     <p class="privacy-note">Your answers are never sent to a server. The PDF is generated in your browser and opens in a new tab — save it from there.</p>
   </div>
 </div>
 
+<script src="/assets/js/fontkit.umd.min.js"></script>
 <script src="/assets/js/pdf-lib.min.js"></script>
 <script src="/assets/js/toolkit-draw.js"></script>
 <script>
@@ -309,5 +324,26 @@ window.addEventListener('beforeunload', e => {
     e.preventDefault();
     e.returnValue = '';
   }
+});
+
+document.querySelectorAll('[maxlength]').forEach(el => {
+  const container = el.closest('.tk-inputs') || el.parentElement;
+  let warn = container.querySelector(':scope > .char-warning');
+  if (!warn) {
+    warn = document.createElement('div');
+    warn.className = 'char-warning';
+    warn.style.display = 'none';
+    container.appendChild(warn);
+  }
+  el.addEventListener('input', () => {
+    const atLimit = Array.from(container.querySelectorAll('[maxlength]'))
+      .find(f => f.value.length >= f.maxLength);
+    if (atLimit) {
+      warn.textContent = `Exceeded ${atLimit.maxLength} characters. Sorry, but any longer, and your text will be cropped on the output pdf!`;
+      warn.style.display = 'flex';
+    } else {
+      warn.style.display = 'none';
+    }
+  });
 });
 </script>
